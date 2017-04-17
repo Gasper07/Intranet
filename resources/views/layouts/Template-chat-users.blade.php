@@ -229,6 +229,15 @@
         @yield('content')
     </div>
 
+    <span class="lnvmodal lnvmodal-loader" style="opacity: 0.9;">
+      <p>
+      <span>Cargando...</span>
+      </p>
+      <aside role="dialog">
+       <div>Loading....</div>
+      </aside>
+    </span>
+
     <!-- Scripts -->
     {!! Html::script('public/js/app.js') !!}
     {!! Html::script('public/assets/js/menu/classie.js') !!}

@@ -33,7 +33,7 @@
 
           <div class="collapse navbar-collapse collapseMenuUser" id="app-navbar-collapse">
               <!-- Left Side Of Navbar -->
-              <img class="paletaAdminBoard" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+              <img class="paletaAdminBoard" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
               <ul class="centerNameUserMenu">
                   <li class="colorBlack fontMiriamProRegular">¡Hola! Lisseth</li>
               </ul>
@@ -47,12 +47,12 @@
                   @else
                       <li class="icosMenus">
                           <a href="#!">
-                              <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/homeNotifiAdmin.png" class="img-responsive" alt="">                                    
+                              <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/homeNotifiAdmin.png" class="img-responsive" alt="">                                    
                           </a>
                       </li>
                       <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
                         <a href="#!">
-                            <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
+                            <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
                             <div class="notifiCount">
                               @include('admin.partials.fields-history-notificaciones-cantidad')
                             </div>
@@ -97,12 +97,12 @@
       @else
           <li class="icosMenus">
               <a href="#!">
-                  <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
+                  <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
               </a>
           </li>
           <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
             <a href="#!">
-                <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/notify-ico.png" class="img-responsive" alt="">
+                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/notify-ico.png" class="img-responsive" alt="">
                 <div class="notifiCount">
                     @include('admin.partials.fields-history-notificaciones-cantidad')
                 </div>
@@ -192,16 +192,16 @@
                </div>
                <div class="captionPromos">
                  <p class="fontMiriamProSemiBold">Promociones de hoy</p>
-                 <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/promo-public.jpg">
-                 <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/promo-public.jpg">
+                 <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
+                 <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
                </div>
 
                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionPublichIcos publichBoard">
                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">          
-                   <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
+                   <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
                  </div>
                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                   <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
+                   <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
                  </div>
                </div>
 

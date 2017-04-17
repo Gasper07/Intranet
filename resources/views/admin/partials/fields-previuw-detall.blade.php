@@ -6,9 +6,9 @@
 <section class="container-fluid">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionMenuInterno menuInernoBoard">
     <ul>
-        <li><a href="http://127.0.0.1/Sites/Intranet-chat/admin/home">Home</a></li>
-        <li><a href="http://127.0.0.1/Sites/Intranet-chat/admin/board">Board</a></li>
-        <li><a href="http://127.0.0.1/Sites/Intranet-chat/admin/usuarios">Usuarios</a></li>
+        <li><a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/home">Home</a></li>
+        <li><a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/board">Board</a></li>
+        <li><a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/usuarios">Usuarios</a></li>
     </ul>
   </div>
 </section>
@@ -33,7 +33,7 @@
 
           <div class="collapse navbar-collapse collapseMenuUser" id="app-navbar-collapse">
               <!-- Left Side Of Navbar -->
-              <img class="paletaAdminBoard" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+              <img class="paletaAdminBoard" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
               <ul class="centerNameUserMenu">
                   <li class="colorBlack fontMiriamProRegular">¡Hola! {{ Auth::user()->name }}</li>
               </ul>
@@ -47,12 +47,12 @@
                   @else
                       <li class="icosMenus">
                           <a href="#!">
-                              <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/homeNotifiAdmin.png" class="img-responsive" alt="">                                    
+                              <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/homeNotifiAdmin.png" class="img-responsive" alt="">                                    
                           </a>
                       </li>
                       <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
                         <a href="#!">
-                            <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
+                            <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
                             <div class="notifiCount">
                               @include('admin.partials.fields-history-notificaciones-cantidad')
                             </div>
@@ -322,7 +322,7 @@
           </div>
 
            <div class="col-md-12 datPublich">
-             <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
+             <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
            </div>
 
           </div>

@@ -123,70 +123,70 @@
                         <ul>
                             <li class="topHome">
                               <a href="#">
-                               <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/home.png" class="img- responsive" alt="">                  
+                               <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/home.png" class="img- responsive" alt="">                  
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/message.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/message.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/sguerencias.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/sguerencias.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/emergencias.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/emergencias.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/permisos.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/permisos.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/calendar.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/calendar.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/documentos.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/documentos.png" class="img- responsive" alt="">      
                               </a>
                             </li>
 
                             {{-- 2 SECTION --}}
                             <li class="top2Bloque">
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/edit-user.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/edit-user.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/add-user.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/add-user.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/users.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/users.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/ranking.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/ranking.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/evaluation.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/evaluation.png" class="img- responsive" alt="">      
                               </a>
                             </li>
 
                             <li class="topChangeColor">
                               <a href="#">
-                                <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/changeCOlor.png" class="img- responsive" alt="">      
+                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/changeCOlor.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             
@@ -328,9 +328,9 @@
                 banderaVeriCOunt = banderaVeriCOunt+1;
 
                 if(banderaVeriCOunt <= 4){
-                  $('.captionUsersInLive>div.accordion>div.title').prepend('<div class="captionCircleUser captionDenoews"><a href="" class="userLive" data-idonline='+dataUseronlineID+'><img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/user-leo.png" alt=""></a></div>');
+                  $('.captionUsersInLive>div.accordion>div.title').prepend('<div class="captionCircleUser captionDenoews"><a href="" class="userLive" data-idonline='+dataUseronlineID+'><img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/user-leo.png" alt=""></a></div>');
                 }else if(banderaVeriCOunt > 4){
-                  $('.captionUsersInLive>div.accordion>.content').append('<div class="captionCircleUser captionDenoews"><a href="" class="userLive" data-idonline='+dataUseronlineID+'><img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/user-leo.png" alt=""></a></div>');
+                  $('.captionUsersInLive>div.accordion>.content').append('<div class="captionCircleUser captionDenoews"><a href="" class="userLive" data-idonline='+dataUseronlineID+'><img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/user-leo.png" alt=""></a></div>');
                 }
                 console.log('entro');
                 

@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/chatUsers',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/chatUsers',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idForChat="+dataIdUser+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -135,7 +135,7 @@ function chooseFileDocu() {
 
 $(".fileInput").change(function(){
 	$('.img1Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img2Do" onclick="chooseFileDocu2()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img2Do" onclick="chooseFileDocu2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -154,7 +154,7 @@ function chooseFileDocu2() {
 
 $(".fileInput2").change(function(){
 	$('.img2Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img3Do" onclick="chooseFileDocu3()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img3Do" onclick="chooseFileDocu3()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -173,7 +173,7 @@ function chooseFileDocu3() {
 
 $(".fileInput3").change(function(){
 	$('.img3Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img4Do" onclick="chooseFileDocu4()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img4Do" onclick="chooseFileDocu4()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -192,7 +192,7 @@ function chooseFileDocu4() {
 
 $(".fileInput4").change(function(){
 	$('.img4Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img5Do" onclick="chooseFileDocu5()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img5Do" onclick="chooseFileDocu5()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -211,7 +211,7 @@ function chooseFileDocu5() {
 
 $(".fileInput5").change(function(){
 	$('.img5Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img6Do" onclick="chooseFileDocu6()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img6Do" onclick="chooseFileDocu6()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -229,7 +229,7 @@ function chooseFileDocu6() {
 
 $(".fileInput6").change(function(){
 	$('.img6Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img7Do" onclick="chooseFileDocu7()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img7Do" onclick="chooseFileDocu7()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -247,7 +247,7 @@ function chooseFileDocu7() {
 
 $(".fileInput7").change(function(){
 	$('.img7Do').remove();
-	$('.Adjuntar').append('<img class="img-responsive img8Do" onclick="chooseFileDocu8()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
+	$('.Adjuntar').append('<img class="img-responsive img8Do" onclick="chooseFileDocu8()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">');
 	$('.col-md-2.AdjuntarFoto ').hide();
 	var valDocument = $(this).val();
 	console.log(valDocument);
@@ -266,7 +266,7 @@ function chooseFileImage() {
 
 $(".fileInputImage").change(function(){
 	$('.imImga').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga2" onclick="chooseFileImage2()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga2" onclick="chooseFileImage2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -288,7 +288,7 @@ function chooseFileImage2() {
 
 $(".fileInputImage2").change(function(){
 	$('.imImga2').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga3" onclick="chooseFileImage3()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga3" onclick="chooseFileImage3()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -307,7 +307,7 @@ function chooseFileImage3() {
 
 $(".fileInputImage3").change(function(){
 	$('.imImga3').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga4" onclick="chooseFileImage4()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga4" onclick="chooseFileImage4()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -325,7 +325,7 @@ function chooseFileImage4() {
 
 $(".fileInputImage4").change(function(){
 	$('.imImga4').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga5" onclick="chooseFileImage5()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga5" onclick="chooseFileImage5()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -343,7 +343,7 @@ function chooseFileImage5() {
 
 $(".fileInputImage5").change(function(){
 	$('.imImga5').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga6" onclick="chooseFileImage6()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga6" onclick="chooseFileImage6()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -361,7 +361,7 @@ function chooseFileImage6() {
 
 $(".fileInputImage6").change(function(){
 	$('.imImga6').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga7" onclick="chooseFileImage7()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga7" onclick="chooseFileImage7()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -379,7 +379,7 @@ function chooseFileImage7() {
 
 $(".fileInputImage7").change(function(){
 	$('.imImga7').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga8" onclick="chooseFileImage8()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga8" onclick="chooseFileImage8()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -397,7 +397,7 @@ function chooseFileImage8() {
 
 $(".fileInputImage8").change(function(){
 	$('.imImga8').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga9" onclick="chooseFileImage9()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga9" onclick="chooseFileImage9()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -415,7 +415,7 @@ function chooseFileImage9() {
 
 $(".fileInputImage9").change(function(){
 	$('.imImga9').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga10" onclick="chooseFileImage10()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga10" onclick="chooseFileImage10()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -434,7 +434,7 @@ function chooseFileImage10() {
 
 $(".fileInputImage10").change(function(){
 	$('.imImga10').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga11" onclick="chooseFileImage11()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga11" onclick="chooseFileImage11()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -453,7 +453,7 @@ function chooseFileImage11() {
 
 $(".fileInputImage11").change(function(){
 	$('.imImga11').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImga12" onclick="chooseFileImage12()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.AdjuntarFoto').append('<img class="img-responsive imImga12" onclick="chooseFileImage12()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.col-md-2.Adjuntar ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
@@ -524,7 +524,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-		    url: 'http://127.0.0.1/Sites/Intranet-chat/notifiViewHi',
+		    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/notifiViewHi',
 		    type: 'POST',
 		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 		    data: "idnotifi="+findInput+"&iduserNotifi="+findInputIdUser+"",
@@ -560,7 +560,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/likeUserd',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/likeUserd',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idLikeUser="+finLikeUser+"&idLikePost="+finLikePost+"&idDislikePost="+finDisLikePost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -594,14 +594,14 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/CcomentsUsers',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/CcomentsUsers',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idComentUser="+findIdUserComent+"&ComentPost="+findComent+"&idDtasPost="+findIdPostPublic+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 			dataType: 'json',
 			success: function(result, index, value, data) {
 				console.log(result.name);
-				$(CaptionComentsPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label"><img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profiles/'+result.foto+'"></div><div class="content"><div class="summary"><a class="user colorGrisMediumSuave fontMiriamProSemiBold">'+result.name+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+result.comentario+'</div></div></div></div></div>');
+				$(CaptionComentsPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label"><img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profiles/'+result.foto+'"></div><div class="content"><div class="summary"><a class="user colorGrisMediumSuave fontMiriamProSemiBold">'+result.name+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+result.comentario+'</div></div></div></div></div>');
 
 			},
 			error: function() {
@@ -632,7 +632,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/postPersonalidadoUser',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/postPersonalidadoUser',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idPostPersonalizadoUser="+finidPostPersonaUser+"&idDataPostpersona="+finPostPersonalizado+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -648,7 +648,7 @@ jQuery(document).ready(function($) {
 					});
 				}, 3000);
 				setTimeout(function(){ 
-					window.location = "http://127.0.0.1/Sites/Intranet-chat/home";
+					window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
 				}, 1000);
 			},
 			error: function() {
@@ -750,7 +750,7 @@ function drop(contenedor, evento) {
 	});
 
 	$.ajax({
-		url: 'http://127.0.0.1/Sites/Intranet-chat/admin/upload_change_direct',
+		url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/upload_change_direct',
 		type: 'POST',
 		headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 		data: "dataNameArchivo="+finNameArchivo+"&nameCarpeta="+NameContenedor+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -863,7 +863,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/admin/sugerencias_View',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/sugerencias_View',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idSugerencia="+findIco+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -898,7 +898,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/admin/solicitud_actiond',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitud_actiond',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idSoliAcepta="+datasAceptaSolicitud+"&typeDescuento="+findTypeDescuento+"&idUSerSOlictud="+datasIdUserSolicitud+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -945,7 +945,7 @@ jQuery(document).ready(function($) {
 		});
 
 		$.ajax({
-			url: 'http://127.0.0.1/Sites/Intranet-chat/admin/solicitud_actiondenegada',
+			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitud_actiondenegada',
 			type: 'POST',
 			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 			data: "idSoliDenega="+datasNIegaSolicitud+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -1184,7 +1184,7 @@ $('.ayerActivi').click(function(e) {
 	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	});
 	$.ajax({
-	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/notifiViewAnterior',
+	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/notifiViewAnterior',
 	    type: 'POST',
 	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 	    dataType: 'json',
@@ -1212,7 +1212,7 @@ $('.ayerAsistencia').click(function(e) {
 	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	});
 	$.ajax({
-	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/HistoryLlegadas/histo/Asist/Date/'+yesterdayAsietemcia+'',
+	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/HistoryLlegadas/histo/Asist/Date/'+yesterdayAsietemcia+'',
 	    type: 'POST',
 	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 	    dataType: 'json',
@@ -1239,7 +1239,7 @@ $('.ayerEmergenci').click(function(e) {
 	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	});
 	$.ajax({
-	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/emergencias/data/fech/emergenci/cont/'+yesterdayEmergenci+'',
+	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencias/data/fech/emergenci/cont/'+yesterdayEmergenci+'',
 	    type: 'POST',
 	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 	    dataType: 'json',
@@ -1267,7 +1267,7 @@ $('.ayerPermiso').click(function(e) {
 	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	});
 	$.ajax({
-	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/solicitud-permisos/data/fech/permiso/coun/'+yesterdayPermiso+'',
+	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitud-permisos/data/fech/permiso/coun/'+yesterdayPermiso+'',
 	    type: 'POST',
 	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 	    dataType: 'json',

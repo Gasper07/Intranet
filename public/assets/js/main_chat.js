@@ -60,7 +60,7 @@
 	      message: message
 	    }
 	    // Send the message to the server
-	    ajaxCall('http://127.0.0.1/Sites/Intranet-chat/message_relay.php', chat_message);
+	    ajaxCall('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php', chat_message);
 	    
 	    // Clear the message input field
 	    $('.chat_box .input_message').val('');

@@ -59,7 +59,7 @@
               @for($i = 0; $i<= $cantidadUserEdit-1; $i++)
                 @if($users->id_usuario == $idsUserGroup[$i])
                   <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 imgProfiEdit">
-                    {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
+                    {{-- <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
                     <div class="label dataPrubeIm dataProfileEditGroup" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                     <input type="hidden" name="id_user_group[]" value="{{ $users->id_usuario }}">
                     {{-- <div class="rectangle"></div> --}}
@@ -540,16 +540,16 @@
             <div class="col-xs-12 col-sm-12 col-md-12 bloquesActions">
               <div class="col-md-6 actionpuBlish">
                 <div class="col-md-2 Adjuntar">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
+                  <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
                 </div>
                 <div class="col-md-2 AdjuntarFoto">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
+                  <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
                 </div>
                 <div class="col-md-2 DestacarPuslish">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/destacarIco.png" alt="">
+                  <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/destacarIco.png" alt="">
                 </div>
                 <div class="col-md-2 AlertPublish">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/alertIco.png" alt="">
+                  <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/alertIco.png" alt="">
                 </div>
               </div>
               <div class="col-md-6 ButtinPublish">

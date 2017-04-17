@@ -15,7 +15,7 @@
               <div class="item PublicatiOn">
                 <i class="large github middle aligned icoPubli"></i>
                 <div class="content">
-                  <a data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong> {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">
+                  <a data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong> {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">
                   <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                   <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                   publicación</span></a>
@@ -25,7 +25,7 @@
                <div class="item NewFotos">
                   <i class="large github middle aligned icoFotos"></i>
                   <div class="content">
-                    <a data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">fotos</span>
+                    <a data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">fotos</span>
                     <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                     <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                     </a>
@@ -35,7 +35,7 @@
                 <div class="item NewFotos">
                    <i class="large github middle aligned icoDocumn"></i>
                    <div class="content">
-                     <a data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">documento</span>
+                     <a data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">documento</span>
                      <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                      <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                      </a>
@@ -57,7 +57,7 @@
               <div class="item NewFotos">
                  <i class="large github middle aligned icoUrgente"></i>
                  <div class="content">
-                   <a data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">urgente</span>
+                   <a data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">urgente</span>
                    <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                    <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                    </a>
@@ -79,7 +79,7 @@
               <div class="item NewFotos">
                  <i class="large github middle aligned icoCalendar"></i>
                  <div class="content">
-                   <a data-href='http://127.0.0.1/Sites/Intranet-chat/admin/calendario' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">al calendario</span>
+                   <a data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/calendario' href="#!" class="header datanotifiNew"><strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">al calendario</span>
                    <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                    <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                    </a>
@@ -101,7 +101,7 @@
               <div class="item NewFotos">
                  <i class="large github middle aligned icoProFile"></i>
                  <div class="content">
-                   <a data-href="http://127.0.0.1/Sites/Intranet-chat/admin/profile-users/{{ $activi->id_usuario}}" href="#!" class="header datanotifiNew"><strong class='nameUserNotifique ' >{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} 
+                   <a data-href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/profile-users/{{ $activi->id_usuario}}" href="#!" class="header datanotifiNew"><strong class='nameUserNotifique ' >{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} 
                    <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                    <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                    </a>
@@ -123,7 +123,7 @@
               <div class="item NewFotos">
                  <i class="large github middle aligned icoCumple"></i>
                  <div class="content">
-                   <a  data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"> {{ $activi->descripcion_actividad }} <strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>
+                   <a  data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"> {{ $activi->descripcion_actividad }} <strong class="nameUserNotifique ">{{ $activi->nonbre_user}} </strong>
                    <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                    <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                    </a>
@@ -148,7 +148,7 @@
               <div class="item NewFotos">
                  <i class="large github middle aligned icoLikes"></i>
                  <div class="content">
-                   <a  data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew">{{ $activi->descripcion_actividad }} <span class="typeAccionNotifi ">les gusta tu publicación</span> 
+                   <a  data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew">{{ $activi->descripcion_actividad }} <span class="typeAccionNotifi ">les gusta tu publicación</span> 
                    <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                    <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                    </a>
@@ -172,7 +172,7 @@
               <div class="item NewFotos">
                  <i class="large github middle aligned icoComentarios"></i>
                  <div class="content">
-                   <a  data-href='http://127.0.0.1/Sites/Intranet-chat/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"> <span class="typeAccionNotifi">{{ $activi->nonbre_user}}</span> {{ $activi->descripcion_actividad }} 
+                   <a  data-href='http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}' href="#!" class="header datanotifiNew"> <span class="typeAccionNotifi">{{ $activi->nonbre_user}}</span> {{ $activi->descripcion_actividad }} 
                    <input type="hidden" class="notifiview" name='datanotifi' value="{{  $activi->id }}">
                    <input type="hidden" class="notifiviewUser" name='datanotifi_iduser' value="{{  Auth::user()->id }}">
                    </a>

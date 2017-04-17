@@ -22,8 +22,8 @@
                  <input type="hidden" class="input_name DatIdUserChat" value="" />           
               </div>
               <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 contentActionSend chat_box">
-                 <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/adjuntarIco.png" alt="">
-                 <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/adjuntarFoto.png" alt="">
+                 <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
+                 <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
                  <input type="submit" value="Enviar" class="input_send">
               </div>            
             </div>

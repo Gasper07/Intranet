@@ -3,14 +3,14 @@
   @foreach($arrayOfImages as $DataImages)
     <p class="gasper">{{ $canditdadImagesForArray = count($DataImages) }}</p>
     @for($ga=0; $ga < $canditdadImagesForArray; $ga++ )
-      <img class="img-responsive clImgView" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $DataImages[$ga] }}" alt="{{ $DataImages[$ga] }}"  data-toggle="modal" data-target="#myModalswPost">
+      <img class="img-responsive clImgView" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $DataImages[$ga] }}" alt="{{ $DataImages[$ga] }}"  data-toggle="modal" data-target="#myModalswPost">
         
       <!-- Modal -->
       <div class="modal fade" id="myModalswPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog dialoDataImgen" role="document">
           <div class="modal-content">
             <div class="modal-body">
-              <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $DataImages[$ga] }}" alt="{{ $DataImages[$ga] }}">
+              <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $DataImages[$ga] }}" alt="{{ $DataImages[$ga] }}">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

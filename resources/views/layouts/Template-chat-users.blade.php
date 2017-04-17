@@ -103,7 +103,7 @@
                                             <a href="profile" class="fontMiriamProRegular colorGrisMediumSuave lineJustify borderLineGris">Ver galerias</a>
                                         </li>
                                         <li class="bloquesMarca accionesPerfil accionesBussines">
-                                            <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf" target="_blank" class="fontMiriamProRegular colorGrisSuave lineJustify">Manual de empleado</a>
+                                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/pdf/Manual-de-empleado.pdf" target="_blank" class="fontMiriamProRegular colorGrisSuave lineJustify">Manual de empleado</a>
                                         </li>
                                         <li class="bloquesMarca accionesPerfil accionesBussines">
                                             <a class="fontMiriamProRegular colorGrisSuave lineJustify">Reglamento institucional</a>
@@ -201,7 +201,7 @@
               headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
           });
           $.ajax({
-              url: 'http://127.0.0.1/Sites/Intranet-chat/datalogout',
+              url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/datalogout',
               type: 'POST',
               headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
               data: "idlogin="+iduserLoIn+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -291,7 +291,7 @@
             headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value')},
         });
         $.ajax({
-            url: 'http://127.0.0.1/Sites/Intranet-chat/onlineUser',
+            url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/onlineUser',
             type: 'POST',
             headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
             data: "_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -313,10 +313,10 @@
 
                 if(banderaVeriCOunt <= 4){
                  $('.captionUsersInLive>div.accordion>div.title').prepend('<div class="captionCircleUser captionDenoews AlluserReegitradosPorBloque"><a href="#!" class="userLive" data-idonline='+dataUseronlineID+' data-iduserchat='+dataUseronlineID+'> <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline '+clStyImg+'"> </div></a></div>');
-                 $('.'+clStyImg).css('background-image', 'url("http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/'+dataUseronFoto+'")');
+                 $('.'+clStyImg).css('background-image', 'url("http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/'+dataUseronFoto+'")');
                 }else if(banderaVeriCOunt > 4){
                   $('.captionUsersInLive>div.accordion>.content').append('<div class="captionCircleUser captionDenoews AlluserReegitradosPorBloque"><a href="#!" class="userLive" data-idonline='+dataUseronlineID+' data-iduserchat='+dataUseronlineID+'> <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline '+clStyImg+'"> </div> </a></div>');
-                  $('.'+clStyImg).css('background-image', 'url("http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/'+dataUseronFoto+'")');
+                  $('.'+clStyImg).css('background-image', 'url("http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/'+dataUseronFoto+'")');
                 }
                 console.log('entro');
                 

@@ -7,10 +7,10 @@
         @foreach($JoinTableUserDatas as $dataUsers)
            @if($dataUsers->id_usuario == Auth::user()->id)
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionProfileMy">
-              <div class="containerPhotoProfile" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUsers->foto }}')">
+              <div class="containerPhotoProfile" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUsers->foto }}')">
               </div>
               <p class="colorBlack fontMiriamProSemiBold">{{ $dataUsers->nombre }} {{ $dataUsers->apellidos }}</p>
-              <a href="http://127.0.0.1/Sites/Intranet-chat/home" class="returnBoard">
+              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home" class="returnBoard">
                 <p>Regresar a Board de trabajo</p>
               </a>
             </div>
@@ -33,7 +33,7 @@
         @foreach($JoinTableUserDatas as $dataUsers)
          @if($dataUsers->id_usuario == $idUserLogin)
            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ProfileFotosStarts">
-             <div class="containerPhotoProfile" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUsers->foto }}')">
+             <div class="containerPhotoProfile" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUsers->foto }}')">
              </div>
              <p class="colorBlack fontMiriamProSemiBold">{{ $dataUsers->nombre }} {{ $dataUsers->apellidos }}</p>
              @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 

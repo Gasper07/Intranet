@@ -246,7 +246,7 @@
               headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
           });
           $.ajax({
-              url: 'http://127.0.0.1/Sites/Intranet-chat/datalogout',
+              url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/datalogout',
               type: 'POST',
               headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
               data: "idlogin="+iduserLoIn+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
@@ -309,7 +309,7 @@
             headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value')},
         });
         $.ajax({
-            url: 'http://127.0.0.1/Sites/Intranet-chat/onlineUser',
+            url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/onlineUser',
             type: 'POST',
             headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
             data: "_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",

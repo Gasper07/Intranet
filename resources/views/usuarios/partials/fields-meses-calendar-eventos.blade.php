@@ -31,7 +31,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -73,7 +73,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -114,7 +114,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -155,7 +155,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -196,7 +196,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -237,7 +237,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -278,7 +278,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -319,7 +319,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -360,7 +360,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -401,7 +401,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -442,7 +442,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>
@@ -483,7 +483,7 @@
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ChatWithUserDatas vDataPublicTypeUSer">
                      {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.leverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                     <div class="dataImhgEvent" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataPersonal->foto }}')">
+                     <div class="dataImhgEvent" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataPersonal->foto }}')">
                      </div>
                      <p class="colorBlack fontMiriamProSemiBold">{{ $dataPersonal->nombre }} {{ $dataPersonal->apellidos }}</p>
                   </div>

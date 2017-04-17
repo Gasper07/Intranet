@@ -9,7 +9,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitradosPorBloque">
               <a href="#!" data-iduserchat="{{ $users->id_usuario }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')">
                 </div>            
               </a>                
             </div>  
@@ -24,7 +24,7 @@
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitradosPorBloque">
                 <a href="#!" data-iduserchat="{{ $users->id_usuario }}">
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')">
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')">
                   </div>            
                 </a>                
               </div>  

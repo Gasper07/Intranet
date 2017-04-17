@@ -17,12 +17,12 @@
             @else
                 <li class="icosMenus">
                     <a href="#!">
-                        <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
+                        <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
                     </a>
                 </li>
                 <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
                   <a href="#!">
-                      <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/notify-ico.png" class="img-responsive" alt="">
+                      <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/notify-ico.png" class="img-responsive" alt="">
                       <div class="notifiCount">
                           @include('usuarios.partials.fields-Totalnotificaciones')
                       </div>

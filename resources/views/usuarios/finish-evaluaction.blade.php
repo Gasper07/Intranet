@@ -8,7 +8,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 LinksForEmpleados manualitiEvaluation">
           <ul>
               <li>
-                <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf" target="_blank">
+                <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/pdf/Manual-de-empleado.pdf" target="_blank">
                  Manual de empleado
                 </a>
               </li>

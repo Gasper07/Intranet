@@ -9,7 +9,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitradosPorBloque">
             <a href="#!" data-iduserchat="{{ $onlineUsers['id_user'] }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $onlineUsers['foto'] }}')">
+              <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $onlineUsers['foto'] }}')">
               </div>            
             </a>
           </div>
@@ -32,7 +32,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitradosPorBloque">
               <a href="#!" data-iduserchat="{{ $onlineUsers['id_user'] }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $onlineUsers['foto'] }}')">
+                <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $onlineUsers['foto'] }}')">
                 </div>            
               </a>
             </div>

@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="ui feed uifeedAvatar">
                       <div class="event">
-                        <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}')">
+                        <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
                         </div>
                         <div class="content">
                           <div class="summary">
@@ -35,14 +35,14 @@
                       </div>
                     </div>
                     @foreach($PostImpar['imagen'] as $imagess)                     
-                      <img class="img-responsive clImgView" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}"  data-toggle="modal" data-target="#myModalswPost">
+                      <img class="img-responsive clImgView" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}"  data-toggle="modal" data-target="#myModalswPost">
                         
                         <!-- Modal -->
                         <div class="modal fade" id="myModalswPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog dialoDataImgen" role="document">
                             <div class="modal-content">
                               <div class="modal-body">
-                                <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}">
+                                <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}">
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -54,7 +54,7 @@
                     <div class="ui feed uifeedActions">
                       <div class="event">
                         <div class="label">
-                          <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                          <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                         </div>
                         <div class="content contLike">
                           <p class="gasper"> {{$banderaLikes = 0}}</p>
@@ -94,7 +94,7 @@
                         @if($PostImpar['id'] == $datComents->id_publicacion)
                           <div class="ui feed uifeedComnetUser">
                             <div class="event">
-                              <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                              <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                               </div>
                               <div class="content">
                                 <div class="summary">
@@ -131,7 +131,7 @@
                   <div class="col-md-12">
                       <div class="ui feed uifeedAvatar">
                         <div class="event">
-                          <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}')">
+                          <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
                           </div>
                           <div class="content">
                             <div class="summary">
@@ -157,15 +157,15 @@
                         </div>
                       </div>
                       @foreach($PostImpar['documentos'] as $docume)
-                        <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $docume }}" class="dataDpcuCl" download="{{ $docume }}">
-                          <img class="img-responsive claa__cupo" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/bogIcoDocuments.png" />
+                        <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $docume }}" class="dataDpcuCl" download="{{ $docume }}">
+                          <img class="img-responsive claa__cupo" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/bogIcoDocuments.png" />
                         </a>
                       @endforeach
                       
                       <div class="ui feed uifeedActions">
                         <div class="event">
                           <div class="label">
-                            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                           </div>
                           <div class="content contLike">
                             <div class="summary">
@@ -205,7 +205,7 @@
                           @if($PostImpar['id'] == $datComents->id_publicacion)
                             <div class="ui feed uifeedComnetUser">
                               <div class="event">
-                                <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                 </div>
                                 <div class="content">
                                   <div class="summary">
@@ -240,7 +240,7 @@
                 <div class="col-md-12">
                   <div class="ui feed uifeedAvatar">
                     <div class="event">
-                      <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}')">
+                      <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
                       </div>
                       <div class="content">
                         <div class="summary">
@@ -269,7 +269,7 @@
                   <div class="ui feed uifeedActions">
                     <div class="event">
                       <div class="label">
-                        <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                        <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                       </div>
                       <div class="content contLike">
                         <div class="summary">
@@ -309,7 +309,7 @@
                       @if($PostImpar['id'] == $datComents->id_publicacion)
                         <div class="ui feed uifeedComnetUser">
                           <div class="event">
-                            <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                            <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                             </div>
                             <div class="content">
                               <div class="summary">
@@ -343,13 +343,13 @@
               @foreach($JoinTableUserPosts as $dataUSe)
                 @if($PostImpar['id_usuario'] == $dataUSe->id_usuario)
                   <div class="col-md-12 typeEventEspecial">
-                     <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/ico-vacaciones.jpg">
+                     <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-vacaciones.jpg">
                      <h4 class="fontCovered">¡Felices vacaciones!</h4>
                      <h5 class="fontMiriamProRegular">Te desea Valdez Mobile</h5>
                      <div class="ui feed uifeedActions">
                        <div class="event">
                          <div class="label">
-                           <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                           <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                          </div>
                          <div class="content contLike">
                            <div class="summary">
@@ -388,7 +388,7 @@
                          @if($PostImpar['id'] == $datComents->id_publicacion)
                            <div class="ui feed uifeedComnetUser">
                              <div class="event">
-                               <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                               <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                </div>
                                <div class="content">
                                  <div class="summary">
@@ -425,14 +425,14 @@
                         <i class="fa fa-times" aria-hidden="true"></i>
                       </a> 
                       <div class="bgHappy">
-                        <img class="img-responsive PeopleHappy" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}">
+                        <img class="img-responsive PeopleHappy" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}">
                       </div>
                       <h4 class="fontCovered">¡Feliz cumpleaños {{ $dataUSe->name }}!</h4>
                       <h5 class="fontMiriamProRegular">Te desea Valdez Mobile</h5>
                       <div class="ui feed uifeedActions">
                         <div class="event">
                           <div class="label">
-                            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                           </div>
                           <div class="content contLike">
                             <div class="summary">
@@ -471,7 +471,7 @@
                           @if($PostImpar['id'] == $datComents->id_publicacion)
                             <div class="ui feed uifeedComnetUser">
                               <div class="event">
-                                <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                 </div>
                                 <div class="content">
                                   <div class="summary">
@@ -517,7 +517,7 @@
                   <div class="col-md-12">
                       <div class="ui feed uifeedAvatar">
                         <div class="event">
-                          <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}')">
+                          <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
                           </div>
                           <div class="content">
                             <div class="summary">
@@ -543,14 +543,14 @@
                         </div>
                       </div>
                       @foreach($PostPar['imagen'] as $imagess)                     
-                        <img class="img-responsive clImgView" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}"  data-toggle="modal" data-target="#myModalswPost">
+                        <img class="img-responsive clImgView" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}"  data-toggle="modal" data-target="#myModalswPost">
                           
                           <!-- Modal -->
                           <div class="modal fade" id="myModalswPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                             <div class="modal-dialog dialoDataImgen" role="document">
                               <div class="modal-content">
                                 <div class="modal-body">
-                                  <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}">
+                                  <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}">
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -562,7 +562,7 @@
                       <div class="ui feed uifeedActions">
                         <div class="event">
                           <div class="label">
-                            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                           </div>
                           <div class="content contLike">
                             <div class="summary">
@@ -602,7 +602,7 @@
                           @if($PostPar['id'] == $datComents->id_publicacion)
                             <div class="ui feed uifeedComnetUser">
                               <div class="event">
-                                <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                 </div>
                                 <div class="content">
                                   <div class="summary">
@@ -637,7 +637,7 @@
                     <div class="col-md-12">
                         <div class="ui feed uifeedAvatar">
                           <div class="event">
-                            <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}')">
+                            <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
                             </div>
                             <div class="content">
                               <div class="summary">
@@ -664,14 +664,14 @@
                         
                         </a>
                         @foreach($PostPar['documentos'] as $docume)
-                          <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $docume }}" class="dataDpcuCl" download="{{ $docume }}">
-                            <img class="img-responsive claa__cupo" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/bogIcoDocuments.png" />
+                          <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $docume }}" class="dataDpcuCl" download="{{ $docume }}">
+                            <img class="img-responsive claa__cupo" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/bogIcoDocuments.png" />
                           </a>
                         @endforeach
                         <div class="ui feed uifeedActions">
                           <div class="event">
                             <div class="label">
-                              <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                              <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                             </div>
                             <div class="content contLike">
                               <div class="summary">
@@ -711,7 +711,7 @@
                             @if($PostPar['id'] == $datComents->id_publicacion)
                               <div class="ui feed uifeedComnetUser">
                                 <div class="event">
-                                  <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                                  <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                   </div>
                                   <div class="content">
                                     <div class="summary">
@@ -747,7 +747,7 @@
                     <div class="col-md-12">
                       <div class="ui feed uifeedAvatar">
                         <div class="event">
-                          <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}')">
+                          <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
                           </div>
                           <div class="content">
                             <div class="summary">
@@ -776,7 +776,7 @@
                       <div class="ui feed uifeedActions">
                         <div class="event">
                           <div class="label">
-                            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                           </div>
                           <div class="content contLike">
                             <div class="summary">
@@ -815,7 +815,7 @@
                           @if($PostPar['id'] == $datComents->id_publicacion)
                             <div class="ui feed uifeedComnetUser">
                               <div class="event">
-                                <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                 </div>
                                 <div class="content">
                                   <div class="summary">
@@ -848,13 +848,13 @@
               @foreach($JoinTableUserPosts as $dataUSe)
                 @if($PostPar['id_usuario'] == $dataUSe->id_usuario)
                   <div class="col-md-12 typeEventEspecial">
-                     <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/ico-vacaciones.jpg">
+                     <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-vacaciones.jpg">
                      <h4 class="fontCovered">¡Felices vacaciones!</h4>
                      <h5 class="fontMiriamProRegular">Te desea Valdez Mobile</h5>
                      <div class="ui feed uifeedActions">
                        <div class="event">
                          <div class="label">
-                           <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                           <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                          </div>
                          <div class="content contLike">
                            <div class="summary">
@@ -893,7 +893,7 @@
                          @if($PostPar['id'] == $datComents->id_publicacion)
                            <div class="ui feed uifeedComnetUser">
                              <div class="event">
-                               <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                               <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                </div>
                                <div class="content">
                                  <div class="summary">
@@ -931,14 +931,14 @@
                         <i class="fa fa-times" aria-hidden="true"></i>
                       </a> 
                       <div class="bgHappy">
-                        <img class="img-responsive PeopleHappy" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}">
+                        <img class="img-responsive PeopleHappy" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}">
                       </div>
                       <h4 class="fontCovered">¡Feliz cumpleaños {{ $dataUSe->name }}!</h4>
                       <h5 class="fontMiriamProRegular">Te desea Valdez Mobile</h5>
                       <div class="ui feed uifeedActions">
                         <div class="event">
                           <div class="label">
-                            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
                           </div>
                           <div class="content contLike">
                             <div class="summary">
@@ -977,7 +977,7 @@
                           @if($PostPar['id'] == $datComents->id_publicacion)
                             <div class="ui feed uifeedComnetUser">
                               <div class="event">
-                                <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                                 </div>
                                 <div class="content">
                                   <div class="summary">

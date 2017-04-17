@@ -8,7 +8,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 LinksForEmpleados manualitiEvaluation">
           <ul>
               <li>
-                <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf" target="_blank">
+                <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/pdf/Manual-de-empleado.pdf" target="_blank">
                  Manual de empleado
                 </a>
               </li>
@@ -49,7 +49,7 @@
                            <p class="gasper"> {{ $validaIdUser = $users->id_usuario }} </p>
                            <a href="evaluacion-a-personal/{{ $encargados->id_encargardo }}/{{$users->id_usuario}}" class="UserYarealizo">
                             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                              <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>
+                              <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                               <p class="colorBlack fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
                               @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                                 @if($users->id_usuario == $valueRankingGeneral['id_user'])
@@ -76,7 +76,7 @@
                    @if($validaIdUser != $users->id_usuario)
                      <a href="evaluacion-a-personal/{{ $encargados->id_encargardo }}/{{$users->id_usuario}}">
                       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>
+                        <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                         <p class="colorBlack fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
                         @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                           @if($users->id_usuario == $valueRankingGeneral['id_user'])

@@ -231,7 +231,7 @@
     </div>
 
      <div class="col-md-12 datPublich">
-       <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
+       <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
      </div>
 
     </div>

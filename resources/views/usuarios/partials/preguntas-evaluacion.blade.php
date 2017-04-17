@@ -7,7 +7,7 @@
          <p>EXCELENTE</p>                  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 OnePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='onePregu'>
        </div>
      </li>
@@ -17,7 +17,7 @@
           <p>MUY BUENO</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 OnePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='onePregu'>
        </div>
      </li>
@@ -27,7 +27,7 @@
          <p>REGULAR</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 OnePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='onePregu'>
        </div>
      </li>
@@ -37,7 +37,7 @@
           <p>MALO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 OnePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='onePregu'>
        </div>
      </li>
@@ -56,7 +56,7 @@
          <p>EXCELENTE</p>            
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 TwoPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='twoPregu'>
        </div>
      </li>
@@ -66,7 +66,7 @@
           <p>MUY BUENO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 TwoPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='twoPregu'>
        </div>
      </li>
@@ -76,7 +76,7 @@
          <p>REGULAR</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 TwoPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='twoPregu'>
        </div>
      </li>
@@ -86,7 +86,7 @@
           <p>MALO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 TwoPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='twoPregu'>
        </div>
      </li>
@@ -105,7 +105,7 @@
          <p>EXCELENTE</p>                 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ThreePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='threPregu'>
        </div>
      </li>
@@ -115,7 +115,7 @@
           <p>MUY BUENO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ThreePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='threPregu'>
        </div>
      </li>
@@ -125,7 +125,7 @@
          <p>REGULAR</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ThreePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='threPregu'>
        </div>
      </li>
@@ -135,7 +135,7 @@
           <p>MALO</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ThreePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='threPregu'>
        </div>
      </li>
@@ -153,7 +153,7 @@
          <p>EXCELENTE</p>                  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FourPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='fourPregu'>
        </div>
      </li>
@@ -163,7 +163,7 @@
           <p>MUY BUENO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FourPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='fourPregu'>
        </div>
      </li>
@@ -173,7 +173,7 @@
          <p>REGULAR</p> 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FourPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='fourPregu'>
        </div>
      </li>
@@ -183,7 +183,7 @@
           <p>MALO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FourPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='fourPregu'>
        </div>
      </li>
@@ -201,7 +201,7 @@
          <p>EXCELENTE</p>                 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FivePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='fivePregu'>
        </div>
      </li>
@@ -211,7 +211,7 @@
           <p>MUY BUENO</p> 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FivePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='fivePregu'>
        </div>
      </li>
@@ -221,7 +221,7 @@
          <p>REGULAR</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FivePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='fivePregu'>
        </div>
      </li>
@@ -231,7 +231,7 @@
           <p>MALO</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 FivePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='fivePregu'>
        </div>
      </li>
@@ -249,7 +249,7 @@
          <p>EXCELENTE</p>            
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SixPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='sixPregu'>
        </div>
      </li>
@@ -259,7 +259,7 @@
           <p>MUY BUENO</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SixPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='sixPregu'>
        </div>
      </li>
@@ -269,7 +269,7 @@
          <p>REGULAR</p> 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SixPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='sixPregu'>
        </div>
      </li>
@@ -279,7 +279,7 @@
           <p>MALO</p>   
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SixPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='sixPregu'>
        </div>
      </li>
@@ -297,7 +297,7 @@
          <p>EXCELENTE</p>                  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SevenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='sevenPregu'>
        </div>
      </li>
@@ -307,7 +307,7 @@
           <p>MUY BUENO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SevenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='sevenPregu'>
        </div>
      </li>
@@ -317,7 +317,7 @@
          <p>REGULAR</p>   
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SevenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='sevenPregu'>
        </div>
      </li>
@@ -327,7 +327,7 @@
           <p>MALO</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 SevenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='sevenPregu'>
        </div>
      </li>
@@ -345,7 +345,7 @@
          <p>EXCELENTE</p>               
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 EightPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='EithPregu'>
        </div>
      </li>
@@ -355,7 +355,7 @@
           <p>MUY BUENO</p> 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 EightPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='EithPregu'>
        </div>
      </li>
@@ -365,7 +365,7 @@
          <p>REGULAR</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 EightPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='EithPregu'>
        </div>
      </li>
@@ -375,7 +375,7 @@
           <p>MALO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 EightPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='EithPregu'>
        </div>
      </li>
@@ -393,7 +393,7 @@
          <p>EXCELENTE</p>               
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 NinePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="10" data-class='ninePregu'>
        </div>
      </li>
@@ -403,7 +403,7 @@
           <p>MUY BUENO</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 NinePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='ninePregu'>
        </div>
      </li>
@@ -413,7 +413,7 @@
          <p>REGULAR</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 NinePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='ninePregu'>
        </div>
      </li>
@@ -423,7 +423,7 @@
           <p>MALO</p> 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 NinePregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='ninePregu'>
        </div>
      </li>
@@ -441,7 +441,7 @@
          <p>EXCELENTE</p>       
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 tenPregunt">
-          <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+          <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
           <input type="hidden" value="10" data-class='tenPregu'>
         </div>
      </li>
@@ -451,7 +451,7 @@
           <p>MUY BUENO</p> 
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 tenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="7.5" data-class='tenPregu'>
        </div>
      </li>
@@ -461,7 +461,7 @@
          <p>REGULAR</p>
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 tenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="5" data-class='tenPregu'>
        </div>
      </li>
@@ -471,7 +471,7 @@
           <p>MALO</p>  
        </a>
        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 tenPregunt">
-         <img class="img-responsive activeSeleccionCarita" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
+         <img class="img-responsive activeSeleccionCarita" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/selectActive.png" alt=/icons"selectActiveAdmin">
          <input type="hidden" value="2.5" data-class='tenPregu'>
        </div>
      </li>

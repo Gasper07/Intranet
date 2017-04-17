@@ -8,7 +8,7 @@
           @if($UsersEmpleados->id_usuario == $UserMejorRanking['id_user'])
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profilesRabking">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ProfileFotosStarts">
-                 <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $UsersEmpleados->foto }}')"></div>
+                 <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $UsersEmpleados->foto }}')"></div>
                  <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
                  {{-- <p class="PuntuancionRanlinkNumber">4.5</p> --}}
                  @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
@@ -36,7 +36,7 @@
           @foreach($JoinTableUserDatosPersonalesDatosEmpleado as $UsersEmpleados)
             @if($UsersEmpleados->id_usuario != $idMejorRanking)
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ProfileFotosStartsMoreUser">
-                 <div class="label dataPrubeIm dataProfileRankingUserOthers" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $UsersEmpleados->foto }}')"></div>
+                 <div class="label dataPrubeIm dataProfileRankingUserOthers" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $UsersEmpleados->foto }}')"></div>
                  <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
                  @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                   @if($UsersEmpleados->id_usuario == $valueRankingGeneral['id_user'])
@@ -101,7 +101,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12 LinksForEmpleados ForEmpleadoRnakin">
             <ul>
                 <li>
-                  <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf">
+                  <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/pdf/Manual-de-empleado.pdf">
                    Manual de empleado
                   </a>
                 </li>

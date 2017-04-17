@@ -1138,7 +1138,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.ranking-empleados',compact('idUserLogin','AllOnlineUser','UserMejorRanking','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','idMejorRanking','AllOnlineUser','getUsers','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.ranking-empleados',compact('idUserLogin','AllOnlineUser','UserMejorRanking','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','idMejorRanking','AllOnlineUser','getUsers','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function ChatEmpleados()

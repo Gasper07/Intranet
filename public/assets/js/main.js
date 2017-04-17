@@ -638,6 +638,9 @@ jQuery(document).ready(function($) {
 // Post personalizado
 jQuery(document).ready(function($) {
 	$('.clickPostPerson').click(function(event) {
+		$('.lnvmodal-loader').css({
+			display: 'block'
+		});
 		var finidPostPersonaUser = $(this).find('input.idUserPostPersona').val();
 		var finPostPersonalizado = $(this).find('input.idPostPersona').val();
 		var Click = $(this);
@@ -653,7 +656,9 @@ jQuery(document).ready(function($) {
 		    data: "idPostPersonalizadoUser="+finidPostPersonaUser+"&idDataPostpersona="+finPostPersonalizado+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
-		    	console.log(result);
+		    	$('.lnvmodal-loader').css({
+		    		display: 'none'
+		    	});
 		    	setTimeout(function(){ 
 		    		window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
 		    	}, 100);

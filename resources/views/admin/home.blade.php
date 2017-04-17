@@ -269,7 +269,7 @@
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contectAllMenssages">
+          {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contectAllMenssages">
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 checkMEnsagge">
               <form action="home_submit" method="get" accept-charset="utf-8" class="selectMensage">
                 <input type="checkbox">                 
@@ -297,7 +297,7 @@
                 </a>                
               </form>
             </div>
-          </div>
+          </div> --}}
 
           @foreach($GetUltimateMensage as $GetdataS)
             {{-- @if($GetdataS['id_user'] == $users->id_usuario or $GetdataS['id_user_conversation'] == $users->id_usuario ) --}}
@@ -339,7 +339,7 @@
               @endif
           @endforeach
 
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contectAllMenssages">
+          {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contectAllMenssages">
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 checkMEnsagge">
               <form action="home_submit" method="get" accept-charset="utf-8" class="selectMensage">
                 <input type="checkbox">                 
@@ -367,7 +367,7 @@
                 </a>                
               </form>
             </div>
-          </div>
+          </div> --}}
         </div>
       {{-- emd section mensajes --}}
       

@@ -2678,7 +2678,15 @@ class HomeController extends Controller
       $IDUserChancheColor = $request->idUserChangeCOlor;
       $BgUser = $request->dataColor;
 
-      dd($BgUser);
+      $dataUpdateBackgrounf = array(
+        'bg_user' => $BgUser,
+      );
+
+      $UpdateBackground= \DB::table('datos_personales')
+        ->where('id_usuario', '=', $IDUserChancheColor)
+        ->update($dataUpdateBackgrounf);
+
+     echo json_encode('cambiado');
 
     }
 

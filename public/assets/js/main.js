@@ -27,6 +27,9 @@ jQuery(document).ready(function($) {
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
 		    	console.log(result);
+		    	if( result == 'cambiado'){
+		    		window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
+		    	}
 
 		    },
 		    error: function() {

@@ -566,7 +566,7 @@ jQuery(document).ready(function($) {
 			display: 'block'
 		});	
 		setTimeout(function(){ 
-			var finLikeUser = $(this).find('input.idUseLike').val();
+			var finLikeUser = $(this).find('input.idUseLike');
 			console.log(finLikeUser);
 			var finLikePost = $(this).find('input.idPubliLike').val();
 			console.log(finLikePost);

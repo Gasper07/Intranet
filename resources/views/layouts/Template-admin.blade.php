@@ -64,45 +64,45 @@
                       <ul>
                           <li id='titleAdmin'><a href="#">Administrador</a></li>
                           <li>
-                            <a href="#" class="dashico"> Dashboards</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/home" class="dashico"> Dashboards</a>
                           </li>
                           <li>
-                            <a href="#" class="mensageIco">  Mensajes</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/chatUsers" class="mensageIco">  Mensajes</a>
                           </li>
                           <li>
-                            <a href="#" class="usgerenIco"> Sugerencias</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/buzon-sugerencias" class="usgerenIco"> Sugerencias</a>
                           </li>
                           <li>
-                            <a href="#" class="emergenciasIco"> Emergencias</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencia" class="emergenciasIco"> Emergencias</a>
                           </li>
                           <li>
-                            <a href="#" class="permisoIco">  Permisos</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitudes-proceso" class="permisoIco">  Permisos</a>
                           </li>
                           <li>
-                            <a href="#" class="calendarIco"> Calendario</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/calendario" class="calendarIco"> Calendario</a>
                           </li>
                           <li>
-                            <a href="#" class="documentIco">  Documentos</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentos" class="documentIco">  Documentos</a>
                           </li>
 
                           {{-- 2 BLOQUE SUBmENU --}}
                           <li class="lineDivide">
-                            <a href="#"></a>
+                            <a href="#!"></a>
                           </li>
                           <li class="2TwoBlow">
-                            <a href="#" class="EditUseIco"> Editar Usuarios</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/usuarios" class="EditUseIco"> Editar Usuarios</a>
                           </li>
                           <li class="2TwoBlow">
-                            <a href="#" class="AddUseIco"> Agregar Usuarios</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/addUsers" class="AddUseIco"> Agregar Usuarios</a>
                           </li>
                           <li class="2TwoBlow">
-                            <a href="#" class="UseIco"> Usuarios</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/usuarios" class="UseIco"> Usuarios</a>
                           </li>
                           <li class="2TwoBlow">
-                            <a href="#" class="rannkingIco"> Ranking</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/ranking" class="rannkingIco"> Ranking</a>
                           </li>
                           <li class="2TwoBlow">
-                            <a href="#" class="evalucionIco"> Evaluaciones</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/evaluaciones-mensuales" class="evalucionIco"> Evaluaciones</a>
                           </li>
                       </ul>
                     </div>
@@ -115,70 +115,71 @@
                       <div id="sidebar3">
                         <ul>
                             <li class="topHome">
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/home">
                                <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/home.png" class="img- responsive" alt="">                  
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/chatUsers">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/message.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/buzon-sugerencias">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/sguerencias.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencia">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/emergencias.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitudes-proceso">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/permisos.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/calendario">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/calendar.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentos">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/documentos.png" class="img- responsive" alt="">      
                               </a>
                             </li>
 
+
                             {{-- 2 SECTION --}}
                             <li class="top2Bloque">
-                              <a href="#">
+                              <a href="#!">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/edit-user.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/usuarios">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/add-user.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/addUsers">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/users.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/usuarios">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/ranking.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/ranking">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/evaluation.png" class="img- responsive" alt="">      
                               </a>
                             </li>
 
                             <li class="topChangeColor">
-                              <a href="#">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/evaluaciones-mensuales">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/changeCOlor.png" class="img- responsive" alt="">      
                               </a>
                             </li>

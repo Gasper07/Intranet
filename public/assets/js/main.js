@@ -689,7 +689,7 @@ jQuery(document).ready(function($) {
 
 
 // Window chat
-$(".col-xs-12.col-sm-12.col-md-12.col-lg-12.chatVentanan").click(function(){
+$(".col-xs-12.col-sm-12.col-md-12.col-lg-12.chatVentanan>.continerChatVent").click(function(){
     $(this).toggleClass("heightMinCHatFloat");
 });
 

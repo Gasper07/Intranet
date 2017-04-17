@@ -1649,6 +1649,10 @@ p.ListHours.fontMiriamProRegular.DayDescans {
   line-height: 29px;
 }
 
+li.gn-search-item>p {
+  text-align: center;
+}
+
 
 /* CENTER PROFILE */
 

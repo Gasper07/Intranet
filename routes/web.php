@@ -304,8 +304,8 @@
 |--------------------------------------------------------------------------
 |
 */
-	Route::get('/changeColorUser', 'HomeController@notifyView');
-	Route::post('/changeColorUser', 'HomeController@notifyView');
+	Route::get('/changeColorUser', 'HomeController@ChangeColorBGUser');
+	Route::post('/changeColorUser', 'HomeController@ChangeColorBGUser');
 	
 
 /*

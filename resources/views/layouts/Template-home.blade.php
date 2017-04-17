@@ -68,7 +68,7 @@
 
                 <div class="collapse navbar-collapse collapseMenuUser" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+                    <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
                     <ul id="gn-menu" class="nav navbar-nav gn-menu-main">
                         <li class="gn-trigger">
                             <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
@@ -77,7 +77,7 @@
                                     <ul class="gn-menu">
                                         <li class="gn-search-item">
                                             <a href="">
-                                             <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
+                                             <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
                                              <p class="colorBlack fontMiriamProSemiBold">{{ Auth::user()->name }}</p>                            
                                             </a>
                                         </li>
@@ -155,12 +155,12 @@
                         @else
                             <li class="icosMenus noneMobile">
                                 <a href="#!">
-                                    <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
+                                    <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
                                 </a>
                             </li>
                             <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular noneMobile">
                               <a href="#!">
-                                  <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/notify-ico.png" class="img-responsive" alt="">
+                                  <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/notify-ico.png" class="img-responsive" alt="">
                                   <div class="notifiCount">
                                       @include('usuarios.partials.fields-Totalnotificaciones')
                                   </div>

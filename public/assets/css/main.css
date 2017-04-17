@@ -1749,6 +1749,101 @@ input.detallInformation:disabled {
   position: relative;
 }
 
+.bgWrapDasGreenSuave{
+  background: url('../images/contador/coloGreenSuave.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.bgWrapDasGris{
+  background: url('../images/contador/ColorGris.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.bgWrapDasYellow{
+  background: url('../images/contador/coloYellow.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.bgWrapDasOrange{
+  background: url('../images/contador/coloYellow.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.bgWrapDasRojoSuave{
+  background: url('../images/contador/colorRed.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.bgWrapDasVerdeAcua{
+  background: url('../images/contador/colorVerdeOscuro.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.bgWrapDasCeleste{
+  background: url('../images/contador/colorCeleste.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+.bgWrapDasBlack{
+  background: url('../images/contador/colorBalck.png');
+  background-size: cover;
+  /* height: 21px; */
+  height: 137px;
+  display: block;
+  bottom: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
 .col-xs-12.col-sm-6.col-md-6.bgWrapDas>p {
   font-size: 89px;
   text-align: center;

@@ -3757,13 +3757,28 @@ ul.Redconocistes>li>div {
   background: #ff8a00;
 }
 
+.col-xs-12.col-sm-3.col-md-3.bloqCOlors.rojosuaveBlock {
+  background: #e54e53;
+}
+.col-xs-12.col-sm-3.col-md-3.bloqCOlors.verdeAcuaBlock {
+  background: #1abc9c;
+}
+.col-xs-12.col-sm-3.col-md-3.bloqCOlors.celesteBlock {
+  background: #1abac8;
+}
+.col-xs-12.col-sm-3.col-md-3.bloqCOlors.blackBlock {
+  background: #1a1a1a;
+}
+
 .col-xs-12.col-sm-12.col-md-12.captionSelectColorPlat>.col-xs-12.col-sm-12.col-md-12 {
-  width: 40%;
-    /* height: 30px; */
+  width: 20%;
+  background: white;
 }
 
 .col-xs-12.col-sm-12.col-md-12.captionSelectColorPlat>.col-xs-12.col-sm-12.col-md-12>div.bloqCOlors {
-  height: 31px;
-  width: 10%;
+  height: 35px;
+  width: 23%;
   margin-right: 2%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }

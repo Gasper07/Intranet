@@ -84,6 +84,21 @@
                           
                         </div>
                       </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors rojosuaveBlock">
+                          
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors verdeAcuaBlock">
+                          
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors celesteBlock">
+                          
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors ">
+                          
+                        </div>
+                      </div>
                     </div>
                     <ul id="gn-menu" class="nav navbar-nav gn-menu-main">
                         <li class="gn-trigger">

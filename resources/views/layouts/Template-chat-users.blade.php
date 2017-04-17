@@ -68,7 +68,39 @@
 
                 <div class="collapse navbar-collapse collapseMenuUser" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+                    <img class="paleytaIco" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+                    <div class="col-xs-12 col-sm-12 col-md-12 captionSelectColorPlat nonnePapletaUser">
+                      <input type="hidden" class="userLogiColo" name="id_userLo" value="{{ Auth::user()->id }}">
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div data-color="#d9e021" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors greensuaveBlock">
+                          
+                        </div>
+                        <div data-color="#b2b2b2" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors grisBlock">
+                          
+                        </div>
+                        <div data-color="#ffcd00" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors yelowBlock">
+                          
+                        </div>
+                        <div data-color="#ff8a00" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors orangeBlock">
+                          
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div data-color="#e54e53" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors rojosuaveBlock">
+
+                        </div>
+                        <div data-color="#1abc9c" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors verdeAcuaBlock">
+                          
+                        </div>
+                        <div data-color="#1abac8" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors celesteBlock">
+                          
+                        </div>
+                        <div data-color="#1a1a1a" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors blackBlock">
+                          
+                        </div>
+                      </div>
+                    </div>
                     <ul id="gn-menu" class="nav navbar-nav gn-menu-main">
                         <li class="gn-trigger">
                             <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
@@ -82,13 +114,13 @@
                                             </a>
                                         </li>
                                         <li class="bloquesMarca marEntrada">
-                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar entrada</a>
+                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif" >Marcar entrada</a>
                                             <div class='secEntrada'>
                                               <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
                                             </div>
                                         </li>
                                         <li class="bloquesMarca marSalida">
-                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar salida</a>
+                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif">Marcar salida</a>
                                             <div class='secEntrada'>
                                               <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
                                             </div>
@@ -117,7 +149,33 @@
                         </li>
                     </ul>
                     <ul class="centerNameUserMenu">
-                        <li class="colorBlack fontMiriamProRegular">¡Hola! {{ Auth::user()->name }}</li>
+                        <li class="bloquesMarca marEntrada blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar entrada</a>
+                            <div class='secEntrada'>
+                              <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
+                            </div>
+                        </li>
+                        <li class="bloquesMarca marSalida blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar salida</a>
+                            <div class='secEntrada'>
+                              <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
+                            </div>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil blockMobileMen colorBlack fontMiriamProRegular">
+                            <a href="profile" class="fontMiriamProRegular colorGrisMediumSuave lineJustify">Editar perfil</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil blockMobileMen colorBlack fontMiriamProRegular">
+                            <a href="chatUsers" class="fontMiriamProRegular colorGrisMediumSuave lineJustify">Mensajes privados</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil accionesBussines blockMobileMen colorBlack fontMiriamProRegular">
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/pdf/Manual-de-empleado.pdf" target="_blank" class="fontMiriamProRegular colorGrisSuave lineJustify">Manual de empleado</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil accionesBussines blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="fontMiriamProRegular colorGrisSuave lineJustify">Reglamento institucional</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil accionesBussines blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="fontMiriamProRegular colorGrisSuave lineJustify">Ayuda</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -127,33 +185,20 @@
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
-                            <li class="icosMenus">
+                            <li class="icosMenus noneMobile">
                                 <a href="#!">
                                     <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
                                 </a>
                             </li>
-                            <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
+                            <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular noneMobile">
                               <a href="#!">
                                   <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/notify-ico.png" class="img-responsive" alt="">
                                   <div class="notifiCount">
-                                      <p>3</p>
+                                      @include('usuarios.partials.fields-Totalnotificaciones')
                                   </div>
                               </a>
                               <div class="menu">
-                                <div class="item">New</div>
-                                <div class="item">
-                                  <span class="description">ctrl + o</span>
-                                  Open...
-                                </div>
-                                <div class="item">
-                                  <span class="description">ctrl + s</span>
-                                  Save as...
-                                </div>
-                                <div class="item">
-                                  <span class="description">ctrl + r</span>
-                                  Rename
-                                </div>
-                                <div class="item">E-mail Collaborators</div>
+                                @include('usuarios.partials.fields-notificaciones')
                               </div>
                             </div>
                             <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">

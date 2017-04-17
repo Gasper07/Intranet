@@ -131,7 +131,7 @@
           {{-- SECTION RANKING USERS --}}
 
           <div class="captionRankingUser">
-            <h3 class="fontMiriamProSemiBold">Ranking de empleados</h3>
+            <h3 class="fontMiriamProSemiBold" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif">Ranking de empleados</h3>
             <div id="carousel-example-genericRan" class="carousel slide" data-ride="carousel" data-interval="false">
               <!-- Indicators -->
               <ol class="carousel-indicators">

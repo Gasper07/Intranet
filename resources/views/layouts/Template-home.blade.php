@@ -108,15 +108,11 @@
                                 <div class="gn-scroller">
                                     <ul class="gn-menu">
                                         <li class="gn-search-item">
-                                          @foreach($JoinTableUserDatas as $dataUsers)
-                                            @if($dataUsers->id_usuario == Auth::user()->id)
-                                             <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile">
-                                               <div class="containerPhotoProfile profileLateraS" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUsers->foto }}')">
-                                               </div>
-                                             </a>
-                                            @endif
-                                          @endforeach
-                                           <p class="colorBlack fontMiriamProSemiBold">{{ Auth::user()->name }}</p>   
+                                         <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile">
+                                           <div class="containerPhotoProfile profileLateraS" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $fotoUser }}')">
+                                           </div>
+                                         </a>
+                                         <p class="colorBlack fontMiriamProSemiBold">{{ Auth::user()->name }}</p>   
                                         </li>
                                         <li class="bloquesMarca marEntrada">
                                             <a class="BgYellow fontMiriamProSemiBold colorBlackSuave" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif" >Marcar entrada</a>

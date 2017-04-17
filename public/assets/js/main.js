@@ -562,41 +562,43 @@ jQuery(document).ready(function($) {
 // like dislike
 jQuery(document).ready(function($) {
 	$('.clkLike').click(function(event) {
+		$('.lnvmodal-loader').css({
+			display: 'block'
+		});	
 		setTimeout(function(){ 
-			$('.lnvmodal-loader').css({
-				display: 'block'
-			});	
-		}, 1000);
-		var finLikeUser = $(this).find('input.idUseLike').val();
-		var finLikePost = $(this).find('input.idPubliLike').val();
-		var finDisLikePost = $(this).find('input.dislike').val();
-		var finUserPublicPost = $(this).find('input.idUserPublicoPost').val();
-		var textClick = $(this).text();
-		var Click = $(this);
+			var finLikeUser = $(this).find('input.idUseLike').val();
+			var finLikePost = $(this).find('input.idPubliLike').val();
+			var finDisLikePost = $(this).find('input.dislike').val();
+			var finUserPublicPost = $(this).find('input.idUserPublicoPost').val();
+			var textClick = $(this).text();
+			var Click = $(this);
 
-		$.ajaxSetup({
-		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
-		});
+			$.ajaxSetup({
+			    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+			});
 
-		$.ajax({
-		    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/likeUserd',
-		    type: 'POST',
-		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-		    data: "idLikeUser="+finLikeUser+"&idLikePost="+finLikePost+"&idUserPublicPost="+finUserPublicPost+"&idDislikePost="+finDisLikePost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
-		    dataType: 'json',
-		    success: function(result, index, value, data) {
-		    	setTimeout(function(){ 
-		    		$('.lnvmodal-loader').css({
-		    			display: 'none'
-		    		});	
-		    	}, 1000);
-		    	$(Click).text(result+' Me gustas');	
+			$.ajax({
+			    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/likeUserd',
+			    type: 'POST',
+			    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+			    data: "idLikeUser="+finLikeUser+"&idLikePost="+finLikePost+"&idUserPublicPost="+finUserPublicPost+"&idDislikePost="+finDisLikePost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+			    dataType: 'json',
+			    success: function(result, index, value, data) {
+			    	$('.lnvmodal-loader').css({
+			    		display: 'none'
+			    	});	
+			    	$(Click).text(result+' Me gustas');	
 
-		    },
-		    error: function() {
-		        console.log('Error');
-		    }
-		});
+			    },
+			    error: function() {
+			        console.log('Error');
+			    }
+			});
+		}, 2000);
+
+		
+
+		
 	});
 });
 
@@ -640,7 +642,7 @@ jQuery(document).ready(function($) {
 			    }
 			});
 
-		}, 1000);
+		}, 2000);
 		
 		
 		

@@ -16,7 +16,7 @@ class DatosPersonales extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'nombre', 'last_name', 'apellidos', 'genero', 'estado_civil', 'direccion', 'departamento', 'municipio', 'correo_personal', 'cumpleanos', 'foto', 'estado', 'id_usuario','created_at','updated_at'
+        'id', 'nombre', 'last_name', 'apellidos', 'genero', 'estado_civil', 'direccion', 'departamento', 'municipio', 'correo_personal', 'cumpleanos', 'foto', 'estado', 'bg_user', 'id_usuario','created_at','updated_at'
     ];
 
 }

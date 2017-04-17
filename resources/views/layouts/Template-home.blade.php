@@ -70,6 +70,7 @@
                     <!-- Left Side Of Navbar -->
                     <img class="paleytaIco" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
                     <div class="col-xs-12 col-sm-12 col-md-12 captionSelectColorPlat nonnePapletaUser">
+                      <input type="hidden" class="userLogiColo" name="id_userLo" value="{{ Auth::user()->id }}">
                       <div class="col-xs-12 col-sm-12 col-md-12">
                         <div data-color="#d9e021" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors greensuaveBlock">
                           

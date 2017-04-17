@@ -298,6 +298,14 @@
 	Route::get('/notifiViewHi', 'HomeController@notifyView');
 	Route::post('/notifiViewHi', 'HomeController@notifyView');
 
+/*
+|--------------------------------------------------------------------------
+| Change Color Portal User
+|--------------------------------------------------------------------------
+|
+*/
+	Route::get('/changeColorUser', 'HomeController@notifyView');
+	Route::post('/changeColorUser', 'HomeController@notifyView');
 	
 
 /*

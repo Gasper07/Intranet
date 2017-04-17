@@ -2671,4 +2671,15 @@ class HomeController extends Controller
 
     }
 
+
+
+    public function ChangeColorBGUser(Request $request)
+    {
+      $IDUserChancheColor = $request->idUserChangeCOlor;
+      $BgUser = $request->dataColor;
+
+      dd($BgUser);
+
+    }
+
 }

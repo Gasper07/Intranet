@@ -5,6 +5,7 @@ jQuery(document).ready(function($) {
 	$('.captionUsersInLive>div.accordion>div.content>p').remove();
 });
 
+// CHANGE COLOR PANEL USER
 jQuery(document).ready(function($) {
 	$('.paleytaIco').click(function(event) {
 		$('.nonnePapletaUser').toggleClass('activePalteUser');
@@ -12,7 +13,27 @@ jQuery(document).ready(function($) {
 
 	$('.col-xs-12.col-sm-12.col-md-12.captionSelectColorPlat>.col-xs-12.col-sm-12.col-md-12>.bloqCOlors').click(function(event) {
 		var dataColor = $(this).data('color');
-		alert(dataColor);
+		var dataIdChangeColor = $('.userLogiColo').val();
+
+		$.ajaxSetup({
+		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+		});
+
+		$.ajax({
+		    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/changeColorUser',
+		    type: 'POST',
+		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+		    data: "idUserChangeCOlor="+dataIdChangeColor+"&dataColor="+dataColor+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+		    dataType: 'json',
+		    success: function(result, index, value, data) {
+		    	console.log(result);
+
+		    },
+		    error: function() {
+		        console.log('Error');
+		    }
+		});
+
 	});
 });z
 

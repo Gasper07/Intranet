@@ -231,7 +231,6 @@ class HomeController extends Controller
            $Bguser = $keyDataUserLogiado->bg_user;
            return $Bguser;
          }else{
-           dd('entro 2');
            $Bguser ='';
            return $Bguser;
          }
@@ -1092,7 +1091,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.profile-of-user',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.profile-of-user',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function RankingEmpleados()

@@ -478,9 +478,6 @@
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionPublichIcos">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">          
-          <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
-        </div>
         <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
       </div>
       {{-- END RECORDATORIOS --}}

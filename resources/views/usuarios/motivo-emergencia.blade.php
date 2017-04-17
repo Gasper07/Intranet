@@ -50,10 +50,10 @@
                </div>
                <div class="col-md-6 actionpuBlish">                 
                  <div class="col-md-2 Adjuntar adjunEmerImg">
-                   <img class="img-responsive img1DoEmer" onclick="chooseFileDocuEmer()"  src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
+                   <img class="img-responsive img1DoEmer" onclick="chooseFileDocuEmer()"  src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
                  </div>
                  <div class="col-md-2 AdjuntarFoto AdjuntarFotoEmergency">
-                   <img class="img-responsive img1FotEmer" onclick="chooseFileIMGEmer()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
+                   <img class="img-responsive img1FotEmer" onclick="chooseFileIMGEmer()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
                  </div>
                  <p>Adjuntar foto o documentos que respalden tu imprevisto</p>
                </div>
@@ -87,7 +87,7 @@
     </div>
 
      <div class="col-md-12 datPublich">
-       <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
+       <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
      </div>
 
     </div>

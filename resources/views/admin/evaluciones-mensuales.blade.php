@@ -56,7 +56,7 @@
                   <h3>Encargado de área</h3>
                   <a href="#!">
                     <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
-                    {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
+                    {{-- <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
                     <p class="fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
                     @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                       @if($users->id_usuario == $valueRankingGeneral['id_user'])
@@ -120,8 +120,8 @@
 
     </div>
     <div class="col-md-12 datPublich publishChatAdmin publichDocuemnts">
-      <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
-      <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
+      <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
+      <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
     </div>
   </div>
 </section>

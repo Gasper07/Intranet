@@ -24,7 +24,7 @@
 
           <div class="collapse navbar-collapse collapseMenuUser" id="app-navbar-collapse">
               <!-- Left Side Of Navbar -->
-              <img class="paletaAdminBoard" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+              <img class="paletaAdminBoard" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
               <ul class="centerNameUserMenu">
                   <li class="colorBlack fontMiriamProRegular">Historial de entrada y salidas</li>
               </ul>
@@ -38,12 +38,12 @@
                   @else
                       <li class="icosMenus">
                           <a href="#!">
-                              <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/homeNotifiAdmin.png" class="img-responsive" alt="">                                    
+                              <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/homeNotifiAdmin.png" class="img-responsive" alt="">                                    
                           </a>
                       </li>
                       <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
                         <a href="#!">
-                            <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
+                            <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
                             <div class="notifiCount">
                               @include('admin.partials.fields-history-notificaciones-cantidad')
                             </div>

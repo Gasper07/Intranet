@@ -79,7 +79,7 @@
                       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 UserImgData">
                         <div class="label dataPrubeIm dataProfileHistory" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datos->foto }}')">
                         </div>
-                        {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
+                        {{-- <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
                         <p class="fontMiriamProSemiBold nameUSerHisroty">{{ $datos->nombre }} {{ $datos->apellidos }}</p>
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 horaEntrada">                        
@@ -135,7 +135,7 @@
         <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DataUserRankings DataUserRankingsHistory">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bloqueactionsRankingsSz">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 UserImgData">
-              <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
+              <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
               <p class="fontMiriamProSemiBold">Lissette Rivas</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 horaEntrada">
@@ -176,8 +176,8 @@
   </div>
 </section>
   <div class="col-md-12 datPublich publishChatAdmin publishRanking">
-    <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
-    <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
+    <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
+    <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
   </div>
 
 

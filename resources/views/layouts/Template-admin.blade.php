@@ -67,16 +67,16 @@
                             <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/home" class="dashico"> Dashboards</a>
                           </li>
                           <li>
-                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/chatUsers" class="mensageIco">  Mensajes</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/chat" class="mensageIco">  Mensajes</a>
                           </li>
                           <li>
-                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/buzon-sugerencias" class="usgerenIco"> Sugerencias</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/sugerencias" class="usgerenIco"> Sugerencias</a>
                           </li>
                           <li>
-                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencia" class="emergenciasIco"> Emergencias</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencias" class="emergenciasIco"> Emergencias</a>
                           </li>
                           <li>
-                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitudes-proceso" class="permisoIco">  Permisos</a>
+                            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitud-permisos" class="permisoIco">  Permisos</a>
                           </li>
                           <li>
                             <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/calendario" class="calendarIco"> Calendario</a>
@@ -120,22 +120,22 @@
                               </a>
                             </li>
                             <li>
-                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/chatUsers">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/chat">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/message.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/buzon-sugerencias">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/sugerencias">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/sguerencias.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencia">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/emergencias">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/emergencias.png" class="img- responsive" alt="">      
                               </a>
                             </li>
                             <li>
-                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitudes-proceso">
+                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/solicitud-permisos">
                                 <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/permisos.png" class="img- responsive" alt="">      
                               </a>
                             </li>

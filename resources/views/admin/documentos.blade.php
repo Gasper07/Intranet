@@ -124,7 +124,7 @@
             <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 " data-identificador="{{$valueCarpeta['identiFI']}}">          
                <i class="fa fa-check noneIcon direCar" aria-hidden="true"></i>
               <a href="{{ $valueCarpeta['nameCarpeta2'] }}">
-                <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/carpetaVacia.png" alt="">
+                <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/carpetaVacia.png" alt="">
                 <p>{{ $valueCarpeta['nameCarpeta'] }}</p>
               </a>
             </div>
@@ -135,7 +135,7 @@
           <p class="gasper">{{ $randomNmm = rand(5, 12323352) }}</p>
            <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 dataDowload" data-identificador="cla{{$randomNmm}}" id="parrafo{{$randomNmm}}" draggable="true" ondragstart="drag(this, event)">
               <i class="fa fa-check noneIcon FilCa" aria-hidden="true"></i>
-             <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/dcumento.png" alt="">
+             <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/dcumento.png" alt="">
              <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentDowload" method="post" accept-charset="utf-8" class="dewoDowloas">
                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                <input type="hidden" name="_url" value="{{ $idurl }}">
@@ -153,7 +153,7 @@
         
         
         <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 fileUploDat">
-          <img class="img-responsive" onclick="FileNewDocu()" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/icons/addFile.png" alt="">
+          <img class="img-responsive" onclick="FileNewDocu()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/addFile.png" alt="">
           <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentUpload" method="post" accept-charset="utf-8" class="uploadArchivoNew" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="_url" value="{{ $idurl }}">
@@ -174,8 +174,8 @@
 
     </div>
     <div class="col-md-12 datPublich publishChatAdmin publichDocuemnts">
-      <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
-      <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
+      <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
+      <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
     </div>
   </div>
 </section>

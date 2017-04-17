@@ -1969,6 +1969,13 @@ input.detallInformation:disabled {
   margin-bottom: 2%;
 }
 
+.col-xs-12.col-sm-6.col-md-4.col-lg-4.ProfileFotosStartsMoreUser>a>p {
+  text-align: center;
+  margin-top: 4%;
+  font-size: 16px;
+  margin-bottom: 2%;
+}
+
 .col-xs-12.col-sm-6.col-md-4.col-lg-4.ProfileFotosStartsMoreUser>div {
   text-align: center;
   margin: 0 auto;

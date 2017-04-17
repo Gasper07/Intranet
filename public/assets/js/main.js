@@ -562,6 +562,9 @@ jQuery(document).ready(function($) {
 // like dislike
 jQuery(document).ready(function($) {
 	$('.clkLike').click(function(event) {
+		$('.lnvmodal-loader').css({
+			display: 'block'
+		});
 		var finLikeUser = $(this).find('input.idUseLike').val();
 		var finLikePost = $(this).find('input.idPubliLike').val();
 		var finDisLikePost = $(this).find('input.dislike').val();
@@ -580,6 +583,9 @@ jQuery(document).ready(function($) {
 		    data: "idLikeUser="+finLikeUser+"&idLikePost="+finLikePost+"&idUserPublicPost="+finUserPublicPost+"&idDislikePost="+finDisLikePost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
+		    	$('.lnvmodal-loader').css({
+		    		display: 'none'
+		    	});
 		    	$(Click).text(result+' Me gustas');	
 
 		    },

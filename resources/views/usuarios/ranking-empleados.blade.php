@@ -9,7 +9,10 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profilesRabking">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ProfileFotosStarts">
                  <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $UsersEmpleados->foto }}')"></div>
-                 <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
+                 <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
+                   <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
+                 </a>
+                 
                  {{-- <p class="PuntuancionRanlinkNumber">4.5</p> --}}
                  @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                    @if($UsersEmpleados->id_usuario == $valueRankingGeneral['id_user'])

@@ -5,6 +5,11 @@ jQuery(document).ready(function($) {
 	$('.captionUsersInLive>div.accordion>div.content>p').remove();
 });
 
+jQuery(document).ready(function($) {
+	$('.paleytaIco').click(function(event) {
+		$('.nonnePapletaUser').toggleClass('activePalteUser');
+	});
+});z
 
 $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.col-sm-12.col-md-12.col-lg-12.FriendWithChat>a', function() {
     // Get data user select

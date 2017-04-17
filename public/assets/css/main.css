@@ -3791,4 +3791,13 @@ ul.Redconocistes>li>div {
   margin-right: 2%;
   margin-top: 4%;
   margin-bottom: 4%;
+  cursor: pointer;
+}
+
+.nonnePapletaUser {
+  display: none;
+}
+
+.activePalteUser{
+  display: block;
 }

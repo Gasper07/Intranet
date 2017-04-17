@@ -229,7 +229,7 @@
         @yield('content')
     </div>
 
-    <span class="lnvmodal lnvmodal-loader" style="opacity: 0.9; display: block;">
+    <span class="lnvmodal lnvmodal-loader" style="opacity: 0.9;">
       <p>
       <span>Cargando...</span>
       </p>

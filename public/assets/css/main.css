@@ -3980,3 +3980,11 @@ ul.Redconocistes>li>div {
   -moz-transform: translateZ(0);
   transform: translateZ(0);
 }
+
+.lnvmodal-loader > aside > div {
+  background: transparent url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/fancybox_loading.gif') no-repeat center center;
+  height: 48px;
+  overflow: hidden;
+  width: 48px;
+  text-indent: -100em;
+}

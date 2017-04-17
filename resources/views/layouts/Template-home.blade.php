@@ -111,7 +111,7 @@
                                           @foreach($JoinTableUserDatas as $dataUsers)
                                             @if($dataUsers->id_usuario == Auth::user()->id)
                                              <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile">
-                                               <div class="containerPhotoProfile" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public /assets/profiles/{{ $dataUsers->foto }}')">
+                                               <div class="containerPhotoProfile" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUsers->foto }}')">
                                                </div>
                                              </a>
                                             @endif

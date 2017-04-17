@@ -234,6 +234,8 @@ class HomeController extends Controller
          }
        }
 
+       dd($Bguser);
+
        return $Bguser;
    }
     

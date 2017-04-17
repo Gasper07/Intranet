@@ -95,7 +95,7 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors celesteBlock">
                           
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors ">
+                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors blackBlock">
                           
                         </div>
                       </div>

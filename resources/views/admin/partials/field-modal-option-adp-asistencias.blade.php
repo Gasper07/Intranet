@@ -6,7 +6,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 contRevibeSOlic">
           <div class="col-xs-12 col-sm-12 col-md-12 clAdpsCLo">
             <h5 class="aceptSol">¿Esta seguro que desea colocar ADP a {{ $datos->nombre }}?</h5>
-            <div class="captionEvulveImg" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datos->foto }}')">              
+            <div class="captionEvulveImg" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datos->foto }}')">              
             </div>
             <h4 class="nameSoliUser">{{ $datos->nombre }} {{ $datos->apellidos }}</h4>
             <p class="AcepAdp">Aceptar</p>

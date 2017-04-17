@@ -8,15 +8,9 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
       <h1>Editar usuario</h1>
-      <h3>Meybelline</h3>
-      <h4>gerente.funanciero@grupovaldez.com</h4>
+      @include('admin.partials.fields-name-admin-login')      
+      @include('admin.partials.fields-search-usuarios')
 
-      <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
-        </div>
-      </form>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <ul class="nav navbar-nav navbar-right navulRIght">
@@ -52,7 +46,7 @@
     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 OtherUserEdit">
       @foreach($UsersAlls as $userEdits)
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dataForUserdonw">
-          <div class="label dataPrubeIm dataProfileEditUsersAlls" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $userEdits->foto }}')"></div>
+          <div class="label dataPrubeIm dataProfileEditUsersAlls" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $userEdits->foto }}')"></div>
           <a href="{{ $userEdits->id_usuario }}">
             <p class="fontMiriamProSemiBold">{{ $userEdits->nombre }} {{ $userEdits->apellidos }}</p>
           </a>
@@ -93,7 +87,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dataImgAndranking">
               <input type="hidden" class="idUserEdits" value="{{ $DatasUser->id_usuario }}">
               <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 imgProfiEdit">
-                <div class="label dataPrubeIm dataProfileEditUsers" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $DatasUser->foto }}')"></div>
+                <div class="label dataPrubeIm dataProfileEditUsers" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $DatasUser->foto }}')"></div>
               </div>
               <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5 editRankinFoto">
                 <h3>{{ $DatasUser->nombre }} {{ $DatasUser->apellidos }} </h3>

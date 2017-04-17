@@ -8,15 +8,9 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
       <h1>Editar usuario</h1>
-      <h3>Meybelline</h3>
-      <h4>gerente.funanciero@grupovaldez.com</h4>
+      @include('admin.partials.fields-name-admin-login')      
+      @include('admin.partials.fields-search-usuarios')
 
-      <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
-        </div>
-      </form>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <ul class="nav navbar-nav navbar-right navulRIght">
@@ -66,7 +60,7 @@
                 @if($users->id_usuario == $idsUserGroup[$i])
                   <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 imgProfiEdit">
                     {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
-                    <div class="label dataPrubeIm dataProfileEditGroup" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>
+                    <div class="label dataPrubeIm dataProfileEditGroup" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                     <input type="hidden" name="id_user_group[]" value="{{ $users->id_usuario }}">
                     {{-- <div class="rectangle"></div> --}}
                   </div>

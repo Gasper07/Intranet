@@ -479,9 +479,23 @@
    </ul>
 </div> 
 
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SendFormDataRes">
-  <input type="submit" value="Enviar evaluación">
-</div>
+<p class="gasper">{{ $verifiEvaluacion = false }}</p>
+<p class="gasper">{{ $carbon = new \Carbon\Carbon() }}</p>
+<p class="gasper">{{ $MesActual = $carbon->now()->format('m') }}</p>
+
+
+@foreach ($HistorialEvaluaciones as $keyHistorialEvaluaciones) 
+  @if($idUserEvaluacion == $keyHistorialEvaluaciones->id_usuario && $idEncargado == $keyHistorialEvaluaciones->id_encargado && $MesActual == $keyHistorialEvaluaciones->mes_evaluacion )
+    <p class="gasper">{{ $verifiEvaluacion = true }}</p>
+  @endif
+@endforeach
+
+@if($verifiEvaluacion == false)
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SendFormDataRes">
+    <input type="submit" value="Enviar evaluación">
+  </div>
+@endif
+
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 errorSelec">
   <p>Por favor responder todas la preguntas de la evaluación</p>

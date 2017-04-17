@@ -5,14 +5,14 @@
         <i class="fa fa-times" aria-hidden="true"></i>
       </a> --}} 
       <div class="bgHappy">
-        <img class="img-responsive PeopleHappy" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $dataUSe->foto }}">
+        <img class="img-responsive PeopleHappy" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}">
       </div>
       <h4 class="fontCovered">¡Feliz cumpleaños {{ $dataUSe->name }}!</h4>
-      <h5 class="fontMiriamProRegular">Te desea Valdez Mobile</h5>
+      <h5 class="fontMiriamProRegular">{{ $PostPar['descripcion'] }}</h5>
       <div class="ui feed uifeedActions">
         <div class="event">
           <div class="label">
-            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
+            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/etiqueta-ico.png">
           </div>
           <div class="content contLike">
             <div class="summary">
@@ -30,6 +30,7 @@
                     <input type="hidden" class="dislike" name="dislike_action_id" value="">
                     <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                     <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                   </a>
                 @endif
               @endforeach
@@ -38,6 +39,7 @@
                   0 Me gusta
                   <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                   <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                 </a>
               @endif
             </div>
@@ -49,11 +51,11 @@
           @if($PostPar['id'] == $datComents->id_publicacion)
             <div class="ui feed uifeedComnetUser">
               <div class="event">
-                <div class="label dataPrubeIm" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $datComents->foto }}')">
+                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                 </div>
                 <div class="content">
                   <div class="summary">
-                    <a class="user colorGrisMediumSuave fontMiriamProSemiBold">
+                    <a href="profile-users/{{ $PostPar['id_usuario'] }}"  class="user colorGrisMediumSuave fontMiriamProSemiBold">
                       {{ $datComents->name }}
                     </a>
                     <div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">
@@ -71,6 +73,7 @@
           <textarea name="comentario_post" required></textarea>
           <input type="hidden" class="iduserComent" name="coment_action_id" value="{{ Auth::user()->id }}">
           <input type="hidden" class="idDataPost" name="data_id_post" value="{{ $PostPar['id'] }}">
+          <input type="hidden" class="idUserPublicoPostComent" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
         </div>
         <a href="" class="dataComenyt"><p>Comentar</p></a>
       </form>

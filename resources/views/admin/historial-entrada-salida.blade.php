@@ -45,24 +45,11 @@
                         <a href="#!">
                             <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
                             <div class="notifiCount">
-                                <p>3</p>
+                              @include('admin.partials.fields-history-notificaciones-cantidad')
                             </div>
                         </a>
                         <div class="menu">
-                          <div class="item">New</div>
-                          <div class="item">
-                            <span class="description">ctrl + o</span>
-                            Open...
-                          </div>
-                          <div class="item">
-                            <span class="description">ctrl + s</span>
-                            Save as...
-                          </div>
-                          <div class="item">
-                            <span class="description">ctrl + r</span>
-                            Rename
-                          </div>
-                          <div class="item">E-mail Collaborators</div>
+                          @include('admin.partials.fields-history-notificaciones-board')
                         </div>
                       </div>
                       <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">

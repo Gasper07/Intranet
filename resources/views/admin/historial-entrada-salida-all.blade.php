@@ -45,24 +45,11 @@
                         <a href="#!">
                             <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
                             <div class="notifiCount">
-                                <p>3</p>
+                              @include('admin.partials.fields-history-notificaciones-cantidad')
                             </div>
                         </a>
                         <div class="menu">
-                          <div class="item">New</div>
-                          <div class="item">
-                            <span class="description">ctrl + o</span>
-                            Open...
-                          </div>
-                          <div class="item">
-                            <span class="description">ctrl + s</span>
-                            Save as...
-                          </div>
-                          <div class="item">
-                            <span class="description">ctrl + r</span>
-                            Rename
-                          </div>
-                          <div class="item">E-mail Collaborators</div>
+                          @include('admin.partials.fields-history-notificaciones-board')
                         </div>
                       </div>
                       <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">
@@ -98,7 +85,7 @@
     @foreach($UsersAlls as $DataUser)
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 RegistroFechas">
         <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 USerdataHoras">
-          <div class="label dataProfileHistoryAllUsers" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $DataUser->foto }}')"> </div>
+          <div class="label dataProfileHistoryAllUsers" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $DataUser->foto }}')"> </div>
           <p class="fontMiriamProSemiBold">{{ $DataUser->nombre }} {{ $DataUser->apellidos }}</p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contentDatsFechas">

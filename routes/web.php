@@ -286,6 +286,20 @@
 	Route::post('/marcarSalida', 'HomeController@StoreSalida');
 
 
+	Route::get('/preview-conte/data/viewDme/{idusers}/{idpost}', 'HomeController@previewContPost');
+// previuw-detall
+
+/*
+|--------------------------------------------------------------------------
+| Route Notificacion vista
+|--------------------------------------------------------------------------
+|
+*/
+	Route::get('/notifiViewHi', 'HomeController@notifyView');
+	Route::post('/notifiViewHi', 'HomeController@notifyView');
+
+	
+
 /*
 |--------------------------------------------------------------------------
 | ADMMINISTRADOR GENERAL
@@ -351,7 +365,26 @@
 	        Route::post('/admin/sugerencias_group_delete', 'Admin\AdminController@storeCheeboxGroupDelete');
 
 	    	Route::get('/admin/emergencias', 'Admin\AdminController@Emergencias');
+	    		/*
+	    	    |--------------------------------------------------------------------------
+	    	    | View Fecha Emergwencia
+	    	    |--------------------------------------------------------------------------
+	    	    |
+	    	    */
+	    	Route::get('/admin/emergencias/data/fech/emergenci/{fechaemergenci}', 'Admin\AdminController@EmergenciasFechas');
+	    	Route::get('/admin/emergencias/data/fech/emergenci/cont/{fechaemergenci}', 'Admin\AdminController@emergenciasTotalsFechas');
+	    	Route::post('/admin/emergencias/data/fech/emergenci/cont/{fechaemergenci}', 'Admin\AdminController@emergenciasTotalsFechas');
+	   		
 	   		Route::get('/admin/solicitud-permisos', 'Admin\AdminController@SolicitudPermisos');
+	   			/*
+	   		    |--------------------------------------------------------------------------
+	   		    | View Fecha Solicitud permiso
+	   		    |--------------------------------------------------------------------------
+	   		    |
+	   		    */
+	   		Route::get('/admin/solicitud-permisos/data/fech/permiso/{fechapermiso}', 'Admin\AdminController@SolicitudPermisosFecha');
+	   		Route::get('/admin/solicitud-permisos/data/fech/permiso/coun/{fechapermiso}', 'Admin\AdminController@PermisosTotalsFechas');
+	   		Route::post('/admin/solicitud-permisos/data/fech/permiso/coun/{fechapermiso}', 'Admin\AdminController@PermisosTotalsFechas');
 	    	/*
 	        |--------------------------------------------------------------------------
 	        | Solicitud aceptada y denegada
@@ -478,6 +511,16 @@
 
 	    Route::get('/admin/history/{id}', 'Admin\AdminController@HistoryEntradaSalidaUsers');
 	    Route::get('/admin/historys/data/allUsers', 'Admin\AdminController@HistoryEntradaSalidaUsersAlls');
+			    /*
+			    |--------------------------------------------------------------------------
+			    | Historial de llegadas Fechas
+			    |--------------------------------------------------------------------------
+			    |
+			    */
+			    Route::get('/admin/HistoryLlegadas/histo/Asist/{fecha}', 'Admin\AdminController@HistoryUsersFechas');
+			    Route::post('/admin/HistoryLlegadas/histo/Asist/{fecha}', 'Admin\AdminController@HistoryUsersFechas');
+			    Route::get('/admin/HistoryLlegadas/histo/Asist/Date/{fecha}', 'Admin\AdminController@HistoryAyer');
+			    Route::post('/admin/HistoryLlegadas/histo/Asist/Date/{fecha}', 'Admin\AdminController@HistoryAyer');
 
 	    /*
 	    |--------------------------------------------------------------------------
@@ -506,6 +549,14 @@
 	   		 */
 		    Route::get('/admin/Desactive_Users', 'Admin\AdminController@DescativeUser');
 		    Route::post('/admin/Desactive_Users', 'Admin\AdminController@DescativeUser');
+		    /*
+            |--------------------------------------------------------------------------
+            | Busqueda de usuario
+            |--------------------------------------------------------------------------
+            |
+            */
+	        Route::get('/admin/search_users', 'Admin\AdminController@SearchUsuarios');
+	        Route::post('/admin/search_users', 'Admin\AdminController@SearchUsuarios');
 
 	    /*
 	    |--------------------------------------------------------------------------
@@ -590,6 +641,36 @@
 
 
 	    Route::get('/demoRecive', 'Admin\AdminController@RankingWithAppAsesores');
+
+	    /*
+	    |--------------------------------------------------------------------------
+	    | Route Notificacion fecha Anterior
+	    |--------------------------------------------------------------------------
+	    |
+	    */
+	    	Route::get('/admin/notifiViewAnterior', 'Admin\AdminController@ActivitiesRecientesPorFecha');
+	    	Route::post('/admin/notifiViewAnterior', 'Admin\AdminController@ActivitiesRecientesPorFecha');
+
+    	/*
+    	|--------------------------------------------------------------------------
+    	| Route Historial notificaciones
+    	|--------------------------------------------------------------------------
+    	|
+    	*/
+    		Route::get('/admin/HistoryNotify/{fecha}', 'Admin\AdminController@HistorialActividadesRecientes');
+    		Route::post('/admin/HistoryNotify/{fecha}', 'Admin\AdminController@HistorialActividadesRecientes');
+    		Route::get('/admin/HistoryNotify', 'Admin\AdminController@HistorialActividadesRecientesAll');
+    		Route::post('/admin/HistoryNotify', 'Admin\AdminController@HistorialActividadesRecientesAll');
+
+		/*
+		|--------------------------------------------------------------------------
+		| Route Previews de Post
+		|--------------------------------------------------------------------------
+		|
+		*/
+
+		Route::get('/admin/preview-conte/data/viewDme/{idusers}/{idpost}', 'Admin\AdminController@previewContPost');
+
 
 
 	});

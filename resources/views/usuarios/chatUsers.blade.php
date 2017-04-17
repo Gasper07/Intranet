@@ -1,7 +1,7 @@
 @extends('layouts.Template-chat-users')
 
 @section('content')
-<div class="container continerWithSite">
+<div class="container continerWithSite contaiNChatU">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 captionPosteos captionChat">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ChatWithUser">

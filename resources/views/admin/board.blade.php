@@ -54,24 +54,11 @@
                         <a href="#!">
                             <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/campaniNotifiAdmin.png" class="img-responsive" alt="">
                             <div class="notifiCount">
-                                <p>3</p>
+                              @include('admin.partials.fields-history-notificaciones-cantidad')
                             </div>
                         </a>
                         <div class="menu">
-                          <div class="item">New</div>
-                          <div class="item">
-                            <span class="description">ctrl + o</span>
-                            Open...
-                          </div>
-                          <div class="item">
-                            <span class="description">ctrl + s</span>
-                            Save as...
-                          </div>
-                          <div class="item">
-                            <span class="description">ctrl + r</span>
-                            Rename
-                          </div>
-                          <div class="item">E-mail Collaborators</div>
+                          @include('admin.partials.fields-history-notificaciones-board')
                         </div>
                       </div>
                       <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">
@@ -99,6 +86,39 @@
       </div>
   </nav>
 </section>
+
+<div class="col-xs-12 col-sm-12 notifisMobile">
+  <!-- Right Side Of Navbar -->
+  <ul class="nav navbar-nav navbar-right navulRIght">
+      <!-- Authentication Links -->
+      @if (Auth::guest())
+          <li><a href="{{ url('/login') }}">Login</a></li>
+          <li><a href="{{ url('/register') }}">Register</a></li>
+      @else
+          <li class="icosMenus">
+              <a href="#!">
+                  <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
+              </a>
+          </li>
+          <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
+            <a href="#!">
+                <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/notify-ico.png" class="img-responsive" alt="">
+                <div class="notifiCount">
+                    @include('admin.partials.fields-history-notificaciones-cantidad')
+                </div>
+            </a>
+            <div class="menu">
+              @include('admin.partials.fields-history-notificaciones-board')
+            </div>
+          </div>
+      @endif
+  </ul>
+  
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 captionRecientesMobie">
+  @include('admin.partials.fields-history-notificaciones-board')
+</div>
 
 
 {{-- SECTION BLOQUE NOTIFICACION Y MENSAJES --}}

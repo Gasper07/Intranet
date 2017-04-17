@@ -27,6 +27,7 @@
 
     {{-- Main style --}}
     {!! Html::style('public/assets/css/main.css') !!}
+    {!! Html::style('public/assets/css/main_responsive.css') !!}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" ></script> 
     <script src="//js.pusher.com/2.2/pusher.min.js" type="text/javascript" type="text/javascript" ></script>  

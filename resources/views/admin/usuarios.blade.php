@@ -7,14 +7,13 @@
       
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
-      <h1>50 Usuarios</h1>
-      <h3>Meybelline</h3>
-      <h4>gerente.funanciero@grupovaldez.com</h4>
+      <h1>@if($totalUsers>1) {{ $totalUsers }} Usuarios @else {{ $totalUsers }} Usuario @endif</h1>
+      @include('admin.partials.fields-name-admin-login')
 
       <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
+          <input id="filtrarUser" type="text" placeholder="Buscar usuario">
         </div>
       </form>
     </div>
@@ -45,9 +44,9 @@
 <section class="container-fluid">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionMenuInterno">
     <ul class="listActionDocuemntps">
-        <li ><a href="">Home</a></li>
-        <li><a href="">Board</a></li>
-        <li class="active"><a href="">Usuarios</a></li>
+        <li ><a href="home">Home</a></li>
+        <li><a href="board">Board</a></li>
+        <li class="active"><a href="usuarios">Usuarios</a></li>
         <li class="dreopDocument">
           <div class="dropdown dwropOptionMensgae">
             <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,80 +107,83 @@
         
         @foreach($JoinTableUserDatosPersonalesDatosEmpleado as $UserDatosPersonales)
           @if($UserDatosPersonales->estado == 1)
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 allDatasUser">
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 imgAndNameUser">
-                <div class="dropdown DropOptinUsersD optionAllUsers">
-                  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li>
-                      <a href="usuarios/edit/{{ $UserDatosPersonales->id_usuario }}">Editar información</a>        
-                    </li>
-                    <li>
-                      <a href="usuarios/editHorario/{{ $UserDatosPersonales->id_usuario }}">Editar horario</a>        
-                    </li>
-                    <li>
-                      <form action="Desactive_Users" method="post" accept-charset="utf-8" class="removeUsers">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">  
-                        <input type="hidden" name='ide_user' value="{{ $UserDatosPersonales->id_usuario }}">
-                        <input type="submit" value="Eliminar">
-                      </form>         
-                    </li>
-                  </ul>          
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dataAllUserSer">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 allDatasUser">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 imgAndNameUser">
+                  <div class="dropdown DropOptinUsersD optionAllUsers">
+                    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                      <li>
+                        <a href="usuarios/edit/{{ $UserDatosPersonales->id_usuario }}">Editar información</a>        
+                      </li>
+                      <li>
+                        <a href="usuarios/editHorario/{{ $UserDatosPersonales->id_usuario }}">Editar horario</a>        
+                      </li>
+                      <li>
+                        <form action="Desactive_Users" method="post" accept-charset="utf-8" class="removeUsers">
+                          <input type="hidden" name="_token" value="{{ csrf_token() }}">  
+                          <input type="hidden" name='ide_user' value="{{ $UserDatosPersonales->id_usuario }}">
+                          <input type="submit" value="Eliminar">
+                        </form>         
+                      </li>
+                    </ul>          
+                  </div>
+                  <input type="checkbox" class="datSelectEdit"  value="{{ $UserDatosPersonales->id_usuario }}">
+                  <div class="label dataPrubeIm dataProfileAllUsers" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $UserDatosPersonales->foto }}')"></div>
+                  <p class="fontMiriamProSemiBold">{{ $UserDatosPersonales->nombre }} {{ $UserDatosPersonales->apellidos }}</p>
                 </div>
-                <input type="checkbox" class="datSelectEdit"  value="{{ $UserDatosPersonales->id_usuario }}">
-                <div class="label dataPrubeIm dataProfileAllUsers" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $UserDatosPersonales->foto }}')"></div>
-                <p class="fontMiriamProSemiBold">{{ $UserDatosPersonales->nombre }} {{ $UserDatosPersonales->apellidos }}</p>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 EmailUser topDatasUser">
-                <p>{{ $UserDatosPersonales->correo_corporativo }}</p>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 CelUsers topDatasUser">
-                <p>{{ $UserDatosPersonales->celular }}</p>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 ExtUsers topDatasUser">
-                <p>{{ $UserDatosPersonales->extencion }}</p>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 RankinUsers topDatasUser">
-                 @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
-                   @if($UserDatosPersonales->id_usuario == $valueRankingGeneral['id_user'])
-                     @if($valueRankingGeneral['puntosRanking'] <= 15)
-                       <div class="ui star rating" data-rating="1"></div>
-                     @elseif ($valueRankingGeneral['puntosRanking'] > 15 && $valueRankingGeneral['puntosRanking'] <= 30) 
-                       <div class="ui star rating" data-rating="2"></div>
-                     @elseif ($valueRankingGeneral['puntosRanking'] > 30 && $valueRankingGeneral['puntosRanking'] <= 45) 
-                       <div class="ui star rating" data-rating="3"></div>
-                     @elseif ($valueRankingGeneral['puntosRanking'] > 45 && $valueRankingGeneral['puntosRanking'] < 75) 
-                       <div class="ui star rating" data-rating="4"></div>
-                     @elseif ($valueRankingGeneral['puntosRanking'] >= 75) 
-                       <div class="ui star rating" data-rating="5"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 EmailUser topDatasUser">
+                  <p>{{ $UserDatosPersonales->correo_corporativo }}</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 CelUsers topDatasUser">
+                  <p>{{ $UserDatosPersonales->celular }}</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 ExtUsers topDatasUser">
+                  <p>{{ $UserDatosPersonales->extencion }}</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 RankinUsers topDatasUser">
+                   @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
+                     @if($UserDatosPersonales->id_usuario == $valueRankingGeneral['id_user'])
+                       @if($valueRankingGeneral['puntosRanking'] <= 15)
+                         <div class="ui star rating" data-rating="1"></div>
+                       @elseif ($valueRankingGeneral['puntosRanking'] > 15 && $valueRankingGeneral['puntosRanking'] <= 30) 
+                         <div class="ui star rating" data-rating="2"></div>
+                       @elseif ($valueRankingGeneral['puntosRanking'] > 30 && $valueRankingGeneral['puntosRanking'] <= 45) 
+                         <div class="ui star rating" data-rating="3"></div>
+                       @elseif ($valueRankingGeneral['puntosRanking'] > 45 && $valueRankingGeneral['puntosRanking'] < 75) 
+                         <div class="ui star rating" data-rating="4"></div>
+                       @elseif ($valueRankingGeneral['puntosRanking'] >= 75) 
+                         <div class="ui star rating" data-rating="5"></div>
+                       @endif
                      @endif
-                   @endif
-                 @endforeach
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 AdpUsers topDatasUser">
-                <p class="gasper">{{ $totalAdps = 0}}</p>
-                @foreach($HistoryAdps as $adpsColocadas)
-                  @if($UserDatosPersonales->id_usuario == $adpsColocadas->id_usuario)
-                   <p class="gasper">{{ $totalAdps = $totalAdps+1 }}</p>
+                   @endforeach
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 AdpUsers topDatasUser">
+                  <p class="gasper">{{ $totalAdps = 0}}</p>
+                  @foreach($HistoryAdps as $adpsColocadas)
+                    @if($UserDatosPersonales->id_usuario == $adpsColocadas->id_usuario)
+                     <p class="gasper">{{ $totalAdps = $totalAdps+1 }}</p>
+                    @endif
+                  @endforeach
+                  <p>{{ $totalAdps }}</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 NotUses topDatasUser">
+                  <p class="gasper"> {{ $verifiEvaluciaon = 0 }}</p>
+                  @foreach ($GetEvaluaciones as $keyGetEvaluaciones)
+                    @if($keyGetEvaluaciones->id_usuario == $UserDatosPersonales->id_usuario)
+                      <p class="gasper">{{ $verifiEvaluciaon = $verifiEvaluciaon+1 }}</p>
+                      <p>{{ $keyGetEvaluaciones->total }}</p>
+                    @endif
+                  @endforeach
+                  @if($verifiEvaluciaon == 0)
+                      <p>0</p>
                   @endif
-                @endforeach
-                <p>{{ $totalAdps }}</p>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-1 col-lg-1 NotUses topDatasUser">
-                <p class="gasper"> {{ $verifiEvaluciaon = 0 }}</p>
-                @foreach ($GetEvaluaciones as $keyGetEvaluaciones)
-                  @if($keyGetEvaluaciones->id_usuario == $UserDatosPersonales->id_usuario)
-                    <p class="gasper">{{ $verifiEvaluciaon = $verifiEvaluciaon+1 }}</p>
-                    <p>{{ $keyGetEvaluaciones->total }}</p>
-                  @endif
-                @endforeach
-                @if($verifiEvaluciaon == 0)
-                    <p>0</p>
-                @endif
+                </div>
               </div>
             </div>
+            
           @endif
         @endforeach
 

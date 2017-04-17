@@ -8,15 +8,9 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
       <h1>Calendario</h1>
-      <h3>Meybelline</h3>
-      <h4>gerente.funanciero@grupovaldez.com</h4>
-
-      <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
-        </div>
-      </form>
+      @include('admin.partials.fields-name-admin-login')      
+      @include('admin.partials.fields-search-usuarios')      
+      
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <ul class="nav navbar-nav navbar-right navulRIght">
@@ -105,7 +99,7 @@
 
       <div class="col-md-12 datPublich publishChatAdmin publichCalndar">
         <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
-        <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
+        <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
       </div>
      
     </div>
@@ -115,6 +109,9 @@
 
 <!-- Modal -->
 @include('usuarios.partials.field-public-post')
+
+<!-- Modal NOTIFICACIONES -->
+@include('admin.partials.fields-modal-notificaciones')
 
 <div class="alert alert-info dataClMoPosPEr" role="alert">¡Publicacion Agregada!</div>  
   

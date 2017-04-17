@@ -8,15 +8,8 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido">
       <h1>Hola!</h1>
-      <h3>{{ Auth::user()->name }}</h3>
-      <h4>{{ Auth::user()->email }}</h4>
-
-      <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
-        </div>
-      </form>
+      @include('admin.partials.fields-name-admin-login')      
+      @include('admin.partials.fields-search-usuarios')
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <ul class="nav navbar-nav navbar-right navulRIght">
@@ -45,9 +38,9 @@
 <section class="container-fluid">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionMenuInterno">
     <ul>
-        <li class="active"><a href="">Home</a></li>
-        <li><a href="">Board</a></li>
-        <li><a href="">Usuarios</a></li>
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="board">Board</a></li>
+        <li><a href="usuarios">Usuarios</a></li>
     </ul>
   </div>
 </section>
@@ -69,23 +62,18 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 daatNotifis">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 notifis">
             <form action="" class="formNotifisDetall">
-              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">
+              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular dropNOtifis">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       Hoy <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </a>
                   <ul class="dropdown-menu" role="menu">
                       <li>
-                          <a href="">
-                           Hoy
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
+                          <a href="#!" class='ayerActivi'>
                            Ayer
-                          </a>
+                          </a>  
                       </li>
                       <li>
-                          <a href="">
+                          <a href="HistoryNotify">
                            Ver historial
                           </a>
                       </li>
@@ -97,15 +85,15 @@
               <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <ul class="dropdown-menu dropDetallNotify" aria-labelledby="dLabel">
                 <li>
-                  <a href="">Detalles</a>              
+                  <a href="HistoryNotify/{{ $fechaMesActual }}" data-daynext="{{ $fechaDiaSiguiente}}">Detalles</a>
                 </li>
               </ul>          
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber">
-              <h1>40</h1>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber counNumberNotifis">
+              <h1>{{ $totalNotifciaciones }}</h1>
             </div>
 
           </div>
@@ -119,23 +107,18 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 daatNotifis">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 notifis">
             <form action="" class="formNotifisDetall">
-              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">
+              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular dropLLegadas">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       Hoy <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </a>
                   <ul class="dropdown-menu" role="menu">
                       <li>
-                          <a href="">
-                           Hoy
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
+                          <a href="#!" class="ayerAsistencia">
                            Ayer
                           </a>
                       </li>
                       <li>
-                          <a href="">
+                          <a href="history">
                            Ver historial
                           </a>
                       </li>
@@ -147,15 +130,15 @@
               <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <ul class="dropdown-menu dropDetallAsiste" aria-labelledby="dLabel">
                 <li>
-                  <a href="">Detalles</a>              
+                  <a href="HistoryLlegadas/histo/Asist/{{ $fechaMesActual }}" data-daynext="{{ $fechaDiaSiguiente}}">Detalles</a>              
                 </li>
               </ul>          
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber">
-              <h1>0</h1>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber counNumberAsisten">
+              <h1>{{ count($HistoryLLegadasTardes) }}</h1>
             </div>
 
           </div>
@@ -168,23 +151,18 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 daatNotifis">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 notifis">
             <form action="" class="formNotifisDetall">
-              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">
+              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular dropEmergenci">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       Hoy <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </a>
                   <ul class="dropdown-menu" role="menu">
                       <li>
-                          <a href="">
-                           Hoy
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
+                          <a href="#!" class="ayerEmergenci">
                            Ayer
                           </a>
                       </li>
                       <li>
-                          <a href="">
+                          <a href="emergencias">
                            Ver historial
                           </a>
                       </li>
@@ -196,15 +174,15 @@
               <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <ul class="dropdown-menu dropDetallEmerge" aria-labelledby="dLabel">
                 <li>
-                  <a href="">Detalles</a>              
+                  <a href="emergencias/data/fech/emergenci/{{ $fechaMesActual }}" data-daynext="{{ $fechaDiaSiguiente}}">Detalles</a>              
                 </li>
               </ul>          
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber">
-              <h1 class="emergenciRed">4</h1>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber counNumberEmergenci">
+              <h1 class="emergenciRed">{{ count($EmergenciasData) }}</h1>
             </div>
 
           </div>
@@ -218,18 +196,13 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 daatNotifis">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 notifis">
             <form action="" class="formNotifisDetall">
-              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">
+              <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular dropPermiso">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       Hoy <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </a>
                   <ul class="dropdown-menu" role="menu">
                       <li>
-                          <a href="">
-                           Hoy
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
+                          <a href="" class="ayerPermiso">
                            Ayer
                           </a>
                       </li>
@@ -246,15 +219,15 @@
               <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <ul class="dropdown-menu dropDetallPermiso" aria-labelledby="dLabel">
                 <li>
-                  <a href="">Detalles</a>              
+                  <a href="solicitud-permisos/data/fech/permiso/{{ $fechaMesActual }}" data-daynext="{{ $fechaDiaSiguiente}}">Detalles</a>              
                 </li>
               </ul>          
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber">
-              <h1 class="permisosOrange">1</h1>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 countNumber counNumberPermiso">
+              <h1 class="permisosOrange">{{ count($PermisosDataSoli) }}</h1>
             </div>
 
           </div>
@@ -508,14 +481,16 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">          
           <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="">
-        </div>
+        <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
       </div>
       {{-- END RECORDATORIOS --}}
 
     </div>
   </div>
 </section>
+
+
+<!-- Modal NOTIFICACIONES -->
+@include('admin.partials.fields-modal-notificaciones')
   
 @endsection

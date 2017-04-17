@@ -58,7 +58,7 @@
           @foreach($UsersAlls as $users)
             @if($encargado->id_encargardo == $users->id_usuario)
               <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 detallImgProfile">
-                <div class="label dataPrubeIm dataProfileEvaluacionesDetall" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>        
+                <div class="label dataPrubeIm dataProfileEvaluacionesDetall" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>        
               </div>
               <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 detallNameProfile">
                 <p class="colorBlack fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
@@ -94,7 +94,7 @@
 
              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ProfileFotosStarts profilesForDetall roflDetallAd">
                <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 detallImgProfile">
-                 <div class="label dataPrubeIm dataProfileEvaluacionesDetallEvaluando" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $UserEvalua->foto }}')"></div>        
+                 <div class="label dataPrubeIm dataProfileEvaluacionesDetallEvaluando" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $UserEvalua->foto }}')"></div>        
                </div> 
                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 detallNameProfile">
                  <p class="colorBlack fontMiriamProSemiBold">{{ $UserEvalua->nombre }} {{ $UserEvalua->apellidos }}</p>

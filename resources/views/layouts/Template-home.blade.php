@@ -27,6 +27,7 @@
 
     {{-- Main style --}}
     {!! Html::style('public/assets/css/main.css') !!}
+    {!! Html::style('public/assets/css/main_responsive.css') !!}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript" ></script> 
     <script src="//js.pusher.com/2.2/pusher.min.js" type="text/javascript" type="text/javascript" ></script>  
@@ -116,7 +117,33 @@
                         </li>
                     </ul>
                     <ul class="centerNameUserMenu">
-                        <li class="colorBlack fontMiriamProRegular">¡Hola! {{ Auth::user()->name }}</li>
+                        <li class="bloquesMarca marEntrada blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar entrada</a>
+                            <div class='secEntrada'>
+                              <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
+                            </div>
+                        </li>
+                        <li class="bloquesMarca marSalida blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar salida</a>
+                            <div class='secEntrada'>
+                              <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
+                            </div>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil blockMobileMen colorBlack fontMiriamProRegular">
+                            <a href="profile" class="fontMiriamProRegular colorGrisMediumSuave lineJustify">Editar perfil</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil blockMobileMen colorBlack fontMiriamProRegular">
+                            <a href="chatUsers" class="fontMiriamProRegular colorGrisMediumSuave lineJustify">Mensajes privados</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil accionesBussines blockMobileMen colorBlack fontMiriamProRegular">
+                            <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf" target="_blank" class="fontMiriamProRegular colorGrisSuave lineJustify">Manual de empleado</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil accionesBussines blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="fontMiriamProRegular colorGrisSuave lineJustify">Reglamento institucional</a>
+                        </li>
+                        <li class="bloquesMarca accionesPerfil accionesBussines blockMobileMen colorBlack fontMiriamProRegular">
+                            <a class="fontMiriamProRegular colorGrisSuave lineJustify">Ayuda</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -126,33 +153,20 @@
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
-                            <li class="icosMenus">
+                            <li class="icosMenus noneMobile">
                                 <a href="#!">
                                     <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
                                 </a>
                             </li>
-                            <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
+                            <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular noneMobile">
                               <a href="#!">
                                   <img src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/notify-ico.png" class="img-responsive" alt="">
                                   <div class="notifiCount">
-                                      <p>3</p>
+                                      @include('usuarios.partials.fields-Totalnotificaciones')
                                   </div>
                               </a>
                               <div class="menu">
-                                <div class="item">New</div>
-                                <div class="item">
-                                  <span class="description">ctrl + o</span>
-                                  Open...
-                                </div>
-                                <div class="item">
-                                  <span class="description">ctrl + s</span>
-                                  Save as...
-                                </div>
-                                <div class="item">
-                                  <span class="description">ctrl + r</span>
-                                  Rename
-                                </div>
-                                <div class="item">E-mail Collaborators</div>
+                                @include('usuarios.partials.fields-notificaciones')
                               </div>
                             </div>
                             <li class="dropdown uSerLogue colorBlackSuave fontMiriamProRegular">

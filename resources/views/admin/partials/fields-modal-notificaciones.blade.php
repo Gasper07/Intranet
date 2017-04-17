@@ -5,7 +5,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 continPublish">
         
         {{-- FORM ADD NOTIFI --}}
-          <form action="http://127.0.0.1/Sites/Intranet-chat/addPosts" method="post" class="sectionPublichUser sectionPubliNotifis" accept-charset="utf-8">
+          <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/addPosts" method="post" class="sectionPublichUser sectionPubliNotifis" accept-charset="utf-8">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">  
             <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
             <input type="hidden" class="post_evnt" name="post_evento" value="6">
@@ -24,7 +24,7 @@
           {{-- FORM ADD NOTIFI --}}
 
           {{-- FORM CREATE NOTIFI --}}
-          <form action="http://127.0.0.1/Sites/Intranet-chat/admin/create_notify" method="post" accept-charset="utf-8">
+          <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/create_notify" method="post" accept-charset="utf-8">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">  
             <div class="col-xs-12 col-sm-12 col-md-12 bloquesActions bloqueActionAddNodui">
               <div class="ui accordion">

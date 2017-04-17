@@ -8,15 +8,8 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
       <h1>Agregar Empleado</h1>
-      <h3>Meybelline</h3>
-      <h4>gerente.funanciero@grupovaldez.com</h4>
-
-      <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
-        </div>
-      </form>
+      @include('admin.partials.fields-name-admin-login')      
+      @include('admin.partials.fields-search-usuarios')
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <ul class="nav navbar-nav navbar-right navulRIght">

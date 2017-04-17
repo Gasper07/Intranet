@@ -1,7 +1,7 @@
 @extends('layouts.Template-home')
 
 @section('content')
-<div class="container continerWithSite">
+<div class="container continerWithSite containRTanks">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 captionPosteos captionRabkinEmpleados">
         @foreach($JoinTableUserDatosPersonalesDatosEmpleado as $UsersEmpleados)
@@ -82,7 +82,7 @@
         </div>
 
         {{-- BLOQUE CALENDAR --}}
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 listConection">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 listConection liconnectRankin">
           <div class="col-xs-12 col-sm-12 col-md-12 backReturn">
             <a href="home">
               <p>Regresar a Board de trabajo</p>
@@ -94,54 +94,24 @@
         {{--ALL USERS --}}
           @include('usuarios.partials.fields-users-all-chat')
 
-
-          <div class="captionActivitiesRecientes activitisInRanking">
-            <h3 class="fontMiriamProSemiBold">Actividades recientes</h3>
-            <div class="notficiActivitie">
-              <div class="ui relaxed divided list">
-                <div class="item PublicatiOn">
-                  <i class="large github middle aligned icoPubli"></i>
-                  <div class="content">
-                    <a class="header"><strong class="nameUserNotifique">Juan Carlos Valdez </strong> tiene una nueva <span class="typeAccionNotifi">publicación</span></a>
-                  </div>
-                </div>
-                <div class="item NewFotos">
-                  <i class="large github middle aligned icoFotos"></i>
-                  <div class="content">
-                    <a class="header"><strong class="nameUserNotifique">Janixia </strong> ha publicado <span class="typeAccionNotifi">nuevas fotos</span></a>
-                  </div>
-                </div>
-                <div class="item ActivitiPago">
-                  <i class="large github middle aligned icoPagos"></i>
-                  <div class="content">
-                    <a class="header">¡Se ha realizado el pago a las 7:00 P.M.!</a>
-                  </div>
-                </div>
-                <div class="item Profilesa">
-                  <i class="large github middle aligned icoProFile"></i>
-                  <div class="content">
-                    <a class="header"><strong class="nameUserNotifique">Edgardo </strong> actualizó su perfil</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{-- ACTIVIDADES RECIENTES --}}
+          @include('usuarios.partials.fields-actividades-recientes')
 
           {{-- SOLICITUD DE PERMISO --}}
           <div class="col-xs-12 col-sm-12 col-md-12 LinksForEmpleados ForEmpleadoRnakin">
             <ul>
                 <li>
-                  <a href="">
+                  <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf">
                    Manual de empleado
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#!">
                    Reglamento institucional
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#!">
                    Ayuda
                   </a>
                 </li>

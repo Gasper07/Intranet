@@ -1,7 +1,7 @@
 @extends('layouts.Template-home')
 
 @section('content')
-<div class="container continerWithSite">
+<div class="container continerWithSite containBloquePro">
     <div class="row">
       @if(Session::has('Profile_update_User'))
         <p class="alert alert-success">{{Session::get('Profile_update_User')}}</p>
@@ -195,8 +195,9 @@
        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 captionPosteos captionPostesOfUser">
            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
              @foreach($DataArrayPostImpar as $dataArrPostImpar => $PostImpar)
-               @if($PostImpar['id_usuario'] == Auth::user()->id)
+               @if($PostImpar['id_usuario'] == Auth::user()->id)               
                  @if($PostImpar['id_tipo_publicacion'] == 1 or $PostImpar['id_tipo_publicacion'] == 2 && $PostImpar['imagen'] != '')
+
                   @include('usuarios.partials.posts.fields-tipo-posnormal-impar')
 
                   @elseif($PostImpar['id_tipo_publicacion'] == 1 or $PostImpar['id_tipo_publicacion'] == 2 && $PostImpar['documentos'] != '')
@@ -225,8 +226,11 @@
            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
            @foreach($DataArrayPostPar as $dataArrPostPar => $PostPar)
+           
             @if($PostPar['id_usuario'] == Auth::user()->id)
                @if($PostPar['id_tipo_publicacion'] == 1 or $PostPar['id_tipo_publicacion'] == 2 && $PostPar['imagen'] != '')
+                  @include('usuarios.partials.posts.fields-tipo-posnormal-PAR')
+                  
                   @elseif($PostPar['id_tipo_publicacion'] == 1 or $PostPar['id_tipo_publicacion'] == 2 && $PostPar['documentos'] != '')
                     @include('usuarios.partials.posts.fields-tipo-posnormal-par-with-document-PAR')
 

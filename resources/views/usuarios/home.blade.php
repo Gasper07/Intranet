@@ -6,6 +6,40 @@
       @if(Session::has('Create_Event'))
         <p class="alert alert-success">{{Session::get('Create_Event')}}</p>
       @endif
+
+      <div class="col-xs-12 col-sm-12 notifisMobile">
+        <!-- Right Side Of Navbar -->
+        <ul class="nav navbar-nav navbar-right navulRIght">
+            <!-- Authentication Links -->
+            @if (Auth::guest())
+                <li><a href="{{ url('/login') }}">Login</a></li>
+                <li><a href="{{ url('/register') }}">Register</a></li>
+            @else
+                <li class="icosMenus">
+                    <a href="#!">
+                        <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
+                    </a>
+                </li>
+                <div class="ui dropdown dropdownSemantic notifiICos fontMiriamProRegular">
+                  <a href="#!">
+                      <img src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/notify-ico.png" class="img-responsive" alt="">
+                      <div class="notifiCount">
+                          @include('usuarios.partials.fields-Totalnotificaciones')
+                      </div>
+                  </a>
+                  <div class="menu">
+                    @include('usuarios.partials.fields-notificaciones')
+                  </div>
+                </div>
+            @endif
+        </ul>
+        
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 captionRecientesMobie">
+        @include('usuarios.partials.fields-actividades-recientes')
+      </div>
+
       <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 captionPosteos">
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             @foreach($DataArrayPostImpar as $dataArrPostImpar => $PostImpar)
@@ -65,14 +99,19 @@
       <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 captionRecordNotas">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bloqueRecordatorios">
           <h1 class="fontMiriamProRegular">Recordatorios</h1> 
-          <div class="captionAvisos">
-            <h1 class="fontMiriamProSemiBold">Avisos</h1>
-            <p class="fontMiriamProRegular">Oportunidad de empleo para asesores. Interesados contactarse con Lic. Marta Hercúles</p>
-          </div>
+          
+            <div class="captionAvisos">
+              <h1 class="fontMiriamProSemiBold">Avisos</h1>
+              @foreach ($Recordatorios as $keyRecordatorios) 
+               <p class="fontMiriamProRegular">{{ $keyRecordatorios->descripcion_recordatorio}}</p>
+               @endforeach
+            </div>
+        
+          
           <div class="captionPromos">
             <p class="fontMiriamProSemiBold">Promociones de hoy</p>
-            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/promo-public.jpg">
-            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/promo-public.jpg">
+            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
+            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
           </div>
 
           <div class="captionPostGuardadosText">
@@ -84,7 +123,7 @@
         </div>
 
         {{-- BLOQUE CALENDAR --}}
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 datCalendarMo">
 
           {{-- SECTION CALENDAR AND ADD EVENT CALENDAR --}}
           @include('usuarios.partials.fields-lateral-calendar')
@@ -111,7 +150,7 @@
                     @if($RabkingUser <= '4')
                       <div class="col-md-6">
                         <a href="">
-                          <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/profile-user-circle.png" alt="">
+                          <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
                           <p class="fontMiriamProSemiBold">{{ $DatosPersonalesDatosEmpleado->nombre }} {{ $DatosPersonalesDatosEmpleado->apellidos }}</p>
                           @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                             @if($DatosPersonalesDatosEmpleado->id_usuario == $valueRankingGeneral['id_user'])
@@ -141,7 +180,7 @@
                        @if($RabkingUser >= '5' && $RabkingUser < '8')
                         <div class="col-md-6">
                           <a href="">
-                            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/profile-user-circle.png" alt="">
+                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
                             <p class="fontMiriamProSemiBold">{{ $DatosPersonalesDatosEmpleado->nombre }} {{ $DatosPersonalesDatosEmpleado->apellidos }}</p>
                             @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                               @if($DatosPersonalesDatosEmpleado->id_usuario == $valueRankingGeneral['id_user'])
@@ -193,8 +232,8 @@
 
           {{-- <div class="captionGaleriFotos">
             <h3 class="fontMiriamProSemiBold">Galería de fotos</h3>
-            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/galeriFotos.jpg" alt="">
-            <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/galeriFotos.jpg" alt="">
+            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/galeriFotos.jpg" alt="">
+            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/galeriFotos.jpg" alt="">
           </div> --}}
 
         </div>
@@ -203,7 +242,7 @@
     </div>
 
      <div class="col-md-12 datPublich">
-       <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
+       <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/IcoPublich.png" alt="" data-toggle="modal" data-target="#myModal">
      </div>
 
     </div>

@@ -8,17 +8,17 @@
         <div class="col-xs-12 col-sm-12 col-md-12 LinksForEmpleados manualitiEvaluation">
           <ul>
               <li>
-                <a href="">
+                <a href="http://127.0.0.1/Sites/Intranet-chat/public/assets/pdf/Manual-de-empleado.pdf" target="_blank">
                  Manual de empleado
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#!">
                  Reglamento institucional
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#!">
                  Ayuda
                 </a>
               </li>

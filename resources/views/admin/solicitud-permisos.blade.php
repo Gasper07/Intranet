@@ -8,8 +8,7 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
       <h1>{{ $CantidadPermisosNovistas }} Solicitudes</h1>
-      <h3>Meybelline</h3>
-      <h4>gerente.funanciero@grupovaldez.com</h4>
+      @include('admin.partials.fields-name-admin-login')      
 
       <form action="search_solicitudes" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="post" accept-charset="utf-8">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -105,7 +104,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fchaUisersMensage">
                   <p>{{ $Permisos->created_at->format('l j F Y H:i:s') }}</p>
                 </div>
-                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 secFotoUser" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $userss->foto }}')">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 secFotoUser" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $userss->foto }}')">
                 </div>
                 <div class="col-xs-12 col-sm-7 col-md-11 col-lg-11 sectioForMEnsagen secdataTextMensage">            
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 nameUisersMensage">
@@ -122,7 +121,7 @@
                         <div class="modal-dialog dialoDataImgen" role="document">
                           <div class="modal-content">
                             <div class="modal-body">
-                              <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $Permisos->img_adjunta }}" alt="{{ $Permisos->img_adjunta }}">
+                              <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $Permisos->img_adjunta }}" alt="{{ $Permisos->img_adjunta }}">
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -190,7 +189,7 @@
                           @if($coments->id_usuario == $user->id_usuario)
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionCOmetsReceibe captionComenSolicitud">
                               <div class="col-xs-12 col-sm-4 col-md-1 col-lg-1 captionCOmetsReceibeIMgUser">
-                                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 secFotoUser" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $user->foto }}')">
+                                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 secFotoUser" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $user->foto }}')">
                                 </div>
                               </div>
                               <div class="col-xs-12 col-sm-8 col-md-11 col-lg-11 captionCOmetsReceibeDescriUserCOmen">
@@ -202,7 +201,7 @@
                                     <div class="modal-dialog dialoDataImgen" role="document">
                                       <div class="modal-content">
                                         <div class="modal-body">
-                                          <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/documents/{{ $coments->documentos_adjuntos }}" alt="{{ $coments->documentos_adjuntos }}">
+                                          <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $coments->documentos_adjuntos }}" alt="{{ $coments->documentos_adjuntos }}">
                                         </div>
                                         <div class="modal-footer">
                                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -263,7 +262,7 @@
                         </div>                  
                       </div>
                     </div>
-                    <form action="http://127.0.0.1/Sites/Intranet-chat/admin/sugerencias_submit" class="formReturnMennsage conteFormSolicitru" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                    <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/sugerencias_submit" class="formReturnMennsage conteFormSolicitru" method="post" accept-charset="utf-8" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 textAreaReturn">
@@ -281,8 +280,8 @@
                             <input type="submit" value="Enviar">
                           </div>
                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bloqueImageretu">
-                            <img class="img-responsive imImga" onclick="chooseFileImageSuAd();" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/adjuntarFoto.png" alt="">
-                            <img class="img-responsive img1Do" onclick="chooseFileDocuSuAd()" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/avatar/adjuntarIco.png" alt="">
+                            <img class="img-responsive imImga" onclick="chooseFileImageSuAd();" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
+                            <img class="img-responsive img1Do" onclick="chooseFileDocuSuAd()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
                           </div>
                         </div>
                         <input type="hidden" name="id_user_sugerencia" value="{{  Auth::user()->id  }}">
@@ -302,7 +301,7 @@
 
   <div class="col-md-12 datPublich publishChatAdmin publishSugerencias">
     <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
-    <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
+    <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
   </div>
 </section>
 
@@ -318,7 +317,7 @@
       <div class="modal-body captionBodySolicRespuesa">
         <div class="col-xs-12 col-sm-12 col-md-12 contRevibeSOlic">
           <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="captionEvulveImg" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/27028.jpg')">              
+            <div class="captionEvulveImg" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/27028.jpg')">              
             </div>
             <h5 class="aceptSol">Has aceptado la solicitud de</h5>
             <h5 class="DeneSoli">Has denegado la solicitud de</h5>
@@ -338,5 +337,9 @@
     </div>
   </div>
 </div>
+
+
+<!-- Modal NOTIFICACIONES -->
+@include('admin.partials.fields-modal-notificaciones')
   
 @endsection

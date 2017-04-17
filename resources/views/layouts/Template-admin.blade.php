@@ -24,9 +24,12 @@
     <!-- Datepicker Files -->
     {!! Html::style('public/assets/css/datePicker/bootstrap-datepicker3.css') !!}
     {!! Html::style('public/assets/css/bootstrap-datetimepicker.min.css') !!}
+    {{-- ColorPicker --}}
+    {!! Html::style('public/assets/css/admin/colorpicker/spectrum.css') !!}
 
     {{-- Main style --}}
     {!! Html::style('public/assets/css/admin/main.css') !!}
+    {!! Html::style('public/assets/css/admin/main_responsive.css') !!}
 
     <!-- Scripts -->
     <script>
@@ -285,6 +288,14 @@
          .rating('disable')
         ;
 
+        $('.bloqueActionAddNodui .accordion')
+          .accordion({
+            selector: {
+              trigger: '.title'
+            }
+          })
+        ;
+
    </script>
 
    {!! Html::script('public/assets/js/jquery-1.11.1.min.js') !!}
@@ -319,6 +330,32 @@
        });
      });//]]>  
    
+   </script>
+
+    {!! Html::script('public/assets/js/admin/colorpicker/spectrum.js') !!}
+   <script>
+     function printColor(color) {
+        var text = "You chose... " + color.toHexString();    
+        $(".label").text(text);
+         
+     }
+
+     $("#showPaletteOnly").spectrum({
+         allowEmpty:true,
+         showInitial: true,
+         showInput: true,   
+         showPaletteOnly: true,
+         change: function(color) {
+             printColor(color);
+         },
+         palette: [
+             ["00a89c", "22b473", "d3145a","ea5b3a"],
+             ["ffd249", "e0629a", "89d085", "4caad8"], 
+             ["662d90", "d3145a", "faaf3b", "f05a24"], 
+             ["d8df21", "39b44a", "c59b6d", "2e3191"], 
+             ["0071bb", "ec1e79", "c0272d", "f46851"]
+         ]
+     });
    </script>
 
    

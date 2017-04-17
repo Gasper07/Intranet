@@ -57,9 +57,12 @@
                           <img class="img-responsive" src="http://127.0.0.1/Sites/Intranet-chat/public/assets/images/etiqueta-ico.png">
                         </div>
                         <div class="content contLike">
+                          <p class="gasper"> {{$banderaLikes = 0}}</p>
                           <div class="summary">
+                            <p class="gasper"> {{$banderaLikes = 0}}</p>
                             @foreach($Likes as $keyLikes => $likes)
                               @if( $PostImpar['id'] == $likes['id_publicacion'])
+                              <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                 <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                   @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                     Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -70,16 +73,18 @@
                                   <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                   <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                   <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
-                                </a>
-                               @else
-                                <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                  0 Me gusta
-                                  <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                  <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
                                 </a>
                               @endif
                             @endforeach
-                            
+                            @if($banderaLikes == 0)
+                              <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                0 Me gusta
+                                <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
+                              </a>
+                            @endif
                           </div>
                         </div>
                       </div>
@@ -164,8 +169,10 @@
                           </div>
                           <div class="content contLike">
                             <div class="summary">
+                              <p class="gasper"> {{$banderaLikes = 0}}</p>
                               @foreach($Likes as $keyLikes => $likes)
                                 @if( $PostImpar['id'] == $likes['id_publicacion'])
+                                <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                   <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                     @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                       Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -176,15 +183,18 @@
                                     <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                     <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                     <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
-                                  </a>
-                                 @else
-                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                    0 Me gusta
-                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
                                   </a>
                                 @endif
                               @endforeach
+                              @if($banderaLikes == 0)
+                                <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                  0 Me gusta
+                                  <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                  <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
+                                </a>
+                              @endif
                               
                             </div>
                           </div>
@@ -263,8 +273,10 @@
                       </div>
                       <div class="content contLike">
                         <div class="summary">
+                          <p class="gasper"> {{$banderaLikes = 0}}</p>
                           @foreach($Likes as $keyLikes => $likes)
                             @if( $PostImpar['id'] == $likes['id_publicacion'])
+                            <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                               <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                 @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                   Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -275,15 +287,18 @@
                                 <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                 <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                 <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
-                              </a>
-                             @else
-                              <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                0 Me gusta
-                                <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
                               </a>
                             @endif
                           @endforeach
+                          @if($banderaLikes == 0)
+                            <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                              0 Me gusta
+                              <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                              <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                              <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
+                            </a>
+                          @endif
                           
                         </div>
                       </div>
@@ -338,8 +353,10 @@
                          </div>
                          <div class="content contLike">
                            <div class="summary">
+                             <p class="gasper"> {{$banderaLikes = 0}}</p>
                              @foreach($Likes as $keyLikes => $likes)
                                @if( $PostImpar['id'] == $likes['id_publicacion'])
+                               <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                    @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                      Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -350,15 +367,18 @@
                                    <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
-                                 </a>
-                                @else
-                                 <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                   0 Me gusta
-                                   <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                   <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                   <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
                                  </a>
                                @endif
                              @endforeach
+                             @if($banderaLikes == 0)
+                               <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                 0 Me gusta
+                                 <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                 <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                 <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
+                               </a>
+                             @endif
                            </div>
                          </div>
                        </div>
@@ -416,8 +436,10 @@
                           </div>
                           <div class="content contLike">
                             <div class="summary">
+                              <p class="gasper"> {{$banderaLikes = 0}}</p>
                               @foreach($Likes as $keyLikes => $likes)
                                 @if( $PostImpar['id'] == $likes['id_publicacion'])
+                                <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                   <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                     @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                       Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -428,15 +450,18 @@
                                     <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                     <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                     <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
-                                  </a>
-                                 @else
-                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                    0 Me gusta
-                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
                                   </a>
                                 @endif
                               @endforeach
+                              @if($banderaLikes == 0)
+                                <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                  0 Me gusta
+                                  <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                  <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostImpar['id'] }}">
+                                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostImpar['id_usuario'] }}">
+                                </a>
+                              @endif
                             </div>
                           </div>
                         </div>
@@ -541,8 +566,10 @@
                           </div>
                           <div class="content contLike">
                             <div class="summary">
+                              <p class="gasper"> {{$banderaLikes = 0}}</p>
                               @foreach($Likes as $keyLikes => $likes)
                                 @if( $PostPar['id'] == $likes['id_publicacion'])
+                                <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                   <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                     @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                       Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -553,15 +580,18 @@
                                     <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                     <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                     <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
-                                  </a>
-                                 @else
-                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                    0 Me gusta
-                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                                   </a>
                                 @endif
                               @endforeach
+                              @if($banderaLikes == 0)
+                                <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                  0 Me gusta
+                                  <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                  <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
+                                </a>
+                              @endif
                               
                             </div>
                           </div>
@@ -645,8 +675,10 @@
                             </div>
                             <div class="content contLike">
                               <div class="summary">
+                                <p class="gasper"> {{$banderaLikes = 0}}</p>
                                 @foreach($Likes as $keyLikes => $likes)
                                   @if( $PostPar['id'] == $likes['id_publicacion'])
+                                  <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                     <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                       @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                         Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -657,15 +689,18 @@
                                       <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                       <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                       <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
-                                    </a>
-                                   @else
-                                    <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                      0 Me gusta
-                                      <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                      <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                      <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                                     </a>
                                   @endif
                                 @endforeach
+                                @if($banderaLikes == 0)
+                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                    0 Me gusta
+                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
+                                  </a>
+                                @endif
                                                                 
                               </div>
                             </div>
@@ -745,8 +780,10 @@
                           </div>
                           <div class="content contLike">
                             <div class="summary">
+                              <p class="gasper"> {{$banderaLikes = 0}}</p>
                               @foreach($Likes as $keyLikes => $likes)
                                 @if( $PostPar['id'] == $likes['id_publicacion'])
+                                <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                   <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                     @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                       Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -757,15 +794,18 @@
                                     <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                     <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                     <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
-                                  </a>
-                                 @else
-                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                    0 Me gusta
-                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                                   </a>
                                 @endif
                               @endforeach
+                              @if($banderaLikes == 0)
+                                <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                  0 Me gusta
+                                  <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                  <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
+                                </a>
+                              @endif
                             </div>
                           </div>
                         </div>
@@ -818,8 +858,10 @@
                          </div>
                          <div class="content contLike">
                            <div class="summary">
+                             <p class="gasper"> {{$banderaLikes = 0}}</p>
                              @foreach($Likes as $keyLikes => $likes)
                                @if( $PostPar['id'] == $likes['id_publicacion'])
+                               <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                    @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                      Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -830,15 +872,18 @@
                                    <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
-                                 </a>
-                                @else
-                                 <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                   0 Me gusta
-                                   <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                   <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                   <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                                  </a>
                                @endif
                              @endforeach
+                             @if($banderaLikes == 0)
+                               <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                 0 Me gusta
+                                 <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                 <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                 <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
+                               </a>
+                             @endif
                            </div>
                          </div>
                        </div>
@@ -897,8 +942,10 @@
                           </div>
                           <div class="content contLike">
                             <div class="summary">
+                              <p class="gasper"> {{$banderaLikes = 0}}</p>
                               @foreach($Likes as $keyLikes => $likes)
                                 @if( $PostPar['id'] == $likes['id_publicacion'])
+                                <p class="gasper"> {{ $banderaLikes = $banderaLikes+1}}</p>
                                   <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
                                     @if(in_array(Auth::user()->id, $likes['id_usuarios_likes']))
                                       Atí y a {{ $likes['total_likes']-1 }} les gusta
@@ -909,15 +956,18 @@
                                     <input type="hidden" class="dislike" name="dislike_action_id" value="">
                                     <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                                     <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
-                                  </a>
-                                 @else
-                                  <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
-                                    0 Me gusta
-                                    <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
-                                    <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                    <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
                                   </a>
                                 @endif
                               @endforeach
+                              @if($banderaLikes == 0)
+                                <a class="user colorGrisMediumSuave fontMiriamProSemiBold clkLike">
+                                  0 Me gusta
+                                  <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
+                                  <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
+                                  <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">
+                                </a>
+                              @endif
                             </div>
                           </div>
                         </div>

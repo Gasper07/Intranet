@@ -1,4 +1,4 @@
-<div class="captionActivitiesRecientes">
+<div class="captionActivitiesRecientes captionReciennoneMobi">
   <h3 class="fontMiriamProSemiBold">Actividades recientes</h3>
   <div class="notficiActivitie">
     <div class="ui relaxed divided list">
@@ -8,7 +8,7 @@
             <div class="item PublicatiOn">
               <i class="large github middle aligned icoPubli"></i>
               <div class="content">
-                <a href="#!" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong> {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">
+                <a href="preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong> {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">
                 publicación</span></a>
               </div>
             </div>
@@ -16,14 +16,14 @@
              <div class="item NewFotos">
                 <i class="large github middle aligned icoFotos"></i>
                 <div class="content">
-                  <a class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">fotos</span></a>
+                  <a href="preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">fotos</span></a>
                 </div>
              </div>
           @elseif($activi->descripcion_actividad == 'Ha publicado un nuevo')
               <div class="item NewFotos">
                  <i class="large github middle aligned icoDocumn"></i>
                  <div class="content">
-                   <a class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">documento</span></a>
+                   <a href="preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">documento</span></a>
                  </div>
               </div>
           @endif
@@ -33,7 +33,7 @@
             <div class="item NewFotos">
                <i class="large github middle aligned icoUrgente"></i>
                <div class="content">
-                 <a class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">urgente</span></a>
+                 <a href="preview-conte/data/viewDme/{{ $activi->id_usuario}}/{{ $activi->id_post}}" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">urgente</span></a>
                </div>
             </div>
           @endif
@@ -43,7 +43,7 @@
             <div class="item NewFotos">
                <i class="large github middle aligned icoCalendar"></i>
                <div class="content">
-                 <a class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">al calendario</span></a>
+                 <a href="calendario" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} <span class="typeAccionNotifi">al calendario</span></a>
                </div>
             </div>
           @endif
@@ -53,7 +53,7 @@
             <div class="item NewFotos">
                <i class="large github middle aligned icoProFile"></i>
                <div class="content">
-                 <a class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} </a>
+                 <a href="profile-users/{{ $activi->id_usuario}}" class="header"><strong class="nameUserNotifique">{{ $activi->nonbre_user}} </strong>  {{ $activi->descripcion_actividad }} </a>
                </div>
             </div>
           @endif

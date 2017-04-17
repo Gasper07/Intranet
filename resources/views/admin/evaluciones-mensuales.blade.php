@@ -8,13 +8,7 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 sectionCenterContenido secCetTitleS">
       <h1>Evaluaciones mensuales</h1>
-
-      <form action="home_submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 formSearch" method="get" accept-charset="utf-8">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" placeholder="Buscar">
-        </div>
-      </form>
+      @include('admin.partials.fields-search-usuarios')
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <ul class="nav navbar-nav navbar-right navulRIght">
@@ -61,7 +55,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 lineDIvider">
                   <h3>Encargado de área</h3>
                   <a href="#!">
-                    <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>
+                    <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                     {{-- <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/profile-user-circle.png" alt=""> --}}
                     <p class="fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
                     @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
@@ -98,7 +92,7 @@
                           <p class="gasper"> {{ $validaIdUser = $users->id_usuario }} </p>
                           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 othersUsersEstadis UserYarealizo">
                             <a href="evaluaciones-mensuales/{{ $encargados->id_encargardo }}/{{ $users->id_usuario }}">
-                              <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>
+                              <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                               <p class="fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
                               <div class="ui star rating" data-rating="5"></div>
                             </a>              
@@ -110,7 +104,7 @@
                   @if($validaIdUser != $users->id_usuario)
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 othersUsersEstadis">
                       <a href="evaluaciones-mensuales/{{ $encargados->id_encargardo }}/{{ $users->id_usuario }}">
-                        <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://127.0.0.1/Sites/Intranet-chat/public/assets/profiles/{{ $users->foto }}')"></div>
+                        <div class="label dataPrubeIm dataProfileEvaluaciones" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
                         <p class="fontMiriamProSemiBold">{{ $users->nombre }} {{ $users->apellidos }}</p>
                         <div class="ui star rating" data-rating="5"></div>
                       </a>              
@@ -127,46 +121,18 @@
     </div>
     <div class="col-md-12 datPublich publishChatAdmin publichDocuemnts">
       <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/addpubliImgae.png" alt="" data-toggle="modal" data-target="#myModal">
-      <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt="">
+      <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/AnuncioPublicAdmin.png" alt=""  data-toggle="modal" data-target="#myModalNotifications">
     </div>
   </div>
 </section>
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog contPusblishDialogo" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="col-xs-12 col-sm-12 col-md-12 continPublish">
-          <form action="home_submit" method="get" class="sectionPublichUser" accept-charset="utf-8">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-              <textarea name="" placeholder="Escribe un comentario"></textarea>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 bloquesActions">
-              <div class="col-md-6 actionpuBlish">
-                <div class="col-md-2 Adjuntar">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
-                </div>
-                <div class="col-md-2 AdjuntarFoto">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
-                </div>
-                <div class="col-md-2 DestacarPuslish">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/destacarIco.png" alt="">
-                </div>
-                <div class="col-md-2 AlertPublish">
-                  <img class="img-responsive" src="http://app-fd8d1fda-4b1b-423f-aa23-358cd43f64b3.cleverapps.io/public/assets/images/avatar/alertIco.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 ButtinPublish">
-                <input type="submit" value="Enviar"></input>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+@include('usuarios.partials.field-public-post')
+
+
+<!-- Modal NOTIFICACIONES -->
+@include('admin.partials.fields-modal-notificaciones')
+<div class="alert alert-info dataClMoPosPEr" role="alert">¡Publicacion Agregada!</div> 
   
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.Template-home')
 
 @section('content')
-<div class="container continerWithSite">
+<div class="container continerWithSite containBloquePro">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 captionPosteos captionProfiles">
         @foreach($JoinTableUserDatas as $dataUsers)

@@ -34,8 +34,8 @@ class LikeAndComentController extends Controller
       if($request->ajax()) {
         $idUserLike = $request->like_action_id;
         $idPostLike = $request->like_publicacion_id;
-        $idPostDisLike = $request->idDislikePost;
-        $idUserPublicoPost = $request->idUserPublicPost;
+        $idPostDisLike = $request->dislike_action_id;
+        $idUserPublicoPost = $request->id_user_pub_post;
 
         $allLikes = LikesPosts::where('id_publicacion','=', $idPostLike)->get();
 

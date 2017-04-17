@@ -265,7 +265,7 @@
               </form>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 textAllsMensages">
-              <a href=""><span>15</span> Mensajes nuevos</a><span><span>1</span>-5</span>
+              <a href="">{{--<span>15</span> --}} Mensajes nuevos</a><span><span>1</span>-5</span>
             </div>
           </div>
 

@@ -114,13 +114,13 @@
                                             </a>
                                         </li>
                                         <li class="bloquesMarca marEntrada">
-                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar entrada</a>
+                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif" >Marcar entrada</a>
                                             <div class='secEntrada'>
                                               <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
                                             </div>
                                         </li>
                                         <li class="bloquesMarca marSalida">
-                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave">Marcar salida</a>
+                                            <a class="BgYellow fontMiriamProSemiBold colorBlackSuave" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif">Marcar salida</a>
                                             <div class='secEntrada'>
                                               <input type="hidden" name="id_user_login" class="IdloginUser" value="{{ Auth::user()->id }}">
                                             </div>

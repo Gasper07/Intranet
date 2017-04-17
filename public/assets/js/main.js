@@ -567,9 +567,13 @@ jQuery(document).ready(function($) {
 		});	
 		setTimeout(function(){ 
 			var finLikeUser = $(this).find('input.idUseLike').val();
+			console.log(finLikeUser);
 			var finLikePost = $(this).find('input.idPubliLike').val();
+			console.log(finLikePost);
 			var finDisLikePost = $(this).find('input.dislike').val();
+			console.log(finDisLikePost);
 			var finUserPublicPost = $(this).find('input.idUserPublicoPost').val();
+			console.log(finUserPublicPost);
 			var textClick = $(this).text();
 			var Click = $(this);
 

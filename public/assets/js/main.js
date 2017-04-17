@@ -9,6 +9,11 @@ jQuery(document).ready(function($) {
 	$('.paleytaIco').click(function(event) {
 		$('.nonnePapletaUser').toggleClass('activePalteUser');
 	});
+
+	$('.col-xs-12.col-sm-12.col-md-12.captionSelectColorPlat>.col-xs-12.col-sm-12.col-md-12>.bloqCOlors').click(function(event) {
+		var dataColor = $(this).data('color');
+		alert(dataColor);
+	});
 });z
 
 $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.col-sm-12.col-md-12.col-lg-12.FriendWithChat>a', function() {

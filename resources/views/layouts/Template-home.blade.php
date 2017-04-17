@@ -71,31 +71,31 @@
                     <img class="paleytaIco" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
                     <div class="col-xs-12 col-sm-12 col-md-12 captionSelectColorPlat nonnePapletaUser">
                       <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors greensuaveBlock">
+                        <div data-color="#d9e021" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors greensuaveBlock">
                           
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors grisBlock">
+                        <div data-color="#b2b2b2" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors grisBlock">
                           
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors yelowBlock">
+                        <div data-color="#ffcd00" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors yelowBlock">
                           
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors orangeBlock">
+                        <div data-color="#ff8a00" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors orangeBlock">
                           
                         </div>
                       </div>
 
                       <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors rojosuaveBlock">
+                        <div data-color="#e54e53" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors rojosuaveBlock">
+
+                        </div>
+                        <div data-color="#1abc9c" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors verdeAcuaBlock">
                           
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors verdeAcuaBlock">
+                        <div data-color="#1abac8" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors celesteBlock">
                           
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors celesteBlock">
-                          
-                        </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 bloqCOlors blackBlock">
+                        <div data-color="#1a1a1a" class="col-xs-12 col-sm-3 col-md-3 bloqCOlors blackBlock">
                           
                         </div>
                       </div>

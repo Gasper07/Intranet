@@ -1396,7 +1396,11 @@ class HomeController extends Controller
       }
       
 // dd($GetUltimateMensage);
-      return view('usuarios.chatUsers', compact('getUsers','GetUltimateMensage','idUserLogin','AllOnlineUser'));
+
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.chatUsers', compact('getUsers','GetUltimateMensage','idUserLogin','AllOnlineUser','Bguser'));
     }
 
     public function storeChat(Request $request){
@@ -1618,7 +1622,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function SolicitudPermiso()
@@ -1707,8 +1714,11 @@ class HomeController extends Controller
         $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
         $NotifisEventos = NotificacionesEventos::all();
 
+        #get Color del panel del usuario d
+        $Bguser  = $this->GetBackgroundPanelOfUSer();
 
-      return view('usuarios.solicitud-permiso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+
+      return view('usuarios.solicitud-permiso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function StoreSolicitudPermimso(Request $request){
@@ -1846,9 +1856,12 @@ class HomeController extends Controller
         $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
         $NotifisEventos = NotificacionesEventos::all();
 
+        #get Color del panel del usuario d
+        $Bguser  = $this->GetBackgroundPanelOfUSer();
 
 
-      return view('usuarios.motivo-emergencia',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+
+      return view('usuarios.motivo-emergencia',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function StoreSolicitudEmergencia(Request $request){
@@ -2005,7 +2018,10 @@ class HomeController extends Controller
         $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
         $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.buzon-sugerencias',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+        #get Color del panel del usuario d
+        $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.buzon-sugerencias',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function StoreBuzonSugerencia(Request $request){
@@ -2177,9 +2193,12 @@ class HomeController extends Controller
         $Activities = $this->ActivitiesRecientes();
         $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
         $NotifisEventos = NotificacionesEventos::all();
+
+        #get Color del panel del usuario d
+        $Bguser  = $this->GetBackgroundPanelOfUSer();
         
 
-      return view('usuarios.solicitud-proceso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','ComentariosPermisos','PermisosData','DescuentosSolicitudes','UsersAllsPersonalesData','EmergenciasData','ComentariosEmergencias','ComentariosSugerencias','SugerenciasData','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      return view('usuarios.solicitud-proceso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','ComentariosPermisos','PermisosData','DescuentosSolicitudes','UsersAllsPersonalesData','EmergenciasData','ComentariosEmergencias','ComentariosSugerencias','SugerenciasData','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function  DaysVacaciones(){
@@ -2250,7 +2269,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.evaluaciones-a-personal',compact('idUserLogin','AllOnlineUser','UsersLogiado','encargadoArea','UsersAlls','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.evaluaciones-a-personal',compact('idUserLogin','AllOnlineUser','UsersLogiado','encargadoArea','UsersAlls','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function EvaluationToPersonalDetall($idEncargado, $id)
@@ -2287,7 +2309,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.evaluaciones-a-personal-detall',compact('idUserLogin','AllOnlineUser','EncargadosOfAreas','UsersEvaluacion','UsersAlls','idUserEvaluacion','idEncargado','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys','HistorialEvaluaciones'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.evaluaciones-a-personal-detall',compact('idUserLogin','AllOnlineUser','EncargadosOfAreas','UsersEvaluacion','UsersAlls','idUserEvaluacion','idEncargado','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys','HistorialEvaluaciones','Bguser'));
     }
 
     public function StoreEvaluation(Request $request){
@@ -2444,7 +2469,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.evaluaciones-a-personal-evaluados',compact('idUserLogin','AllOnlineUser','UsersAlls','UsersEvaluacion','encargadoArea','UsersLogiado','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.evaluaciones-a-personal-evaluados',compact('idUserLogin','AllOnlineUser','UsersAlls','UsersEvaluacion','encargadoArea','UsersLogiado','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function FinishEvaluation()
@@ -2461,7 +2489,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.finish-evaluaction',compact('idUserLogin','AllOnlineUser','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.finish-evaluaction',compact('idUserLogin','AllOnlineUser','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function GetPost()
@@ -2650,7 +2681,10 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.previuw-detall', compact('JoinTableUserPosts','idusers','idpost','getPost','Likes','Coments','idUserLogin','arrayOfImages','ArrayOfDocuemnts','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+      #get Color del panel del usuario d
+      $Bguser  = $this->GetBackgroundPanelOfUSer();
+
+      return view('usuarios.previuw-detall', compact('JoinTableUserPosts','idusers','idpost','getPost','Likes','Coments','idUserLogin','arrayOfImages','ArrayOfDocuemnts','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser'));
     }
 
     public function notifyView(Request $request)

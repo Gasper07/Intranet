@@ -1835,7 +1835,6 @@ input.detallInformation:disabled {
 .bgWrapDasBlack{
   background: url('../images/contador/colorBalck.png');
   background-size: cover;
-  /* height: 21px; */
   height: 137px;
   display: block;
   bottom: 10px;

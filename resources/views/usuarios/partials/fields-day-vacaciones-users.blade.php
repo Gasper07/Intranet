@@ -2,36 +2,33 @@
   <p>Usted tiene</p>
   <div class="col-xs-12 col-sm-12 col-md-12 sectionSelectDay">
   @if($Bguser == '#d9e021') 
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGreenSuave">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGreenSuave dt">
       <p>{{ $PrimerNumerDay }}</p>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGreenSuave">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGreenSuave dt">
       <p>{{ $SegundoNumerDay }}</p>
     </div>
   @elseif($Bguser == '#b2b2b2')
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGris">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGris dt">
       <p>{{ $PrimerNumerDay }}</p>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGris">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasGris dt">
       <p>{{ $SegundoNumerDay }}</p>
     </div>
-  @endif
   @elseif($Bguser == '#ffcd00')
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasYellow">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasYellow dt">
       <p>{{ $PrimerNumerDay }}</p>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasYellow">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasYellow dt">
       <p>{{ $SegundoNumerDay }}</p>
     </div>
-  @endif
   @elseif($Bguser == '#ff8a00')
-    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasOrange">
+    <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasOrange dt">
       <p>{{ $PrimerNumerDay }}</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasOrange">
       <p>{{ $SegundoNumerDay }}</p>
     </div>
-  @endif
   @elseif($Bguser == '#e54e53')
     <div class="col-xs-12 col-sm-6 col-md-6 bgWrapDas bgWrapDasRojoSuave">
       <p>{{ $PrimerNumerDay }}</p>

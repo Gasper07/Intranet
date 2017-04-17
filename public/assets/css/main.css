@@ -3743,9 +3743,18 @@ ul.Redconocistes>li>div {
 
 .col-xs-12.col-sm-3.col-md-3.bloqCOlors.greensuaveBlock {
   background: #d9e021;
-  padding: 8%;
 }
 
-.col-xs12.col-sm-12.col-md-12.captionSelectColorPlat>div {
+.col-xs-12.col-sm-3.col-md-3.bloqCOlors.grisBlock {
+  background: #b2b2b2;
+}
+
+.col-xs-12.col-sm-12.col-md-12.captionSelectColorPlat>.col-xs-12.col-sm-12.col-md-12 {
   width: 20%;
+    /* height: 30px; */
+}
+
+.col-xs-12.col-sm-12.col-md-12.captionSelectColorPlat>.col-xs-12.col-sm-12.col-md-12>div.bloqCOlors {
+  height: 31px;
+  width: 23%;
 }

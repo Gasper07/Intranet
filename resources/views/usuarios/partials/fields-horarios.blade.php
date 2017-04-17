@@ -4,7 +4,7 @@
     @foreach($HorariosUser as $DataHorarios)
       @if($DataHorarios->id_usuario == Auth::user()->id)
          @if($DataHorarios->bloq_horario1 != null)
-          <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="col-xs-12 col-sm-12 col-md-12 dtsss">
             <p class="ListDays fontMiriamProSemiBold">{{ $DataHorarios->bloq_horario1 }}</p>
             <p class="ListHours fontMiriamProRegular">{{ $DataHorarios->bloq_horario1Time}}</p>
           </div>

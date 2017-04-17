@@ -69,6 +69,22 @@
                 <div class="collapse navbar-collapse collapseMenuUser" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
+                    <div class="col-xs12 col-sm-12 col-md-12 captionSelectColorPlat">
+                      <div class="col-xs12 col-sm-12 col-md-12">
+                        <div class="col-xs12 col-sm-3 col-md-3 bloqCOlors greensuaveBlock">
+                          
+                        </div>
+                        <div class="col-xs12 col-sm-3 col-md-3 bloqCOlors grisBlock">
+                          
+                        </div>
+                        <div class="col-xs12 col-sm-3 col-md-3 bloqCOlors yelowBlock">
+                          
+                        </div>
+                        <div class="col-xs12 col-sm-3 col-md-3 bloqCOlors orangeBlock">
+                          
+                        </div>
+                      </div>
+                    </div>
                     <ul id="gn-menu" class="nav navbar-nav gn-menu-main">
                         <li class="gn-trigger">
                             <a class="gn-icon gn-icon-menu"><span>Menu</span></a>

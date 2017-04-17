@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
 		});
 
 	});
-});z
+});
 
 $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.col-sm-12.col-md-12.col-lg-12.FriendWithChat>a', function() {
     // Get data user select

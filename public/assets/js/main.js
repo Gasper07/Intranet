@@ -1103,3 +1103,13 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 });
+
+
+$('.chatVentanan').keypress(function(e) {
+    if(e.which == 13) {
+    	alert('pecio');
+    	e.preventDefault();
+       $('.col-lg-12.nullCOnversation>p').hide();
+    }
+});
+

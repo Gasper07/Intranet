@@ -1131,8 +1131,8 @@ function chooseFileImageChat1() {
 
 $(".fileInputImageChat1").change(function(){
 	$('.imImgaChat').remove();
-	$('.AdjuntarFoto').append('<img class="img-responsive imImgaChat2" onclick="chooseFileImageChat2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
-	$('.col-md-2.Adjuntar ').hide();
+	$('.anjunFoto').append('<img class="img-responsive imImgaChat2" onclick="chooseFileImageChat2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.anjunDocu ').hide();
 	var valImage = $(this).val();
 	console.log(valImage);
 	var varParenytdImg = $(this).parent();

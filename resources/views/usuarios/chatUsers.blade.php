@@ -22,12 +22,20 @@
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 contenTexaArea chat_box">
                <textarea name="" class="input_message form-control"  placeholder="Escribe aquí"></textarea>  
                <input type="hidden" class="input_id_user_logi" value="{{ Auth::user()->id }}" />           
-               <input type="hidden" class="input_name DatIdUserChat" value="" />           
+               <input type="hidden" class="input_name DatIdUserChat" value="" />   
+               <div class="contenMoreImages">
+                 <input type="file" class="fileInputImageChat1" name="fileInputImageChat[]" />
+               </div>        
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 contentActionSend chat_box">
                {{-- <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt=""> --}}
-                 <img class="img-responsive imImgaChat" onclick="chooseFileImageChat1();" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">                    
-                 <img class="img-responsive img1DoChat" onclick="chooseFileDocuChat1()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
+               <div class="anjunFoto">
+                 <img class="img-responsive imImgaChat" onclick="chooseFileImageChat1();" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">
+               </div>
+               <div class="anjunDocu">
+                <img class="img-responsive img1DoChat" onclick="chooseFileDocuChat1()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt="">
+               </div>
+                 
                <input type="submit" value="Enviar" class="input_send">
             </div>            
           </div>
@@ -176,9 +184,7 @@
 
             </div>
 
-            <div class="contenMoreImages">
-              <input type="file" class="fileInputImageChat1" name="fileInputImageChat[]" />
-            </div>
+            
           </div>
 
           <div class="col-md-12 datPublich">

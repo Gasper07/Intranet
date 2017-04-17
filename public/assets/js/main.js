@@ -594,7 +594,13 @@ jQuery(document).ready(function($) {
 
 // Public coment
 jQuery(document).ready(function($) {
-	$('.dataComenyt').click(function(event) {	
+	$('.dataComenyt').click(function(event) {
+		setTimeout(function(){ 
+			$('.lnvmodal-loader').css({
+				display: 'block'
+			});	
+		}, 1000);
+		
 		var parentFormComent = $(this).parent();
 		var parentPost = $(this).parent().parent();
 		var CaptionComentsPost = $(parentPost).find('div.captionlokComen');
@@ -615,7 +621,9 @@ jQuery(document).ready(function($) {
 		    data: "idComentUser="+findIdUserComent+"&ComentPost="+findComent+"&idPostComent="+finUserPublicPostComent+"&idDtasPost="+findIdPostPublic+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
-		    	console.log(result.name);
+		    	$('.lnvmodal-loader').css({
+		    		display: 'none'
+		    	});
 		    	$(CaptionComentsPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label"><img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profiles/'+result.foto+'"></div><div class="content"><div class="summary"><a class="user colorGrisMediumSuave fontMiriamProSemiBold">'+result.name+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+result.comentario+'</div></div></div></div></div>');
 
 		    },

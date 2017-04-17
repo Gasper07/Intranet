@@ -43,6 +43,9 @@ jQuery(document).ready(function($) {
 // chats
 
 $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.col-sm-12.col-md-12.col-lg-12.FriendWithChat>a, .captionCircleUser.captionDenoews.AlluserReegitradosPorBloque>a', function() {
+	  $('.lnvmodal-loader').css({
+	  	display: 'block'
+	  });	
     // Get data user select
 	var dataIdUser = $(this).data('iduserchat');
 	var dataNameUser = $(this).find('.blqueDatasUser>p.TitleUserMen').text();
@@ -67,6 +70,9 @@ $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.
 	    data: "idForChat="+dataIdUser+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 	    dataType: 'json',
 	    success: function(result, index, value, data) {
+	    	$('.lnvmodal-loader').css({
+	    		display: 'none'
+	    	});	
 	    	// Iniciamos contador
     		var elem = 1;
     		var bander = 0;

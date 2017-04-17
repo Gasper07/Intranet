@@ -31,7 +31,7 @@
 <div class="captionAddEvento">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif"><a href="#profile" class="fontMiriamProRegular" aria-controls="profile" role="tab" data-toggle="tab">Agregar evento a calendario</a></li>
+    <li role="presentation" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif"><a href="#profile" class="fontMiriamProRegular" aria-controls="profile" role="tab" data-toggle="tab" style="background: {{ $Bguser }} !important; @endif">Agregar evento a calendario</a></li>
   </ul>
   <!-- Tab panes -->
   <div class="tab-content tabconteAddComent">

@@ -107,7 +107,7 @@
               @foreach($AllOnlineUser as $onlineUsers)
                 <p class="gasper"> {{ $banderaOnline = $banderaOnline+1 }}</p>
                 <div class="captionCircleUser captionDenoews">
-                  <a href="" class="userLive" data-idonline='{{ $onlineUsers['id_user'] }}'>
+                  <a href="#!" class="userLive" data-idonline='{{ $onlineUsers['id_user'] }}'>
                     <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $onlineUsers['foto'] }}')">
                     </div>
                   </a>
@@ -127,7 +127,7 @@
                 <p class="gasper"> {{ $banderaOnline = $banderaOnline+1 }}</p>                  
                 @if($banderaOnline >= 4 )
                   <div class="captionCircleUser captionDenoews">
-                    <a href="" class="userLive" data-idonline='{{ $onlineUsers['id_user'] }}'>
+                    <a href="#!" class="userLive" data-idonline='{{ $onlineUsers['id_user'] }}'>
                       <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $onlineUsers['foto'] }}')">
                       </div>            
                     </a>

@@ -40,6 +40,8 @@ jQuery(document).ready(function($) {
 	});
 });
 
+// chats
+
 $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.col-sm-12.col-md-12.col-lg-12.FriendWithChat>a, .captionCircleUser.captionDenoews.AlluserReegitradosPorBloque>a', function() {
     // Get data user select
 	var dataIdUser = $(this).data('iduserchat');

@@ -397,7 +397,6 @@ class HomeController extends Controller
       foreach ($DataUserLogiado as $keyDataUserLogiado) {
         if($keyDataUserLogiado->bg_user != null or $keyDataUserLogiado->bg_user != ''){
           $Bguser = $keyDataUserLogiado->bg_user;
-          dd($Bguser);
         }else{
           $Bguser ='';
         }

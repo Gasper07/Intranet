@@ -1976,6 +1976,14 @@ input.detallInformation:disabled {
   margin-bottom: 2%;
 }
 
+.col-xs-12.col-sm-12.col-md-7.col-lg-7.CarouselDataCalendar>.calendarDatas>div#carousel-example-generic>.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 28%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+}
+
 .col-xs-12.col-sm-6.col-md-4.col-lg-4.ProfileFotosStartsMoreUser>div {
   text-align: center;
   margin: 0 auto;

@@ -32,8 +32,8 @@ class LikeAndComentController extends Controller
 
     public function StoreLikeUserPost(Request $request){
       if($request->ajax()) {
-        $idUserLike = $request->idLikeUser;
-        $idPostLike = $request->idLikePost;
+        $idUserLike = $request->like_action_id;
+        $idPostLike = $request->like_publicacion_id;
         $idPostDisLike = $request->idDislikePost;
         $idUserPublicoPost = $request->idUserPublicPost;
 

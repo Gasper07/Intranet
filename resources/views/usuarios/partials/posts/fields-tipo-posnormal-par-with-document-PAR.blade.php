@@ -54,8 +54,8 @@
                         <input type="hidden" class="dislike" name="dislike_action_id" value="{{ Auth::user()->id }}">
                       @else
                         {{ $likes['total_likes']}} Me gusta
+                        <input type="hidden" class="dislike" name="dislike_action_id" value="">
                       @endif    
-                      <input type="hidden" class="dislike" name="dislike_action_id" value="">
                       <input type="hidden" class="idUseLike" name="like_action_id" value="{{ Auth::user()->id }}">
                       <input type="hidden" class="idPubliLike" name="like_publicacion_id" value="{{ $PostPar['id'] }}">
                       <input type="hidden" class="idUserPublicoPost" name="id_user_pub_post" value="{{ $PostPar['id_usuario'] }}">

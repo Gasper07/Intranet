@@ -83,9 +83,9 @@
                             <p class="colorBlack fontMiriamProSemiBold TitleUserMen">{{ $users->name }} <span> dice: </span></p>
                             <p class="cont_previwMenSage">Tu: {{ $GetdataS['mensages'] }}...</p>
                           </div>
-                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 TimeSendMenssage">
+                          {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 TimeSendMenssage">
                            <p>6H</p>
-                          </div>
+                          </div> --}}
                         </a>
                       @endif
                     @endforeach

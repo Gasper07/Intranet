@@ -1659,6 +1659,13 @@ p.ListHours.fontMiriamProRegular.DayDescans {
   margin-bottom: 0;
 }
 
+.col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts>a>p {
+    color: #000000;
+    font-size: 21px;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts {
   text-align: center;
   padding-top: 3%;

@@ -511,6 +511,41 @@ jQuery(document).ready(function($) {
 });
 
 
+// Notifi View
+jQuery(document).ready(function($) {
+	$('.datanotifiNew').click(function(e) {	
+		var getUrl = $(this).data('href');
+		var findInput = $(this).find('input.notifiview').val();
+		var findInputIdUser = $(this).find('input.notifiviewUser').val();
+		e.preventDefault();
+
+		$.ajaxSetup({
+		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+		});
+
+		$.ajax({
+		    url: 'http://127.0.0.1/Sites/Intranet-chat/notifiViewHi',
+		    type: 'POST',
+		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+		    data: "idnotifi="+findInput+"&iduserNotifi="+findInputIdUser+"",
+		    dataType: 'json',
+		    success: function(result, index, value, data) {
+		    	if(result == 'vista'){
+		    		setTimeout(function(){ 
+		    			window.location = getUrl;
+		    		}, 200);
+		    	}	
+		    },
+		    error: function() {
+		        console.log('Error');
+		    }
+		});
+		return false;
+	});
+});
+
+
+
 // like dislike
 jQuery(document).ready(function($) {
 	$('.clkLike').click(function(event) {
@@ -756,21 +791,25 @@ jQuery(document).ready(function($) {
 });
 
 
-// FILTER BUSQUEDA CANDIDATE CHAT
+// FILTER BUSQUEDAS
 
-$(document).ready(function () {
-	(function ($) {
-		$('#filtrar').keyup(function () {
-			var rex = new RegExp($(this).val(), 'i');
-			$('.AlluserReegitradosPorBloque>a').hide();
-			$('.AlluserReegitradosPorBloque>a').filter(function () {
-				return rex.test($(this).text());
-			}).show();
-		})
-	}(jQuery));
-});
+jQuery.fn.FilerSearch = function(removeMagin,sectionFilter)  //damos nombre ala funcion
+{
+	$(this).keyup(function () {
+		$(removeMagin).addClass('RestMargin');
+		var rex = new RegExp($(this).val(), 'i');
+		$(sectionFilter).hide();
+		$(sectionFilter).filter(function () {
+			return rex.test($(this).text());
+			$(removeMagin).removeClass('RestMargin');
+		}).show();
+	});
+};
 
-
+$('#filtrar').FilerSearch('','.AlluserReegitradosPorBloque>a'); 
+$('#filtrar').FilerSearch('.col-xs-12.col-sm-12.col-md-12.col-lg-12.DataUserRankings','.AlluserRankinSearch>div.ranlingSty'); 
+$('#filtrarHistory').FilerSearch('.col-xs-12.col-sm-12.col-md-12.col-lg-12.DataUserRankings.DataUserRankingsHistory','.dataHitorySear>div.searchHis'); 
+$('#filtrarUser').FilerSearch('.col-xs-12.col-sm-12.col-md-12.col-lg-12.dataAllUserSer','.dataAllUserSer>div.allDatasUser'); 
 
 
 // 1File Image
@@ -1135,4 +1174,114 @@ $('.AcepAdp').click(function(event) {
 $('.coloADP').click(function(event) {
 	var parentFormADp = $(this).parent().parent().find('.UserImgData>.dataProfileHistory');
 	console.log(parentFormADp);
+});
+
+
+// Notifi home admin
+
+$('.ayerActivi').click(function(e) {
+	$.ajaxSetup({
+	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	});
+	$.ajax({
+	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/notifiViewAnterior',
+	    type: 'POST',
+	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+	    dataType: 'json',
+	    success: function(result, index, value, data) {
+	    	console.log(result);
+	    	$('body').click();
+	    	$('.counNumberNotifis>h1').text(result);
+	    	$('form.formNotifisDetall>li.dropNOtifis>a').text('Ayer');
+	    	var nexDay = $('.dropDetallNotify>li>a').data('daynext');
+	    	$('.dropDetallNotify>li>a').attr('href','HistoryNotify/'+nexDay);
+	    },
+	    error: function() {
+	        console.log('Error');
+	    }
+	});
+	return false;
+});
+
+
+// Asistencia home admin
+
+$('.ayerAsistencia').click(function(e) {
+	var yesterdayAsietemcia = $('.dropDetallAsiste>li>a').data('daynext');
+	$.ajaxSetup({
+	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	});
+	$.ajax({
+	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/HistoryLlegadas/histo/Asist/Date/'+yesterdayAsietemcia+'',
+	    type: 'POST',
+	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+	    dataType: 'json',
+	    success: function(result, index, value, data) {
+	    	console.log(result);
+	    	$('body').click();
+	    	$('.counNumberAsisten>h1').text(result);
+	    	$('form.formNotifisDetall>li.dropLLegadas>a').text('Ayer');
+	    	var nexDay = $('.dropDetallAsiste>li>a').data('daynext');
+	    	$('.dropDetallAsiste>li>a').attr('href','HistoryLlegadas/histo/Asist/'+nexDay);
+	    },
+	    error: function() {
+	        console.log('Error');
+	    }
+	});
+	return false;
+});
+
+// Emergencias home admin
+
+$('.ayerEmergenci').click(function(e) {
+	var yesterdayEmergenci = $('.dropDetallEmerge>li>a').data('daynext');
+	$.ajaxSetup({
+	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	});
+	$.ajax({
+	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/emergencias/data/fech/emergenci/cont/'+yesterdayEmergenci+'',
+	    type: 'POST',
+	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+	    dataType: 'json',
+	    success: function(result, index, value, data) {
+	    	console.log(result);
+	    	$('body').click();
+	    	$('.counNumberEmergenci>h1').text(result);
+	    	$('form.formNotifisDetall>li.dropEmergenci>a').text('Ayer');
+	    	var nexDay = $('.dropDetallEmerge>li>a').data('daynext');
+	    	$('.dropDetallEmerge>li>a').attr('href','emergencias/data/fech/emergenci/'+nexDay);
+	    },
+	    error: function() {
+	        console.log('Error');
+	    }
+	});
+	return false;
+});
+
+
+// Permiso home admin
+
+$('.ayerPermiso').click(function(e) {
+	var yesterdayPermiso = $('.dropDetallPermiso>li>a').data('daynext');
+	$.ajaxSetup({
+	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	});
+	$.ajax({
+	    url: 'http://127.0.0.1/Sites/Intranet-chat/admin/solicitud-permisos/data/fech/permiso/coun/'+yesterdayPermiso+'',
+	    type: 'POST',
+	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+	    dataType: 'json',
+	    success: function(result, index, value, data) {
+	    	console.log(result);
+	    	$('body').click();
+	    	$('.counNumberPermiso>h1').text(result);
+	    	$('form.formNotifisDetall>li.dropPermiso>a').text('Ayer');
+	    	var nexDay = $('.dropDetallPermiso>li>a').data('daynext');
+	    	$('.dropDetallPermiso>li>a').attr('href','solicitud-permisos/data/fech/permiso/'+nexDay);
+	    },
+	    error: function() {
+	        console.log('Error');
+	    }
+	});
+	return false;
 });

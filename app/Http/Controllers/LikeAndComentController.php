@@ -9,6 +9,8 @@ use App\Post;
 use App\LikesPosts;
 use App\ComentariosPost;
 use App\PostPersonalizados;
+use App\DatosPersonales;
+use App\HistorialActividadesRecientes;
 
 class LikeAndComentController extends Controller
 {
@@ -33,6 +35,7 @@ class LikeAndComentController extends Controller
         $idUserLike = $request->idLikeUser;
         $idPostLike = $request->idLikePost;
         $idPostDisLike = $request->idDislikePost;
+        $idUserPublicoPost = $request->idUserPublicPost;
 
         $allLikes = LikesPosts::where('id_publicacion','=', $idPostLike)->get();
 
@@ -45,6 +48,32 @@ class LikeAndComentController extends Controller
           $createNewLikePost = new LikesPosts($dataLikePost);
           $createNewLikePost->save();
           $totalLikes = $createNewLikePost->total_likes;
+
+          // CREATE NOTIFICACIONES
+          $usuarioPublic = $idUserPublicoPost;
+          $idPostPublicado = $idPostLike;
+          $tipoActividad = '11';
+
+          $Usuarios = DatosPersonales::where('id_usuario', '=', $usuarioPublic)->get();
+          foreach ($Usuarios as $keyUsuarios) {
+            if($usuarioPublic == $keyUsuarios->id_usuario){
+              $nameUser = $keyUsuarios->nombre.' '.$keyUsuarios->apellidos;
+              $DescriptActiviti = 'a '.$totalLikes;
+            }
+            
+            $dataPublicActiviti = array(
+              'id_usuario' => $usuarioPublic,
+              'nonbre_user' => $nameUser,
+              'tipo_actividad' => $tipoActividad,
+              'id_post' => $idPostPublicado,
+              'descripcion_actividad' => $DescriptActiviti,
+            );
+
+            $DataStoreActivity = new HistorialActividadesRecientes($dataPublicActiviti);  
+            $DataStoreActivity->save();
+          }
+
+
           echo json_encode($totalLikes);
          
         }else{ 
@@ -93,6 +122,31 @@ class LikeAndComentController extends Controller
                 ->update(['id_usuarios_likes' => $UnionAllUsersLikes, 'total_likes' => $updateLikes]);
 
               $totalLikes = $keyUpdateLikePost->total_likes+1;
+
+              // CREATE NOTIFICACIONES
+              $usuarioPublic = $idUserPublicoPost;
+              $idPostPublicado = $idPostLike;
+              $tipoActividad = '11';
+
+              $Usuarios = DatosPersonales::where('id_usuario', '=', $usuarioPublic)->get();
+              foreach ($Usuarios as $keyUsuarios) {
+                if($usuarioPublic == $keyUsuarios->id_usuario){
+                  $nameUser = $keyUsuarios->nombre.' '.$keyUsuarios->apellidos;
+                  $DescriptActiviti = 'a '.$totalLikes;
+                }
+                
+                $dataPublicActiviti = array(
+                  'id_usuario' => $usuarioPublic,
+                  'nonbre_user' => $nameUser,
+                  'tipo_actividad' => $tipoActividad,
+                  'id_post' => $idPostPublicado,
+                  'descripcion_actividad' => $DescriptActiviti,
+                );
+
+                $DataStoreActivity = new HistorialActividadesRecientes($dataPublicActiviti);  
+                $DataStoreActivity->save();
+              }
+
               echo json_encode($totalLikes);
             }
           }
@@ -111,6 +165,8 @@ class LikeAndComentController extends Controller
         $idComentarioUser = $request->idComentUser;
         $ComentarioUser = $request->ComentPost;
         $IdPost = $request->idDtasPost;
+        $idUserPublicoPost = $request->idPostComent;
+
         $NewComents = array();
 
         $dataComentPost = array(
@@ -122,6 +178,31 @@ class LikeAndComentController extends Controller
         $createNewComentPost = new ComentariosPost($dataComentPost);
         $createNewComentPost->save();
         $UserPotComent = $createNewComentPost->comentarios;
+
+        // CREATE NOTIFICACIONES
+        $usuarioPublic = $idUserPublicoPost;
+        $idPostPublicado = $IdPost;
+        $tipoActividad = '12';
+
+        $Usuarios = DatosPersonales::where('id_usuario', '=', $idComentarioUser)->get();
+        foreach ($Usuarios as $keyUsuarios) {
+          if($idComentarioUser == $keyUsuarios->id_usuario){
+            $nameUser = $keyUsuarios->nombre.' '.$keyUsuarios->apellidos;
+            $DescriptActiviti = 'comentó tu publicación';
+
+            $dataPublicActiviti = array(
+              'id_usuario' => $usuarioPublic,
+              'nonbre_user' => $nameUser,
+              'tipo_actividad' => $tipoActividad,
+              'id_post' => $idPostPublicado,
+              'descripcion_actividad' => $DescriptActiviti,
+            );
+
+            $DataStoreActivity = new HistorialActividadesRecientes($dataPublicActiviti);  
+            $DataStoreActivity->save();
+          }
+         
+        }
 
         $JoinTableUserPostsComents =  \DB::table('users')
         ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')

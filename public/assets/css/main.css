@@ -337,7 +337,7 @@ ul.nav.navbar-nav.navbar-right.navulRIght {
   text-align: center;
   background: #1a1a1a;
   position: absolute;
-  width: 90%;
+  width: 97%;
   border-radius: 50%;
   bottom: 35%;
   color: white;
@@ -391,6 +391,11 @@ li.dropdown.uSerLogue.colorBlackSuave {
 
 .ui.feed.uifeedAvatar>.event>.content>.summary>a {
   font-size: 16px;
+}
+
+.ui.feed.uifeedAvatar>.event>.content>.summary>a:hover {
+  font-size: 16px;
+  text-decoration: underline;
 }
 
 .ui.feed.uifeedAvatar>.event>.content>.summary>.date {
@@ -456,7 +461,7 @@ li.dropdown.uSerLogue.colorBlackSuave {
 
 .dataPrubeIm {  
   padding-bottom: 3%;
-  background-size: 195%;
+  background-size: 125%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1054,7 +1059,7 @@ div#sandbox-container>h4 {
 }
 
 .content>.summary.postPosss>div.date>img.alertPost {
-  width: 37%;
+  width: 23%;
   height: auto;
 }
 
@@ -1162,6 +1167,10 @@ div#carousel-example-genericRan>.carousel-inner {
 .captionUsersInLive>div>div.title {
   width: 90%;
   margin: 0 auto;
+}
+
+div.ui.dropdown.dropdownSemantic.notifiICos.fontMiriamProRegular>div.menu>.captionActivitiesRecientes {
+  white-space: inherit;
 }
 
 .captionUsersInLive>div>div.content {
@@ -1299,6 +1308,48 @@ div#carousel-example-genericRan>.carousel-inner {
   margin-left: 4%;
 }
 
+.icoCumple {
+  background: url('../images/avatar/ico-happy.png');
+  background-size: cover;
+  width: 9%;
+  height: 21px;
+  display: block;
+  background-repeat: no-repeat;
+  display: inline-block;
+  /* bottom: 10px; */
+  position: relative;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.icoLikes {
+  background: url('../images/avatar/ico-likes.png');
+  background-size: cover;
+  width: 9%;
+  height: 21px;
+  display: block;
+  background-repeat: no-repeat;
+  display: inline-block;
+  /* bottom: 10px; */
+  position: relative;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.icoComentarios {
+  background: url('../images/avatar/ico-comment.png');
+  background-size: cover;
+  width: 9%;
+  height: 21px;
+  display: block;
+  background-repeat: no-repeat;
+  display: inline-block;
+  /* bottom: 10px; */
+  position: relative;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
 
 .notficiActivitie>.ui.relaxed.divided.list>.item>.content {
   display: inline-block;
@@ -1352,6 +1403,15 @@ div#carousel-example-genericRan>.carousel-inner {
   padding-bottom: 2%;
 }
 
+.col-xs-12.col-sm-6.col-md-7.col-lg-7.captionPosteos.captionPreviewPost {
+  width: 100%;
+}
+
+.col-xs-12.col-sm-6.col-md-7.col-lg-7.captionPosteos.captionPreviewPost>.col-xs-12.col-sm-6.col-md-6.col-lg-6 {
+  width: 100%;
+  padding-left: 36%;
+  padding-right: 36%;
+}
 
 /* PUBLISH SECTION */
 
@@ -3667,5 +3727,17 @@ ul.Redconocistes>li>div {
   width: 50%;
   text-align: center;
   margin-top: 2%;
+}
+
+.captionRecientesMobie{
+  display: none;
+}
+
+.col-xs-12.col-sm-12.notifisMobile{
+  display: none;
+}
+
+.blockMobileMen{
+  display: none;
 }
 

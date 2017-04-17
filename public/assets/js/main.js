@@ -531,6 +531,7 @@ jQuery(document).ready(function($) {
 		var finLikeUser = $(this).find('input.idUseLike').val();
 		var finLikePost = $(this).find('input.idPubliLike').val();
 		var finDisLikePost = $(this).find('input.dislike').val();
+		var finUserPublicPost = $(this).find('input.idUserPublicoPost').val();
 		var textClick = $(this).text();
 		var Click = $(this);
 
@@ -542,7 +543,7 @@ jQuery(document).ready(function($) {
 		    url: 'http://127.0.0.1/Sites/Intranet-chat/likeUserd',
 		    type: 'POST',
 		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-		    data: "idLikeUser="+finLikeUser+"&idLikePost="+finLikePost+"&idDislikePost="+finDisLikePost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+		    data: "idLikeUser="+finLikeUser+"&idLikePost="+finLikePost+"&idUserPublicPost="+finUserPublicPost+"&idDislikePost="+finDisLikePost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
 		    	console.log(result);
@@ -567,7 +568,8 @@ jQuery(document).ready(function($) {
 		var findComent = $(parentFormComent).find('textarea').val();
 		var findIdUserComent = $(parentFormComent).find('input.iduserComent').val();
 		var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();
-
+		var finUserPublicPostComent = $(parentFormComent).find('input.idUserPublicoPostComent').val();
+		console.log(finUserPublicPostComent);
 		$.ajaxSetup({
 		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 		});
@@ -576,7 +578,7 @@ jQuery(document).ready(function($) {
 		    url: 'http://127.0.0.1/Sites/Intranet-chat/CcomentsUsers',
 		    type: 'POST',
 		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-		    data: "idComentUser="+findIdUserComent+"&ComentPost="+findComent+"&idDtasPost="+findIdPostPublic+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+		    data: "idComentUser="+findIdUserComent+"&ComentPost="+findComent+"&idPostComent="+finUserPublicPostComent+"&idDtasPost="+findIdPostPublic+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
 		    	console.log(result.name);
@@ -618,17 +620,9 @@ jQuery(document).ready(function($) {
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
 		    	console.log(result);
-		    	$(".alert.alert-info.dataClMoPosPEr").css({
-		    		display: 'block',
-		    	});
-		    	setTimeout(function(){ 
-		    		$(".alert.alert-info.dataClMoPosPEr").css({
-		    			display: 'none',
-		    		});
-		    	}, 3000);
 		    	setTimeout(function(){ 
 		    		window.location = "http://127.0.0.1/Sites/Intranet-chat/home";
-		    	}, 1000);
+		    	}, 100);
 		    },
 		    error: function() {
 		        console.log('Error');
@@ -1006,4 +1000,38 @@ $("form.formEvaliuacion").submit(function(e){
 		e.preventDefault();
 		$('.errorSelec').fadeIn();
 	}
+});
+
+
+// Notifi View
+jQuery(document).ready(function($) {
+	$('.datanotifiNew').click(function(e) {	
+		var getUrl = $(this).data('href');
+		var findInput = $(this).find('input.notifiview').val();
+		var findInputIdUser = $(this).find('input.notifiviewUser').val();
+		e.preventDefault();
+
+		$.ajaxSetup({
+		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+		});
+
+		$.ajax({
+		    url: 'http://127.0.0.1/Sites/Intranet-chat/notifiViewHi',
+		    type: 'POST',
+		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+		    data: "idnotifi="+findInput+"&iduserNotifi="+findInputIdUser+"",
+		    dataType: 'json',
+		    success: function(result, index, value, data) {
+		    	if(result == 'vista'){
+		    		setTimeout(function(){ 
+		    			window.location = getUrl;
+		    		}, 200);
+		    	}	
+		    },
+		    error: function() {
+		        console.log('Error');
+		    }
+		});
+		return false;
+	});
 });

@@ -29,6 +29,7 @@ use App\HistorialActividadesRecientes;
 use App\Adps;
 use App\HistorialAdps;
 use App\NotificacionesEventos;
+use App\RecordatoriosAdmin;
 
 
 class HomeController extends Controller
@@ -210,7 +211,12 @@ class HomeController extends Controller
    }
 
    public function ActivitiesRecientes(){
-    $GetActividades = HistorialActividadesRecientes::orderBy('id', 'desc')->paginate(10);
+    $GetActividades = HistorialActividadesRecientes::orderBy('id', 'desc')->paginate(11);
+    return $GetActividades;
+   }
+
+   public function ActivitiesNotifysRecientes(){
+    $GetActividades = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
     return $GetActividades;
    }
     
@@ -219,6 +225,7 @@ class HomeController extends Controller
       $likesPost = LikesPosts::all();
       $EventsDayCalendar = EventosCalendario::all();
       $eventosNOtify = NotificacionesEventos::all();
+      $Recordatorios = RecordatoriosAdmin::all();
 
       #Verifi Cumpleanos de algun empleado
       $UsuariosAll = DatosPersonales::all();
@@ -257,6 +264,31 @@ class HomeController extends Controller
             ); 
             $DataStorePosy = new Post($dataPublicPost);  
             $DataStorePosy->save();
+
+            // CREATE ACTIVIDADES
+            $usuarioCumpleanos = $keyUsuariosAllPub->id_usuario;
+            $idPostPublicado = $DataStorePosy->id;
+            $tipoActividad = '14';
+
+            $Usuarios = DatosPersonales::where('id_usuario', '=', $usuarioCumpleanos)->get();
+
+            foreach ($Usuarios as $keyUsuarios) {
+              if($usuarioCumpleanos == $keyUsuarios->id_usuario){
+                $nameUser = $keyUsuarios->nombre.' '.$keyUsuarios->apellidos;
+                $DescriptActiviti = 'Hoy es el cumpleaños de';
+              }
+              
+              $dataPublicActiviti = array(
+                'id_usuario' => $usuarioCumpleanos,
+                'nonbre_user' => $nameUser,
+                'tipo_actividad' => $tipoActividad,
+                'id_post' => $idPostPublicado,
+                'descripcion_actividad' => $DescriptActiviti,
+              );
+
+              $DataStoreActivity = new HistorialActividadesRecientes($dataPublicActiviti);  
+              $DataStoreActivity->save();
+            }
           }
         }
       }
@@ -326,7 +358,7 @@ class HomeController extends Controller
         $dateCreado = new \Carbon\Carbon($keyPosts->created_at); 
         $dateUpdate = new \Carbon\Carbon($keyPosts->created_at); 
 
-        $newArrayDats = array('id' => $keyPosts->id,'descripcion' => $keyPosts->descripcion,'imagen' => $ArrayImgees,'documentos' => $ArrayDocuemnts, 'id_tipo_publicacion' => $keyPosts->id_tipo_publicacion, 'id_tipo_evento' => $keyPosts->id_tipo_evento,'id_usuario' => $keyPosts->id_usuario,'created_at' => $dateCreado->toDateTimeString(),'updated_at' => $dateUpdate->toDateTimeString());
+        $newArrayDats = array('id' => $keyPosts->id,'descripcion' => $keyPosts->descripcion,'imagen' => $ArrayImgees,'documentos' => $ArrayDocuemnts, 'id_tipo_publicacion' => $keyPosts->id_tipo_publicacion, 'id_tipo_evento' => $keyPosts->id_tipo_evento, 'descripcion' => $keyPosts->descripcion,'id_usuario' => $keyPosts->id_usuario,'created_at' => $dateCreado->toDateTimeString(),'updated_at' => $dateUpdate->toDateTimeString());
         array_push($dataPostD,$newArrayDats);
       }
 
@@ -354,10 +386,11 @@ class HomeController extends Controller
 
       #Get actividades recientes
       $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
 
-      return view('usuarios.home',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','RankingGeneral','JoinTableUserDatosPersonalesDatosEmpleado','eventosNOtify','Activities','NotifisEventos','AllPost','NotifisEventos'));
+      return view('usuarios.home',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','RankingGeneral','JoinTableUserDatosPersonalesDatosEmpleado','eventosNOtify','Activities','NotifisEventos','AllPost','NotifisEventos','ActivitiesNotifys','Recordatorios'));
     }
 
     public function rankingSinAppAsesores($GetDataUsers,$ADPS,$HistoryAdps){
@@ -789,9 +822,15 @@ class HomeController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
 
 
-      return view('usuarios.profile',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','Solicitudes','PrimerNumerDay','SegundoNumerDay','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify','AllPost'));
+
+      return view('usuarios.profile',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','Solicitudes','PrimerNumerDay','SegundoNumerDay','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify','AllPost','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function updateProfileUser(Request $request){
@@ -1019,9 +1058,13 @@ class HomeController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      // dd($DataArrayPostImpar);
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.profile-of-user',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify'));
+      return view('usuarios.profile-of-user',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function RankingEmpleados()
@@ -1058,9 +1101,14 @@ class HomeController extends Controller
           $UserMejorRanking = array('id_user' => $valueRankingGeneral['id_user'],'puntos' => $valueRankingGeneral['puntosRanking']);
         }
       }
-      // dd($UserMejorRanking);
 
-      return view('usuarios.ranking-empleados',compact('idUserLogin','AllOnlineUser','UserMejorRanking','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','idMejorRanking','AllOnlineUser','getUsers'));
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.ranking-empleados',compact('idUserLogin','AllOnlineUser','UserMejorRanking','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','idMejorRanking','AllOnlineUser','getUsers','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function ChatEmpleados()
@@ -1531,7 +1579,13 @@ class HomeController extends Controller
           }          
         }
 
-      return view('usuarios.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder'));
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function SolicitudPermiso()
@@ -1614,8 +1668,14 @@ class HomeController extends Controller
         $PrimerNumerDay = $DataDias[0];
         $SegundoNumerDay = $DataDias[1];
 
+        #get Notificaciones y actividades
+        $AllPost = Post::all();
+        $Activities = $this->ActivitiesRecientes();
+        $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+        $NotifisEventos = NotificacionesEventos::all();
 
-      return view('usuarios.solicitud-permiso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay'));
+
+      return view('usuarios.solicitud-permiso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function StoreSolicitudPermimso(Request $request){
@@ -1747,9 +1807,15 @@ class HomeController extends Controller
         $PrimerNumerDay = $DataDias[0];
         $SegundoNumerDay = $DataDias[1];
 
+        #get Notificaciones y actividades
+        $AllPost = Post::all();
+        $Activities = $this->ActivitiesRecientes();
+        $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+        $NotifisEventos = NotificacionesEventos::all();
 
 
-      return view('usuarios.motivo-emergencia',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay'));
+
+      return view('usuarios.motivo-emergencia',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function StoreSolicitudEmergencia(Request $request){
@@ -1900,7 +1966,13 @@ class HomeController extends Controller
         $PrimerNumerDay = $DataDias[0];
         $SegundoNumerDay = $DataDias[1];
 
-      return view('usuarios.buzon-sugerencias',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay'));
+        #get Notificaciones y actividades
+        $AllPost = Post::all();
+        $Activities = $this->ActivitiesRecientes();
+        $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+        $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.buzon-sugerencias',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function StoreBuzonSugerencia(Request $request){
@@ -2066,9 +2138,15 @@ class HomeController extends Controller
         $DataDias = $this->DaysVacaciones();
         $PrimerNumerDay = $DataDias[0];
         $SegundoNumerDay = $DataDias[1];
+
+        #get Notificaciones y actividades
+        $AllPost = Post::all();
+        $Activities = $this->ActivitiesRecientes();
+        $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+        $NotifisEventos = NotificacionesEventos::all();
         
 
-      return view('usuarios.solicitud-proceso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','ComentariosPermisos','PermisosData','DescuentosSolicitudes','UsersAllsPersonalesData','EmergenciasData','ComentariosEmergencias','ComentariosSugerencias','SugerenciasData','PrimerNumerDay','SegundoNumerDay'));
+      return view('usuarios.solicitud-proceso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','ComentariosPermisos','PermisosData','DescuentosSolicitudes','UsersAllsPersonalesData','EmergenciasData','ComentariosEmergencias','ComentariosSugerencias','SugerenciasData','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function  DaysVacaciones(){
@@ -2133,7 +2211,13 @@ class HomeController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      return view('usuarios.evaluaciones-a-personal',compact('idUserLogin','AllOnlineUser','UsersLogiado','encargadoArea','UsersAlls','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral'));
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.evaluaciones-a-personal',compact('idUserLogin','AllOnlineUser','UsersLogiado','encargadoArea','UsersAlls','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function EvaluationToPersonalDetall($idEncargado, $id)
@@ -2142,6 +2226,7 @@ class HomeController extends Controller
       $UsersAlls = DatosPersonales::all();
       $UsersEvaluacion = DatosPersonales::where('id_usuario','=', $id)->get();
       $EncargadosOfAreas = EncargadosAreas::where('id_encargardo','=', $idEncargado)->get();
+      $HistorialEvaluaciones = HistorialEvaluaciones::all();
 
       // $encargadoArea = array();
       $idUserLogin = Auth::user()->id;
@@ -2163,7 +2248,13 @@ class HomeController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      return view('usuarios.evaluaciones-a-personal-detall',compact('idUserLogin','AllOnlineUser','EncargadosOfAreas','UsersEvaluacion','UsersAlls','idUserEvaluacion','idEncargado','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral'));
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.evaluaciones-a-personal-detall',compact('idUserLogin','AllOnlineUser','EncargadosOfAreas','UsersEvaluacion','UsersAlls','idUserEvaluacion','idEncargado','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys','HistorialEvaluaciones'));
     }
 
     public function StoreEvaluation(Request $request){
@@ -2272,10 +2363,10 @@ class HomeController extends Controller
           Session::flash('Evaluacion_UsersFoto', $keyUsersEvaluado->foto);
           Session::flash('Evaluacion_UsersId', $keyUsersEvaluado->id_usuario);
         }        
-        return redirect('http://127.0.0.1/Sites/Intranet-chat/evaluacion-a-personal-evaluados');
+        return redirect('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/evaluacion-a-personal-evaluados');
 
       }else{
-        return redirect('http://127.0.0.1/Sites/Intranet-chat/finish-evaluation');
+        return redirect('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/finish-evaluation');
       }
 
     }
@@ -2314,7 +2405,13 @@ class HomeController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      return view('usuarios.evaluaciones-a-personal-evaluados',compact('idUserLogin','AllOnlineUser','UsersAlls','UsersEvaluacion','encargadoArea','UsersLogiado','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral'));
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.evaluaciones-a-personal-evaluados',compact('idUserLogin','AllOnlineUser','UsersAlls','UsersEvaluacion','encargadoArea','UsersLogiado','JoinTableUserDatas','HistorialEvaluaciones','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function FinishEvaluation()
@@ -2325,7 +2422,13 @@ class HomeController extends Controller
       //get all users online
       $AllOnlineUser = $this->UsersOnline();
 
-      return view('usuarios.finish-evaluaction',compact('idUserLogin','AllOnlineUser'));
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.finish-evaluaction',compact('idUserLogin','AllOnlineUser','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
     }
 
     public function GetPost()
@@ -2473,6 +2576,98 @@ class HomeController extends Controller
       $createComentSugerencia->save();
       Session::flash('Create_Comentario', "Su comentario se ha enviado");
       return back()->withInput();
+
+    }
+
+    public function previewContPost($idusers,$idpost){
+      $idUserLogin = Auth::user()->id;
+      $JoinTableUserPosts =  \DB::table('users')
+      ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')
+      # ->join('datos_empleados', 'users.id', '=', 'datos_empleados.id_usuario')
+      ->select('*')
+      ->get();
+
+      $getPost = Post::where('id','=',$idpost)->get();
+      $Likes = $this->getLikesPost();
+      $Coments = $this->getComentsPost();
+      $arrayOfImages = array();
+      $ArrayOfDocuemnts = array();
+
+      foreach ($getPost as $keyPostsImages) {
+        if($keyPostsImages->id_usuario == $idusers){
+          if($keyPostsImages->imagen != ''){
+            $ArrayImgeesGaleri = '';
+            $ArrayImgeesGaleri = explode(",", $keyPostsImages->imagen);
+            array_push($arrayOfImages,$ArrayImgeesGaleri);
+          }
+        }
+        if($keyPostsImages->id_usuario == $idusers){
+          if($keyPostsImages->documentos != ''){
+            $ArrayDocuemnts = explode(",", $keyPostsImages->documentos);
+            array_push($ArrayOfDocuemnts,$ArrayDocuemnts);
+          }
+        }
+        
+        
+      }
+
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      return view('usuarios.previuw-detall', compact('JoinTableUserPosts','idusers','idpost','getPost','Likes','Coments','idUserLogin','arrayOfImages','ArrayOfDocuemnts','Activities','NotifisEventos','AllPost','ActivitiesNotifys'));
+    }
+
+    public function notifyView(Request $request)
+    {
+      if($request->ajax()) {
+        $idNotificacion = $request->idnotifi;
+        $idUserNotificacion = $request->iduserNotifi;
+
+        $getNotificacion = HistorialActividadesRecientes::where('id','=',$idNotificacion)->get();
+        $idUserViewsNotify = '';
+        #bucamos los usuarios que ya vieron la notificaicon
+        foreach ($getNotificacion as $keyGetNotificacion) {
+          $idUserViewsNotify = $keyGetNotificacion->id_users_view;
+        }
+
+        #Si no lo encuentra guarda el usuario que vio la notificacion
+        if($idUserViewsNotify == ''){
+          $dataUpdateNotificacion = array(
+            'id_users_view' => $idUserNotificacion,
+          );
+          $UpdateNotificacion= \DB::table('historial_actividades_recientes')
+            ->where('id', '=', $idNotificacion)
+            ->update($dataUpdateNotificacion);
+
+          echo json_encode('vista');
+
+        }elseif($idUserViewsNotify != ''){
+          #si encuentra algun usuario, verifica si el que viene ya existe, si existe
+          #solo retorna a su respectiva pagina
+          $decomponerIds = explode(',', $idUserViewsNotify);
+          if(in_array($idUserNotificacion, $decomponerIds)){
+            echo json_encode('vista');
+          }else{
+            #Si no es el mismo concatena el numero usuario con los anteriores
+            # y actualiza la notificacion
+            $newUserView = $idUserViewsNotify.','.$idUserNotificacion;
+            $dataUpdateNotificacion = array(
+              'id_users_view' => $newUserView,
+            );
+            $UpdateNotificacion= \DB::table('historial_actividades_recientes')
+              ->where('id', '=', $idNotificacion)
+              ->update($dataUpdateNotificacion);
+
+            echo json_encode('vista');
+          }
+        }
+
+        
+        
+      }
 
     }
 

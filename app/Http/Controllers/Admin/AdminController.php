@@ -35,6 +35,7 @@ use App\HistorialEvaluaciones;
 use App\Adps;
 use App\HistorialAdps;
 use App\NotificacionesEventos;
+use App\HistorialActividadesRecientes;
 
 
 
@@ -55,6 +56,46 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function ActivitiesRecientes(){
+     date_default_timezone_set('America/Monterrey');
+     $fechaMesActual = date('Y-m-d');
+
+     $GetActividades = HistorialActividadesRecientes::orderBy('id', 'desc')->where('created_at', 'like', '%'.$fechaMesActual.'%')->get();
+     return $GetActividades;
+    }
+
+    public function ActivitiesRecientesPorFecha(){
+
+     date_default_timezone_set('America/Monterrey');
+     $fechaDiaAnterior =  date("Y-m-d", strtotime("yesterday"));
+
+     $GetActividadesFechas = HistorialActividadesRecientes::where('created_at','like','%'.$fechaDiaAnterior.'%')->orderBy('id', 'desc')->get();
+
+     $totalNotifciaciones = $this->ValidaNotificaciones($GetActividadesFechas);
+
+     echo json_encode($totalNotifciaciones);
+
+    }
+
+    public function HistorialActividadesRecientes($fecha){
+
+     $GetActividadesFechas = HistorialActividadesRecientes::where('created_at','like','%'.$fecha.'%')->orderBy('id', 'desc')->get();
+
+     return view('admin.history-notificaciones', compact('GetActividadesFechas'));     
+    }
+
+    public function HistorialActividadesRecientesAll(){
+
+     $GetActividadesFechas = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
+
+     return view('admin.history-notificaciones', compact('GetActividadesFechas'));     
+    }
+
+    public function ActivitiesNotifysRecientes(){
+     $GetActividades = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
+     return $GetActividades;
+    }
 
     public function Home()
     {
@@ -323,7 +364,126 @@ class AdminController extends Controller
            }
         }
 
-        return view('admin.home', compact('idUserLogin','EventsDayCalendar','UsersAlls','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','Recordatorios','GetUltimateMensage','getUsers'));
+
+        #Get actividades recientes
+        $Activities = $this->ActivitiesRecientes();
+
+        $totalNotifciaciones = $this->ValidaNotificaciones($Activities);
+
+        date_default_timezone_set('America/Monterrey');
+        $fechaMesActual = date('Y-m-d');
+
+        $DiaASiguiente= new \Carbon\Carbon('yesterday');
+        $fechaDiaSiguiente = $DiaASiguiente->format('Y-m-d');
+
+        $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+        $NotifisEventos = NotificacionesEventos::all();
+
+        #get Solicitudes de llegadas tarde
+        $HistoryLLegadasTardes = AsistenciaUsers::where('fecha', '=', $fechaMesActual)->where('hora_entrada', '>', '08:00')->get();
+        #get Solicitudes de emergencia
+        $EmergenciasData = DetallesSolicitudes::where('id_tipo_solicitud', '=','2')->where('created_at', 'like','%'.$fechaMesActual.'%')->orderBy('id','desc')->get();
+        #get Solicitudes permisos
+        $PermisosDataSoli = DetallesSolicitudes::where('id_tipo_solicitud', '=','1')->where('created_at', 'like', '%'.$fechaMesActual.'%')->orderBy('id','desc')->get();
+        # Obtener notifiaciones creadas
+        $GetNotificaciones = $this->getNotificaciones();
+        return view('admin.home', compact('idUserLogin','EventsDayCalendar','UsersAlls','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','Recordatorios','GetUltimateMensage','getUsers','Activities','ActivitiesNotifys','NotifisEventos','totalNotifciaciones','fechaMesActual','fechaDiaSiguiente','HistoryLLegadasTardes','EmergenciasData','PermisosDataSoli','GetNotificaciones'));
+    }
+
+    public function ValidaNotificaciones($getNotifis){
+      $totalNotifciaciones = 0;
+      foreach ($getNotifis as $activi) {
+        if($activi->tipo_actividad == 4){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            $totalNotifciaciones = $totalNotifciaciones+1;
+          }
+        }
+
+        if($activi->tipo_actividad == 5){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            $totalNotifciaciones = $totalNotifciaciones+1;
+          }
+        }
+
+        if($activi->tipo_actividad == 13){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            $totalNotifciaciones = $totalNotifciaciones+1;
+          }
+        }
+
+        if($activi->tipo_actividad == 10){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            $totalNotifciaciones = $totalNotifciaciones+1;
+          }
+        }
+
+        if($activi->tipo_actividad == 14){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            $totalNotifciaciones = $totalNotifciaciones+1;
+          }
+        }
+
+        if($activi->tipo_actividad == 11){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            if($activi->id_usuario == Auth::user()->id){
+              $totalNotifciaciones = $totalNotifciaciones+1;
+            }
+            
+          }
+        }
+
+        if($activi->tipo_actividad == 12){
+          $idUserLo = Auth::user()->id;
+          $idValidaView = false;
+          $userViews = explode(',', $activi->id_users_view);
+          if($userViews == $idUserLo){
+            $idValidaView = true;
+          }
+          if( $idValidaView == false){
+            if($activi->id_usuario == Auth::user()->id){
+             $totalNotifciaciones = $totalNotifciaciones+1;
+            }
+          }
+        }
+      }
+
+      return $totalNotifciaciones;
     }
     
     public function Board()
@@ -393,7 +553,7 @@ class AdminController extends Controller
         $dateCreado = new \Carbon\Carbon($keyPosts->created_at); 
         $dateUpdate = new \Carbon\Carbon($keyPosts->created_at); 
 
-        $newArrayDats = array('id' => $keyPosts->id,'descripcion' => $keyPosts->descripcion,'imagen' => $ArrayImgees,'documentos' => $ArrayDocuemnts, 'id_tipo_publicacion' => $keyPosts->id_tipo_publicacion, 'id_tipo_evento' => $keyPosts->id_tipo_evento,'id_usuario' => $keyPosts->id_usuario,'created_at' => $dateCreado->toDateTimeString(),'updated_at' => $dateUpdate->toDateTimeString());
+        $newArrayDats = array('id' => $keyPosts->id,'descripcion' => $keyPosts->descripcion,'imagen' => $ArrayImgees,'documentos' => $ArrayDocuemnts, 'id_tipo_publicacion' => $keyPosts->id_tipo_publicacion, 'id_tipo_evento' => $keyPosts->id_tipo_evento, 'descripcion' => $keyPosts->descripcion,'id_usuario' => $keyPosts->id_usuario,'created_at' => $dateCreado->toDateTimeString(),'updated_at' => $dateUpdate->toDateTimeString());
         array_push($dataPostD,$newArrayDats);
       }
 
@@ -406,8 +566,11 @@ class AdminController extends Controller
         }
       }
 
+      #Get notificaciones
+      $GetActividadesFechas = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
 
-      return view('admin.board',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','eventosNOtify'));
+
+      return view('admin.board',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','eventosNOtify','GetActividadesFechas'));
     }
 
     public function ChatAdmin()
@@ -675,7 +838,10 @@ class AdminController extends Controller
 
       $CantidadSugerenciasNovistas = count($JoinTableUserDatasSugerenciasVerifiView);
 
-      return view('admin.sugerencias',compact('ComentariosSugerencias','UsersAlls','CantidadSugerenciasNovistas','SugerenciasData'));
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.sugerencias',compact('ComentariosSugerencias','UsersAlls','CantidadSugerenciasNovistas','SugerenciasData','GetNotificaciones'));
     }
 
     public function Emergencias()
@@ -695,7 +861,37 @@ class AdminController extends Controller
 
       $CantidadEmergenciasNovistas = count($JoinTableUserDatasEmergenciasVerifiView);
 
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.emergencias',compact('ComentariosEmergencias','UsersAlls','CantidadEmergenciasNovistas','EmergenciasData','GetNotificaciones'));
+    }
+
+    public function EmergenciasFechas($fechaemergenci)
+    {
+      $ComentariosEmergencias = ComentariosSolicitudes::all();
+      $EmergenciasData = DetallesSolicitudes::where('id_tipo_solicitud', '=','2')->where('created_at', 'like','%'.$fechaemergenci.'%')->orderBy('id','desc')->get();
+
+      $UsersAlls = DatosPersonales::all();
+
+      $JoinTableUserDatasEmergenciasVerifiView =  \DB::table('datos_personales')
+      ->join('detalles_solicitudes', 'datos_personales.id_usuario', '=', 'detalles_solicitudes.id_usuario')
+      ->select('*')
+      ->where('id_tipo_solicitud', '=','2')
+      ->whereNull('solicitud_vista')
+      ->get();
+
+
+      $CantidadEmergenciasNovistas = count($JoinTableUserDatasEmergenciasVerifiView);
+
       return view('admin.emergencias',compact('ComentariosEmergencias','UsersAlls','CantidadEmergenciasNovistas','EmergenciasData'));
+    }
+
+    public function emergenciasTotalsFechas($fechaMesActual){
+      #get Solicitudes de emergencia
+      $EmergenciasData = DetallesSolicitudes::where('id_tipo_solicitud', '=','2')->where('created_at', 'like','%'.$fechaMesActual.'%')->orderBy('id','desc')->get();
+      $totalEmergenciasYesterday = count($EmergenciasData);
+      echo json_encode($totalEmergenciasYesterday);
     }
 
     public function SolicitudPermisos()
@@ -716,7 +912,38 @@ class AdminController extends Controller
 
       $CantidadPermisosNovistas = count($JoinTableUserDatasPermmisosVerifiView);
 
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.solicitud-permisos',compact('ComentariosPermisos','UsersAlls','CantidadPermisosNovistas','PermisosData','JoinTableUserDatasPermmisosVerifiView','DescuentosSolicitudes','GetNotificaciones'));
+    }
+
+    public function SolicitudPermisosFecha($fechapermiso)
+    {
+      $ComentariosPermisos = ComentariosSolicitudes::all();
+      $PermisosData = DetallesSolicitudes::where('id_tipo_solicitud', '=','1')->where('created_at', 'like','%'.$fechapermiso.'%')->orderBy('id','desc')->get();
+
+      $UsersAlls = DatosPersonales::all();
+      $DescuentosSolicitudes = TiposDescuentos::all();
+
+      $JoinTableUserDatasPermmisosVerifiView =  \DB::table('datos_personales')
+      ->join('detalles_solicitudes', 'datos_personales.id_usuario', '=', 'detalles_solicitudes.id_usuario')
+      ->select('*')
+      ->where('id_tipo_solicitud', '=','1')
+      ->whereNull('solicitud_vista')
+      ->get();
+
+
+      $CantidadPermisosNovistas = count($JoinTableUserDatasPermmisosVerifiView);
+
       return view('admin.solicitud-permisos',compact('ComentariosPermisos','UsersAlls','CantidadPermisosNovistas','PermisosData','JoinTableUserDatasPermmisosVerifiView','DescuentosSolicitudes'));
+    }
+
+    public function PermisosTotalsFechas($fechaMesActual){
+      #get Solicitudes de emergencia
+      $PermisosData = DetallesSolicitudes::where('id_tipo_solicitud', '=','1')->where('created_at', 'like','%'.$fechaMesActual.'%')->orderBy('id','desc')->get();
+      $totalPermisosYesterday = count($PermisosData);
+      echo json_encode($totalPermisosYesterday);
     }
 
     public function Calendar()
@@ -802,8 +1029,11 @@ class AdminController extends Controller
             }
           }          
         }
+
+        # Obtener notifiaciones creadas
+        $GetNotificaciones = $this->getNotificaciones();
         
-      return view('admin.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder'));
+      return view('admin.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder','GetNotificaciones'));
     }
 
     public function Documentos()
@@ -842,8 +1072,10 @@ class AdminController extends Controller
 
       // dd($ArrayCarpetas);
 
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5'));
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas1($idurl)
@@ -883,8 +1115,11 @@ class AdminController extends Controller
         }
       }
 
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5'));
+
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas2($idurl,$idurl2)
@@ -925,7 +1160,10 @@ class AdminController extends Controller
         }
       }
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5'));
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas3($idurl,$idurl2,$idurl3)
@@ -966,7 +1204,10 @@ class AdminController extends Controller
         }
       }
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5'));
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas4($idurl,$idurl2,$idurl3,$idurl4)
@@ -1007,7 +1248,10 @@ class AdminController extends Controller
         }
       }
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5'));
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas5($idurl,$idurl2,$idurl3,$idurl4,$idurl5)
@@ -1048,7 +1292,10 @@ class AdminController extends Controller
         }
       }
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5'));
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function Ranking()
@@ -1066,7 +1313,10 @@ class AdminController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      return view('admin.ranking', compact('JoinTableUserDatosPersonalesDatosEmpleado','AllAdps','HistoryAdps','RankingGeneral'));
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.ranking', compact('JoinTableUserDatosPersonalesDatosEmpleado','AllAdps','HistoryAdps','RankingGeneral','GetNotificaciones'));
     }
 
     public function rankingSinAppAsesores($GetDataUsers,$ADPS,$HistoryAdps){
@@ -1342,6 +1592,8 @@ class AdminController extends Controller
       ->select('datos_personales.nombre','datos_personales.apellidos','datos_personales.foto','datos_personales.estado','datos_personales.id_usuario','datos_empleados.correo_corporativo','datos_empleados.celular','datos_empleados.extencion')
       ->get();
 
+      $totalUsers = count($JoinTableUserDatosPersonalesDatosEmpleado);
+
       // RANKING
       $AllAdps = Adps::all();
       $HistoryAdps = HistorialAdps::all();
@@ -1355,7 +1607,7 @@ class AdminController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      return view('admin.usuarios', compact('JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','HistoryAdps','GetEvaluaciones'));
+      return view('admin.usuarios', compact('JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','HistoryAdps','GetEvaluaciones','totalUsers'));
     }
 
      public function DescativeUser(Request $request)
@@ -1530,8 +1782,166 @@ class AdminController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.historial-usuarios',compact('UsersAlls','JoinTableUserDatasHostoriLlegadas','Asistencias','arrayLosHorariosOfUser','ADPS','arrayAdpsCreadas','RankingGeneral','GetNotificaciones'));
+    }
+
+    public function HistoryUsersFechas($fecha)
+    {
+      $UsersAlls = DatosPersonales::all();
+      $HorariosData = Horarios::all();
+      $Asistencias = AsistenciaUsers::where('fecha','=',$fecha)->get();
+      $arrayHorarioUsers = array();
+      $arrayLosHorariosOfUser = array();
+      $ADPS = Adps::all();
+
+      foreach ($HorariosData as $keyHorariosData) {
+        $arrayHorarioUsers = array();
+        // DIAS COMPLETOS
+       // primer bloque de horarios
+       $DayCompleto = $keyHorariosData->bloq_horario1;
+       $DayCompletoTime = $keyHorariosData->bloq_horario1Time;
+       $RemoveComasCompl1 = explode(', ',$DayCompleto);
+       $RemoveComasCompleTime1 = explode(',',$DayCompletoTime);
+
+       if($DayCompleto != null){
+         // Horarios del primer bloque
+         foreach ($RemoveComasCompl1 as $keyRemoveComasCompl1e) {
+           $dias = $keyRemoveComasCompl1e;
+           $HoraEntrada = $RemoveComasCompleTime1[0];
+           $HoraSalida = $RemoveComasCompleTime1[1];
+           $HorarioDias = array('dia' =>$dias, 'entrada' =>$HoraEntrada, 'salida' =>$HoraSalida);
+           array_push($arrayHorarioUsers, $HorarioDias);
+         }
+       }
+
+       // segundo bloque de horarios
+        $DayCompleto2 = $keyHorariosData->bloq_horario2;
+        $DayCompletoTime2 = $keyHorariosData->bloq_horario2Time;
+
+        if($DayCompleto2 != null){
+          $RemoveComasCompl2 = explode(', ',$DayCompleto2);
+          $RemoveComasCompleTime2 = explode(',',$DayCompletoTime2);
+
+          // Horarios del segundo bloque
+          foreach ($RemoveComasCompl2 as $keyRemoveComasCompl2e) {
+            $dias2 = $keyRemoveComasCompl2e;
+            $HoraEntrada2 = $RemoveComasCompleTime2[0];
+            $HoraSalida2 = $RemoveComasCompleTime2[1];
+            $HorarioDias2 = array('dia' =>$dias2, 'entrada' =>$HoraEntrada2, 'salida' =>$HoraSalida2);
+            array_push($arrayHorarioUsers, $HorarioDias2);
+          }
+        }        
+
+        // tercer bloque de horarios
+        $DayCompleto3 = $keyHorariosData->bloq_horario3;
+        $DayCompletoTime3 = $keyHorariosData->bloq_horario3Time;
+
+        if($DayCompleto3 != null){
+          $RemoveComasCompl3 = explode(', ',$DayCompleto3);
+          $RemoveComasCompleTime3 = explode(',',$DayCompletoTime3);
+
+          // Horarios del tercer bloque
+          foreach ($RemoveComasCompl3 as $keyRemoveComasCompl3e) {
+            $dias3 = $keyRemoveComasCompl3e;
+            $HoraEntrada3 = $RemoveComasCompleTime3[0];
+            $HoraSalida3 = $RemoveComasCompleTime3[1];
+            $HorarioDias3 = array('dia' =>$dias3, 'entrada' =>$HoraEntrada3, 'salida' =>$HoraSalida3);
+            array_push($arrayHorarioUsers, $HorarioDias3);
+          }
+        }   
+
+        // MEDIOS DIAS    
+
+        // primer bloque de horarios medio tiempo
+        $DayMedio1 = $keyHorariosData->bloq_horarioMedio1;
+        $DayMedio1Time = $keyHorariosData->bloq_horarioMedio1Time;
+        $RemoveComasMedio1 = explode(', ',$DayMedio1);
+        $RemoveComasMedioTime1 = explode(',',$DayMedio1Time);
+
+        if($DayMedio1 != null){
+          // Horarios del primer bloque medio tiempo
+          foreach ($RemoveComasMedio1 as $keyRemoveComasMedio1e) {
+            $diasMedios = $keyRemoveComasMedio1e;
+            $HoraEntradaMedio = $RemoveComasMedioTime1[0];
+            $HoraSalidaMedio = $RemoveComasMedioTime1[1];
+            $HorarioDiasMedios = array('dia' =>$diasMedios, 'entrada' =>$HoraEntradaMedio, 'salida' =>$HoraSalidaMedio);
+            array_push($arrayHorarioUsers, $HorarioDiasMedios);
+          }
+        }
+
+        // segundo bloque de horarios medio tiempo
+         $DayMedio2 = $keyHorariosData->bloq_horarioMedio2;
+         $DayMedioTime2 = $keyHorariosData->bloq_horarioMedio2Time;
+
+         if($DayMedio2 != null){
+           $RemoveComasMedio2 = explode(', ',$DayMedio2);
+           $RemoveComasMedioTime2 = explode(',',$DayMedioTime2);
+
+           // Horarios del segundo bloque medio tiempo
+           foreach ($RemoveComasMedio2 as $keyRemoveComasMedio2e) {
+             $diasMedio2 = $keyRemoveComasMedio2e;
+             $HoraEntradaMedio2 = $RemoveComasMedioTime2[0];
+             $HoraSalidaMedio2 = $RemoveComasMedioTime2[1];
+             $HorarioDiasMedio2 = array('dia' =>$diasMedio2, 'entrada' =>$HoraEntradaMedio2, 'salida' =>$HoraSalidaMedio2);
+             array_push($arrayHorarioUsers, $HorarioDiasMedio2);
+           }
+         }        
+
+         // tercer bloque de horarios medio tiempo
+         $DayMedio3 = $keyHorariosData->bloq_horarioMedio3;
+         $DayMedioTime3 = $keyHorariosData->bloq_horarioMedio3Time;
+
+         if($DayMedio3 != null){
+           $RemoveComasMedio3 = explode(', ',$DayMedio3);
+           $RemoveComasMedioTime3 = explode(',',$DayMedioTime3);
+
+           // Horarios del tercer bloque medio tiempo
+           foreach ($RemoveComasMedio3 as $keyRemoveComasCompl3e) {
+             $diasMedio3 = $keyRemoveComasCompl3e;
+             $HoraEntradaMedio3 = $RemoveComasMedioTime3[0];
+             $HoraSalidaMedio3 = $RemoveComasMedioTime3[1];
+             $HorarioDiasMedio3 = array('dia' =>$diasMedio3, 'entrada' =>$HoraEntradaMedio3, 'salida' =>$HoraSalidaMedio3);
+             array_push($arrayHorarioUsers, $HorarioDiasMedio3);
+           }
+         }   
+         
+         $HorariosOfUser = array('id_user_h' => $keyHorariosData->id_usuario, 'horarios' => $arrayHorarioUsers); 
+        array_push($arrayLosHorariosOfUser,$HorariosOfUser);
+      }
+
+      // dd($arrayLosHorariosOfUser);
+      $HistorialAdps = HistorialAdps::all();
+
+      $arrayAdpsCreadas = array();
+      foreach ($HistorialAdps as $keyHistorialAdps) {
+        $idAsistenciasDataAdp = $keyHistorialAdps->id_asistencias;
+        array_push($arrayAdpsCreadas,$idAsistenciasDataAdp);
+      }
+
+      $AllAdps = Adps::all();
+      $HistoryAdps = HistorialAdps::all();
+      $JoinTableUserDatosPersonalesDatosEmpleado =  \DB::table('datos_personales')
+      ->join('datos_empleados', 'datos_personales.id_usuario', '=', 'datos_empleados.id_usuario')
+      ->select('datos_personales.nombre','datos_personales.apellidos','datos_personales.foto','datos_personales.id_usuario','datos_empleados.correo_corporativo','datos_empleados.celular','datos_empleados.extencion','datos_empleados.area_departamento')
+      ->get();
+
+      // RANKING
+      $rankingSInApp = $this->rankingSinAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
+      $RankingGeneral = $rankingSInApp;
+      // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
+      // $RankingGeneral = $rankingWithApp;
+
 
       return view('admin.historial-usuarios',compact('UsersAlls','JoinTableUserDatasHostoriLlegadas','Asistencias','arrayLosHorariosOfUser','ADPS','arrayAdpsCreadas','RankingGeneral'));
+    }
+
+    public function HistoryAyer($fechaYesterday){
+     $HistoryLLegadasTardes = AsistenciaUsers::where('fecha', '=', $fechaYesterday)->where('hora_entrada', '>', '08:00')->get();
+     $TotalLLegadasTarde = count($HistoryLLegadasTardes);
+     echo json_encode($TotalLLegadasTarde);
     }
 
     public function HistoryEntradaSalidaUsers($id)
@@ -1550,8 +1960,11 @@ class AdminController extends Controller
       }
       #Get todas las asistencias del usuario
       $AsistenciasAll = AsistenciaUsers::where('id_usuario', '=', $id)->orderBy('fecha', 'desc')->get();
+
+      #Get notificaciones
+      $GetActividadesFechas = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
       
-      return view('admin.historial-entrada-salida',compact('AsistenciasDay','AsistenciasAll','UsersAlls','DataHistoryHoy'));
+      return view('admin.historial-entrada-salida',compact('AsistenciasDay','AsistenciasAll','UsersAlls','DataHistoryHoy','GetActividadesFechas'));
     }
 
     public function HistoryEntradaSalidaUsersAlls()
@@ -1583,7 +1996,10 @@ class AdminController extends Controller
 
       // dd($DataHistoryHoy);
 
-      return view('admin.historial-entrada-salida-all',compact('AsistenciasDay','AsistenciasAll','UsersAlls','DataHistoryHoy'));
+      #Get notificaciones
+      $GetActividadesFechas = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
+
+      return view('admin.historial-entrada-salida-all',compact('AsistenciasDay','AsistenciasAll','UsersAlls','DataHistoryHoy','GetActividadesFechas'));
     }
 
     public function EditUser($id)
@@ -1789,9 +2205,10 @@ class AdminController extends Controller
       // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
       // $RankingGeneral = $rankingWithApp;
 
-      // dd($JoinTableUserDatas);
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.evaluciones-mensuales',compact('EncargadosOfAreas','UsersAlls','JoinTableUserDatas','HistorialEvaluaciones','RankingGeneral'));
+      return view('admin.evaluciones-mensuales',compact('EncargadosOfAreas','UsersAlls','JoinTableUserDatas','HistorialEvaluaciones','RankingGeneral','GetNotificaciones'));
     }
 
     public function MonthlyEvaluationsDetall($idEncargado, $id)
@@ -1868,7 +2285,7 @@ class AdminController extends Controller
       $saveEvaluation = new HistorialEvaluaciones($dataSendEvaluation);
       $saveEvaluation->save();
       Session::flash('Evaluacion', "La evaluacion del usuario ha sido realizada");
-      return redirect('http://127.0.0.1/Sites/Intranet-chat/admin/evaluaciones-mensuales');
+      return redirect('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/evaluaciones-mensuales');
 
     }
 
@@ -2369,6 +2786,42 @@ class AdminController extends Controller
       return view('admin.sugerencias',compact('ComentariosSugerencias','UsersAlls','CantidadSugerenciasNovistas','SugerenciasData'));
     }
 
+    public function SearchUsuarios(Request $request){
+      // $nameUserSearch = $request->n;
+      $nameUserSearch = $request->user_search;
+      $UsersAlls = DatosPersonales::where('nombre', 'like', '%'.$nameUserSearch.'%')->get();
+
+      $carbon = new \Carbon\Carbon();
+      $fechaMesActual = $carbon->now()->format('m');
+      $fechaYearActual = $carbon->now()->format('Y');
+      $GetEvaluaciones = HistorialEvaluaciones::where('mes_evaluacion', 'like', '%'.$fechaMesActual.'%' )->where('created_at', 'like', '%'.$fechaYearActual.'%' )->get();
+
+      $JoinTableUserDatosPersonalesDatosEmpleado =  \DB::table('datos_personales')
+      ->join('datos_empleados', 'datos_personales.id_usuario', '=', 'datos_empleados.id_usuario')
+      ->select('datos_personales.nombre','datos_personales.apellidos','datos_personales.foto','datos_personales.estado','datos_personales.id_usuario','datos_empleados.correo_corporativo','datos_empleados.celular','datos_empleados.extencion')
+      ->where('nombre', 'like', '%'.$nameUserSearch.'%')
+      ->get();
+
+      $totalUsers = count($JoinTableUserDatosPersonalesDatosEmpleado);
+
+      // RANKING
+      $AllAdps = Adps::all();
+      $HistoryAdps = HistorialAdps::all();
+      $JoinTableUserDatosPersonalesDatosEmpleado =  \DB::table('datos_personales')
+      ->join('datos_empleados', 'datos_personales.id_usuario', '=', 'datos_empleados.id_usuario')
+      ->select('datos_personales.nombre','datos_personales.apellidos','datos_personales.foto','datos_personales.estado','datos_personales.id_usuario','datos_empleados.correo_corporativo','datos_empleados.celular','datos_empleados.extencion','datos_empleados.area_departamento')
+      ->where('nombre', 'like', '%'.$nameUserSearch.'%')
+      ->get();
+
+      $rankingSInApp = $this->rankingSinAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
+      $RankingGeneral = $rankingSInApp;
+      // $rankingWithApp = $this->RankingWithAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);
+      // $RankingGeneral = $rankingWithApp;
+
+      return view('admin.usuarios', compact('JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','HistoryAdps','GetEvaluaciones','totalUsers'));
+    }
+
+
     public function UploadChangeDirect(Request $request){
       if($request->ajax()) {
         $data= facedesrequest::all();
@@ -2386,7 +2839,7 @@ class AdminController extends Controller
       $getNameArchivos = $request->dta_move_element;
 
       $getUrl = $request->_url;
-      $cadena = "http://127.0.0.1/Sites/Intranet-chat/admin/documentos";
+      $cadena = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentos";
       $removeParteUrl = str_replace($cadena,"",$getUrl);
 
       if($removeParteUrl == ''){
@@ -2417,7 +2870,7 @@ class AdminController extends Controller
       $getUrl = $request->_url;
       $getRemoveArchivos = $request->dta_move_element;
       $getRemoveArchivosCarpetas = $request->dta_move_element_car;
-      $cadena = "http://127.0.0.1/Sites/Intranet-chat/admin/documentos";
+      $cadena = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentos";
 
       $removeParteUrl = str_replace($cadena,"",$getUrl);
       #Si vienen archivos para eliminar
@@ -2678,6 +3131,51 @@ class AdminController extends Controller
     public function getNotificaciones(){
       $AllTypeNotficaciones = NotificacionesEventos::all();
       return $AllTypeNotficaciones;
+    }
+
+    public function previewContPost($idusers,$idpost){
+      $idUserLogin = Auth::user()->id;
+      $JoinTableUserPosts =  \DB::table('users')
+      ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')
+      # ->join('datos_empleados', 'users.id', '=', 'datos_empleados.id_usuario')
+      ->select('*')
+      ->get();
+
+      $getPost = Post::where('id','=',$idpost)->get();
+      $Likes = $this->getLikesPost();
+      $Coments = $this->getComentsPost();
+      $arrayOfImages = array();
+      $ArrayOfDocuemnts = array();
+
+      foreach ($getPost as $keyPostsImages) {
+        if($keyPostsImages->id_usuario == $idusers){
+          if($keyPostsImages->imagen != ''){
+            $ArrayImgeesGaleri = '';
+            $ArrayImgeesGaleri = explode(",", $keyPostsImages->imagen);
+            array_push($arrayOfImages,$ArrayImgeesGaleri);
+          }
+        }
+        if($keyPostsImages->id_usuario == $idusers){
+          if($keyPostsImages->documentos != ''){
+            $ArrayDocuemnts = explode(",", $keyPostsImages->documentos);
+            array_push($ArrayOfDocuemnts,$ArrayDocuemnts);
+          }
+        }
+        
+        
+      }
+
+      #get Notificaciones y actividades
+      $AllPost = Post::all();
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
+      #Get notificaciones
+      $GetActividadesFechas = HistorialActividadesRecientes::orderBy('id', 'desc')->get();
+      $totalNotifciaciones = $this->ValidaNotificaciones($GetActividadesFechas);
+
+      return view('admin.partials.fields-previuw-detall', compact('JoinTableUserPosts','idusers','idpost','getPost','Likes','Coments','idUserLogin','arrayOfImages','ArrayOfDocuemnts','Activities','NotifisEventos','AllPost','ActivitiesNotifys','GetActividadesFechas','totalNotifciaciones'));
     }
 
 

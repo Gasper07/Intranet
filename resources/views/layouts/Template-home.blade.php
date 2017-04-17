@@ -48,7 +48,7 @@
 </head>
 <body class="bgUser">
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top navbarHome BgYellow">
+        <nav class="navbar navbar-default navbar-static-top navbarHome BgYellow" @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif">
             <div class="container">
                 <div class="navbar-header">
 

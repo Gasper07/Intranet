@@ -227,6 +227,8 @@ class HomeController extends Controller
       $eventosNOtify = NotificacionesEventos::all();
       $Recordatorios = RecordatoriosAdmin::all();
 
+
+
       #Verifi Cumpleanos de algun empleado
       $UsuariosAll = DatosPersonales::all();
       $AllPost = Post::all();
@@ -293,15 +295,15 @@ class HomeController extends Controller
         }
       }
 
-      
-
-      
+            
       
       $PostPersonalizados = PostPersonalizados::all();
       $idUserLogin = Auth::user()->id;
       $dataPostD = array();
       $ArrayImgees = '';
       $ArrayDocuemnts = '';
+
+
 
       # Creamos session de idLogiado para chat
       $getCreateOnlineUsers = $this->CreateGetOnlineUser($idUserLogin);
@@ -389,8 +391,19 @@ class HomeController extends Controller
       $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
       $NotifisEventos = NotificacionesEventos::all();
 
+      #get Color del panel del usuario
+      $Bguser = '';
+      $DataUserLogiado = DatosPersonales::where('id_usuario','=', $idUserLogin)->get();
+      foreach ($DataUserLogiado as $keyDataUserLogiado) {
+        if($keyDataUserLogiado->bg_user != null or $keyDataUserLogiado->bg_user != ''){
+          $Bguser =$keyDataUserLogiado->bg_userL;
+        }else{
+          $Bguser ='';
+        }
+      }
 
-      return view('usuarios.home',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','RankingGeneral','JoinTableUserDatosPersonalesDatosEmpleado','eventosNOtify','Activities','NotifisEventos','AllPost','NotifisEventos','ActivitiesNotifys','Recordatorios'));
+
+      return view('usuarios.home',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','RankingGeneral','JoinTableUserDatosPersonalesDatosEmpleado','eventosNOtify','Activities','NotifisEventos','AllPost','NotifisEventos','ActivitiesNotifys','Recordatorios','Bguser'));
     }
 
     public function rankingSinAppAsesores($GetDataUsers,$ADPS,$HistoryAdps){

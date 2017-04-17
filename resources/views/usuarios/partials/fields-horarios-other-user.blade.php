@@ -1,6 +1,6 @@
 <div class="col-xs-12 col-sm-12 col-md-12 HorariosUser">
   <div class="col-xs-12 col-sm-12 col-md-12 sectionHorarios sectionHorarioOthers">
-    <p id='titleHorrarios'>Horarios</p>
+    <p id='titleHorrarios' @if($Bguser != '') style="background: {{ $Bguser }} !important; @endif">Horarios</p>
     @foreach($HorariosUser as $DataHorarios)
       @if($DataHorarios->id_usuario == $idUserLogin)
          @if($DataHorarios->bloq_horario1 != null)

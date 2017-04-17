@@ -848,6 +848,9 @@ $(".fileInputEmergenciImg2").change(function(){
 jQuery(document).ready(function($) {
 
 	$('.marEntrada').click(function(event) {
+		$('.lnvmodal-loader').css({
+			display: 'block'
+		});
 		var findIdeUserlogin = $(this).find('div.secEntrada>input.IdloginUser').val();
 
 		$.ajaxSetup({
@@ -860,6 +863,9 @@ jQuery(document).ready(function($) {
 		    data: "idUserLoginMarcar="+findIdeUserlogin+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
+		    	$('.lnvmodal-loader').css({
+		    		display: 'none'
+		    	});
 		    	if(result == 'true'){
 		    		$(".alert.alert-info.yaMarcado").css({
 		    			display: 'block',

@@ -228,8 +228,10 @@ class HomeController extends Controller
        $DataUserLogiado = DatosPersonales::where('id_usuario','=', $idUserLogin)->get();
        foreach ($DataUserLogiado as $keyDataUserLogiado) {
          if($keyDataUserLogiado->bg_user != null or $keyDataUserLogiado->bg_user != ''){
+            dd('entro 1');
            $Bguser = $keyDataUserLogiado->bg_user;
          }else{
+           dd('entro 2');
            $Bguser ='';
          }
        }

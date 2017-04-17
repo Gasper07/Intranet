@@ -1653,6 +1653,10 @@ li.gn-search-item>p {
   text-align: center;
 }
 
+.col-xs-12.col-sm-12.col-md-12.col-lg-12.userCOntentChat.chat_box {
+  margin-top: 2%;
+}
+
 
 /* CENTER PROFILE */
 

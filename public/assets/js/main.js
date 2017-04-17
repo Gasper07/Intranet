@@ -690,7 +690,7 @@ jQuery(document).ready(function($) {
 
 // Window chat
 $(".continerChatVent>.bg-bar-name").click(function(){
-    $(this).parent().toggleClass("heightMinCHatFloat");
+    $(this).parent().parent().toggleClass("heightMinCHatFloat");
 });
 
 // select edit profile

@@ -1115,9 +1115,27 @@ jQuery(document).ready(function($) {
 
 $('.chatVentanan').keypress(function(e) {
     if(e.which == 13) {
-    	alert('pecio');
     	e.preventDefault();
        $('.col-lg-12.nullCOnversation>p').hide();
     }
 });
 
+
+
+// file img CHat
+function chooseFileImageChat1() {
+  var file =  $(".fileInputImageChat1").click();
+  var nameArchivo = $(file).val();
+  console.log(nameArchivo);
+}
+
+$(".fileInputImageChat1").change(function(){
+	$('.imImgaChat').remove();
+	$('.AdjuntarFoto').append('<img class="img-responsive imImgaChat2" onclick="chooseFileImageChat2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
+	$('.col-md-2.Adjuntar ').hide();
+	var valImage = $(this).val();
+	console.log(valImage);
+	var varParenytdImg = $(this).parent();
+	$(varParenytdImg).fadeIn();
+	$(varParenytdImg).append('<p class="nameValue">'+valImage+'</p><i class="fa fa-times" aria-hidden="true"></i>');
+});

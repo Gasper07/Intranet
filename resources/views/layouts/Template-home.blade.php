@@ -234,7 +234,7 @@
       <span>Cargando...</span>
       </p>
       <aside role="dialog">
-       <div>Loading...</div>
+       <div>Loading....</div>
       </aside>
     </span>
 

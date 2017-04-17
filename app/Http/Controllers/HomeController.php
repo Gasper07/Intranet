@@ -1397,10 +1397,15 @@ class HomeController extends Controller
       
 // dd($GetUltimateMensage);
 
+      #Get actividades recientes
+      $Activities = $this->ActivitiesRecientes();
+      $ActivitiesNotifys = $this->ActivitiesNotifysRecientes();
+      $NotifisEventos = NotificacionesEventos::all();
+
       #get Color del panel del usuario d
       $Bguser  = $this->GetBackgroundPanelOfUSer();
 
-      return view('usuarios.chatUsers', compact('getUsers','GetUltimateMensage','idUserLogin','AllOnlineUser','Bguser'));
+      return view('usuarios.chatUsers', compact('getUsers','GetUltimateMensage','idUserLogin','AllOnlineUser','Bguser','Activities','ActivitiesNotifys','NotifisEventos'));
     }
 
     public function storeChat(Request $request){

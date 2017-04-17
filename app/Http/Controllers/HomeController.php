@@ -223,6 +223,7 @@ class HomeController extends Controller
    public function GetBackgroundPanelOfUSer()
    {
      #get Color del panel del usuario
+       $idUserLogin = Auth::user()->id;
        $Bguser = '';
        $DataUserLogiado = DatosPersonales::where('id_usuario','=', $idUserLogin)->get();
        foreach ($DataUserLogiado as $keyDataUserLogiado) {

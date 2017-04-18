@@ -2873,7 +2873,7 @@ class HomeController extends Controller
          $fileNameFoto = rand(11,99999);
          $imageName = $fileNameFoto.'.'.$fileImages->getClientOriginalExtension();
          $fileImages->move(
-             base_path() . '\public\assets\images\documents-chat', $imageName
+             base_path() . 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents-chat/', $imageName
          );
       }
       echo 'guaradao';

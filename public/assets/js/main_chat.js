@@ -47,7 +47,7 @@
 	  var id_Usuario =$('.chat_box .input_id_user_logi').val();
 
 	  var formData = new FormData(document.getElementById("formuploadajax"));
-      formData.append("dato",  $(this)[0].files[0]);
+	  
       $.ajax({
           url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php",
           type: "post",

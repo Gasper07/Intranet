@@ -16,8 +16,12 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
+
+
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
+	$InpurArchive = $_FILES['fileInputImageChat1'];
+	dd($InpurArchive);
 	$data['message'] = $_POST['message'];	
 	$Menssage = $_POST['conversation'];	
 	$id_user = $_POST['id_Usuario'];	

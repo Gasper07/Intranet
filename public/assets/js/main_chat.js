@@ -48,10 +48,10 @@
 
 	  var formData = new FormData(document.getElementById("formuploadajax"));
 
+	  // Si envia un archivo usa esta funcion
 	  var file_data = $('.fileInputImageChat1').prop('files')[0];   
       var form_data = new FormData();                  
       form_data.append('file', file_data);
-      alert(form_data);                          
 
 	  $.ajaxSetup({
 	      headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
@@ -68,7 +68,6 @@
       }).done(function(res){
         alert('sefue');
 	  });
-      //formData.append(f.attr("name"), $(this)[0].files[0]);
 	  
 	  // Validate Name field
 	  if (id_Usuario_conversation === '') {

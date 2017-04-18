@@ -16,7 +16,16 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-print_r($_FILES['file']);
+if ( 0 < $_FILES['file']['error'] ) {
+
+}
+else {
+	print_r($_FILES['file']);
+    move_uploaded_file($_FILES['file']['tmp_name'], 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents-chat/' . $_FILES['file']['name']);
+}
+
+
+move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/' . $_FILES['file']['name']);
 
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		

@@ -1148,9 +1148,12 @@ $(".fileInputImageChat1").change(function(){
 
 	$.ajax({
 	  url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
-	  type: "POST",
-	  dataType: "json",
-	  data: $('.chatFIles').serialize(),
+	  type: 'POST',
+	  headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+	  data: "idUserChangeCOlor=1&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+	  dataType: 'json',
+
+	  // data: $('.chatFIles').serialize(),
 	  success: function(response, textStatus, jqXHR) {
 	    console.log(jqXHR.responseText);
 	    alert('en')

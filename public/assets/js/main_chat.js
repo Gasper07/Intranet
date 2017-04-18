@@ -48,6 +48,11 @@
 
 	  var formData = new FormData(document.getElementById("formuploadajax"));
 
+	  var file_data = $('.fileInputImageChat1').prop('files')[0];   
+      var form_data = new FormData();                  
+      form_data.append('file', file_data);
+      alert(form_data);                          
+
 	  $.ajaxSetup({
 	      headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	  });
@@ -56,7 +61,7 @@
           url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php",
           type: "post",
           headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-          data: formData,
+          data: form_data,
           cache: false,
           contentType: false,
      	  processData: false

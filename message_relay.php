@@ -16,9 +16,12 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
+print_r($_FILES['file']);
+
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
 	$data['message'] = $_POST['message'];	
+
 	$Menssage = $_POST['conversation'];	
 	$id_user = $_POST['id_Usuario'];	
 	$id_userConversation = $_POST['id_Usuario_conversation'];	

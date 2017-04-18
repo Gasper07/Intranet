@@ -60,8 +60,11 @@ return [
         ],
 
         'ubUploadsChange' => [
-            'driver' => 'local',
-            'root'   => 'public/assets/documents-admin/',
+            'driver' => 's3',
+            'key' => 'TLCQ8T7MCYDE2CC7OMGY',
+            'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
+            'region' => 'Europe',
+            'bucket' => 'documents-admin',
         ],
 
         's3' => [

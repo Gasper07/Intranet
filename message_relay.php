@@ -16,9 +16,6 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-dd('entro');
-// $InpurArchive = $_FILES['file-data-0'];
-
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
 	$data['message'] = $_POST['message'];	

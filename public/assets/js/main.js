@@ -1140,33 +1140,27 @@ $(".fileInputImageChat1").change(function(){
 	$(varParenytdImg).fadeIn();
 	$(varParenytdImg).append('<p class="nameValue">'+valImage+'</p><i class="fa fa-times" aria-hidden="true"></i>');
 
-	var data = new FormData();
-	jQuery.each(jQuery('.fileInputImageChat1')[0].files, function(i, file) {
-	    data.append('file-data'+i, file);
-	});
+
+	var formData = new FormData($('.chatFIles')[0]);
 
 	$.ajaxSetup({
 	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	});
 
 	$.ajax({
-	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
-	    type: 'POST',
-	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-	    data: data,
-	    cache: false,
-	    contentType: false,
-	    processData: false,
-	    dataType: 'json',
-	    success: function(result, index, value, data) {
-	    	console.log(result);
-	    	alert(data);
+        url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
+        type: 'POST',
+        headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+        data: formData,
+        async: false,
+        success: function (data) {
+            alert(data)
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    });
 
-	    },
-	    error: function() {
-	        console.log('Error');
-	    }
-	});
 
 
 

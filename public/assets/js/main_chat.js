@@ -45,6 +45,20 @@
 	  var message =$('.chat_box .input_message').val();
 	  var id_Usuario_conversation =$('.chat_box .input_name').val();
 	  var id_Usuario =$('.chat_box .input_id_user_logi').val();
+
+	  var formData = new FormData(document.getElementById("formuploadajax"));
+      formData.append("dato",  $(this)[0].files[0]);
+      $.ajax({
+          url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php",
+          type: "post",
+          data: formData,
+          cache: false,
+          contentType: false,
+     	  processData: false
+      }).done(function(res){
+        alert('sefue');
+	  });
+      //formData.append(f.attr("name"), $(this)[0].files[0]);
 	  
 	  // Validate Name field
 	  if (id_Usuario_conversation === '') {

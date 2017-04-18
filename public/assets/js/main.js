@@ -1131,7 +1131,6 @@ function chooseFileImageChat1() {
 
 $(".fileInputImageChat1").change(function(){
 	$('.imImgaChat').remove();
-	var parentInput = $(this).parent().parent().addClass('llevaFile');
 	$('.anjunFoto').append('<img class="img-responsive imImgaChat2" onclick="chooseFileImageChat2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.anjunDocu ').hide();
 	var valImage = $(this).val();
@@ -1139,30 +1138,4 @@ $(".fileInputImageChat1").change(function(){
 	var varParenytdImg = $(this).parent();
 	$(varParenytdImg).fadeIn();
 	$(varParenytdImg).append('<p class="nameValue">'+valImage+'</p><i class="fa fa-times" aria-hidden="true"></i>');
-
-	$.ajaxSetup({
-	  headers: {
-	    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-	  }
-	});
-
-	$.ajax({
-	  url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
-	  type: 'POST',
-	  headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-	  data: "idUserChangeCOlor=1&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
-	  dataType: 'json',
-
-	  // data: $('.chatFIles').serialize(),
-	  success: function(response, textStatus, jqXHR) {
-	    console.log(jqXHR.responseText);
-	    alert('en')
-	  },
-	  error: function(msg) {}
-	});
-
-
-
-
-
 });

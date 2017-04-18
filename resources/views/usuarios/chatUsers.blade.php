@@ -21,11 +21,13 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 userCOntentSend">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 contenTexaArea chat_box">
                <textarea name="" class="input_message form-control"  placeholder="Escribe aquí"></textarea>  
-               <input type="hidden" class="input_id_user_logi" value="{{ Auth::user()->id }}" />           
+               <input type="hidden" class="input_id_user_logi" value="{{ Auth::user()->id }}" /> <form class="chatFIles" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                 <div class="contenMoreImages">
+                   <input type="file" class="fileInputImageChat1" name="fileInputImageChat[]" />
+                  </div> 
+               </form>           
                <input type="hidden" class="input_name DatIdUserChat" value="" />  
-               <div class="contenMoreImages">
-                  <input type="file" class="fileInputImageChat1" name="fileInputImageChat[]" />
-               </div>        
+                      
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 contentActionSend chat_box">
                {{-- <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarIco.png" alt=""> --}}

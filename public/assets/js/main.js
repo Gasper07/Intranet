@@ -1145,16 +1145,29 @@ $(".fileInputImageChat1").change(function(){
 	    data.append('file-data'+i, file);
 	});
 
-	jQuery.ajax({
+	$.ajaxSetup({
+	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	});
+
+	$.ajax({
 	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
+	    type: 'POST',
+	    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 	    data: data,
 	    cache: false,
 	    contentType: false,
 	    processData: false,
-	    type: 'POST',
-	    success: function(data){
-	        alert(data);
+	    dataType: 'json',
+	    success: function(result, index, value, data) {
+	    	console.log(result);
+	    	alert(data);
+
+	    },
+	    error: function() {
+	        console.log('Error');
 	    }
 	});
-	
+
+
+
 });

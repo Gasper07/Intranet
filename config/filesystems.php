@@ -63,7 +63,7 @@ return [
             'driver' => 's3',
             'key' => 'TLCQ8T7MCYDE2CC7OMGY',
             'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
-            'region' => 'us-east-1',
+            'region' => 'eu-west-1',
             'bucket' => 'cloudfront.amazonaws.com',
         ],
 

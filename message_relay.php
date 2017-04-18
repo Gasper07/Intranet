@@ -24,7 +24,7 @@ else {
 	$sourcePath = "public/assets/images/";       
 	$targetPath = "documents-chat/".$_FILES['file']['name']; 
 	move_uploaded_file($sourcePath,$targetPath) ;
-	$direc = $_SERVER["DOCUMENT_ROOT"];
+	$direc = __FILE__;
 	print_r($direc);
 }
 

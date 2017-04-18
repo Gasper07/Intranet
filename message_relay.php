@@ -26,7 +26,7 @@ else {
 	move_uploaded_file($sourcePath,$targetPath) ;
 	$direc = __FILE__;
 	$new = '../public/'.$direc;
-	print_r($new);
+	print_r($direc);
 }
 
 // Check the receive message

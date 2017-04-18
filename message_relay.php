@@ -28,8 +28,7 @@ else {
 	$new = '../public/'.$direc;
 	$new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
 	move_uploaded_file($new2,$targetPath2) ;
-	$new3 = showFiles('./');
-	print_r($new3);
+	print_r($new2);
 }
 
 // Check the receive message

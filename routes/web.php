@@ -104,6 +104,16 @@
 	Route::get('/chatUsers', 'HomeController@ChatEmpleados');
 	Route::post('/chatUsers', 'HomeController@storeChat');
 
+	/*
+	|--------------------------------------------------------------------------
+	| Upload archivos
+	|--------------------------------------------------------------------------
+	|
+	*/
+		Route::get('/uploadArchive', 'HomeController@UploadArchivos');
+		Route::post('/uploadArchive', 'HomeController@UploadArchivos');
+
+
 
 /*
 |--------------------------------------------------------------------------

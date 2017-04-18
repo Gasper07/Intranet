@@ -2862,6 +2862,26 @@ class HomeController extends Controller
         ->update($dataUpdateBackgrounf);
 
      echo json_encode('cambiado');
+    }
+
+    public function UploadArchivos(Request $request){
+      $data = facedesrequest::all();
+      dd($data);
+
+      $fileImages = $request->file('file_inputemergenci_imga');  
+      if($fileImages != ''){
+        $cantidadImages = count($fileImages);
+
+        for ($i=0; $i < $cantidadImages ; $i++) { 
+         $nombreFoto = $fileImages[$i]->getClientOriginalName();
+         $fileNameFoto = rand(11,99999);
+         $imageName = $fileNameFoto.'.'.$fileImages[$i]->getClientOriginalExtension();
+         $fileImages[$i]->move(
+             base_path() . '\public\assets\images\documents', $imageName
+         );
+         array_push($arrayImages, $imageName);
+        }
+      }
 
     }
 

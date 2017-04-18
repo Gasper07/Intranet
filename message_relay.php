@@ -16,36 +16,36 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-if ( 0 < $_FILES['file']['error'] ) {
+// if ( 0 < $_FILES['file']['error'] ) {
 
-}
-else {
-	print_r($_FILES['file']);
-	// $targetPath2 = $_FILES['file']['name']; 
-	// $direc = __FILE__;
-	// $new = '../public/'.$direc;
-	// $new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
-	// Upload file
-	$dat = $_FILES['file'];
-	$datN = dirname(__FILE__).'/uploads/'.$_FILES['file']['name'];
-	$datN2 = dirname(__FILE__).'/public/uploads/'.$_FILES['file']['name'];
-	// $sourcePath = "public/assets/images/";       
-	// $targetPath = "documents-chat/".$_FILES['file']['name']; 
-	move_uploaded_file($dat,$datN) ;
-	move_uploaded_file($dat,$datN2) ;
+// }
+// else {
+// 	print_r($_FILES['file']);
+// 	// $targetPath2 = $_FILES['file']['name']; 
+// 	// $direc = __FILE__;
+// 	// $new = '../public/'.$direc;
+// 	// $new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
+// 	// Upload file
+// 	$dat = $_FILES['file'];
+// 	$datN = dirname(__FILE__).'/uploads/'.$_FILES['file']['name'];
+// 	$datN2 = dirname(__FILE__).'/public/uploads/'.$_FILES['file']['name'];
+// 	// $sourcePath = "public/assets/images/";       
+// 	// $targetPath = "documents-chat/".$_FILES['file']['name']; 
+// 	move_uploaded_file($dat,$datN) ;
+// 	move_uploaded_file($dat,$datN2) ;
 
-	print_r($dat);
-	print_r($datN);
+// 	print_r($dat);
+// 	print_r($datN);
 
 
-	// if(!move_uploaded_file($_FILES['file'], 'uploads/' . $_FILES['file']['name'])){
-	//     echo 'Error uploading file - check destination is writeable.';
-	// }else{
-	// 	echo 'se fue';
-	// }
+// 	// if(!move_uploaded_file($_FILES['file'], 'uploads/' . $_FILES['file']['name'])){
+// 	//     echo 'Error uploading file - check destination is writeable.';
+// 	// }else{
+// 	// 	echo 'se fue';
+// 	// }
 
-	print_r($new2);
-}
+// 	print_r($new2);
+// }
 
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		

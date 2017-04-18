@@ -1154,9 +1154,9 @@ $(".fileInputImageChat1").change(function(){
         success: function (data) {
             alert(data)
         },
-        cache: false,
-        contentType: false,
-        processData: false
+	    error: function() {
+	        console.log('Error');
+	    }
     });
 
 

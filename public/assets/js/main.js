@@ -1153,6 +1153,7 @@ $(".fileInputImageChat1").change(function(){
         headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
         data: formData,
         async: false,
+        dataType: 'json',
         success: function (data) {
             alert(data)
         },

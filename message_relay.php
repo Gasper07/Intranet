@@ -21,8 +21,8 @@ if ( 0 < $_FILES['file']['error'] ) {
 }
 else {
 	print_r($_FILES['file']);
-	$sourcePath = $_FILES['file']['tmp_name'];       
-	$targetPath = "public/assets/images/documents-chat/".$_FILES['file']['name']; 
+	$sourcePath = "public/assets/images/";       
+	$targetPath = "documents-chat/".$_FILES['file']['name']; 
 	move_uploaded_file($sourcePath,$targetPath) ;
 }
 

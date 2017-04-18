@@ -70,7 +70,7 @@ return [
 
         'ubUploadsChange' => [
             'driver'   => 'ftp',
-            'host'     => ' bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com',
+            'host'     => 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com',
             'username' => 'user1237ad59102548ba90c5d567e8ecd3dc',
             'password' => 'i0s2xIqSp2zuGKxL',
         ],

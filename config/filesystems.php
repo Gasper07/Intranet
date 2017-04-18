@@ -63,7 +63,7 @@ return [
             'driver' => 's3',
             'key' => 'TLCQ8T7MCYDE2CC7OMGY',
             'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
-            'region' => 'Europe',
+            'region' => 'cellar.services.clever-cloud.com',
             'bucket' => 'documents-admin',
         ],
 

@@ -28,13 +28,12 @@ else {
 	// $new = '../public/'.$direc;
 	// $new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
 	// move_uploaded_file($new2,$targetPath2) ;
+	// Upload file
 
-	$dir_subida = '/var/www/uploads/';
-	$fichero_subido = $dir_subida . basename($_FILES['file']['name']);
-	if (move_uploaded_file($_FILES['file']['tmp_name'], $fichero_subido)) {
-	    echo "El fichero es válido y se subió con éxito.\n";
-	} else {
-	    echo "¡Posible ataque de subida de ficheros!\n";
+	if(!move_uploaded_file($_FILES['file']['tmp_name'], 'upload/' . $_FILES['file']['name'])){
+	    echo 'Error uploading file - check destination is writeable.';
+	}else{
+		echo 'se fue';
 	}
 
 	print_r($new2);

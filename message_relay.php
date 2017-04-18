@@ -27,8 +27,8 @@ else {
 	// $new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
 	// Upload file
 	$dat = $_FILES['file'];
-	$datN = dirname(__FILE__).'/uploads'.$_FILES['file']['name'];
-	$datN2 = dirname(__FILE__).'/public/uploads'.$_FILES['file']['name'];
+	$datN = dirname(__FILE__).'/uploads/'.$_FILES['file']['name'];
+	$datN2 = dirname(__FILE__).'/public/uploads/'.$_FILES['file']['name'];
 	// $sourcePath = "public/assets/images/";       
 	// $targetPath = "documents-chat/".$_FILES['file']['name']; 
 	move_uploaded_file($dat,$datN) ;

@@ -111,6 +111,7 @@ class ComposerStaticInitfdec433beaa7f3a96dec1f7c64196219
         ),
         'A' => 
         array (
+            'Aws\\Laravel\\' => 12,
             'Aws\\' => 4,
             'App\\' => 4,
         ),
@@ -286,6 +287,10 @@ class ComposerStaticInitfdec433beaa7f3a96dec1f7c64196219
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+        'Aws\\Laravel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aws/aws-sdk-php-laravel/src',
         ),
         'Aws\\' => 
         array (
@@ -600,6 +605,8 @@ class ComposerStaticInitfdec433beaa7f3a96dec1f7c64196219
         'Aws\\Kms\\KmsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Kms/KmsClient.php',
         'Aws\\Lambda\\Exception\\LambdaException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Lambda/Exception/LambdaException.php',
         'Aws\\Lambda\\LambdaClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Lambda/LambdaClient.php',
+        'Aws\\Laravel\\AwsFacade' => __DIR__ . '/..' . '/aws/aws-sdk-php-laravel/src/AwsFacade.php',
+        'Aws\\Laravel\\AwsServiceProvider' => __DIR__ . '/..' . '/aws/aws-sdk-php-laravel/src/AwsServiceProvider.php',
         'Aws\\LexRuntimeService\\Exception\\LexRuntimeServiceException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/LexRuntimeService/Exception/LexRuntimeServiceException.php',
         'Aws\\LexRuntimeService\\LexRuntimeServiceClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/LexRuntimeService/LexRuntimeServiceClient.php',
         'Aws\\Lightsail\\Exception\\LightsailException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/Lightsail/Exception/LightsailException.php',

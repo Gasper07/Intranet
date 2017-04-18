@@ -273,6 +273,8 @@ return array(
     'Aws\\Kms\\KmsClient' => $vendorDir . '/aws/aws-sdk-php/src/Kms/KmsClient.php',
     'Aws\\Lambda\\Exception\\LambdaException' => $vendorDir . '/aws/aws-sdk-php/src/Lambda/Exception/LambdaException.php',
     'Aws\\Lambda\\LambdaClient' => $vendorDir . '/aws/aws-sdk-php/src/Lambda/LambdaClient.php',
+    'Aws\\Laravel\\AwsFacade' => $vendorDir . '/aws/aws-sdk-php-laravel/src/AwsFacade.php',
+    'Aws\\Laravel\\AwsServiceProvider' => $vendorDir . '/aws/aws-sdk-php-laravel/src/AwsServiceProvider.php',
     'Aws\\LexRuntimeService\\Exception\\LexRuntimeServiceException' => $vendorDir . '/aws/aws-sdk-php/src/LexRuntimeService/Exception/LexRuntimeServiceException.php',
     'Aws\\LexRuntimeService\\LexRuntimeServiceClient' => $vendorDir . '/aws/aws-sdk-php/src/LexRuntimeService/LexRuntimeServiceClient.php',
     'Aws\\Lightsail\\Exception\\LightsailException' => $vendorDir . '/aws/aws-sdk-php/src/Lightsail/Exception/LightsailException.php',

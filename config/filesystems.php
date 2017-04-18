@@ -59,13 +59,20 @@ return [
             'root'   => 'public/assets/images/documents-admin/',
         ],
         #documen
+        // 'ubUploadsChange' => [
+        //     'driver' => 's3',
+        //     'key' => 'TLCQ8T7MCYDE2CC7OMGY',
+        //     'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
+        //     'region' => 'eu-west-1',
+        //     'bucket' => 'documents-admin',
+        //     'endpoint' => 'https://cellar.services.clever-cloud.com',
+        // ],
+
         'ubUploadsChange' => [
-            'driver' => 's3',
-            'key' => 'TLCQ8T7MCYDE2CC7OMGY',
-            'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
-            'region' => 'eu-west-1',
-            'bucket' => 'documents-admin',
-            'endpoint' => 'https://cellar.services.clever-cloud.com',
+            'driver'   => 'ftp',
+            'host'     => ' bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com',
+            'username' => 'user1237ad59102548ba90c5d567e8ecd3dc',
+            'password' => 'i0s2xIqSp2zuGKxL',
         ],
 
         's3' => [

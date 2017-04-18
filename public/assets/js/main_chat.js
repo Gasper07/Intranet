@@ -50,7 +50,7 @@
       formData.append("dato",  $(this)[0].files[0]);
       $.ajax({
           url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php",
-          type: "post",
+          type: "get",
           data: formData,
           cache: false,
           contentType: false,

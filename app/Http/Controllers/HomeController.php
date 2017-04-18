@@ -2868,14 +2868,20 @@ class HomeController extends Controller
       // $fileImages = facedesrequest::all();
 
       $fileImages = $request->file('file');  
-      if($fileImages != ''){
-         $nombreFoto = $fileImages->getClientOriginalName();
-         $fileNameFoto = rand(11,99999);
-         $imageName = $fileNameFoto.'.'.$fileImages->getClientOriginalExtension();
-         $fileImages->move(
-             base_path() . 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents-chat/', $imageName
-         );
-      }
+      $nombreDocumento = $fileImages->getClientOriginalName();
+      $move = $fileImages->move(
+          base_path().'/public/assets/images/documents-admin/', $nombreDocumento
+      );
+
+
+      // if($fileImages != ''){
+      //    $nombreFoto = $fileImages->getClientOriginalName();
+      //    $fileNameFoto = rand(11,99999);
+      //    $imageName = $fileNameFoto.'.'.$fileImages->getClientOriginalExtension();
+      //    $fileImages->move(
+      //        base_path() . 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents-chat/', $imageName
+      //    );
+      // }
       echo 'guaradao';
 
     }

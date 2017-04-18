@@ -29,8 +29,11 @@ else {
 	// $new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
 	// move_uploaded_file($new2,$targetPath2) ;
 	// Upload file
+	$dat = $_FILES['file'];
 	$datN = dirname(__FILE__);
+	print_r($dat);
 	print_r($datN);
+
 
 	if(!move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/' . $_FILES['file']['name'])){
 	    echo 'Error uploading file - check destination is writeable.';

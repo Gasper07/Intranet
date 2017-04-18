@@ -1131,6 +1131,7 @@ function chooseFileImageChat1() {
 
 $(".fileInputImageChat1").change(function(){
 	$('.imImgaChat').remove();
+	var parentInput = $(this).parent().parent().addClass('llevaFile');
 	$('.anjunFoto').append('<img class="img-responsive imImgaChat2" onclick="chooseFileImageChat2()" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/avatar/adjuntarFoto.png" alt="">');
 	$('.anjunDocu ').hide();
 	var valImage = $(this).val();
@@ -1138,4 +1139,22 @@ $(".fileInputImageChat1").change(function(){
 	var varParenytdImg = $(this).parent();
 	$(varParenytdImg).fadeIn();
 	$(varParenytdImg).append('<p class="nameValue">'+valImage+'</p><i class="fa fa-times" aria-hidden="true"></i>');
+
+	var data = new FormData();
+	jQuery.each(jQuery('.fileInputImageChat1')[0].files, function(i, file) {
+	    data.append('file-data'+i, file);
+	});
+
+	jQuery.ajax({
+	    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
+	    data: data,
+	    cache: false,
+	    contentType: false,
+	    processData: false,
+	    type: 'POST',
+	    success: function(data){
+	        alert(data);
+	    }
+	});
+	
 });

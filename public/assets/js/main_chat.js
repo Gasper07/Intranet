@@ -52,20 +52,13 @@
 	  
 	  } else if (message !== '') {
 	    // Define ajax data
-	    var formData = new FormData();
-	    formData.append('file', $('.fileInputImageChat1')[0].files[0]);
-
 	    var chat_message={
 	      id_Usuario_conversation: $('.chat_box .input_name').val(),
 	      id_Usuario: $('.chat_box .input_id_user_logi').val(),
 	      conversation: message,
-	      archive: formData,
 	      // message: '<strong>' + $('.chat_box .input_name').val() + '</strong>: ' + message
 	      message: message
 	    }
-
-	
-	    
 	    // Send the message to the server
 	    ajaxCall('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php', chat_message);
 	    

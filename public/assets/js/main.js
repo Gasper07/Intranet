@@ -1146,18 +1146,17 @@ $(".fileInputImageChat1").change(function(){
 	});
 
 	$.ajax({
-        url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
-        type: 'POST',
-        headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-        data: $('.chatFIles').serialize(),
-        dataType: 'json',
-        success: function (data) {
-            alert(data)
-        },
-	    error: function() {
-	        console.log('Error');
-	    }
-    });
+	  type: "POST",
+	  url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
+	  dataType: "json",
+	  data: $('.chatFIles').serialize(),
+	  success: function(response, textStatus, jqXHR) {
+	    console.log(jqXHR.responseText);
+	    alert('en')
+	  },
+	  error: function(msg) {}
+	});
+
 
 
 

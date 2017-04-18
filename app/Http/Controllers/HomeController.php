@@ -2865,10 +2865,10 @@ class HomeController extends Controller
     }
 
     public function UploadArchivos(Request $request){
-      $data = facedesrequest::all();
-      dd($data);
+      // $fileImages = facedesrequest::all();
 
-      $fileImages = $request->file('file_inputemergenci_imga');  
+      $fileImages = $request->file('file');  
+      dd($fileImages);
       if($fileImages != ''){
         $cantidadImages = count($fileImages);
 

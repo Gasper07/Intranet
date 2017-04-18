@@ -63,8 +63,8 @@ return [
             'driver' => 's3',
             'key' => 'TLCQ8T7MCYDE2CC7OMGY',
             'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
-            'region' => 'US',
-            'bucket' => 'cloudfront.amazonaws.com',
+            'region' => 'eu-central-1',
+            'bucket' => 'documents-admin',
         ],
 
         's3' => [

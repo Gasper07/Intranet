@@ -30,7 +30,7 @@ else {
 	// move_uploaded_file($new2,$targetPath2) ;
 	// Upload file
 
-	if(!move_uploaded_file($_FILES['file']['tmp_name'], 'upload/' . $_FILES['file']['name'])){
+	if(!move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/' . $_FILES['file']['name'])){
 	    echo 'Error uploading file - check destination is writeable.';
 	}else{
 		echo 'se fue';

@@ -64,7 +64,7 @@ return [
             'key' => 'TLCQ8T7MCYDE2CC7OMGY',
             'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
             'region' => 'US',
-            'bucket' => 'documents-admin',
+            'bucket' => 'cloudfront.amazonaws.com',
         ],
 
         's3' => [

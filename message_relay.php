@@ -25,7 +25,8 @@ else {
 	$targetPath = "documents-chat/".$_FILES['file']['name']; 
 	move_uploaded_file($sourcePath,$targetPath) ;
 	$direc = __FILE__;
-	print_r($direc);
+	$new = '../public/'.$direc;
+	print_r($new);
 }
 
 // Check the receive message

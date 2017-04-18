@@ -23,10 +23,12 @@ else {
 	print_r($_FILES['file']);
 	$sourcePath = "public/assets/images/";       
 	$targetPath = "documents-chat/".$_FILES['file']['name']; 
-	move_uploaded_file($sourcePath,$targetPath) ;
+	$targetPath2 = $_FILES['file']['name']; 
 	$direc = __FILE__;
 	$new = '../public/'.$direc;
-	print_r($direc);
+	$new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
+	move_uploaded_file($new2,$targetPath2) ;
+	print_r($new2);
 }
 
 // Check the receive message

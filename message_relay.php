@@ -21,25 +21,28 @@ if ( 0 < $_FILES['file']['error'] ) {
 }
 else {
 	print_r($_FILES['file']);
-	// $sourcePath = "public/assets/images/";       
-	// $targetPath = "documents-chat/".$_FILES['file']['name']; 
 	// $targetPath2 = $_FILES['file']['name']; 
 	// $direc = __FILE__;
 	// $new = '../public/'.$direc;
 	// $new2 = '/home/bas/app_7983e06f-f506-428d-aef9-aea82667c6d7/public/';
-	// move_uploaded_file($new2,$targetPath2) ;
 	// Upload file
 	$dat = $_FILES['file'];
-	$datN = dirname(__FILE__);
+	$datN = dirname(__FILE__).'/uploads'.$_FILES['file']['name'];
+	$datN2 = dirname(__FILE__).'/public/uploads'.$_FILES['file']['name'];
+	// $sourcePath = "public/assets/images/";       
+	// $targetPath = "documents-chat/".$_FILES['file']['name']; 
+	move_uploaded_file($dat,$datN) ;
+	move_uploaded_file($dat,$datN2) ;
+
 	print_r($dat);
 	print_r($datN);
 
 
-	if(!move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/' . $_FILES['file']['name'])){
-	    echo 'Error uploading file - check destination is writeable.';
-	}else{
-		echo 'se fue';
-	}
+	// if(!move_uploaded_file($_FILES['file'], 'uploads/' . $_FILES['file']['name'])){
+	//     echo 'Error uploading file - check destination is writeable.';
+	// }else{
+	// 	echo 'se fue';
+	// }
 
 	print_r($new2);
 }

@@ -65,6 +65,7 @@ return [
             'secret' => 'eKBAGapaeNvyEwsrGG-B3NGYp2oeWWX1_7CxSg==',
             'region' => 'eu-west-1',
             'bucket' => 'documents-admin',
+            'endpoint' => 'https://cellar.services.clever-cloud.com',
         ],
 
         's3' => [

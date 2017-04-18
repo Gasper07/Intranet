@@ -2869,10 +2869,10 @@ class HomeController extends Controller
 
       $fileImages = $request->file('file');  
       if($fileImages != ''){
-         $nombreFoto = $fileImages[$i]->getClientOriginalName();
+         $nombreFoto = $fileImages->getClientOriginalName();
          $fileNameFoto = rand(11,99999);
-         $imageName = $fileNameFoto.'.'.$fileImages[$i]->getClientOriginalExtension();
-         $fileImages[$i]->move(
+         $imageName = $fileNameFoto.'.'.$fileImages->getClientOriginalExtension();
+         $fileImages->move(
              base_path() . '\public\assets\images\documents-chat', $imageName
          );
       }

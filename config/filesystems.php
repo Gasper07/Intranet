@@ -58,7 +58,7 @@ return [
             'driver' => 'local',
             'root'   => 'public/assets/images/documents-admin/',
         ],
-
+        #documen
         'ubUploadsChange' => [
             'driver' => 's3',
             'key' => 'TLCQ8T7MCYDE2CC7OMGY',

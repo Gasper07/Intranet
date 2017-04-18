@@ -2868,20 +2868,15 @@ class HomeController extends Controller
       // $fileImages = facedesrequest::all();
 
       $fileImages = $request->file('file');  
-      dd($fileImages);
       if($fileImages != ''){
-        $cantidadImages = count($fileImages);
-
-        for ($i=0; $i < $cantidadImages ; $i++) { 
          $nombreFoto = $fileImages[$i]->getClientOriginalName();
          $fileNameFoto = rand(11,99999);
          $imageName = $fileNameFoto.'.'.$fileImages[$i]->getClientOriginalExtension();
          $fileImages[$i]->move(
-             base_path() . '\public\assets\images\documents', $imageName
+             base_path() . '\public\assets\images\documents-chat', $imageName
          );
-         array_push($arrayImages, $imageName);
-        }
       }
+      echo 'guaradao';
 
     }
 

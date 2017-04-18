@@ -1140,14 +1140,15 @@ $(".fileInputImageChat1").change(function(){
 	$(varParenytdImg).fadeIn();
 	$(varParenytdImg).append('<p class="nameValue">'+valImage+'</p><i class="fa fa-times" aria-hidden="true"></i>');
 
-
 	$.ajaxSetup({
-	    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	  headers: {
+	    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	  }
 	});
 
 	$.ajax({
-	  type: "POST",
 	  url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php',
+	  type: "POST",
 	  dataType: "json",
 	  data: $('.chatFIles').serialize(),
 	  success: function(response, textStatus, jqXHR) {

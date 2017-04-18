@@ -47,10 +47,15 @@
 	  var id_Usuario =$('.chat_box .input_id_user_logi').val();
 
 	  var formData = new FormData(document.getElementById("formuploadajax"));
-	  
+
+	  $.ajaxSetup({
+	      headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+	  });
+
       $.ajax({
           url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php",
           type: "post",
+          headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
           data: formData,
           cache: false,
           contentType: false,

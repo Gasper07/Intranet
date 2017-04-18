@@ -24,9 +24,6 @@ else {
     move_uploaded_file($_FILES['file'], 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents-chat/' . $_FILES['file']['name']);
 }
 
-
-move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/' . $_FILES['file']['name']);
-
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
 	$data['message'] = $_POST['message'];	

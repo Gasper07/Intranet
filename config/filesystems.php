@@ -67,6 +67,7 @@ return [
         //     'bucket' => 'documents-admin',
         //     'endpoint' => 'https://cellar.services.clever-cloud.com',
         // ],
+        // Fto
 
         'ubUploadsChange' => [
             'driver'   => 'ftp',

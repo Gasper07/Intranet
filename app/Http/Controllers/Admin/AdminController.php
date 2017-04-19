@@ -2971,9 +2971,17 @@ class AdminController extends Controller
       }
       #Si la descarga proviene del cuarto folder que seleccione
       elseif($fileUrl != '' && $fileUrl2 != '' && $fileUrl3 != '' && $fileUrl4 != '' && $fileUrl5 == ''){ 
-        $move = $fileDocumento->move(
-            base_path().'/public/assets/images/documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'', $nombreDocumento
+
+        $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/'.$nombreDocumento,  \File::get($fileDocumento));
+
+        $dataUploadFile = array(
+          'nombre_archivo' => $nombreDocumento,
+          'type_upload' => 'file',
+          'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/',
         );
+        $SaveDocument = new Documentos($dataUploadFile);
+        $SaveDocument->save();
+
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }

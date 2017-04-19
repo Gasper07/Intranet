@@ -1111,9 +1111,9 @@ class AdminController extends Controller
       $ArrayCarpetas = array();
 
       #directorios de archivos
-      $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=',''.$idurl.'/'.$idurl2.'')->get();
+      $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/'.$idurl.'/'.$idurl2.'')->get();
       #get directorios carpetas
-      $getDirectoryCarpetas = Documentos::where('ubicacion_anterior','=','/'.$idurl.'/'.$idurl2.'')->where('type_upload','=','carpeta')->get();
+      $getDirectoryCarpetas = Documentos::where('ubicacion_anterior','=','documents-admin//'.$idurl.'/'.$idurl2.'')->where('type_upload','=','carpeta')->get();
 
       # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
       # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA

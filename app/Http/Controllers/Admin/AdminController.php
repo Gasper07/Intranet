@@ -3061,7 +3061,18 @@ class AdminController extends Controller
       }
       #Si la descarga proviene del tercer folder que seleccione
       elseif($fileUrl != '' && $fileUrl2 != '' && $fileUrl3 != '' && $fileUrl4 == '' && $fileUrl5 == ''){
-        \File::makeDirectory(base_path().'/public/assets/images/documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$nameDirectorie.'', $mode = 0755, $recursive = true, $force = false);
+
+        \Storage::disk('ubUploadsChange')->makeDirectory('documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$nameDirectorie.'');
+
+        $dataUploadFile = array(
+          'nombre_archivo' => $nameDirectorie,
+          'type_upload' => 'carpeta',
+          'ubicacion_anterior' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/',
+          'ubicacion_archivo' => '/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$nameDirectorie.'',
+        );
+        $SaveDocument = new Documentos($dataUploadFile);
+        $SaveDocument->save();
+
 
         Session::flash('Create_directorie', "La carpeta ha sido creada");
         return back()->withInput();

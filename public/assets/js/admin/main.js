@@ -730,12 +730,14 @@ jQuery(document).ready(function($) {
 // Events Drap & Drop Seccion Docuemnts
 var finNameArchivo;
 var finIDArchivo;
+var finUbicacionArchivo;
 
 function drag(parrafo, evento) {
 	evento.dataTransfer.setData('Text', parrafo.id);
 	finNameArchivo = $(parrafo).find('p').text();
 	finIDArchivo = $(parrafo).find('p').data('element');
-	console.log(finIDArchivo);
+	finUbicacionArchivo = $(parrafo).find('p').data('ubicaciom');
+	console.log(finUbicacionArchivo);
 	// console.log(evento.srcElement.currentSrc); 
 
 }

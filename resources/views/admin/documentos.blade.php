@@ -153,7 +153,7 @@
                <input type="hidden" name="_name_archivo" value="{{ $archivos->nombre_archivo }}">
              </form> 
              <a href="#!">
-               <p data-element="{{ $archivos->id }}">{{ $archivos->nombre_archivo }}</p>
+               <p data-element="{{ $archivos->id }}" data-ubicaciom="{{ $archivos->ubicacion_archivo }}">{{ $archivos->nombre_archivo }}</p>
              </a>
            </div>
          @endforeach

@@ -2793,7 +2793,6 @@ class AdminController extends Controller
     public function UploadChangeDirect(Request $request){
       if($request->ajax()) {
         $data= facedesrequest::all();
-        dd($data);
         $nameCarpetaTraslade = $request->nameCarpeta;
         $UbicacionCarpetaTraslade = $request->ubicacionCarpeta;
         $UbicacionArchivo = $request->ubicaArchivo;

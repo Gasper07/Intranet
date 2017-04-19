@@ -1045,7 +1045,7 @@ class AdminController extends Controller
        $idurl4 = '';
        $idurl5 = '';
        #directorios de archivos
-       $ArchivosCarpetas = 'ftp://bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/uploadss';      
+       $ArchivosCarpetas = 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/uploadss';      
        #get archivos que contiene la carpeta
        $getDirectoryArchivos = \File::files($ArchivosCarpetas);
        dd($getDirectoryArchivos);

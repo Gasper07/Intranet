@@ -1056,9 +1056,6 @@ class AdminController extends Controller
        foreach ($getDirectoryCarpetas as $keygetDirectoryCarpetas) {
          $nameCarptea = $keygetDirectoryCarpetas->nombre_archivo;
          $nameCarptea2 = $keygetDirectoryCarpetas->ubicacion_archivo;
-         $ubicacionArchivosMoreNewCarpeta = $ArchivosCarpetas.'/'.$nameCarptea;
-         $getDirectoryArchivosInCarpeta = \File::files($ubicacionArchivosMoreNewCarpeta);
-         $getDirectoryCarpteasInCarpeta = \File::directories($ubicacionArchivosMoreNewCarpeta);
          $randomNmm = rand(5, 1232335);
 
          $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '1','identiFI' => $randomNmm);

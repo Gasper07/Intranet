@@ -1050,7 +1050,7 @@ class AdminController extends Controller
       // $storagePath  = \Storage::disk('ubUploadsChange')->getDriver()->getAdapter()->getPathPrefix();
       $url = Storage::disk('ubUploadsChange')->url('Captura.PNG');
       $path = public_path($url);
-      // d
+      // ddede
       dd($path);      
       #get archivos que contiene la carpeta
       $getDirectoryArchivos = \File::files($ArchivosCarpetas);

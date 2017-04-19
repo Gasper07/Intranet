@@ -3059,7 +3059,7 @@ class AdminController extends Controller
         Session::flash('Create_directorie', "La carpeta ha sido creada");
         return back()->withInput();
       }
-      #Si la descarga proviene del tercer folder que seleccione
+      #Sis la descarga proviene del tercer folder que seleccione
       elseif($fileUrl != '' && $fileUrl2 != '' && $fileUrl3 != '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
         \Storage::disk('ubUploadsChange')->makeDirectory('documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$nameDirectorie.'');

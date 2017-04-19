@@ -2971,7 +2971,7 @@ class AdminController extends Controller
         $route = \Storage::disk('ubUploadsChange');
         print_r($route);
 
-        \Storage::move(''.$nombreDocumento.'', 'uploadss/'.$nombreDocumento.'');
+        \Storage::move('/'.$nombreDocumento.'', 'uploadss/'.$nombreDocumento.'');
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }

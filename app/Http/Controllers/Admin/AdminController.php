@@ -2970,7 +2970,7 @@ class AdminController extends Controller
         $move = \Storage::disk('ubUploadsChange')->put($nombreDocumento,  \File::get($fileDocumento));
         print_r('aca');
         $move = $fileDocumento->move(
-            base_path().'demo/uploads', $nombreDocumento
+            base_path().'uploads/', $nombreDocumento
         );
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();

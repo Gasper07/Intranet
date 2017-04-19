@@ -1046,17 +1046,17 @@ class AdminController extends Controller
       $idurl5 = '';
       #directorios de archivos
       // $ArchivosCarpetas = base_path().'/public/assets/images/documents-admin';    
-      $public_path = public_path();  
+      // $public_path = public_path();  
       // $ArchivosCarpetas = \Storage::disk('ubUploadsChange')->url('Captura.PNG');
       // $storagePath  = \Storage::disk('ubUploadsChange')->url('uploadss');
-      $ArchivosCarpetas = \Storage::disk('ubUploadsChange');    
+      // $ArchivosCarpetas = \Storage::disk('ubUploadsChange');    
       
       // $ve = $storagePath."/Captura.PNG";
 
-      // $storagePath  = \Storage::disk('ubUploadsChange')->get('Captura.PNG');
+      $storagePath  = \Storage::disk('ubUploadsChange')->get('Captura.PNG');
       // $url = \Storage::disk('ubUploadsChange')->url('Captura.PNG');
       // $path = public_path($url);
-      // dd($storagePath);      
+      dd($storagePath);      
       #get archivos que contiene la carpeta
       $getDirectoryArchivos = \File::files($ArchivosCarpetas);
      

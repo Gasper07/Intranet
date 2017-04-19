@@ -143,10 +143,10 @@
                <input type="hidden" name="_url3" value="{{ $idurl3 }}">
                <input type="hidden" name="_url4" value="{{ $idurl4 }}">
                <input type="hidden" name="_url5" value="{{ $idurl5 }}">
-               <input type="hidden" name="_name_archivo" value="{{ basename($archivos) }}">
+               <input type="hidden" name="_name_archivo" value="{{ $archivos->nombre_archivo }}">
              </form> 
              <a href="#!">
-               <p>{{ basename($archivos) }}</p>
+               <p>{{ $archivos->nombre_archivo }}</p>
              </a>
            </div>
          @endforeach

@@ -3037,7 +3037,7 @@ class AdminController extends Controller
         Session::flash('Create_directorie', "La carpeta ha sido creada");
         return back()->withInput();
       }
-      #Sdi la descarga proviene del primer folder que seleccione
+      #Si la descarga proviene del primer folder que seleccione
       if($fileUrl != '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
         \Storage::disk('ubUploadsChange')->makeDirectory('documents-admin/'.$fileUrl.'/'.$nameDirectorie.'');
@@ -3046,7 +3046,7 @@ class AdminController extends Controller
           'nombre_archivo' => $nameDirectorie,
           'type_upload' => 'carpeta',
           'ubicacion_anterior' => 'documents-admin/'.$fileUrl.'/',
-          'ubicacion_archivo' => '/'.$nameDirectorie.'',
+          'ubicacion_archivo' => '/documents-admin/'.$fileUrl.'/'.$nameDirectorie.'',
         );
         $SaveDocument = new Documentos($dataUploadFile);
         $SaveDocument->save();

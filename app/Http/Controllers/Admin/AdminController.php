@@ -2969,9 +2969,9 @@ class AdminController extends Controller
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
         $move = \Storage::disk('ubUploadsChange')->put($nombreDocumento,  \File::get($fileDocumento));
         print_r('aca');
-        // $move = $fileDocumento->move(
-        //     base_path().'/public/assets/images/documents-admin/', $nombreDocumento
-        // );
+        $move = $fileDocumento->move(
+            base_path().'demo/uploads', $nombreDocumento
+        );
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }

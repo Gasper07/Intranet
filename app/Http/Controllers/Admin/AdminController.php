@@ -2903,6 +2903,21 @@ class AdminController extends Controller
 
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
+
+        $entry = Documentos::where('nombre_archivo', '=', $file)->firstOrFail();
+        $fileData = Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
+        dd($fileData);
+
+        $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$nombreDocumento,  \File::get($fileDocumento));
+
+        $dataUploadFile = array(
+          'nombre_archivo' => $nombreDocumento,
+          'type_upload' => 'file',
+          'ubicacion_archivo' => 'documents-admin/',
+        );
+        $SaveDocument = new Documentos($dataUploadFile);
+        $SaveDocument->save();
+
         $path = base_path().'/public/assets/images/documents-admin/'.$file.'';    
         return response()->download($path);
       }

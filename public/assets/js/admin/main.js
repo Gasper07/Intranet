@@ -733,6 +733,7 @@ var finNameArchivo;
 function drag(parrafo, evento) {
 	evento.dataTransfer.setData('Text', parrafo.id);
 	finNameArchivo = $(parrafo).find('p').text();
+	console.log(finNameArchivo);
 	// console.log(evento.srcElement.currentSrc); 
 
 }
@@ -742,6 +743,7 @@ function drop(contenedor, evento) {
 	contenedor.appendChild(document.getElementById(id));
 	// Get nombre carpeta
 	var NameContenedor = $(contenedor).parent().parent().find('p.namedataCarpeta').text();
+	// var dtaCOnt = $(contenedor).parent().parent().parent().find('div.dataDowload');
 	// Get name archivo
 	// var dataImage = evento.srcElement.currentSrc;
 

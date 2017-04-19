@@ -117,7 +117,7 @@
                <i class="fa fa-check noneIcon direCar" aria-hidden="true"></i>
               <a href="{{ $valueCarpeta['nameArchivo'] }}">
                 <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/carpetaLlena.png" alt="">
-                <p class="namedataCarpeta">{{ $valueCarpeta['nameCarpeta'] }}</p>
+                <p class="namedataCarpeta">{{ $valueCarpeta['nameArchivo'] }}</p>
               </a>
             </div>
           @else
@@ -125,7 +125,7 @@
                <i class="fa fa-check noneIcon direCar" aria-hidden="true"></i>
               <a href="{{ $valueCarpeta['nameArchivo'] }}">
                 <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/carpetaVacia.png" alt="">
-                <p>{{ $valueCarpeta['nameCarpeta'] }}</p>
+                <p>{{ $valueCarpeta['nameArchivo'] }}</p>
               </a>
             </div>
           @endif

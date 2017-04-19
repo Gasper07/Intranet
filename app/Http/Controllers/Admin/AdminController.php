@@ -3095,7 +3095,7 @@ class AdminController extends Controller
         $dataUploadFile = array(
           'nombre_archivo' => $nameDirectorie,
           'type_upload' => 'carpeta',
-          'ubicacion_anterior' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/',
+          'ubicacion_anterior' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/'.$fileUrl5.'/',
           'ubicacion_archivo' => '/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/'.$fileUrl5.'/'.$nameDirectorie.'',
         );
         $SaveDocument = new Documentos($dataUploadFile);

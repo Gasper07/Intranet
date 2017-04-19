@@ -733,7 +733,8 @@ var finNameArchivo;
 function drag(parrafo, evento) {
 	evento.dataTransfer.setData('Text', parrafo.id);
 	finNameArchivo = $(parrafo).find('p').text();
-	console.log(finNameArchivo);
+	finIDArchivo = $(parrafo).find('p').data('idelement');
+	console.log(finIDArchivo);
 	// console.log(evento.srcElement.currentSrc); 
 
 }

@@ -1046,7 +1046,8 @@ class AdminController extends Controller
       $idurl5 = '';
       #directorios de archivos
       // $ArchivosCarpetas = base_path().'/public/assets/images/documents-admin';      
-      $ArchivosCarpetas = 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com';      
+      $ArchivosCarpetas = \Storage::disk('ubUploadsChange');
+      dd($ArchivosCarpetas);      
       #get archivos que contiene la carpeta
       $getDirectoryArchivos = \File::files($ArchivosCarpetas);
       dd($getDirectoryArchivos);

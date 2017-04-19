@@ -1045,6 +1045,7 @@ class AdminController extends Controller
        $idurl3 ='';
        $idurl4 = '';
        $idurl5 = '';
+       $idurl6 = '';
 
        #directorios de archivos
        $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/')->get();
@@ -1065,7 +1066,7 @@ class AdminController extends Controller
        # Obtener notifiaciones creadas
        $GetNotificaciones = $this->getNotificaciones();
 
-       return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+       return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
     }
 
     public function DocumentosRutas1($idurl)
@@ -1075,6 +1076,7 @@ class AdminController extends Controller
       $idurl3 = '';
       $idurl4 = '';
       $idurl5 = '';
+      $idurl6 = '';
       $ArrayCarpetas = array();
 
       #directorios de archivos
@@ -1097,7 +1099,7 @@ class AdminController extends Controller
       $GetNotificaciones = $this->getNotificaciones();
 
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
     }
 
     public function DocumentosRutas2($idurl,$idurl2)
@@ -1108,6 +1110,7 @@ class AdminController extends Controller
       $idurl3 = '';
       $idurl4 = '';
       $idurl5 = '';
+      $idurl6 = '';
       $ArrayCarpetas = array();
 
       #directorios de archivos
@@ -1129,7 +1132,7 @@ class AdminController extends Controller
       # Obtener notifiaciones creadas
       $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
     }
 
     public function DocumentosRutas3($idurl,$idurl2,$idurl3)
@@ -1140,6 +1143,7 @@ class AdminController extends Controller
       $idurl3 = $idurl3;
       $idurl4 = '';
       $idurl5 = '';
+      $idurl6 = '';
       $ArrayCarpetas = array();
       #directorios de archivos
       $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/'.$idurl.'/'.$idurl2.'/'.$idurl3.'/')->get();
@@ -1160,7 +1164,7 @@ class AdminController extends Controller
       # Obtener notifiaciones creadas
       $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
     }
 
     public function DocumentosRutas4($idurl,$idurl2,$idurl3,$idurl4)
@@ -1171,6 +1175,7 @@ class AdminController extends Controller
       $idurl3 = $idurl3;
       $idurl4 = $idurl4;
       $idurl5 = '';
+      $idurl6 = '';
       $ArrayCarpetas = array();
 
       #directorios de archivos
@@ -1192,7 +1197,7 @@ class AdminController extends Controller
       # Obtener notifiaciones creadas
       $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
     }
 
     public function DocumentosRutas5($idurl,$idurl2,$idurl3,$idurl4,$idurl5)
@@ -1203,6 +1208,7 @@ class AdminController extends Controller
       $idurl3 = $idurl3;
       $idurl4 = $idurl4;
       $idurl5 = $idurl5;
+      $idurl6 = '';
       $ArrayCarpetas = array();
 
       #directorios de archivos
@@ -1224,7 +1230,40 @@ class AdminController extends Controller
       # Obtener notifiaciones creadas
       $GetNotificaciones = $this->getNotificaciones();
 
-      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
+    }
+
+    public function DocumentosRutas6($idurl,$idurl2,$idurl3,$idurl4,$idurl5,$idurl6)
+    {
+      $data = facedesrequest::all();
+      $idurl = $idurl;
+      $idurl2 = $idurl2;
+      $idurl3 = $idurl3;
+      $idurl4 = $idurl4;
+      $idurl5 = $idurl5;
+      $idurl6 = $idurl6;
+      $ArrayCarpetas = array();
+
+      #directorios de archivos
+      $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/'.$idurl.'/'.$idurl2.'/'.$idurl3.'/'.$idurl4.'/'.$idurl5.'/'.$idurl6.'/')->get();
+      #get directorios carpetas
+      $getDirectoryCarpetas = Documentos::where('ubicacion_anterior','=','documents-admin/'.$idurl.'/'.$idurl2.'/'.$idurl3.'/'.$idurl4.'/'.$idurl5.'/'.$idurl6.'/')->where('type_upload','=','carpeta')->get();
+
+      # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
+      # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA
+      foreach ($getDirectoryCarpetas as $keygetDirectoryCarpetas) {
+        $nameCarptea = $keygetDirectoryCarpetas->nombre_archivo;
+        $nameCarptea2 = $keygetDirectoryCarpetas->ubicacion_archivo;
+        $randomNmm = rand(5, 1232335);
+
+        $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '1','identiFI' => $randomNmm);
+        array_push($ArrayCarpetas,$dataCarpetas);
+      }
+
+      # Obtener notifiaciones creadas
+      $GetNotificaciones = $this->getNotificaciones();
+
+      return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','idurl6','GetNotificaciones'));
     }
 
     public function Ranking()

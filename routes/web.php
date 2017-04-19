@@ -458,6 +458,7 @@
 	    Route::get('/admin/documentos/{idurl}/{idurl2}/{idurl3}', 'Admin\AdminController@DocumentosRutas3');
 	    Route::get('/admin/documentos/{idurl}/{idurl2}/{idurl3}/{idurl4}', 'Admin\AdminController@DocumentosRutas4');
 	    Route::get('/admin/documentos/{idurl}/{idurl2}/{idurl3}/{idurl4}/{idurl5}', 'Admin\AdminController@DocumentosRutas5');
+	    Route::get('/admin/documentos/{idurl}/{idurl2}/{idurl3}/{idurl4}/{idurl5}/{idurl6}', 'Admin\AdminController@DocumentosRutas6');
             	/*
                 |--------------------------------------------------------------------------
                 | Ajax change documents

@@ -2987,6 +2987,9 @@ class AdminController extends Controller
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/',
         );
 
+        $SaveDocument = new Documentos($dataUploadFile);
+        $SaveDocument->save();
+
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }
@@ -3037,7 +3040,17 @@ class AdminController extends Controller
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
         \Storage::disk('ubUploadsChange')->makeDirectory('documents-admin/'.$nameDirectorie.'');
-        
+
+        $dataUploadFile = array(
+          'nombre_archivo' => $nameDirectorie,
+          'type_upload' => 'carpeta',
+          'ubicacion_archivo' => 'documents-admin/'.$nameDirectorie.'/',
+        );
+
+        $SaveDocument = new Documentos($dataUploadFile);
+        $SaveDocument->save();
+
+
         Session::flash('Create_directorie', "La carpeta ha sido creada");
         return back()->withInput();
       }

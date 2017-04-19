@@ -3036,7 +3036,7 @@ class AdminController extends Controller
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
-        Storage::disk('ubUploadsChange')->makeDirectory('documents-admin/'.$nameDirectorie.'');
+        \Storage::disk('ubUploadsChange')->makeDirectory('documents-admin/'.$nameDirectorie.'');
         
         Session::flash('Create_directorie', "La carpeta ha sido creada");
         return back()->withInput();

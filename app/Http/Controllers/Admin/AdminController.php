@@ -2803,8 +2803,10 @@ class AdminController extends Controller
         $filePath = $nameArchiveTraslade;
         $content = \Storage::disk('ubUploadsChange')->move('documents-admin/'.$filePath, 'documents-admin/'.$nameCarpetaTraslade.'/'.$filePath.'');
 
+        $newUbicacionArchivo = ''.$UbicacionCarpetaTraslade.''.$nameCarpetaTraslade.'';
+
         $DataUpdateDirectery = array(
-          'ubicacion_archivo' => $UbicacionCarpetaTraslade,
+          'ubicacion_archivo' => $newUbicacionArchivo,
         );
 
         $SaveData= \DB::table('documentos')

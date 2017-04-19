@@ -1046,18 +1046,31 @@ class AdminController extends Controller
        $idurl4 = '';
        $idurl5 = '';
 
-       $GetDocumentos = Documentos::where('ubicacion_archivo','=','documents-admin/')->get();
-
-       foreach ($GetDocumentos as $keyGetDocumentos) {
+       #directorios de archivos
+       $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/')->get();
+       #get directorios carpetas
+       $getDirectoryCarpetas = Documentos::where('ubicacion_archivo','=','documents-admin/')->where('type_upload','=','carpeta')->get();
+             
+       # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
+       # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA
+       foreach ($getDirectoryCarpetas as $keygetDirectoryCarpetas) {
+         $nameCarptea = $keygetDirectoryCarpetas->nombre_archivo;
+         $nameCarptea2 = $keygetDirectoryCarpetas->ubicacion_archivo;
+         $ubicacionArchivosMoreNewCarpeta = $ArchivosCarpetas.'/'.$nameCarptea;
+         $getDirectoryArchivosInCarpeta = \File::files($ubicacionArchivosMoreNewCarpeta);
+         $getDirectoryCarpteasInCarpeta = \File::directories($ubicacionArchivosMoreNewCarpeta);
          $randomNmm = rand(5, 1232335);
-         $dataCarpetas = array('nameArchivo' => $keyGetDocumentos->nombre_archivo,'VaueContenido' => '0','identiFI' => $randomNmm);
-          array_push($ArrayCarpetas,$dataCarpetas);
+
+         $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '1','identiFI' => $randomNmm);
+         array_push($ArrayCarpetas,$dataCarpetas);
        }
+
+       // dd($ArrayCarpetas);
 
        # Obtener notifiaciones creadas
        $GetNotificaciones = $this->getNotificaciones();
 
-       return view('admin.documentos',compact('ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+       return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas1($idurl)

@@ -729,11 +729,13 @@ jQuery(document).ready(function($) {
 
 // Events Drap & Drop Seccion Docuemnts
 var finNameArchivo;
+var finIDArchivo;
 
 function drag(parrafo, evento) {
 	evento.dataTransfer.setData('Text', parrafo.id);
 	finNameArchivo = $(parrafo).find('p').text();
-	finIDArchivo = $(parrafo).find('p').data('idelement');
+	finIDArchivo = $(parrafo).find('p').data('element');
+	console.log(finNameArchivo);
 	console.log(finIDArchivo);
 	// console.log(evento.srcElement.currentSrc); 
 
@@ -756,7 +758,7 @@ function drop(contenedor, evento) {
 		url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/upload_change_direct',
 		type: 'POST',
 		headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-		data: "dataNameArchivo="+finNameArchivo+"&nameCarpeta="+NameContenedor+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+		data: "dataNameArchivo="+finNameArchivo+"&idDaArchivo="+finIDArchivo+"&nameCarpeta="+NameContenedor+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		dataType: 'json',
 		success: function(result, index, value, data) {
 			console.log(result);

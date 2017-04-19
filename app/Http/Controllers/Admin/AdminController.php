@@ -2795,10 +2795,13 @@ class AdminController extends Controller
         $data= facedesrequest::all();
         dd($data);
         $nameCarpetaTraslade = $request->nameCarpeta;
+        $UbicacionCarpetaTraslade = $request->ubicacionCarpeta;
+        $UbicacionArchivo = $request->ubicaArchivo;
+        $idArchivo = $request->idDaArchivo;
         $nameArchiveTraslade = $request->dataNameArchivo;
 
         $filePath = $nameArchiveTraslade;
-        $content = \Storage::disk('ubUploads')->move($filePath,'/'.$nameCarpetaTraslade.'/'.$filePath.'');
+        $content = \Storage::disk('ubUploadsChange')->move($filePath,'/'.$nameCarpetaTraslade.'/'.$filePath.'');
         dd('subido');
       }
     }

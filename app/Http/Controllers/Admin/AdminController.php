@@ -2804,6 +2804,7 @@ class AdminController extends Controller
 
     public function UploadChangeDirectSnAJax(Request $request){
       $data= facedesrequest::all();
+      dd($data);
       $getNameArchivos = $request->dta_move_element;
 
       $getUrl = $request->_url;
@@ -2822,8 +2823,6 @@ class AdminController extends Controller
           $content = \Storage::disk('ubUploads')->move($filePath,'/archivos/'.$filePath.'');
         }
       }
-
-      
     }
 
     public function RemoveDirectSnAJax(Request $request){

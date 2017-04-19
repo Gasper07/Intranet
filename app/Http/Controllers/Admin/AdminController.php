@@ -2793,7 +2793,7 @@ class AdminController extends Controller
     public function UploadChangeDirect(Request $request){
       if($request->ajax()) {
         $data= facedesrequest::all();
-        dd($data);
+        // dd($data);
         $nameCarpetaTraslade = $request->nameCarpeta;
         $UbicacionCarpetaTraslade = $request->ubicacionCarpeta;
         $UbicacionArchivo = $request->ubicaArchivo;
@@ -2801,7 +2801,7 @@ class AdminController extends Controller
         $nameArchiveTraslade = $request->dataNameArchivo;
 
         $filePath = $nameArchiveTraslade;
-        $content = \Storage::disk('ubUploadsChange')->move('/documents-admin/'.$filePath, '/documents-admin/'.$nameCarpetaTraslade.'/'.$filePath.'');
+        $content = \Storage::disk('ubUploadsChange')->move('documents-admin/'.$filePath, 'documents-admin/'.$nameCarpetaTraslade.'/'.$filePath.'');
         echo json_encode('enviado');
       }
     }

@@ -2807,7 +2807,7 @@ class AdminController extends Controller
           'ubicacion_archivo' => $UbicacionCarpetaTraslade,
         );
 
-        $SaveData= \DB::table('datos_personales')
+        $SaveData= \DB::table('documentos')
           ->where('id', '=', $idArchivo)
           ->update($DataUpdateDirectery);
 

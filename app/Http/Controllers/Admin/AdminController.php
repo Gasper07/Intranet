@@ -2967,7 +2967,17 @@ class AdminController extends Controller
 
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
-        $move = \Storage::disk('ubUploadsChange')->put('uploadss/'.$nombreDocumento,  \File::get($fileDocumento));
+        
+        $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$nombreDocumento,  \File::get($fileDocumento));
+
+        $dataUploadFile = array(
+          'nombre_archivo' => $nombreDocumento,
+          'type_upload' => 'file',
+          'ubicacion_archivo' => 'documents-admin/',
+        );
+
+        $SaveDocument = new Documentos($dataUploadFile);
+        $SaveDocument->save();
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }

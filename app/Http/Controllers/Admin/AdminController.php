@@ -2967,9 +2967,7 @@ class AdminController extends Controller
 
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
-        // $move = \Storage::disk('ubUploadsChange')->put($nombreDocumento, '/demo/'.\File::get($fileDocumento));
-        $filePath = \File::get($fileDocumento);
-        $content = \Storage::disk('ubUploadsChange')->move($filePath,'/demo/'.$filePath.'');
+        $move = \Storage::disk('ubUploadsChange')->put($nombreDocumento,  \File::get($fileDocumento));
         print_r('aca');
         // $move = $fileDocumento->move(
         //     base_path().'/public/assets/images/documents-admin/', $nombreDocumento

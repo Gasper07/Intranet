@@ -3040,7 +3040,7 @@ class AdminController extends Controller
           'nombre_archivo' => $nameDirectorie,
           'type_upload' => 'carpeta',
           'ubicacion_anterior' => 'documents-admin/',
-          'ubicacion_archivo' => 'documents-admin/'.$nameDirectorie.'/',
+          'ubicacion_archivo' => '/'.$nameDirectorie.'',
         );
         $SaveDocument = new Documentos($dataUploadFile);
         $SaveDocument->save();

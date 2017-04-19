@@ -1045,38 +1045,19 @@ class AdminController extends Controller
        $idurl3 ='';
        $idurl4 = '';
        $idurl5 = '';
-       #directorios de archivos
-       $ArchivosCarpetas = base_path().'/public/assets/images/documents-admin';      
-       #get archivos que contiene la carpeta
-       $getDirectoryArchivos = \File::files($ArchivosCarpetas);
 
-       #get directorios carpetas
-       $getDirectoryCarpetas = \File::directories($ArchivosCarpetas);
-       
-       # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
-       # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA
-       foreach ($getDirectoryCarpetas as $keygetDirectoryCarpetas) {
-         $nameCarptea = basename($keygetDirectoryCarpetas);
-         $nameCarptea2 = 'documentos/'.basename($keygetDirectoryCarpetas);
-         $ubicacionArchivosMoreNewCarpeta = $ArchivosCarpetas.'/'.$nameCarptea;
-         $getDirectoryArchivosInCarpeta = \File::files($ubicacionArchivosMoreNewCarpeta);
-         $getDirectoryCarpteasInCarpeta = \File::directories($ubicacionArchivosMoreNewCarpeta);
+       $GetDocumentos = Documentos::where('ubicacion_archivo','=','documents-admin/')->get();
+
+       foreach ($GetDocumentos as $keyGetDocumentos) {
          $randomNmm = rand(5, 1232335);
-         if(count($getDirectoryArchivosInCarpeta)>0 or count($getDirectoryCarpteasInCarpeta)>0){
-           $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '1','identiFI' => $randomNmm);
-           array_push($ArrayCarpetas,$dataCarpetas);
-         }else{
-           $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '0','identiFI' => $randomNmm);
-           array_push($ArrayCarpetas,$dataCarpetas);
-         }
+         $dataCarpetas = array('nameArchivo' => $keyGetDocumentos->nombre_archivo,'VaueContenido' => '0','identiFI' => $randomNmm);
+          array_push($ArrayCarpetas,$dataCarpetas);
        }
-
-       // dd($ArrayCarpetas);
 
        # Obtener notifiaciones creadas
        $GetNotificaciones = $this->getNotificaciones();
 
-       return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+       return view('admin.documentos',compact('ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas1($idurl)
@@ -2968,7 +2949,7 @@ class AdminController extends Controller
 
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
-        
+
         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$nombreDocumento,  \File::get($fileDocumento));
 
         $dataUploadFile = array(
@@ -2984,9 +2965,15 @@ class AdminController extends Controller
       }
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl != '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
-        $move = $fileDocumento->move(
-            base_path().'/public/assets/images/documents-admin/'.$fileUrl.'', $nombreDocumento
+
+        $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$fileUrl.'/'.$nombreDocumento,  \File::get($fileDocumento));
+
+        $dataUploadFile = array(
+          'nombre_archivo' => $nombreDocumento,
+          'type_upload' => 'file',
+          'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/',
         );
+
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }

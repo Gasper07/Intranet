@@ -115,7 +115,7 @@
           @if($valueCarpeta['VaueContenido'] == '1')
             <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-identificador="{{$valueCarpeta['identiFI']}}">          
                <i class="fa fa-check noneIcon direCar" aria-hidden="true"></i>
-              <a href="{{ $valueCarpeta['nameCarpeta2'] }}">
+              <a href="{{ $valueCarpeta['nameArchivo'] }}">
                 <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/carpetaLlena.png" alt="">
                 <p class="namedataCarpeta">{{ $valueCarpeta['nameCarpeta'] }}</p>
               </a>
@@ -123,7 +123,7 @@
           @else
             <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 " data-identificador="{{$valueCarpeta['identiFI']}}">          
                <i class="fa fa-check noneIcon direCar" aria-hidden="true"></i>
-              <a href="{{ $valueCarpeta['nameCarpeta2'] }}">
+              <a href="{{ $valueCarpeta['nameArchivo'] }}">
                 <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/carpetaVacia.png" alt="">
                 <p>{{ $valueCarpeta['nameCarpeta'] }}</p>
               </a>
@@ -131,7 +131,7 @@
           @endif
         @endforeach
 
-         @foreach($getDirectoryArchivos as $archivos)
+         {{-- @foreach($getDirectoryArchivos as $archivos)
           <p class="gasper">{{ $randomNmm = rand(5, 12323352) }}</p>
            <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 dataDowload" data-identificador="cla{{$randomNmm}}" id="parrafo{{$randomNmm}}" draggable="true" ondragstart="drag(this, event)">
               <i class="fa fa-check noneIcon FilCa" aria-hidden="true"></i>
@@ -149,7 +149,7 @@
                <p>{{ basename($archivos) }}</p>
              </a>
            </div>
-         @endforeach
+         @endforeach --}}
         
         
         <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 fileUploDat">

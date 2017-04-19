@@ -1049,7 +1049,7 @@ class AdminController extends Controller
        #directorios de archivos
        $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/')->get();
        #get directorios carpetas
-       $getDirectoryCarpetas = Documentos::where('ubicacion_archivo','=','documents-admin/')->where('type_upload','=','carpeta')->get();
+       $getDirectoryCarpetas = Documentos::where('ubicacion_anterior','=','documents-admin/')->where('type_upload','=','carpeta')->get();
              
        # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
        # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA
@@ -2970,7 +2970,6 @@ class AdminController extends Controller
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/',
         );
-
         $SaveDocument = new Documentos($dataUploadFile);
         $SaveDocument->save();
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
@@ -2986,7 +2985,6 @@ class AdminController extends Controller
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/',
         );
-
         $SaveDocument = new Documentos($dataUploadFile);
         $SaveDocument->save();
 
@@ -3044,12 +3042,11 @@ class AdminController extends Controller
         $dataUploadFile = array(
           'nombre_archivo' => $nameDirectorie,
           'type_upload' => 'carpeta',
+          'ubicacion_anterior' => 'documents-admin/',
           'ubicacion_archivo' => 'documents-admin/'.$nameDirectorie.'/',
         );
-
         $SaveDocument = new Documentos($dataUploadFile);
         $SaveDocument->save();
-
 
         Session::flash('Create_directorie', "La carpeta ha sido creada");
         return back()->withInput();

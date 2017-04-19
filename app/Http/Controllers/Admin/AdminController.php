@@ -1039,43 +1039,44 @@ class AdminController extends Controller
     public function Documentos()
     {
       $ArrayCarpetas = array();
-           $idurl ='';
-           $idurl2 ='';
-           $idurl3 ='';
-           $idurl4 = '';
-           $idurl5 = '';
-           #directorios de archivos
-           $ArchivosCarpetas = base_path().'/public/assets/images/documents-admin';      
-           #get archivos que contiene la carpeta
-           $getDirectoryArchivos = \File::files($ArchivosCarpetas);
+       $idurl ='';
+       $idurl2 ='';
+       $idurl3 ='';
+       $idurl4 = '';
+       $idurl5 = '';
+       #directorios de archivos
+       $ArchivosCarpetas = 'ftp://bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/uploadss';      
+       #get archivos que contiene la carpeta
+       $getDirectoryArchivos = \File::files($ArchivosCarpetas);
+       dd($getDirectoryArchivos);
 
-           #get directorios carpetas
-           $getDirectoryCarpetas = \File::directories($ArchivosCarpetas);
-           
-           # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
-           # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA
-           foreach ($getDirectoryCarpetas as $keygetDirectoryCarpetas) {
-             $nameCarptea = basename($keygetDirectoryCarpetas);
-             $nameCarptea2 = 'documentos/'.basename($keygetDirectoryCarpetas);
-             $ubicacionArchivosMoreNewCarpeta = $ArchivosCarpetas.'/'.$nameCarptea;
-             $getDirectoryArchivosInCarpeta = \File::files($ubicacionArchivosMoreNewCarpeta);
-             $getDirectoryCarpteasInCarpeta = \File::directories($ubicacionArchivosMoreNewCarpeta);
-             $randomNmm = rand(5, 1232335);
-             if(count($getDirectoryArchivosInCarpeta)>0 or count($getDirectoryCarpteasInCarpeta)>0){
-               $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '1','identiFI' => $randomNmm);
-               array_push($ArrayCarpetas,$dataCarpetas);
-             }else{
-               $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '0','identiFI' => $randomNmm);
-               array_push($ArrayCarpetas,$dataCarpetas);
-             }
-           }
+       #get directorios carpetas
+       $getDirectoryCarpetas = \File::directories($ArchivosCarpetas);
+       
+       # OBTENER LAS CARPETAS QUE EXISTEN EN UNA CARPETA, DESCOMPONEMOS EL ARRAY OBTENIDO DE TODAS LAS CARPERTAS QUE EXITEN
+       # EN EL DIRECTORIO Y CON BASENAME OBTENEMOS EL NOMBRE DE LA CARPETA
+       foreach ($getDirectoryCarpetas as $keygetDirectoryCarpetas) {
+         $nameCarptea = basename($keygetDirectoryCarpetas);
+         $nameCarptea2 = 'documentos/'.basename($keygetDirectoryCarpetas);
+         $ubicacionArchivosMoreNewCarpeta = $ArchivosCarpetas.'/'.$nameCarptea;
+         $getDirectoryArchivosInCarpeta = \File::files($ubicacionArchivosMoreNewCarpeta);
+         $getDirectoryCarpteasInCarpeta = \File::directories($ubicacionArchivosMoreNewCarpeta);
+         $randomNmm = rand(5, 1232335);
+         if(count($getDirectoryArchivosInCarpeta)>0 or count($getDirectoryCarpteasInCarpeta)>0){
+           $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '1','identiFI' => $randomNmm);
+           array_push($ArrayCarpetas,$dataCarpetas);
+         }else{
+           $dataCarpetas = array('nameCarpeta' => $nameCarptea,'nameCarpeta2' => $nameCarptea2,'VaueContenido' => '0','identiFI' => $randomNmm);
+           array_push($ArrayCarpetas,$dataCarpetas);
+         }
+       }
 
-           // dd($ArrayCarpetas);
+       // dd($ArrayCarpetas);
 
-           # Obtener notifiaciones creadas
-           $GetNotificaciones = $this->getNotificaciones();
+       # Obtener notifiaciones creadas
+       $GetNotificaciones = $this->getNotificaciones();
 
-           return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
+       return view('admin.documentos',compact('getDirectoryArchivos','getDirectoryCarpetas','ArrayCarpetas','idurl','idurl2','idurl3','idurl4','idurl5','GetNotificaciones'));
     }
 
     public function DocumentosRutas1($idurl)

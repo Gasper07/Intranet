@@ -124,7 +124,7 @@
                <i class="fa fa-check noneIcon direCar" aria-hidden="true"></i>
               <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentos{{ $valueCarpeta['nameCarpeta2'] }}">
                 <img class="img-responsive" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/icons/carpetaVacia.png" alt="">
-                <p class="namedataCarpeta">{{ $valueCarpeta['nameCarpeta'] }}</p>
+                <p class="namedataCarpeta" data-ubicacarpeta="{{ $valueCarpeta['nameCarpeta2'] }}">{{ $valueCarpeta['nameCarpeta'] }}</p>
               </a>
             </div>
           @else

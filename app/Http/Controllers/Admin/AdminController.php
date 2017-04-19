@@ -2801,7 +2801,7 @@ class AdminController extends Controller
         $nameArchiveTraslade = $request->dataNameArchivo;
 
         $filePath = $nameArchiveTraslade;
-        $content = \Storage::disk('ubUploadsChange')->move($filePath,'/'.$nameCarpetaTraslade.'/'.$filePath.'');
+        $content = \Storage::disk('ubUploadsChange')->move('/documents-admin/'.$filePath,'/documents-admin/'.$nameCarpetaTraslade.'/'.$filePath.'');
         dd('subido');
       }
     }

@@ -44,26 +44,33 @@
 <section class="container-fluid">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionMenuInterno">
     <ul class="listActionDocuemntps">
-        <li><a href="#!" class="createCarpeta">Crear carpeta</a></li>
-        <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentCreateDirectorie" method="post" accept-charset="utf-8" class="createNewDirec" >
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <input type="hidden" name="_url" value="{{ $idurl }}">
-          <input type="hidden" name="_url2" value="{{ $idurl2 }}">
-          <input type="hidden" name="_url3" value="{{ $idurl3 }}">
-          <input type="hidden" name="_url4" value="{{ $idurl4 }}">
-          <input type="hidden" name="_url5" value="{{ $idurl5 }}">
-          <input type="hidden" class="CreateNewActionDirective" name="name_carpeta_new" />
-        </form>
-        <li><a href="#!" onclick="FileNewDocu()">Subir</a></li>
-        <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentUpload" method="post" accept-charset="utf-8" class="uploadArchivoNew2" enctype="multipart/form-data">
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <input type="hidden" name="_url" value="{{ $idurl }}">
-          <input type="hidden" name="_url2" value="{{ $idurl2 }}">
-          <input type="hidden" name="_url3" value="{{ $idurl3 }}">
-          <input type="hidden" name="_url4" value="{{ $idurl4 }}">
-          <input type="hidden" name="_url5" value="{{ $idurl5 }}">
-          <input type="file" class="fileInputUploadDocu2" name="file_input_docuemnt_upload" />
-        </form>
+        @if($idurl6 == '')
+          <li>
+            <a href="#!" class="createCarpeta">Crear carpeta</a>
+          </li>
+             <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentCreateDirectorie" method="post" accept-charset="utf-8" class="createNewDirec" >
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="_url" value="{{ $idurl }}">
+                <input type="hidden" name="_url2" value="{{ $idurl2 }}">
+                <input type="hidden" name="_url3" value="{{ $idurl3 }}">
+                <input type="hidden" name="_url4" value="{{ $idurl4 }}">
+                <input type="hidden" name="_url5" value="{{ $idurl5 }}">
+                <input type="hidden" class="CreateNewActionDirective" name="name_carpeta_new" />
+            </form>
+          <li>
+             <a href="#!" onclick="FileNewDocu()">Subir</a>
+          </li>
+          <form action="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/admin/documentUpload" method="post" accept-charset="utf-8" class="uploadArchivoNew2" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="_url" value="{{ $idurl }}">
+            <input type="hidden" name="_url2" value="{{ $idurl2 }}">
+            <input type="hidden" name="_url3" value="{{ $idurl3 }}">
+            <input type="hidden" name="_url4" value="{{ $idurl4 }}">
+            <input type="hidden" name="_url5" value="{{ $idurl5 }}">
+            <input type="file" class="fileInputUploadDocu2" name="file_input_docuemnt_upload" />
+          </form>
+        @endif
+        
         {{-- <li><a href="">Descargar</a></li> --}}
         <li class="dreopDocument">
           <div class="dropdown dwropOptionMensgae">

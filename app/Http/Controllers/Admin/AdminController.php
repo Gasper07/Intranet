@@ -1080,7 +1080,7 @@ class AdminController extends Controller
       $ArrayCarpetas = array();
 
       #directorios de archivos
-      $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin'.$idurl.'/')->get();
+      $getDirectoryArchivos = Documentos::where('ubicacion_archivo','=','documents-admin/'.$idurl.'/')->get();
       #get directorios carpetas
       $getDirectoryCarpetas = Documentos::where('ubicacion_anterior','=','documents-admin'.$idurl.'')->where('type_upload','=','carpeta')->get();
 

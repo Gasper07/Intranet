@@ -1047,8 +1047,7 @@ class AdminController extends Controller
       #directorios de archivos
       // $ArchivosCarpetas = base_path().'/public/assets/images/documents-admin';    
       $public_path = public_path();  
-      $directory = \Storage::disk('ubUploadsChange');
-      $ArchivosCarpetas = \Storage::files($directory);
+      $ArchivosCarpetas = \Storage::files('ubUploadsChange');
       dd($ArchivosCarpetas);
       // $storagePath  = \Storage::disk('ubUploadsChange')->get('Captura.PNG');
       // $url = \Storage::disk('ubUploadsChange')->url('Captura.PNG');

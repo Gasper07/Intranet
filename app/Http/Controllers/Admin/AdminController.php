@@ -2967,10 +2967,10 @@ class AdminController extends Controller
 
       #Si la descarga proviene del primer folder que seleccione
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
-        $move = \Storage::root('ubUploadsChange')->put($nombreDocumento,  \File::get($fileDocumento));
+        $move = \Storage::disk('ubUploadsChange')->put('uploadss/'.$nombreDocumento,  \File::get($fileDocumento));
         $route = base_path();
         // print_r($route);
-        \Storage::move('bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/'.$nombreDocumento.'', 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/uploadss/'.$nombreDocumento.'');
+        \Storage::move('bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/'.$nombreDocumento.'', 'uploadss/'.$nombreDocumento.'');
         Session::flash('Upload_document', "El Archivo ha sido subido con exito");
         return back()->withInput();
       }

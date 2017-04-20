@@ -5,10 +5,7 @@
         <i class="fa fa-times" aria-hidden="true"></i>
       </a> --}} 
       <div class="bgHappy">
-        <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUSe->foto.'') }}</p>
-        <div class="img-responsive PeopleHappy" style="background-image: url('data:{{ $PostPar['mime'] }};base64,{{ base64_encode($GetImage) }}')">
-        </div>
-        
+        <img class="img-responsive PeopleHappy" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}">
       </div>
       <h4 class="fontCovered">¡Feliz cumpleaños {{ $dataUSe->name }}!</h4>
       <h5 class="fontMiriamProRegular">{{ $PostPar['descripcion'] }}</h5>
@@ -54,8 +51,7 @@
           @if($PostPar['id'] == $datComents->id_publicacion)
             <div class="ui feed uifeedComnetUser">
               <div class="event">
-                <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$datComents->foto.'') }}</p>
-                <div class="label dataPrubeIm" style="background-image: url('data:{{ $PostPar['mime'] }};base64,{{ base64_encode($GetImage) }}')">
+                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                 </div>
                 <div class="content">
                   <div class="summary">

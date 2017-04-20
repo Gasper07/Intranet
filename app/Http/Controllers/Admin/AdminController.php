@@ -2907,7 +2907,8 @@ class AdminController extends Controller
         $entry = Documentos::where('nombre_archivo', '=', $file)->firstOrFail();
         $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/promoToshibas.png');
         // return response()->download($storagePath);
-        return (new \Response($storagePath, 200));
+        // return (new \Response($storagePath, 200));
+        return response()->json($storagePath);
         // $fileData = \Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
         dd($storagePath);
 

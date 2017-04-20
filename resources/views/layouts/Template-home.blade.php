@@ -413,9 +413,11 @@
               var dataIDUser = element.id_usuario;
               var dataComentarios = element.comentarios;
               var dataIdPublicacion = element.id_publicacion;
-              {{ $GetImage  = \Storage::disk('ubUploadsChange')->get("/profiles/"+dataFotoName+"") }}
-               var data = '<div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,{{ base64_encode($GetImage) }}")"></div>';
-               console.log(data);
+
+              var url = "/profiles/"+dataFotoName+"";
+              var GetImage = {{ \Storage::disk('ubUploadsChange')->get(url) }};
+               console.log(GetImage);
+               // var data = '<div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,{{ base64_encode($GetImage) }}")"></div>';
                // $(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,'{{.base64_encode($GetImage).}}'')"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
               
 

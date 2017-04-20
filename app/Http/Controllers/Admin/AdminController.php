@@ -2976,7 +2976,7 @@ class AdminController extends Controller
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$nombreDocumento,  \File::get($fileDocumento));
-
+        #dat
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
           'mime' => $TipoDocumento,

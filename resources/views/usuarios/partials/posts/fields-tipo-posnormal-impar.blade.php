@@ -35,7 +35,9 @@
       @if($PostImpar['imagen'] != '')
       <h1>ES</h1>
         @foreach($PostImpar['imagen'] as $imagess) 
-          <img class="img-responsive clImgView" src="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($imagess) }}" data-toggle="modal" data-target="#myModalswPost" alt="{{ $imagess }}">
+          <p class="gasper"></p>
+          <p class="gasper">{{ $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/'.$imagess.'') }}</p>
+          <img class="img-responsive clImgView" src="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($storagePath) }}" data-toggle="modal" data-target="#myModalswPost" alt="{{ $storagePath }}">
             
             <!-- Modal -->
             <div class="modal fade" id="myModalswPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

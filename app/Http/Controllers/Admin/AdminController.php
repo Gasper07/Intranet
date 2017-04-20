@@ -2912,22 +2912,22 @@ class AdminController extends Controller
         #data
         // return (new \Response($storagePath, 200))
         //               ->header('Content-Type', $entry->mime);
-        return response($storagePath, 200, ['Content-Type' => $entry->mime]);
+        return response($storagePath, 200, ['Content-Type' => $entry->mime])->download();
         // $fileData = \Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
-        dd($storagePath);
+        // dd($storagePath);
 
-        $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$nombreDocumento,  \File::get($fileDocumento));
+        // $SaveFile = \Storage::disk('ubUploadsChange')->put('documents-admin/'.$nombreDocumento,  \File::get($fileDocumento));
 
-        $dataUploadFile = array(
-          'nombre_archivo' => $nombreDocumento,
-          'type_upload' => 'file',
-          'ubicacion_archivo' => 'documents-admin/',
-        );
-        $SaveDocument = new Documentos($dataUploadFile);
-        $SaveDocument->save();
+        // $dataUploadFile = array(
+        //   'nombre_archivo' => $nombreDocumento,
+        //   'type_upload' => 'file',
+        //   'ubicacion_archivo' => 'documents-admin/',
+        // );
+        // $SaveDocument = new Documentos($dataUploadFile);
+        // $SaveDocument->save();
 
-        $path = base_path().'/public/assets/images/documents-admin/'.$file.'';    
-        return response()->download($path);
+        // $path = base_path().'/public/assets/images/documents-admin/'.$file.'';    
+        // return response()->download($path);
       }
       if($fileUrl != '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
         $path = base_path().'/public/assets/images/documents-admin/'.$fileUrl.'/'.$file.'';    

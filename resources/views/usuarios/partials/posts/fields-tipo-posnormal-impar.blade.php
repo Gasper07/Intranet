@@ -33,10 +33,8 @@
       </div>
       <p class="textCOment fontMiriamProRegular colorGrisMediumSuave">{{ $PostImpar['descripcion'] }}</p> 
       @if($PostImpar['imagen'] != '')
-      <h1>ES</h1>
         @foreach($PostImpar['imagen'] as $imagess) 
-          <p class="gasper"></p>
-          <p class="gasper">{{ $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/'.$imagess.'') }}</p>
+          <p class="gasper">{{ $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents/'.$imagess.'') }}</p>
           <img class="img-responsive clImgView" src="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($storagePath) }}" data-toggle="modal" data-target="#myModalswPost" alt="{{ $storagePath }}">
             
             <!-- Modal -->
@@ -44,7 +42,7 @@
               <div class="modal-dialog dialoDataImgen" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}">
+                    <img class="img-responsive clImgView" src="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($storagePath) }}" data-toggle="modal" data-target="#myModalswPost" alt="{{ $storagePath }}">
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

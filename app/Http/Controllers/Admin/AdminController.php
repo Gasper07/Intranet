@@ -2912,7 +2912,7 @@ class AdminController extends Controller
         #data
         // return (new \Response($storagePath, 200))
         //               ->header('Content-Type', $entry->mime);
-        return response($storagePath, 200, ['Content-Type' => $entry->mime])->download();
+        return response($storagePath, 200, ['Content-Type' => $entry->mime]);
         // $fileData = \Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
         // dd($storagePath);
 

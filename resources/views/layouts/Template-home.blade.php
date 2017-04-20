@@ -403,7 +403,7 @@
           dataType: 'json',
           success: function(result, index, value, data) {
             console.log(result);
-            $d = '1';
+            var d = '1';
 
             $.each(result, function(index, element) {
               var dataNombre = element.nombre;
@@ -413,6 +413,9 @@
               var dataIDUser = element.id_usuario;
               var dataComentarios = element.comentarios;
               var dataIdPublicacion = element.id_publicacion;
+
+              var url = "/profiles/"+dataFotoName+"";
+              console.log(url);
               
             });
           },

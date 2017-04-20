@@ -2905,10 +2905,10 @@ class AdminController extends Controller
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
         $entry = Documentos::where('nombre_archivo', '=', $file)->firstOrFail();
-        $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/promoToshibas.png');
+        $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/'.$entry->nombre_archivo.'');
         // return response()->download($storagePath);
-        // return (new \Response($storagePath, 200));
-        return response()->json($storagePath);
+        return (new Response($storagePath, 200))
+                      ->header('Content-Type', $entry->mime);
         // $fileData = \Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
         dd($storagePath);
 

@@ -242,34 +242,36 @@ class LikeAndComentController extends Controller
     }
 
     public function getComentsPost(Request $request){
-      $idPost = $request->idpostComents;
-      $ArrayComentarios = array();
+      if($request->ajax()) {
+        $idPost = $request->idpostComents;
+        $ArrayComentarios = array();
 
-      $JoinTableUserPostsComents =  \DB::table('users')
-      ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')
-      ->join('comentarios_post', 'users.id', '=', 'comentarios_post.id_usuario')
-      ->select('users.name','datos_personales.foto','datos_personales.mime','datos_personales.id_usuario','comentarios_post.comentarios','comentarios_post.id_publicacion')
-      ->where('id_publicacion', '=', $idPost)
-      ->get();
+        $JoinTableUserPostsComents =  \DB::table('users')
+        ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')
+        ->join('comentarios_post', 'users.id', '=', 'comentarios_post.id_usuario')
+        ->select('users.name','datos_personales.foto','datos_personales.mime','datos_personales.id_usuario','comentarios_post.comentarios','comentarios_post.id_publicacion')
+        ->where('id_publicacion', '=', $idPost)
+        ->get();
 
-      foreach ($JoinTableUserPostsComents as $keyComents) {
-        $nommbre = $keyComents->name;
-        $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyComents->foto.'');
-        $foto = 'data:'.$keyComents->mime.';base64,'.base64_encode($GetImage).'';
-        $id_usuario = $keyComents->id_usuario;
-        $comentarios = $keyComents->comentarios;
-        $id_publicacion = $keyComents->id_publicacion;
+        foreach ($JoinTableUserPostsComents as $keyComents) {
+          $nommbre = $keyComents->name;
+          $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyComents->foto.'');
+          $foto = 'data:'.$keyComents->mime.';base64,'.base64_encode($GetImage).'';
+          $id_usuario = $keyComents->id_usuario;
+          $comentarios = $keyComents->comentarios;
+          $id_publicacion = $keyComents->id_publicacion;
 
-        $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
+          $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
 
-        array_push($ArrayComentarios, $DataComentario);
-        # code...
-      }
+          array_push($ArrayComentarios, $DataComentario);
+          # code...
+        }
 
 
-      // $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
-      json_encode($ArrayComentarios);
+        // $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
+        json_encode($ArrayComentarios);
 
+     }
     }
 
 

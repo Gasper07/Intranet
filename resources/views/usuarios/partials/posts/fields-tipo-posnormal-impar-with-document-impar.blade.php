@@ -33,7 +33,8 @@
       </div>
       <p class="textCOment fontMiriamProRegular colorGrisMediumSuave">{{ $PostImpar['descripcion'] }}</p>
       @foreach($PostImpar['documentos'] as $docume)
-        <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $docume }}" class="dataDpcuCl" download="{{ $docume }}">
+        <p class="gasper">{{ $storagePathDocu  = \Storage::disk('ubUploadsChange')->get('/documents/'.$docume.'') }}</p>
+        <a href="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($storagePathDocu) }}" class="dataDpcuCl" download="{{ $docume }}">
           <img class="img-responsive claa__cupo" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/bogIcoDocuments.png" />
         </a>
       @endforeach

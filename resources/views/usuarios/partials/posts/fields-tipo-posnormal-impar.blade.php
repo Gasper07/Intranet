@@ -1,10 +1,11 @@
 @foreach($JoinTableUserPosts as $dataUSe)
-<p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUSe->foto.'') }}</p>
+
 
   @if($PostImpar['id_usuario'] == $dataUSe->id_usuario)
   <div class="col-md-12">
       <div class="ui feed uifeedAvatar">
         <div class="event">
+          <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUSe->foto.'') }}</p>
           <div class="label dataPrubeIm" style="background-image: url('data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($GetImage) }}')">
           </div>
           <div class="content">

@@ -2907,7 +2907,7 @@ class AdminController extends Controller
         $entry = Documentos::where('nombre_archivo', '=', $file)->firstOrFail();
         $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/'.$entry->nombre_archivo.'');
         // return response()->download($storagePath);
-        return (new Response($storagePath, 200))
+        return (new \Response($storagePath, 200))
                       ->header('Content-Type', $entry->mime);
         // $fileData = \Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
         dd($storagePath);

@@ -1149,6 +1149,7 @@ jQuery(document).ready(function($) {
 
 	$('.getComents').click(function(event) {
 		var dataIdPost = $(this).find('input.postIdCom').val();
+		var ParentContentPost = $(this).parent();
 
 		$.ajaxSetup({
 		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
@@ -1169,11 +1170,9 @@ jQuery(document).ready(function($) {
 	    			var dataIDUser = element.id_usuario;
 	    			var dataComentarios = element.comentarios;
 	    			var dataIdPublicacion = element.id_publicacion;
-	    			console.log(dataNombre);
-	    			console.log(dataFoto);
-	    			console.log(dataIDUser);
-	    			console.log(dataComentarios);
-	    			console.log(dataIdPublicacion);
+
+	    			$(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("'+dataFoto+'")"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
+
 	    			// var arrayMensagge = element.mensages;
 		    	});
 		    	// if( result == 'cambiado'){

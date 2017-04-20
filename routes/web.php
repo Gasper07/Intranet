@@ -260,6 +260,17 @@
 	Route::get('/CcomentsUsers', 'LikeAndComentController@ComentariosPosts');
 	Route::post('/CcomentsUsers', 'LikeAndComentController@ComentariosPosts');
 
+/*
+/*
+|--------------------------------------------------------------------------
+| Get COments post 
+|--------------------------------------------------------------------------
+|
+*/
+	Route::get('/getComents', 'LikeAndComentController@getComentsPost');
+	Route::post('/getComents', 'LikeAndComentController@getComentsPost');
+/*
+
 
 /*
 |--------------------------------------------------------------------------

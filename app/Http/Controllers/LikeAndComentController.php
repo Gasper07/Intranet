@@ -241,5 +241,24 @@ class LikeAndComentController extends Controller
       }
     }
 
+    public function getComentsPost(Request $request){
+      $data = facedesrequest::all();
+      $idPost = $request->idpostComents;
+
+      $JoinTableUserPostsComents =  \DB::table('users')
+      ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')
+      ->join('comentarios_post', 'users.id', '=', 'comentarios_post.id_usuario')
+      ->select('users.name','datos_personales.foto','datos_personales.id_usuario','comentarios_post.comentarios','comentarios_post.id_publicacion')
+      ->where('id_publicacion', '=', $idPost)
+      ->get();
+
+      dd($idPost);
+
+
+      $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
+      json_encode($GetComentarios);
+
+    }
+
 
 }

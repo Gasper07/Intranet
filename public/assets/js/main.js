@@ -1139,3 +1139,45 @@ $(".fileInputImageChat1").change(function(){
 	$(varParenytdImg).fadeIn();
 	$(varParenytdImg).append('<p class="nameValue">'+valImage+'</p><i class="fa fa-times" aria-hidden="true"></i>');
 });
+
+
+
+
+
+// GET COMENTARIOS USUARIOS POST
+jQuery(document).ready(function($) {
+
+	$('.getComents').click(function(event) {
+		var dataIdPost = $(this).find('input.postIdCom').val();
+
+		$.ajaxSetup({
+		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+		});
+
+		$.ajax({
+		    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/getComents',
+		    type: 'POST',
+		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+		    data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+		    dataType: 'json',
+		    success: function(result, index, value, data) {
+		    	console.log(result);
+		    	
+		    	// $.each(result, function(index, element) {
+	    		// 	var dataFecha = element.fecha_conver;
+	    		// 	var dataWithUserSend = element.userSend;
+	    		// 	var dataWithUserReceive = element.userReceive;
+	    		// 	var arrayMensagge = element.mensages;
+		    	// });
+		    	// if( result == 'cambiado'){
+		    	// 	window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
+		    	// }
+
+		    },
+		    error: function() {
+		        console.log('Error');
+		    }
+		});
+
+	});
+});

@@ -251,7 +251,7 @@ class LikeAndComentController extends Controller
       ->where('id_publicacion', '=', $idPost)
       ->get();
 
-      dd($idPost);
+      dd($JoinTableUserPostsComents);
 
 
       $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();

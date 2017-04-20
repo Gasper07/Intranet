@@ -416,7 +416,7 @@
 
               var url = "/profiles/"+dataFotoName+"";
               console.log(url);
-              var GetImage = {{ \Storage::disk('ubUploadsChange')->get(''.url.'') }};
+              var GetImage = {{ \Storage::disk('ubUploadsChange')->get('/profiles/16418.jpg') }};
               console.log(GetImage);
               
             });

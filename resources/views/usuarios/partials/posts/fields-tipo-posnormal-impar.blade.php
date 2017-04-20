@@ -35,7 +35,7 @@
       @if($PostImpar['imagen'] != '')
       <h1>ES</h1>
         @foreach($PostImpar['imagen'] as $imagess) 
-          <img class="img-responsive clImgView" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}"  data-toggle="modal" data-target="#myModalswPost">
+          <img class="img-responsive clImgView" src="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($imagess) }}" data-toggle="modal" data-target="#myModalswPost" alt="{{ $imagess }}">
             
             <!-- Modal -->
             <div class="modal fade" id="myModalswPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

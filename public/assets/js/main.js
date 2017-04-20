@@ -1163,16 +1163,25 @@ jQuery(document).ready(function($) {
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
 		    	console.log(result);
+		    	$d = '1';
 
 		    	$.each(result, function(index, element) {
 	    			var dataNombre = element.nombre;
 	    			var dataFoto = element.foto;
+	    			var dataFotoName = element.fotoName;
 	    			var dataTypeFoto = element.Typefoto;
 	    			var dataIDUser = element.id_usuario;
 	    			var dataComentarios = element.comentarios;
 	    			var dataIdPublicacion = element.id_publicacion;
+	    			@if($d == '')
+    				 {{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.dataFotoName.'') }}
+    				 var data = '<div class="label dataPrubeIm" style="background-image: url('data:{{ dataTypeFoto }};base64,{{ base64_encode($GetImage) }}')"></div>';
+    				 console.log(data);
+    				 // $(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,'{{.base64_encode($GetImage).}}'')"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
+	    			@endif
+	    			
 
-	    			$(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,'+dataFoto+'")"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
+	    			
 
 	    			// var arrayMensagge = element.mensages;
 		    	});

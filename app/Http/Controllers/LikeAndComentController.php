@@ -242,7 +242,6 @@ class LikeAndComentController extends Controller
     }
 
     public function getComentsPost(Request $request){
-      $data = facedesrequest::all();
       $idPost = $request->idpostComents;
 
       $JoinTableUserPostsComents =  \DB::table('users')

@@ -556,7 +556,7 @@ class AdminController extends Controller
         $dateCreado = new \Carbon\Carbon($keyPosts->created_at); 
         $dateUpdate = new \Carbon\Carbon($keyPosts->created_at); 
 
-        $newArrayDats = array('id' => $keyPosts->id,'descripcion' => $keyPosts->descripcion,'imagen' => $ArrayImgees,'documentos' => $ArrayDocuemnts, 'id_tipo_publicacion' => $keyPosts->id_tipo_publicacion, 'id_tipo_evento' => $keyPosts->id_tipo_evento, 'descripcion' => $keyPosts->descripcion,'id_usuario' => $keyPosts->id_usuario,'created_at' => $dateCreado->toDateTimeString(),'updated_at' => $dateUpdate->toDateTimeString());
+        $newArrayDats = array('id' => $keyPosts->id,'descripcion' => $keyPosts->descripcion,'imagen' => $ArrayImgees,'documentos' => $ArrayDocuemnts, 'id_tipo_publicacion' => $keyPosts->id_tipo_publicacion, 'mime' => $keyPosts->mime, 'id_tipo_evento' => $keyPosts->id_tipo_evento, 'descripcion' => $keyPosts->descripcion,'id_usuario' => $keyPosts->id_usuario,'created_at' => $dateCreado->toDateTimeString(),'updated_at' => $dateUpdate->toDateTimeString());
         array_push($dataPostD,$newArrayDats);
       }
 
@@ -2995,6 +2995,7 @@ class AdminController extends Controller
 
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
+          'mime' => $TipoDocumento,
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/',
         );
@@ -3011,6 +3012,7 @@ class AdminController extends Controller
 
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
+          'mime' => $TipoDocumento,
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/',
         );
@@ -3027,6 +3029,7 @@ class AdminController extends Controller
 
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
+          'mime' => $TipoDocumento,
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/',
         );
@@ -3043,6 +3046,7 @@ class AdminController extends Controller
 
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
+          'mime' => $TipoDocumento,
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/',
         );
@@ -3059,6 +3063,7 @@ class AdminController extends Controller
 
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
+          'mime' => $TipoDocumento,
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/'.$fileUrl.'/'.$fileUrl2.'/'.$fileUrl3.'/'.$fileUrl4.'/'.$fileUrl5.'/',
         );

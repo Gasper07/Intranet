@@ -2907,7 +2907,7 @@ class AdminController extends Controller
       if($fileUrl == '' && $fileUrl2 == ''&& $fileUrl3 == '' && $fileUrl4 == '' && $fileUrl5 == ''){
 
         $entry = Documentos::where('nombre_archivo', '=', $file)->firstOrFail();
-        $storagePath  = \Storage::disk('ubUploadsChange')->get('/documents-admin/'.$entry->nombre_archivo.'');
+        $storagePath  = \Storage::disk('ubUploadsChange')->get('/'.$entry->ubicacion_archivo.''.$entry->nombre_archivo.'');
         // return response()->download($storagePath);
         #data
         // return (new \Response($storagePath, 200))

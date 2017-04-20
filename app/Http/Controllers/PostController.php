@@ -43,6 +43,7 @@ class PostController extends Controller
       $fileImages = $request->file('fileInputImage');  
       $arrayDocuments = array();
       $arrayImages = array();
+      $TipoDocumento = '';
 
       // Validad Subbida de archivos
       if($fileDocuments != ''){
@@ -52,9 +53,10 @@ class PostController extends Controller
          $nombreFoto = $fileDocuments[$i]->getClientOriginalName();
          $fileNameFoto = rand(11,99999);
          $imageName = $fileNameFoto.'.'.$fileDocuments[$i]->getClientOriginalExtension();
-         $fileDocuments[$i]->move(
-             base_path() . 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io\public\assets\images\documents', $imageName
-         );
+         $TipoDocumento = $fileDocuments[$i]->getClientMimeType();
+
+         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileDocuments));
+
          array_push($arrayDocuments, $imageName);
         }
 
@@ -65,9 +67,9 @@ class PostController extends Controller
          $nombreFoto = $fileImages[$i]->getClientOriginalName();
          $fileNameFoto = rand(11,99999);
          $imageName = $fileNameFoto.'.'.$fileImages[$i]->getClientOriginalExtension();
-         $fileImages[$i]->move(
-             base_path() . 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io\public\assets\images\documents', $imageName
-         );
+         $TipoDocumento = $fileImages[$i]->getClientMimeType();
+
+         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));
          array_push($arrayImages, $imageName);
         }
       }
@@ -100,6 +102,7 @@ class PostController extends Controller
       $dataPublicPost = array(
         'descripcion' => $request->descrip_posts,
         'imagen' => $uniedo_images,
+        'mime' => $TipoDocumento,
         'documentos' => $uniedo_document,
         'id_tipo_publicacion' => $idPOst,
         'id_tipo_evento' => $request->id_tipo_evento,

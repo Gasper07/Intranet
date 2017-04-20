@@ -260,7 +260,7 @@ class LikeAndComentController extends Controller
         $comentarios = $keyComents->comentarios;
         $id_publicacion = $keyComents->id_publicacion;
 
-        $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'comentarios' => $comentarios, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
+        $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
 
         array_push($ArrayComentarios, $DataComentario);
         # code...

@@ -1167,11 +1167,12 @@ jQuery(document).ready(function($) {
 		    	$.each(result, function(index, element) {
 	    			var dataNombre = element.nombre;
 	    			var dataFoto = element.foto;
+	    			var dataTypeFoto = element.Typefoto;
 	    			var dataIDUser = element.id_usuario;
 	    			var dataComentarios = element.comentarios;
 	    			var dataIdPublicacion = element.id_publicacion;
 
-	    			$(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("'+dataFoto+'")"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
+	    			$(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,'+dataFoto+'")"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
 
 	    			// var arrayMensagge = element.mensages;
 		    	});

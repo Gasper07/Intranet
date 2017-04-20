@@ -256,12 +256,13 @@ class LikeAndComentController extends Controller
         foreach ($JoinTableUserPostsComents as $keyComents) {
           $nommbre = $keyComents->name;
           $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyComents->foto.'');
-          $foto = 'data:'.$keyComents->mime.';base64,'.base64_encode($GetImage).'';
+          $foto = base64_encode($GetImage);
+          $tipeFoto = $keyComents->mime;
           $id_usuario = $keyComents->id_usuario;
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
+          $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'Typefoto' => $tipeFoto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
 
           array_push($ArrayComentarios, $DataComentario);
           # code...

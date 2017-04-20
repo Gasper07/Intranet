@@ -33,6 +33,7 @@
       </div>
       <p class="textCOment fontMiriamProRegular colorGrisMediumSuave">{{ $PostImpar['descripcion'] }}</p> 
       @if($PostImpar['imagen'] != '')
+      <h1>ES</h1>
         @foreach($PostImpar['imagen'] as $imagess) 
           <img class="img-responsive clImgView" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents/{{ $imagess }}" alt="{{ $imagess }}"  data-toggle="modal" data-target="#myModalswPost">
             

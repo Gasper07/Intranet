@@ -1,10 +1,9 @@
 @foreach($JoinTableUserPosts as $dataUSe)
-  <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUSe->foto.'') }}</p>
   @if($PostImpar['id_usuario'] == $dataUSe->id_usuario)
   <div class="col-md-12">
       <div class="ui feed uifeedAvatar">
         <div class="event">
-          <div class="label dataPrubeIm" style="background-image: url('data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($GetImage) }}')">
+          <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
           </div>
           <div class="content">
             <div class="summary postPosss">
@@ -110,10 +109,9 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionlokComen">
         @foreach($Coments as $datComents)
           @if($PostImpar['id'] == $datComents->id_publicacion)
-            <p class="gasper">{{ $GetImageComen  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$datComents->foto.'') }}</p>
             <div class="ui feed uifeedComnetUser">
               <div class="event">
-                <div class="label dataPrubeIm" style="background-image: url('data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($GetImageComen) }}')">
+                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
                 </div>
                 <div class="content">
                   <div class="summary">

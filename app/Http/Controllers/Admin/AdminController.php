@@ -2912,8 +2912,8 @@ class AdminController extends Controller
         #data
         // return (new \Response($storagePath, 200))
         //               ->header('Content-Type', $entry->mime);
-        return response()->download($storagePath);
-        // return response($storagePath, 200, ['Content-Type' => $entry->mime]);
+        // return response()->download($storagePath);
+        return response($storagePath, 200, ['Content-Type' => $entry->mime]);
         // $fileData = \Storage::disk('ubUploadsChange')->get($entry->nombre_archivo);
         // dd($storagePath);
 
@@ -2964,6 +2964,7 @@ class AdminController extends Controller
 
       $fileDocumento = $request->file('file_input_docuemnt_upload');
       $nombreDocumento = $fileDocumento->getClientOriginalName();
+      $TipoDocumento = $fileDocumento->getClientMimeType();
 
       $fileUrl =  $request->_url;
       $fileUrl2 =  $request->_url2;
@@ -2978,6 +2979,7 @@ class AdminController extends Controller
 
         $dataUploadFile = array(
           'nombre_archivo' => $nombreDocumento,
+          'mime' => $TipoDocumento,
           'type_upload' => 'file',
           'ubicacion_archivo' => 'documents-admin/',
         );

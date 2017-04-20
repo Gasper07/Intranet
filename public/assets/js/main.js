@@ -1162,13 +1162,20 @@ jQuery(document).ready(function($) {
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
 		    	console.log(result);
-		    	
-		    	// $.each(result, function(index, element) {
-	    		// 	var dataFecha = element.fecha_conver;
-	    		// 	var dataWithUserSend = element.userSend;
-	    		// 	var dataWithUserReceive = element.userReceive;
-	    		// 	var arrayMensagge = element.mensages;
-		    	// });
+
+		    	$.each(result, function(index, element) {
+	    			var dataNombre = element.nombre;
+	    			var dataFoto = element.foto;
+	    			var dataIDUser = element.id_usuario;
+	    			var dataComentarios = element.comentarios;
+	    			var dataIdPublicacion = element.id_publicacion;
+	    			console.log(dataNombre);
+	    			console.log(dataFoto);
+	    			console.log(dataIDUser);
+	    			console.log(dataComentarios);
+	    			console.log(dataIdPublicacion);
+	    			// var arrayMensagge = element.mensages;
+		    	});
 		    	// if( result == 'cambiado'){
 		    	// 	window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
 		    	// }

@@ -266,11 +266,9 @@ class LikeAndComentController extends Controller
         # code...
       }
 
-      dd($ArrayComentarios);
 
-
-      $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
-      json_encode($GetComentarios);
+      // $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
+      json_encode($ArrayComentarios);
 
     }
 

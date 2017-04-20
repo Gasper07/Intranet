@@ -15,7 +15,7 @@ class Documentos extends Model
      * @var array
      */
     protected $fillable = [
-        'id','nombre_archivo','type_upload' ,'ubicacion_anterior', 'ubicacion_archivo','created_at','updated_at'
+        'id','nombre_archivo','mime','type_upload' ,'ubicacion_anterior', 'ubicacion_archivo','created_at','updated_at'
     ];
 
 }

@@ -112,6 +112,10 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionlokComen">
+        <a href="#!" class="getComents">
+          <p>Comentarios</p>
+          <input type="hidden" name="id_post_coment" value="{{ $PostImpar['id'] }}">
+        </a>
         @foreach($Coments as $datComents)
           @if($PostImpar['id'] == $datComents->id_publicacion)
             <div class="ui feed uifeedComnetUser">

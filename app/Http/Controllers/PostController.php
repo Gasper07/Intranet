@@ -55,7 +55,7 @@ class PostController extends Controller
          $imageName = $fileNameFoto.'.'.$fileDocuments[$i]->getClientOriginalExtension();
          $TipoDocumento = $fileDocuments[$i]->getClientMimeType();
 
-         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileDocuments));
+         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileDocuments[$i]));
 
          array_push($arrayDocuments, $imageName);
         }
@@ -69,7 +69,7 @@ class PostController extends Controller
          $imageName = $fileNameFoto.'.'.$fileImages[$i]->getClientOriginalExtension();
          $TipoDocumento = $fileImages[$i]->getClientMimeType();
 
-         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));
+         $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages[$i]));
          array_push($arrayImages, $imageName);
         }
       }

@@ -588,7 +588,7 @@ jQuery(document).ready(function($) {
 		var CaptionComentsPost = $(parentPost).find('div.captionlokComen');
 		var findComent = $(parentFormComent).find('textarea').val();
 		var findIdUserComent = $(parentFormComent).find('input.iduserComent').val();
-		var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();\
+		var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();
 		var finUserPublicPostComent = $(parentFormComent).find('input.idUserPublicoPostComent').val();
 
 		setTimeout(function(){ 

@@ -613,6 +613,7 @@ jQuery(document).ready(function($) {
 		});	
 		setTimeout(function(){ 
 			var parentFormComent = $(this).parent();
+			console.log(parentFormComent);
 			var parentPost = $(this).parent().parent();
 			var CaptionComentsPost = $(parentPost).find('div.captionlokComen');
 

@@ -123,6 +123,11 @@
             <p>({{$TotalComent}}) Comentarios</p>
             <input type="hidden" class="postIdCom" name="id_post_coment" value="{{ $PostImpar['id'] }}">
           </a>
+          <span class="lnvmodal lnvmodal-loadermin" style="opacity: 0.9;">
+            <aside role="dialog">
+             <div>Loading....</div>
+            </aside>
+          </span>
         @endif        
       </div>                      
       <form class="ui form formComentUser">

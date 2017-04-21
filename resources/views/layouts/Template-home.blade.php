@@ -383,55 +383,6 @@
 
    </script>
 
-   <script >
-
-   // GET COMENTARIOS USUARIOS POST
-
-    $('.getComents').click(function(event) {
-      var dataIdPost = $(this).find('input.postIdCom').val();
-      var ParentContentPost = $(this).parent();
-
-      $.ajaxSetup({
-          headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
-      });
-
-      $.ajax({
-          url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/getComents',
-          type: 'POST',
-          headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-          data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
-        }).done(function(rmd) {
-            console.log(rmd);
-            $(ParentContentPost).append(rmd);
-            var d = '1';
-            // $.each(rmd, function(index, element) {
-            //   $(ParentContentPost).append(element.Comentario);
-            // });
-            
-
-            // $.each(result, function(index, element) {
-            //   var dataNombre = element.nombre;
-            //   var dataFoto = element.foto;
-            //   var dataFotoName = element.fotoName;
-            //   var dataTypeFoto = element.Typefoto;
-            //   var dataIDUser = element.id_usuario;
-            //   var dataComentarios = element.comentarios;
-            //   var dataIdPublicacion = element.id_publicacion;
-
-            //   var url = "/profiles/"+dataFotoName+"";
-
-            //   $(ParentContentPost).append('<div class="ui feed uifeedComnetUser">'+dataFoto+'</div>');
-            //   console.log(url);
-            //   var GetImage = {{ \Storage::disk('ubUploadsChange')->get('/profiles/16418.jpg') }};
-            //   console.log(GetImage);
-              
-            // });
-          });
-      
-    });
-
-   </script>
-
    {!! Html::script('public/assets/js/moment.js') !!}
    {!! Html::script('public/assets/js/bootstrap-datetimepicker.min.js') !!}
    <script type="text/javascript">

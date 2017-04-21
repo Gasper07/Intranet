@@ -1142,49 +1142,32 @@ $(".fileInputImageChat1").change(function(){
 
 
 
-
-
 // GET COMENTARIOS USUARIOS POST
-/*jQuery(document).ready(function($) {
 
-	$('.getComents').click(function(event) {
-		var dataIdPost = $(this).find('input.postIdCom').val();
-		var ParentContentPost = $(this).parent();
+ $('.getComents').click(function(event) {
+   $('.lnvmodal-loadermin').css({
+     display: 'block'
+   });
+   var dataIdPost = $(this).find('input.postIdCom').val();
+   var ParentContentPost = $(this).parent();
 
-		$.ajaxSetup({
-		    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
-		});
+   $.ajaxSetup({
+       headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+   });
 
-		$.ajax({
-		    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/getComents',
-		    type: 'POST',
-		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-		    data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
-		    dataType: 'json',
-		    success: function(result, index, value, data) {
-		    	console.log(result);
-
-		    	$.each(result, function(index, element) {
-	    			var dataNombre = element.nombre;
-	    			var dataFoto = element.foto;
-	    			var dataTypeFoto = element.Typefoto;
-	    			var dataIDUser = element.id_usuario;
-	    			var dataComentarios = element.comentarios;
-	    			var dataIdPublicacion = element.id_publicacion;
-
-	    			$(ParentContentPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label dataPrubeIm" style="background-image: url("data:'+dataTypeFoto+';base64,'+dataFoto+'")"></div><div class="content"><div class="summary"><a href="profile-users/'+dataIDUser+'" class="user colorGrisMediumSuave fontMiriamProSemiBold">'+dataNombre+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+dataComentarios+'</div></div></div></div></div>');
-
-	    			// var arrayMensagge = element.mensages;
-		    	});
-		    	// if( result == 'cambiado'){
-		    	// 	window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
-		    	// }
-
-		    },
-		    error: function() {
-		        console.log('Error');
-		    }
-		});
-
-	});
-});*/
+   $.ajax({
+       url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/getComents',
+       type: 'POST',
+       headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+       data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+     }).done(function(rmd) {         
+         setTimeout(function(){ 
+         	$('.lnvmodal-loadermin').css({
+         	  display: 'none'
+         	});
+         	$(ParentContentPost).append(rmd);
+     	 }, 1000);
+         
+       });
+   
+ });

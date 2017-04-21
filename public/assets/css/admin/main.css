@@ -1913,6 +1913,68 @@ div.ui.dropdown.dropdownSemantic.notifiICos.fontMiriamProRegular>div.menu>.capti
   white-space: inherit;
 }
 
+.col-xs-12.col-sm-12.col-md-12.col-lg-12.captionlokComen {
+  z-index: 10000;
+}
+
+a.getComents>p {
+  font-size: 16px;
+  color: #0071bc !important;
+  margin-left: 6%;
+}
+
+
+
+.lnvmodal-loadermin > aside {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+  background: #000;
+  display: block;
+  z-index: 20;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+  -o-box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.lnvmodal-loadermin {
+  /* cursor: wait; */
+  display: none;
+  left: 0;
+  position: relative;
+  text-align: center;
+  /* top: 0; */
+  /* z-index: 10005; */
+  margin: 0 auto;
+}
+
+.lnvmodal-loadermin:before {
+  background: url('../../images/icons/ajax-loader.gif') no-repeat;
+  content: "";
+  font-size: 0;
+  position: relative;
+  /* height: 100%; */
+  height: 16px;
+  left: 50%;
+  /* top: 0; */
+  width: 100%;
+  /* width: 100vw; */
+  /* z-index: 10; */
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
 
 /* CALENDAR STYLE COLUMN */
 

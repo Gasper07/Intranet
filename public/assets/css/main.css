@@ -4078,7 +4078,7 @@ a.getComents>p {
 }
 
 .lnvmodal-loadermin:before {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4//9/KgAJYQNjxr4BSQAAAABJRU5ErkJggg==) repeat;
+  background: url('../images/icons/ajax-loader.gif') repeat;
   content: "";
   font-size: 0;
   position: relative;

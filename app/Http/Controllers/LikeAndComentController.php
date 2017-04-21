@@ -264,7 +264,7 @@ class LikeAndComentController extends Controller
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          echo json_encode("<div id='contentblock' style='$foto'>
+          echo ("<div id='contentblock' style='$foto'>
                   <div id='picture'><a href=#!'><img src='#!'/></a></div>
                   <div id='description'><p>#!</p></div>
                   <div id='price'><p class=price>#!</p></div>

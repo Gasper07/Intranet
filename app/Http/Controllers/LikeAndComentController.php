@@ -175,6 +175,8 @@ class LikeAndComentController extends Controller
           'id_publicacion' => $IdPost,
         );
 
+        dd($dataComentPost);
+
         $createNewComentPost = new ComentariosPost($dataComentPost);
         $createNewComentPost->save();
         $UserPotComent = $createNewComentPost->comentarios;

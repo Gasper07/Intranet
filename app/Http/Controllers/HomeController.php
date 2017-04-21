@@ -1166,9 +1166,10 @@ class HomeController extends Controller
       $fotoUser = '';
       foreach ($UsersDatasLogin as $keyUsersDatasLogin) {
         $fotoUser =$keyUsersDatasLogin->foto;
+        $TypefotoUser =$keyUsersDatasLogin->mime;
       }
 
-      return view('usuarios.ranking-empleados',compact('idUserLogin','AllOnlineUser','UserMejorRanking','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','idMejorRanking','AllOnlineUser','getUsers','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser'));
+      return view('usuarios.ranking-empleados',compact('idUserLogin','AllOnlineUser','UserMejorRanking','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','idMejorRanking','AllOnlineUser','getUsers','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser','TypefotoUser'));
     }
 
     public function ChatEmpleados()

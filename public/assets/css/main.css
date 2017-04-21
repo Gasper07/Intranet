@@ -4068,7 +4068,7 @@ a.getComents>p {
 
 .lnvmodal-loadermin {
   /* cursor: wait; */
-  /* display: none; */
+  display: none;
   left: 37%;
   position: relative;
   text-align: center;

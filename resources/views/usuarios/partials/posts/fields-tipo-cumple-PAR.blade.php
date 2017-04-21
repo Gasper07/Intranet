@@ -47,26 +47,20 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionlokComen">
+        <p class="gasper">{{ $TotalComent = 0 }}</p>
         @foreach($Coments as $datComents)
           @if($PostPar['id'] == $datComents->id_publicacion)
-            <div class="ui feed uifeedComnetUser">
-              <div class="event">
-                <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
-                </div>
-                <div class="content">
-                  <div class="summary">
-                    <a href="profile-users/{{ $PostPar['id_usuario'] }}"  class="user colorGrisMediumSuave fontMiriamProSemiBold">
-                      {{ $datComents->name }}
-                    </a>
-                    <div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">
-                      {{ $datComents->comentarios }}
-                    </div>                           
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p class="gasper">{{ $TotalComent = $TotalComent+1 }}</p>
           @endif
         @endforeach
+        @if($TotalComent > 0)
+          <a href="#!" class="getComents">
+            <p>({{$TotalComent}}) Comentarios</p>
+            <input type="hidden" class="postIdCom" name="id_post_coment" value="{{ $PostPar['id'] }}">
+          </a>
+          <span class="lnvmodal lnvmodal-loadermin" style="opacity: 0.9;">
+          </span>
+        @endif 
       </div>
       <form class="ui form formComentUser">
         <div class="field">

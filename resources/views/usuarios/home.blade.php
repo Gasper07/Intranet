@@ -147,10 +147,12 @@
                 <div class="item active">
                   @foreach($JoinTableUserDatosPersonalesDatosEmpleado as $DatosPersonalesDatosEmpleado)
                     <p class="gasper">{{ $RabkingUser = $RabkingUser + 1 }}</p>
+                    <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$DatosPersonalesDatosEmpleado->foto.'') }}</p>
                     @if($RabkingUser <= '4')
                       <div class="col-md-6">
-                        <a href="">
-                          <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
+                        <a href="">                          
+                          <div class="label dataPrubeIm dataimgRabksH" style="background-image: url('data:{{ $DatosPersonalesDatosEmpleado->mime }};base64,{{ base64_encode($GetImage) }}')">
+                          </div>
                           <p class="fontMiriamProSemiBold">{{ $DatosPersonalesDatosEmpleado->nombre }} {{ $DatosPersonalesDatosEmpleado->apellidos }}</p>
                           @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                             @if($DatosPersonalesDatosEmpleado->id_usuario == $valueRankingGeneral['id_user'])
@@ -180,7 +182,8 @@
                        @if($RabkingUser >= '5' && $RabkingUser < '8')
                         <div class="col-md-6">
                           <a href="">
-                            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profile-user-circle.png" alt="">
+                            <div class="label dataPrubeIm dataimgRabksH" style="background-image: url('data:{{ $DatosPersonalesDatosEmpleado->mime }};base64,{{ base64_encode($GetImage) }}')">
+                            </div>
                             <p class="fontMiriamProSemiBold">{{ $DatosPersonalesDatosEmpleado->nombre }} {{ $DatosPersonalesDatosEmpleado->apellidos }}</p>
                             @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
                               @if($DatosPersonalesDatosEmpleado->id_usuario == $valueRankingGeneral['id_user'])

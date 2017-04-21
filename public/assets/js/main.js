@@ -894,10 +894,10 @@ jQuery(document).ready(function($) {
 		    			$(".alert.alert-info.dataENtradaMarcada").css({
 		    				display: 'none',
 		    			});
-		    		}, 3000);
-		    		setTimeout(function(){ 
-		    			window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
-		    		}, 1000);
+		    		}, 1113000);
+		    		// setTimeout(function(){ 
+		    		// 	window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
+		    		// }, 1000);
 		    	}
 		    	
 		    },
@@ -923,9 +923,6 @@ jQuery(document).ready(function($) {
 		    data: "idUserLoginMarcar="+findIdeUserlogin+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
-		    	$('.lnvmodal-loader').css({
-		    		display: 'none'
-		    	});
 		    	$(".alert.alert-info.dataSalidas").css({
 		    		display: 'block',
 		    	});

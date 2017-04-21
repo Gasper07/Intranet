@@ -400,12 +400,11 @@
           type: 'POST',
           headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
           data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
-          dataType: 'json',
-          success: function(result, index, value, data) {
-            console.log(result);
+        }).done(function(rmd) {
+            console.log(rmd);
             var d = '1';
 
-            $(ParentContentPost).append(result);
+            $(ParentContentPost).append(rmd);
 
             // $.each(result, function(index, element) {
             //   var dataNombre = element.nombre;
@@ -424,12 +423,7 @@
             //   console.log(GetImage);
               
             // });
-          },
-          error: function() {
-              console.log('Error');
-          }
-      });
-
+          });
       
     });
 

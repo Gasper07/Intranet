@@ -8,7 +8,8 @@
       <div class="title">
         <p class="gasper"> {{ $banderaOnline = 0}}</p>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitrados columnChatss captionLikechatsFlotante getUserLoad">
-         
+        <span class="lnvmodal lnvmodal-loadermin" style="opacity: 0.9;">
+        </span> 
         </div>                            
       </div>
       <div class="content">

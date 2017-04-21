@@ -1166,6 +1166,7 @@ $(".fileInputImageChat1").change(function(){
  // GET LOAD ALL USUARIOS
 
   $('.loadUserJa').click(function(event) {
+  	$var finLoader = $(this).find('.lnvmodal-loadermin');
     $(findLoader).css({
       display: 'block'
     });

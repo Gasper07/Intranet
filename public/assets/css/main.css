@@ -4118,3 +4118,14 @@ a.getComents>p {
   text-align: center;
   margin: 0 auto;
 }
+
+a.loadUserJa>p {
+  background: #0072ff;
+  text-align: center;
+  color: white;
+  padding: 2%;
+  width: 37%;
+  border-radius: 50px;
+  padding: 4%;
+  margin: 0 auto;
+}

@@ -4129,3 +4129,7 @@ a.loadUserJa>p {
   padding: 4%;
   margin: 0 auto;
 }
+
+a.loadUserJa {
+  text-decoration: none;
+}

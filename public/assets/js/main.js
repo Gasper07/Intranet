@@ -1161,3 +1161,31 @@ $(".fileInputImageChat1").change(function(){
      });
    
  });
+
+
+ // GET LOAD ALL USUARIOS
+
+  $('.loadUserJa').click(function(event) {
+    $(findLoader).css({
+      display: 'block'
+    });
+
+    $.ajaxSetup({
+        headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+    });
+
+    $.ajax({
+        url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/getAllUse',
+        type: 'POST',
+        headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+      }).done(function(rmd) {         
+          setTimeout(function(){ 
+          	$(findLoader).css({
+          	  display: 'none'
+          	});
+          	$('.getUserLoad').append(rmd);
+      	 }, 1000);
+          
+      });
+    
+  });

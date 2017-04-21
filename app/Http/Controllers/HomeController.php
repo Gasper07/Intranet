@@ -2887,4 +2887,22 @@ class HomeController extends Controller
 
     }
 
+
+    public function loadUserHome(){
+      # get all users
+      $getUsers = $this->AllUsers();
+
+      foreach($getUsers as $users){
+        $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$users->foto.'');
+        $DataImgae = base64_encode($GetImage);
+        $foto = 'background-image: url("data:'.$users->mime.';base64,'.$DataImgae.'")';
+
+        $GetContentUser = "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitradosPorBloque'><a href='#!' data-iduserchat='$users->id_usuario'><div class='col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser' style='$foto'></div></a></div>";
+
+        echo $GetContentUser;
+        
+      }
+          
+    }
+
 }

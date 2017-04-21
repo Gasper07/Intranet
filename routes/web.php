@@ -271,6 +271,16 @@
 	Route::post('/getComents', 'LikeAndComentController@getComentsPost');
 /*
 
+/*
+|--------------------------------------------------------------------------
+| Get AJAX USERS
+|--------------------------------------------------------------------------
+|
+*/
+	Route::get('/getAllUse', 'LikeAndComentController@loadUserHome');
+	Route::post('/getAllUse', 'LikeAndComentController@loadUserHome');
+/*
+
 
 /*
 |--------------------------------------------------------------------------

@@ -256,23 +256,29 @@ class LikeAndComentController extends Controller
         foreach ($JoinTableUserPostsComents as $keyComents) {
           $nommbre = $keyComents->name;
           $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyComents->foto.'');
-          $foto = response($GetImage, 200, ['Content-Type' => $keyComents->mime]);
+          $DataImgae = base64_encode($GetImage);
+          $foto = 'background-image: url("data:$keyComents->mime;base64,$DataImgae")';
           // dd($foto);
-          // $foto = base64_encode($GetImage);
           $tipeFoto = $keyComents->mime;
           $id_usuario = $keyComents->id_usuario;
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'fotoName' => $keyComents->foto, 'Typefoto' => $tipeFoto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
+          echo json_encode("<div id='contentblock' style='$foto'>
+                  <div id='picture'><a href=#!'><img src='#!'/></a></div>
+                  <div id='description'><p>#!</p></div>
+                  <div id='price'><p class=price>#!</p></div>
+              </div>");
 
-          array_push($ArrayComentarios, $DataComentario);
+          // $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'fotoName' => $keyComents->foto, 'Typefoto' => $tipeFoto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
+
+          // array_push($ArrayComentarios, $DataComentario);
           # code...
         }
 
 
         // $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
-       echo json_encode($ArrayComentarios);
+       // echo json_encode($ArrayComentarios);
 
      }
     }

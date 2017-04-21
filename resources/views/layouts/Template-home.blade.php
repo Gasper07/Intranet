@@ -405,23 +405,25 @@
             console.log(result);
             var d = '1';
 
-            $.each(result, function(index, element) {
-              var dataNombre = element.nombre;
-              var dataFoto = element.foto;
-              var dataFotoName = element.fotoName;
-              var dataTypeFoto = element.Typefoto;
-              var dataIDUser = element.id_usuario;
-              var dataComentarios = element.comentarios;
-              var dataIdPublicacion = element.id_publicacion;
+            $(ParentContentPost).append(result);
 
-              var url = "/profiles/"+dataFotoName+"";
+            // $.each(result, function(index, element) {
+            //   var dataNombre = element.nombre;
+            //   var dataFoto = element.foto;
+            //   var dataFotoName = element.fotoName;
+            //   var dataTypeFoto = element.Typefoto;
+            //   var dataIDUser = element.id_usuario;
+            //   var dataComentarios = element.comentarios;
+            //   var dataIdPublicacion = element.id_publicacion;
 
-              $(ParentContentPost).append('<div class="ui feed uifeedComnetUser">'+dataFoto+'</div>');
-              console.log(url);
-              // var GetImage = {{ \Storage::disk('ubUploadsChange')->get('/profiles/16418.jpg') }};
-              console.log(GetImage);
+            //   var url = "/profiles/"+dataFotoName+"";
+
+            //   $(ParentContentPost).append('<div class="ui feed uifeedComnetUser">'+dataFoto+'</div>');
+            //   console.log(url);
+            //   var GetImage = {{ \Storage::disk('ubUploadsChange')->get('/profiles/16418.jpg') }};
+            //   console.log(GetImage);
               
-            });
+            // });
           },
           error: function() {
               console.log('Error');

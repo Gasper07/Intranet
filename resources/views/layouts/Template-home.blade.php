@@ -403,8 +403,10 @@
         }).done(function(rmd) {
             console.log(rmd);
             var d = '1';
-
-            $(ParentContentPost).append(rmd);
+            $.each(rmd, function(index, element) {
+              $(ParentContentPost).append(element.Comentario);
+            });
+            
 
             // $.each(result, function(index, element) {
             //   var dataNombre = element.nombre;

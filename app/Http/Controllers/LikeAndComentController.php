@@ -264,17 +264,19 @@ class LikeAndComentController extends Controller
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          echo "<div id='contentblock' style='$foto'><div id='picture'></div></div>";
+          $crateComent = "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='conten'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>comentarios</div></div></div></div></div>";
 
-          // $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'fotoName' => $keyComents->foto, 'Typefoto' => $tipeFoto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
+          echo "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='conten'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>comentarios</div></div></div></div></div>";
 
-          // array_push($ArrayComentarios, $DataComentario);
+          $DataComentario = array('Comentario' => $crateComent);
+
+          array_push($ArrayComentarios, $DataComentario);
           # code...
         }
 
 
         // $GetComentarios = ComentariosPost::where('id_publicacion', '=', $idPost)->get();
-       // echo json_encode($ArrayComentarios);
+       echo ($ArrayComentarios);
 
      }
     }

@@ -877,9 +877,6 @@ jQuery(document).ready(function($) {
 		    data: "idUserLoginMarcar="+findIdeUserlogin+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
 		    success: function(result, index, value, data) {
-		    	$('.lnvmodal-loader').css({
-		    		display: 'none'
-		    	});
 		    	if(result == 'true'){
 		    		$(".alert.alert-info.yaMarcado").css({
 		    			display: 'block',
@@ -888,7 +885,7 @@ jQuery(document).ready(function($) {
 		    			$(".alert.alert-info.yaMarcado").css({
 		    				display: 'none',
 		    			});
-		    		}, 3000);
+		    		}, 1113000);
 		    	}else{
 		    		$(".alert.alert-info.dataENtradaMarcada").css({
 		    			display: 'block',

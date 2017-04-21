@@ -266,8 +266,6 @@ class LikeAndComentController extends Controller
 
           $crateComent = "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='conten'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>comentarios</div></div></div></div></div>";
 
-          echo "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='conten'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>comentarios</div></div></div></div></div>";
-
           $DataComentario = array('Comentario' => $crateComent);
 
           array_push($ArrayComentarios, $DataComentario);

@@ -210,11 +210,21 @@ class LikeAndComentController extends Controller
         ->where('users.id', '=',$idComentarioUser)
         ->get();
 
-        foreach ($JoinTableUserPostsComents as $keyJoinTableUserPostsComents) {
-          $NewComents = array('name' => $keyJoinTableUserPostsComents->name,'foto' => $keyJoinTableUserPostsComents->foto,'id_usuario' => $keyJoinTableUserPostsComents->id_usuario,'comentario' => $UserPotComent);
+        foreach ($JoinTableUserPostsComents as $UserPostsComents) {
+          $nommbre = $UserPostsComents->name;
+          $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$UserPostsComents->foto.'');
+          $DataImgae = base64_encode($GetImage);
+          $foto = 'background-image: url("data:'.$UserPostsComents->mime.';base64,'.$DataImgae.'")';
+          // dd($foto);
+          $tipeFoto = $UserPostsComents->mime;
+          $id_usuario = $UserPostsComents->id_usuario;
+          $comentarios = $UserPostsComents->comentarios;
+          $id_publicacion = $UserPostsComents->id_publicacion;
+
+          $crateComent = "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='content'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>$comentarios</div></div></div></div></div>";
+
+          echo $crateComent;
         }
-    
-        echo json_encode($NewComents);
 
       }
 

@@ -264,7 +264,7 @@ class LikeAndComentController extends Controller
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          $crateComent = "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='content'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>comentarios</div></div></div></div></div>";
+          $crateComent = "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='content'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>$comentarios</div></div></div></div></div>";
 
           echo $crateComent;
 

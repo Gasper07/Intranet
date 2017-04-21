@@ -108,26 +108,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionlokComen">
-          @foreach($Coments as $datComents)
-            @if($PostPar['id'] == $datComents->id_publicacion)
-              <div class="ui feed uifeedComnetUser">
-                <div class="event">
-                  <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $datComents->foto }}')">
-                  </div>
-                  <div class="content">
-                    <div class="summary">
-                      <a  href="profile-users/{{ $PostPar['id_usuario'] }}"  class="user colorGrisMediumSuave fontMiriamProSemiBold">
-                        {{ $datComents->name }}
-                      </a>
-                      <div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">
-                        {{ $datComents->comentarios }}
-                      </div>                           
-                    </div>
-                  </div>
-                </div>
-              </div>
-            @endif
-          @endforeach
+          
         </div>
         <form class="ui form formComentUser">
           <div class="field">

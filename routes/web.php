@@ -277,8 +277,8 @@
 |--------------------------------------------------------------------------
 |
 */
-	Route::get('/getAllUse', 'LikeAndComentController@loadUserHome');
-	Route::post('/getAllUse', 'LikeAndComentController@loadUserHome');
+	Route::get('/getAllUse', 'loadUserHome@loadUserHome');
+	Route::post('/getAllUse', 'loadUserHome@loadUserHome');
 /*
 
 

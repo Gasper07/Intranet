@@ -885,7 +885,7 @@ jQuery(document).ready(function($) {
 		    			$(".alert.alert-info.yaMarcado").css({
 		    				display: 'none',
 		    			});
-		    		}, 1113000);
+		    		}, 3000);
 		    	}else{
 		    		$(".alert.alert-info.dataENtradaMarcada").css({
 		    			display: 'block',
@@ -894,10 +894,12 @@ jQuery(document).ready(function($) {
 		    			$(".alert.alert-info.dataENtradaMarcada").css({
 		    				display: 'none',
 		    			});
-		    		}, 1113000);
-		    		// setTimeout(function(){ 
-		    		// 	window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
-		    		// }, 1000);
+
+		    			setTimeout(function(){ 
+		    				window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
+		    			}, 200);
+		    		}, 3000);
+		    		
 		    	}
 		    	
 		    },

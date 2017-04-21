@@ -611,18 +611,17 @@ jQuery(document).ready(function($) {
 		$('.lnvmodal-loader').css({
 			display: 'block'
 		});	
+		var parentFormComent = $(this).parent();
+		console.log(parentFormComent);
+		var parentPost = $(this).parent().parent();
+		var CaptionComentsPost = $(parentPost).find('div.captionlokComen');
+		var findComent = $(parentFormComent).find('textarea').val();
+		var findIdUserComent = $(parentFormComent).find('input.iduserComent').val();
+		var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();
+		var finUserPublicPostComent = $(parentFormComent).find('input.idUserPublicoPostComent').val();
+		console.log(finUserPublicPostComent);
+
 		setTimeout(function(){ 
-			var parentFormComent = $(this).parent();
-			console.log(parentFormComent);
-			var parentPost = $(this).parent().parent();
-			var CaptionComentsPost = $(parentPost).find('div.captionlokComen');
-
-			var findComent = $(parentFormComent).find('textarea').val();
-			var findIdUserComent = $(parentFormComent).find('input.iduserComent').val();
-			var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();
-			var finUserPublicPostComent = $(parentFormComent).find('input.idUserPublicoPostComent').val();
-			console.log(finUserPublicPostComent);
-
 			$.ajaxSetup({
 			    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 			});

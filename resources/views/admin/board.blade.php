@@ -35,7 +35,7 @@
               <!-- Left Side Of Navbar -->
               <img class="paletaAdminBoard" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/ico-paleta.png" alt="Paleta-Colores">
               <ul class="centerNameUserMenu">
-                  <li class="colorBlack fontMiriamProRegular">¡Hola! Lisseth</li>
+                  <li class="colorBlack fontMiriamProRegular">¡Hola! {{ Auth::user()->name }}</li>
               </ul>
 
               <!-- Right Side Of Navbar -->

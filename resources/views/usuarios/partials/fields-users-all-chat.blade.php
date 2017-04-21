@@ -10,7 +10,7 @@
               <a href="#!" data-iduserchat="{{ $users->id_usuario }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$users->foto.'') }}</p>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('data:{{ $users->mimme }};base64,{{ base64_encode($GetImage) }}')">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('data:{{ $users->mime }};base64,{{ base64_encode($GetImage) }}')">
                 </div>          
               </a>                
             </div>  
@@ -26,7 +26,7 @@
                 <a href="#!" data-iduserchat="{{ $users->id_usuario }}">
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$users->foto.'') }}</p>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('data:{{ $users->mimme }};base64,{{ base64_encode($GetImage) }}')">
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser" style="background-image: url('data:{{ $users->mime }};base64,{{ base64_encode($GetImage) }}')">
                   </div>          
                 </a>                
               </div>  

@@ -206,7 +206,7 @@ class LikeAndComentController extends Controller
 
         $JoinTableUserPostsComents =  \DB::table('users')
         ->join('datos_personales', 'users.id', '=', 'datos_personales.id_usuario')
-        ->select('users.name','datos_personales.foto','datos_personales.id_usuario')
+        ->select('*')
         ->where('users.id', '=',$idComentarioUser)
         ->get();
 

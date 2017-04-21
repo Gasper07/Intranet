@@ -264,7 +264,7 @@ class LikeAndComentController extends Controller
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          echo "<div id='contentblock' style='$foto'><div id='picture'><a href=#!'><img src='#!'/></a></div><div id='description'><p>#!</p></div><div id='price'><p class=price>#!</p></div></div>";
+          echo "<div id='contentblock' style="$foto"><div id='picture'></div>";
 
           // $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'fotoName' => $keyComents->foto, 'Typefoto' => $tipeFoto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
 

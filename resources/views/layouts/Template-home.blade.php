@@ -415,6 +415,8 @@
               var dataIdPublicacion = element.id_publicacion;
 
               var url = "/profiles/"+dataFotoName+"";
+
+              $(ParentContentPost).append('<div class="ui feed uifeedComnetUser">'+dataFoto+'</div>');
               console.log(url);
               // var GetImage = {{ \Storage::disk('ubUploadsChange')->get('/profiles/16418.jpg') }};
               console.log(GetImage);

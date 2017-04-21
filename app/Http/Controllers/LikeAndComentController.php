@@ -257,7 +257,7 @@ class LikeAndComentController extends Controller
           $nommbre = $keyComents->name;
           $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyComents->foto.'');
           $foto = response($GetImage, 200, ['Content-Type' => $keyComents->mime]);
-          dd($foto);
+          // dd($foto);
           // $foto = base64_encode($GetImage);
           $tipeFoto = $keyComents->mime;
           $id_usuario = $keyComents->id_usuario;

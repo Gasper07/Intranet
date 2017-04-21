@@ -188,7 +188,7 @@
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="icosMenus noneMobile">
-                                <a href="#!">
+                                <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home">
                                     <img src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/house-ido.png" class="img-responsive" alt="">                                    
                                 </a>
                             </li>

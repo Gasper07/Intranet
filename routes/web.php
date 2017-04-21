@@ -277,8 +277,8 @@
 |--------------------------------------------------------------------------
 |
 */
-	Route::get('/getAllUse', 'loadUserHome@loadUserHome');
-	Route::post('/getAllUse', 'loadUserHome@loadUserHome');
+	Route::get('/getAllUse', 'HomeController@loadUserHome');
+	Route::post('/getAllUse', 'HomeController@loadUserHome');
 /*
 
 

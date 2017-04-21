@@ -257,14 +257,14 @@ class LikeAndComentController extends Controller
           $nommbre = $keyComents->name;
           $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyComents->foto.'');
           $DataImgae = base64_encode($GetImage);
-          $foto = 'background-image: url("data:$keyComents->mime;base64,$DataImgae")';
+          $foto = 'background-image: url("data:'.$keyComents->mime.';base64,'.$DataImgae.'")';
           // dd($foto);
           $tipeFoto = $keyComents->mime;
           $id_usuario = $keyComents->id_usuario;
           $comentarios = $keyComents->comentarios;
           $id_publicacion = $keyComents->id_publicacion;
 
-          echo "<div id='contentblock' style=".$foto."><div id='picture'></div>";
+          echo "<div id='contentblock' style='$foto'><div id='picture'></div></div>";
 
           // $DataComentario = array('nombre' => $nommbre, 'foto' => $foto, 'fotoName' => $keyComents->foto, 'Typefoto' => $tipeFoto, 'id_usuario' => $id_usuario, 'comentarios' => $comentarios,'id_publicacion' => $id_publicacion);
 

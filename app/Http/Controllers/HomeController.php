@@ -418,10 +418,11 @@ class HomeController extends Controller
       $fotoUser = '';
       foreach ($UsersDatasLogin as $keyUsersDatasLogin) {
         $fotoUser =$keyUsersDatasLogin->foto;
+        $TypefotoUser =$keyUsersDatasLogin->mime;
       }
 
 
-      return view('usuarios.home',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','RankingGeneral','JoinTableUserDatosPersonalesDatosEmpleado','eventosNOtify','Activities','NotifisEventos','AllPost','NotifisEventos','ActivitiesNotifys','Recordatorios','Bguser','fotoUser'));
+      return view('usuarios.home',compact('idUserLogin','AllOnlineUser','Posts','DataArrayPostPar','DataArrayPostImpar','likesPost','JoinTableUserPosts','Likes','Coments','PostPersonalizados','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','DayMothsYear','EventsDayCalendar','getUsers','RankingGeneral','JoinTableUserDatosPersonalesDatosEmpleado','eventosNOtify','Activities','NotifisEventos','AllPost','NotifisEventos','ActivitiesNotifys','Recordatorios','Bguser','fotoUser','TypefotoUser'));
     }
 
     public function rankingSinAppAsesores($GetDataUsers,$ADPS,$HistoryAdps){

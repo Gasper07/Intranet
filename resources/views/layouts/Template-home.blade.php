@@ -109,7 +109,8 @@
                                     <ul class="gn-menu">
                                         <li class="gn-search-item">
                                          <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile">
-                                           <div class="containerPhotoProfile profileLateraS" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $fotoUser }}')">
+                                           <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUSe->foto.'') }}</p>
+                                           <div class="containerPhotoProfile profileLateraS" style="background-image: url('data:{{ $TypefotoUser }};base64,{{ base64_encode($GetImage) }}')">
                                            </div>
                                          </a>
                                          <p class="colorBlack fontMiriamProSemiBold">{{ Auth::user()->name }}</p>   

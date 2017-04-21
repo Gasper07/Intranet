@@ -2488,7 +2488,7 @@ class AdminController extends Controller
     public function GetPost()
     {
       $DataPosts = Post::select('*')
-        ->orderBy('created_at', 'desc')
+        ->orderBy('id', 'desc')
         ->get();
 
       return $DataPosts;

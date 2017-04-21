@@ -402,10 +402,11 @@
           data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
         }).done(function(rmd) {
             console.log(rmd);
+            $(ParentContentPost).append(rmd);
             var d = '1';
-            $.each(rmd, function(index, element) {
-              $(ParentContentPost).append(element.Comentario);
-            });
+            // $.each(rmd, function(index, element) {
+            //   $(ParentContentPost).append(element.Comentario);
+            // });
             
 
             // $.each(result, function(index, element) {

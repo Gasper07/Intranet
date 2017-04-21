@@ -633,6 +633,7 @@ jQuery(document).ready(function($) {
 			      	$('.lnvmodal-loader').css({
 			      		display: 'none'
 			      	});
+			      	$('form.ui.form.formComentUser>div>textarea').val('');
 			      	$(CaptionComentsPost).append(rmd);
 			      
 			  });

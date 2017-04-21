@@ -1145,11 +1145,12 @@ $(".fileInputImageChat1").change(function(){
 // GET COMENTARIOS USUARIOS POST
 
  $('.getComents').click(function(event) {
-   $('.lnvmodal-loadermin').css({
-     display: 'block'
-   });
    var dataIdPost = $(this).find('input.postIdCom').val();
    var ParentContentPost = $(this).parent();
+   var findLoader = $(ParentContentPost).find('.lnvmodal-loadermin');
+   $(findLoader).css({
+     display: 'block'
+   });
 
    $.ajaxSetup({
        headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
@@ -1162,9 +1163,9 @@ $(".fileInputImageChat1").change(function(){
        data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
      }).done(function(rmd) {         
          setTimeout(function(){ 
-         	// $('.lnvmodal-loadermin').css({
-         	//   display: 'none'
-         	// });
+         	$(findLoader).css({
+         	  display: 'none'
+         	});
          	$(ParentContentPost).append(rmd);
      	 }, 1000);
          

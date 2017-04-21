@@ -218,8 +218,8 @@ class LikeAndComentController extends Controller
           // dd($foto);
           $tipeFoto = $UserPostsComents->mime;
           $id_usuario = $UserPostsComents->id_usuario;
-          $comentarios = $UserPostsComents->comentarios;
-          $id_publicacion = $UserPostsComents->id_publicacion;
+          $comentarios = $ComentarioUser;
+          $id_publicacion = $IdPost;
 
           $crateComent = "<div class='ui feed uifeedComnetUser'><div class='event'><div class='label dataPrubeIm' style='$foto')'></div><div class='content'><div class='summary'><a href='profile-users/$id_usuario' class='user colorGrisMediumSuave fontMiriamProSemiBold'>$nommbre</a><div class='date fontMiriamProRegular colorGrisMediumSuave comentUser'>$comentarios</div></div></div></div></div>";
 

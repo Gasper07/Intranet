@@ -1162,9 +1162,9 @@ $(".fileInputImageChat1").change(function(){
        data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
      }).done(function(rmd) {         
          setTimeout(function(){ 
-         	$('.lnvmodal-loadermin').css({
-         	  display: 'none'
-         	});
+         	// $('.lnvmodal-loadermin').css({
+         	//   display: 'none'
+         	// });
          	$(ParentContentPost).append(rmd);
      	 }, 1000);
          

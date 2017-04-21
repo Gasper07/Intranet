@@ -6092,3 +6092,28 @@ p.Aceptado {
 .col-xs-12.col-sm-12.notifisMobile {
   display: none;
 }
+
+
+
+.label.dataPrubeIm.dataimgRabksH {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  padding-bottom: 0%;
+  background-size: 135%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 82%;
+  display: block;
+  height: 72px;
+  border-radius: 150px;
+  /* margin-right: 0%; */
+  /* margin-left: 11%; */
+  /* bottom: 8px; */
+  position: relative;
+  display: block;
+  /* margin: 0 auto; */
+  text-align: center;
+  margin: 0 auto;
+}

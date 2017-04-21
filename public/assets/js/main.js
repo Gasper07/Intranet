@@ -634,14 +634,9 @@ jQuery(document).ready(function($) {
 			      		display: 'none'
 			      	});
 			      	$('form.ui.form.formComentUser>div>textarea').val('');
-			      	$(CaptionComentsPost).append(rmd);
-			      
+			      	$(CaptionComentsPost).append(rmd);			      
 			  });
-
-		}, 2000);
-		
-		
-		
+		}, 2000);			
 		return false;
 	});
 });

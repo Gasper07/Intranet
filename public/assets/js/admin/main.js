@@ -577,37 +577,38 @@ jQuery(document).ready(function($) {
 	});
 });
 
-
 // Public coment
 jQuery(document).ready(function($) {
 	$('.dataComenyt').click(function(event) {	
+		$('.lnvmodal-loader').css({
+			display: 'block'
+		});	
 		var parentFormComent = $(this).parent();
 		var parentPost = $(this).parent().parent();
 		var CaptionComentsPost = $(parentPost).find('div.captionlokComen');
-
 		var findComent = $(parentFormComent).find('textarea').val();
 		var findIdUserComent = $(parentFormComent).find('input.iduserComent').val();
-		var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();
+		var findIdPostPublic = $(parentFormComent).find('input.idDataPost').val();\
+		var finUserPublicPostComent = $(parentFormComent).find('input.idUserPublicoPostComent').val();
 
-		$.ajaxSetup({
-			headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
-		});
+		setTimeout(function(){ 
+			$.ajaxSetup({
+			    headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+			});
 
-		$.ajax({
-			url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/CcomentsUsers',
-			type: 'POST',
-			headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-			data: "idComentUser="+findIdUserComent+"&ComentPost="+findComent+"&idDtasPost="+findIdPostPublic+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
-			dataType: 'json',
-			success: function(result, index, value, data) {
-				console.log(result.name);
-				$(CaptionComentsPost).append('<div class="ui feed uifeedComnetUser"><div class="event"><div class="label"><img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/profiles/'+result.foto+'"></div><div class="content"><div class="summary"><a class="user colorGrisMediumSuave fontMiriamProSemiBold">'+result.name+'</a><div class="date fontMiriamProRegular colorGrisMediumSuave comentUser">'+result.comentario+'</div></div></div></div></div>');
-
-			},
-			error: function() {
-				console.log('Error');
-			}
-		});
+			$.ajax({
+			    url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/CcomentsUsers',
+			    type: 'POST',
+			    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+			    data: "idComentUser="+findIdUserComent+"&ComentPost="+findComent+"&idPostComent="+finUserPublicPostComent+"&idDtasPost="+findIdPostPublic+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+			  }).done(function(rmd) {        
+			      	$('.lnvmodal-loader').css({
+			      		display: 'none'
+			      	});
+			      	$('form.ui.form.formComentUser>div>textarea').val('');
+			      	$(CaptionComentsPost).append(rmd);			      
+			  });
+		}, 2000);			
 		return false;
 	});
 });
@@ -1292,3 +1293,36 @@ $('.ayerPermiso').click(function(e) {
 	});
 	return false;
 });
+
+
+
+// GET COMENTARIOS USUARIOS POST
+
+ $('.getComents').click(function(event) {
+   var dataIdPost = $(this).find('input.postIdCom').val();
+   var ParentContentPost = $(this).parent();
+   var findLoader = $(ParentContentPost).find('.lnvmodal-loadermin');
+   $(findLoader).css({
+     display: 'block'
+   });
+
+   $.ajaxSetup({
+       headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
+   });
+
+   $.ajax({
+       url: 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/getComents',
+       type: 'POST',
+       headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+       data: "idpostComents="+dataIdPost+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
+     }).done(function(rmd) {         
+         setTimeout(function(){ 
+         	$(findLoader).css({
+         	  display: 'none'
+         	});
+         	$(ParentContentPost).append(rmd);
+     	 }, 1000);
+         
+     });
+   
+ });

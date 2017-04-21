@@ -133,12 +133,12 @@
                   @if($PostImpar['id_tipo_publicacion'] == 1 or $PostImpar['id_tipo_publicacion'] == 2 && $PostImpar['imagen'] != '')
                     @include('usuarios.partials.posts.fields-tipo-posnormal-impar')
 
-                    @elseif($PostImpar['id_tipo_publicacion'] == 1 or $PostImpar['id_tipo_publicacion'] == 2 && $PostImpar['documentos'] != '')
+                    {{-- @elseif($PostImpar['id_tipo_publicacion'] == 1 or $PostImpar['id_tipo_publicacion'] == 2 && $PostImpar['documentos'] != '')
                       @include('usuarios.partials.posts.fields-tipo-posnormal-impar-with-document-impar')
                       
                       
                     @elseif($PostImpar['id_tipo_publicacion'] == 1 or $PostImpar['id_tipo_publicacion'] == 2 && $PostImpar['imagen'] == '' && $PostImpar['documentos'] == '')
-                     @include('usuarios.partials.posts.fields-tipo-posnormal-impar-with-document-imagen-impar')
+                     @include('usuarios.partials.posts.fields-tipo-posnormal-impar-with-document-imagen-impar') --}}
                     
                   {{-- Si el post es tipo vacaciones --}}
                   @elseif($PostImpar['id_tipo_publicacion'] == 4)
@@ -161,11 +161,11 @@
                   @if($PostPar['id_tipo_publicacion'] == 1 or $PostPar['id_tipo_publicacion'] == 2 && $PostPar['imagen'] != '')
                     @include('usuarios.partials.posts.fields-tipo-posnormal-PAR')
 
-                    @elseif($PostPar['id_tipo_publicacion'] == 1 or $PostPar['id_tipo_publicacion'] == 2 && $PostPar['documentos'] != '')
+                   {{--  @elseif($PostPar['id_tipo_publicacion'] == 1 or $PostPar['id_tipo_publicacion'] == 2 && $PostPar['documentos'] != '')
                       @include('usuarios.partials.posts.fields-tipo-posnormal-par-with-document-PAR')
 
                     @elseif($PostPar['id_tipo_publicacion'] == 1 or $PostPar['id_tipo_publicacion'] == 2 && $PostPar['imagen'] == '' && $PostPar['documentos'] == '')
-                      @include('usuarios.partials.posts.fields-tipo-posnormal-par-with-document-imagen-PAR')
+                      @include('usuarios.partials.posts.fields-tipo-posnormal-par-with-document-imagen-PAR') --}}
                       
                   {{-- Si el post es tipo vacaciones --}}
                   @elseif($PostPar['id_tipo_publicacion'] == 4)

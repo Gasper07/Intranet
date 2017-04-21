@@ -881,6 +881,9 @@ jQuery(document).ready(function($) {
 		    		$(".alert.alert-info.yaMarcado").css({
 		    			display: 'block',
 		    		});
+		    		$('.lnvmodal-loader').css({
+		    			display: 'none'
+		    		});
 		    		setTimeout(function(){ 
 		    			$(".alert.alert-info.yaMarcado").css({
 		    				display: 'none',

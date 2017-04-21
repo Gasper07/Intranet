@@ -108,7 +108,10 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionlokComen">
-          
+          <a href="#!" class="getComents">
+            <p>Comentarios</p>
+            <input type="hidden" class="postIdCom" name="id_post_coment" value="{{ $PostImpar['id'] }}">
+          </a>
         </div>
         <form class="ui form formComentUser">
           <div class="field">

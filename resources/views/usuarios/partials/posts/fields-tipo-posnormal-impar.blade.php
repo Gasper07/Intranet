@@ -112,11 +112,18 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 captionlokComen">
-        <a href="#!" class="getComents">
-          <p>Comentarios</p>
-          <input type="hidden" class="postIdCom" name="id_post_coment" value="{{ $PostImpar['id'] }}">
-        </a>
-        
+        <p class="gasper">{{ $TotalComent = 0 }}</p>
+        @foreach($Coments as $datComents)
+          @if($PostImpar['id'] == $datComents->id_publicacion)
+            <p class="gasper">{{ $TotalComent = $TotalComent+1 }}</p>
+          @endif
+        @endforeach
+        @if($TotalComent > 0)
+          <a href="#!" class="getComents">
+            <p>({{$TotalComent}}) Comentarios</p>
+            <input type="hidden" class="postIdCom" name="id_post_coment" value="{{ $PostImpar['id'] }}">
+          </a>
+        @endif        
       </div>                      
       <form class="ui form formComentUser">
         <div class="field">

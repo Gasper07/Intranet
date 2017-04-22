@@ -87,7 +87,7 @@ class HomeController extends Controller
           if($keyOnlineUser->id_user_login == $keyallUsers->id_usuario){
             $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyallUsers->foto.'');
             $DataImgae = base64_encode($GetImage);
-            $foto = 'background-image: url("data:'.$keyallUsers->mime.';base64,'.$DataImgae.'")';
+            $foto = 'url("data:'.$keyallUsers->mime.';base64,'.$DataImgae.'")';
 
             $getArrayUser = array('id_user' => $keyallUsers->id_usuario, 'nombre_user' => $keyallUsers->nombre, 'foto' => $foto);
             array_push($arrayUsersOnline,$getArrayUser);

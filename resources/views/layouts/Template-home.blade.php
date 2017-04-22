@@ -358,10 +358,10 @@
 
                 if(banderaVeriCOunt <= 4){
                   $('.captionUsersInLive>div.accordion>div.title').prepend('<div class="captionCircleUser captionDenoews AlluserReegitradosPorBloque"><a href="#!" class="userLive" data-idonline='+dataUseronlineID+' data-iduserchat='+dataUseronlineID+'> <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline '+clStyImg+'"> </div></a></div>');
-                  $('.'+clStyImg).css('background-image', 'url("http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/'+dataUseronFoto+'")');
+                  $('.'+clStyImg).css('background-image', ''+dataUseronFoto+'');
                 }else if(banderaVeriCOunt > 4){
                   $('.captionUsersInLive>div.accordion>.content').append('<div class="captionCircleUser captionDenoews AlluserReegitradosPorBloque"><a href="#!" class="userLive" data-idonline='+dataUseronlineID+' data-iduserchat='+dataUseronlineID+'> <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline '+clStyImg+'"> </div> </a></div>');
-                  $('.'+clStyImg).css('background-image', 'url("http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/'+dataUseronFoto+'")');
+                  $('.'+clStyImg).css('background-image', ''+dataUseronFoto+'');
                 }
                 console.log('entro');
                 

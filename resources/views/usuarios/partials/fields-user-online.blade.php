@@ -9,7 +9,7 @@
           <div class="captionCircleUser captionDenoews AlluserReegitradosPorBloque">
             <a href="#!" class="userLive" data-idonline='{{ $onlineUsers['id_user'] }}' data-iduserchat="{{ $onlineUsers['id_user'] }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="{{ $onlineUsers['foto'] }}">
+              <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: {{ $onlineUsers['foto'] }}">
               </div>
             </a>
           </div>
@@ -30,7 +30,7 @@
           <div class="captionCircleUser captionDenoews AlluserReegitradosPorBloque">
             <a href="#!" class="userLive" data-idonline='{{ $onlineUsers['id_user'] }}' data-iduserchat="{{ $onlineUsers['id_user'] }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="{{ $onlineUsers['foto'] }}">
+              <div class="label dataPrubeIm vloqImageUser dataProfileAllUsersOnline" style="background-image: {{ $onlineUsers['foto'] }}">
               </div>            
             </a>
           </div>

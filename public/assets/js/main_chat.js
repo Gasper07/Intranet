@@ -83,7 +83,9 @@
       }).done(function(res){
       	$.each(res, function(index, element) {
   			var dataFile = element.file;
+  			console.log(dataFile);
   			var dataFileType = element.fileType;
+  			console.log(dataFileType);
   		});
 
 	  });

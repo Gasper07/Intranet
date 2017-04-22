@@ -83,16 +83,16 @@
      	  dataType: 'json',
      	  success: function(result, index, value, data) {
   	    	$.each(result, function(index, element) {
-  				var dataFile = element.file;
-  				console.log(dataFile);
+  				var dataFile = element.file;  				
   				var dataFileType = element.fileType;
-  				console.log(dataFileType);
   			});
 	 	 },
 	    error: function() {
 	        console.log('Error');
 	    }
 	  });
+
+	  console.log(dataFile);
 	  
 	  // Validate Name field
 	  if (id_Usuario_conversation === '') {

@@ -2880,7 +2880,12 @@ class HomeController extends Controller
       // $fileImages = facedesrequest::all();
       $dataELe = array();
 
-      $fileImages = $request->file('file'); 
+      $fileImages = $request->file('file');
+      if($fileImages>0){
+        dd('si');
+      } else{
+        dd('no');
+      }
       $imageName = $fileImages->getClientOriginalName();
       $imageNameType = $fileImages->getClientOriginalExtension();
 

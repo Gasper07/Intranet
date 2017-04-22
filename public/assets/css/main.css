@@ -2160,6 +2160,25 @@ p.typEEvento {
  margin: 0 auto;
 }
 
+.label.dataPrubeIm.dataProfileRankingUser.ranINDDS {
+  padding-bottom: 0%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 64%;
+  display: block;
+  height: 130px;
+  border-radius: 66px;
+  margin-right: 0%;
+  margin-left: 11%;
+  /* bottom: 8px; */
+  position: relative;
+  display: block;
+  /* margin: 0 auto; */
+  text-align: center;
+  margin: 0 auto;
+}
+
 .label.dataPrubeIm.dataProfileRankingUserOthers {
   padding-bottom: 0%;
   background-size: 100%;

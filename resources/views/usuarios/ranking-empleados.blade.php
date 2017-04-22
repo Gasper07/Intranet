@@ -42,7 +42,7 @@
             @if($UsersEmpleados->id_usuario != $idMejorRanking)
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ProfileFotosStartsMoreUser">
                  <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$UsersEmpleados->foto.'') }}</p>
-                 <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('data:{{ $UsersEmpleados->mime }};base64,{{ base64_encode($GetImage) }}')">
+                 <div class="label dataPrubeIm dataProfileRankingUser ranINDDS" style="background-image: url('data:{{ $UsersEmpleados->mime }};base64,{{ base64_encode($GetImage) }}')">
                  </div>
                  <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
                   <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>

@@ -1190,6 +1190,7 @@ class HomeController extends Controller
       $getCreateOnlineUsers = $this->CreateGetOnlineUser($idUserLogin);
       //get all users online
       $AllOnlineUser = $this->UsersOnline();
+      $AllPost = Post::all();
 
       // $ChatWithUsers = User::all();
       $getUsers = $this->AllUsers();
@@ -1450,7 +1451,7 @@ class HomeController extends Controller
         $fotoUser =$keyUsersDatasLogin->foto;
       }
 
-      return view('usuarios.chatUsers', compact('getUsers','GetUltimateMensage','idUserLogin','AllOnlineUser','Bguser','Activities','ActivitiesNotifys','NotifisEventos','fotoUser'));
+      return view('usuarios.chatUsers', compact('getUsers','GetUltimateMensage','idUserLogin','AllOnlineUser','Bguser','Activities','ActivitiesNotifys','NotifisEventos','fotoUser','AllPost'));
     }
 
     public function storeChat(Request $request){

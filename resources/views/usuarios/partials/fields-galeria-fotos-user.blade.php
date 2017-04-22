@@ -3,7 +3,7 @@
   @foreach($arrayOfImages as $DataImages)
     <p class="gasper">{{ $canditdadImagesForArray = count($DataImages) }}</p>
     @for($ga=0; $ga < $canditdadImagesForArray; $ga++ )
-      <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$DataImages[$ga].'') }}</p>
+      <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/documents/'.$DataImages[$ga].'') }}</p>
       <img class="img-responsive clImgView" src="data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($GetImage) }}" alt=""  data-toggle="modal" data-target="#myModalswPost">
         
       <!-- Modal -->

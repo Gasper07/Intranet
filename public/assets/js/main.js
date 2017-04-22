@@ -56,7 +56,7 @@ $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.
 
 	// Asigana valor para chat, del user seleccionado
 	// $('.ChatWithUser>.ChatWithUserDatas>img').attr('src',dataFotoUser);
-	$('.ChatWithUser>.ChatWithUserDatas>div.recibeSelectChat').css('background-image',''+dataFotoUser+')');
+	$('.ChatWithUser>.ChatWithUserDatas>div.recibeSelectChat').css('background-image',''+dataFotoUser+'');
 	$('.ChatWithUser>.ChatWithUserDatas>p').text(dataNameUser);
 	$('.DatIdUserChat').val(dataIdUser);
 

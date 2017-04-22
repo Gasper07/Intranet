@@ -20,7 +20,9 @@ if ( 0 < $_FILES['file']['error'] ) {
 	print_r('ho');
 }
 else {
-	print_r($_FILES['file']);
+	$imageName = $_FILES['file']['name'];
+	$SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($_FILES['file']));
+	print_r('inser');
 }
 // 	print_r($_FILES['file']);
 // 	// $targetPath2 = $_FILES['file']['name']; 

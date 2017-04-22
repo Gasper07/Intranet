@@ -22,7 +22,7 @@ if ( 0 < $_FILES['file']['error'] ) {
 else {
 	$imageName = $_FILES['file']['name'];
 
-	move_uploaded_file($_FILES['file']['name'], 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/documents/' . $_FILES['file']);
+	// move_uploaded_file($_FILES['file']['name'], 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/documents/' . $_FILES['file']);
 	
 	print_r($imageName);
 	// $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($_FILES['file']));

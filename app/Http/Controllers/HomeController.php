@@ -2879,7 +2879,8 @@ class HomeController extends Controller
     public function UploadArchivos(Request $request){
       // $fileImages = facedesrequest::all();
 
-      $fileImages = $request->file('file');  
+      $fileImages = $request->file('file'); 
+      dd($fileImages); 
       $nombreDocumento = $fileImages->getClientOriginalName();
       $move = $fileImages->move(
           base_path().'/public/assets/images/documents-admin/', $nombreDocumento

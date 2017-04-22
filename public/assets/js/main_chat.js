@@ -79,7 +79,7 @@
           data: form_data,
           cache: false,
           contentType: false,
-     	  processData: false
+     	  processData: false,
      	  dataType: 'json',
      	  success: function(result, index, value, data) {
   	    	$.each(result, function(index, element) {

@@ -16,12 +16,10 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-if ( 0 < $_FILES['file']['error'] ) {
+// if ( 0 < $_FILES['file']['error'] ) {
 
-}	
-else {
-	print($_FILES['file']);
-}
+// }
+// else {
 // 	print_r($_FILES['file']);
 // 	// $targetPath2 = $_FILES['file']['name']; 
 // 	// $direc = __FILE__;

@@ -88,7 +88,7 @@ class HomeController extends Controller
             $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyallUsers->foto.'');
             $DataImgae = base64_encode($GetImage);
             $foto = 'background-image: url("data:'.$keyallUsers->mime.';base64,'.$DataImgae.'")';
-            
+
             $getArrayUser = array('id_user' => $keyallUsers->id_usuario, 'nombre_user' => $keyallUsers->nombre, 'foto' => $foto);
             array_push($arrayUsersOnline,$getArrayUser);
           }
@@ -1141,7 +1141,7 @@ class HomeController extends Controller
       $HistoryAdps = HistorialAdps::all();
       $JoinTableUserDatosPersonalesDatosEmpleado =  \DB::table('datos_personales')
       ->join('datos_empleados', 'datos_personales.id_usuario', '=', 'datos_empleados.id_usuario')
-      ->select('datos_personales.nombre','datos_personales.apellidos','datos_personales.foto','datos_personales.id_usuario','datos_empleados.correo_corporativo','datos_empleados.celular','datos_empleados.extencion','datos_empleados.area_departamento')
+      ->select('datos_personales.nombre','datos_personales.apellidos','datos_personales.foto','datos_personales.mime','datos_personales.id_usuario','datos_empleados.correo_corporativo','datos_empleados.celular','datos_empleados.extencion','datos_empleados.area_departamento')
       ->get();
 
       $rankingSInApp = $this->rankingSinAppAsesores($JoinTableUserDatosPersonalesDatosEmpleado,$AllAdps,$HistoryAdps);

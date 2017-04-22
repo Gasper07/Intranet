@@ -57,17 +57,17 @@
 	      headers: { 'X-CSRF-Token': $('input[name=_token]').attr('value') }
 	  });
 
-      $.ajax({
-          url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/uploadArchive",
-          type: "post",
-          headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
-          data: form_data,
-          cache: false,
-          contentType: false,
-     	  processData: false
-      }).done(function(res){
-        alert('sefue');
-	  });
+   //    $.ajax({
+   //        url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/uploadArchive",
+   //        type: "post",
+   //        headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
+   //        data: form_data,
+   //        cache: false,
+   //        contentType: false,
+   //   	  processData: false
+   //    }).done(function(res){
+   //      alert('sefue');
+	  // });
 	  
 	  // Validate Name field
 	  if (id_Usuario_conversation === '') {
@@ -79,6 +79,7 @@
 	      id_Usuario_conversation: $('.chat_box .input_name').val(),
 	      id_Usuario: $('.chat_box .input_id_user_logi').val(),
 	      conversation: message,
+	      form_data: form_data,
 	      // message: '<strong>' + $('.chat_box .input_name').val() + '</strong>: ' + message
 	      message: message
 	    }

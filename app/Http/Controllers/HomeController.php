@@ -2882,24 +2882,24 @@ class HomeController extends Controller
 
       $fileImages = $request->file('file');
       if($fileImages>0){
-        dd('si');
+        $imageName = $fileImages->getClientOriginalName();
+        $imageNameType = $fileImages->getClientOriginalExtension();
+
+        $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));
+
+        $GetImage  = \Storage::disk('ubUploadsChange')->get('/documents/'.$imageName.'');
+        $DataImgae = base64_encode($GetImage);
+        $file = 'data:'.$imageNameType.';base64,'.$DataImgae.'';
+        $fileType = $imageNameType;
+
+        $dataArchivoCreate = array('file' => $file, 'fileType' => $fileType);
+        array_push($dataELe,$dataArchivoCreate);
+
+        echo json_encode($dataELe);
       } else{
-        dd('no');
+        echo json_encode('no');
       }
-      $imageName = $fileImages->getClientOriginalName();
-      $imageNameType = $fileImages->getClientOriginalExtension();
-
-      $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));
-
-      $GetImage  = \Storage::disk('ubUploadsChange')->get('/documents/'.$imageName.'');
-      $DataImgae = base64_encode($GetImage);
-      $file = 'data:'.$imageNameType.';base64,'.$DataImgae.'';
-      $fileType = $imageNameType;
-
-      $dataArchivoCreate = array('file' => $file, 'fileType' => $fileType);
-      array_push($dataELe,$dataArchivoCreate);
-
-      echo json_encode($dataELe);
+      
 
     }
 

@@ -6,36 +6,33 @@
       <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 captionPosteos captionRabkinEmpleados">
         @foreach($JoinTableUserDatosPersonalesDatosEmpleado as $UsersEmpleados)
           @if($UsersEmpleados->id_usuario == $UserMejorRanking['id_user'])
-            <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profilesRabking">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ProfileFotosStarts">
-                   <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$UsersEmpleados->foto.'') }}</p>
-                   <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('data:{{ $UsersEmpleados->mime }};base64,{{ base64_encode($GetImage) }}')">
-                   </div>
-                   <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
-                     <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
-                   </a>
-                   
-                   {{-- <p class="PuntuancionRanlinkNumber">4.5</p> --}}
-                   @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
-                     @if($UsersEmpleados->id_usuario == $valueRankingGeneral['id_user'])
-                       @if($valueRankingGeneral['puntosRanking'] <= 15)
-                         <div class="ui star rating" data-rating="1"></div>
-                       @elseif ($valueRankingGeneral['puntosRanking'] > 15 && $valueRankingGeneral['puntosRanking'] <= 30) 
-                         <div class="ui star rating" data-rating="2"></div>
-                       @elseif ($valueRankingGeneral['puntosRanking'] > 30 && $valueRankingGeneral['puntosRanking'] <= 45) 
-                         <div class="ui star rating" data-rating="3"></div>
-                       @elseif ($valueRankingGeneral['puntosRanking'] > 45 && $valueRankingGeneral['puntosRanking'] < 75) 
-                         <div class="ui star rating" data-rating="4"></div>
-                       @elseif ($valueRankingGeneral['puntosRanking'] >= 75) 
-                         <div class="ui star rating" data-rating="5"></div>
-                       @endif
-                     @endif
-                   @endforeach
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profilesRabking">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ProfileFotosStarts">
+                 <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$UsersEmpleados->foto.'') }}</p>
+                 <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('data:{{ $UsersEmpleados->mime }};base64,{{ base64_encode($GetImage) }}')">
                  </div>
-              </div>
-            </a>
-            
+                 <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
+                   <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
+                 </a>
+                 
+                 {{-- <p class="PuntuancionRanlinkNumber">4.5</p> --}}
+                 @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
+                   @if($UsersEmpleados->id_usuario == $valueRankingGeneral['id_user'])
+                     @if($valueRankingGeneral['puntosRanking'] <= 15)
+                       <div class="ui star rating" data-rating="1"></div>
+                     @elseif ($valueRankingGeneral['puntosRanking'] > 15 && $valueRankingGeneral['puntosRanking'] <= 30) 
+                       <div class="ui star rating" data-rating="2"></div>
+                     @elseif ($valueRankingGeneral['puntosRanking'] > 30 && $valueRankingGeneral['puntosRanking'] <= 45) 
+                       <div class="ui star rating" data-rating="3"></div>
+                     @elseif ($valueRankingGeneral['puntosRanking'] > 45 && $valueRankingGeneral['puntosRanking'] < 75) 
+                       <div class="ui star rating" data-rating="4"></div>
+                     @elseif ($valueRankingGeneral['puntosRanking'] >= 75) 
+                       <div class="ui star rating" data-rating="5"></div>
+                     @endif
+                   @endif
+                 @endforeach
+               </div>
+            </div>
           @endif
         @endforeach
         
@@ -43,30 +40,28 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 profilesRabking profileMoreUSaer">
           @foreach($JoinTableUserDatosPersonalesDatosEmpleado as $UsersEmpleados)
             @if($UsersEmpleados->id_usuario != $idMejorRanking)
-             <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ProfileFotosStartsMoreUser">
-                   <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$UsersEmpleados->foto.'') }}</p>
-                   <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('data:{{ $UsersEmpleados->mime }};base64,{{ base64_encode($GetImage) }}')">
-                   </div>
-                   <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
-                    <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
-                  </a>
-                   @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
-                    @if($UsersEmpleados->id_usuario == $valueRankingGeneral['id_user'])
-                      @if($valueRankingGeneral['puntosRanking'] <= 15)
-                        <div class="ui star rating" data-rating="1"></div>
-                      @elseif ($valueRankingGeneral['puntosRanking'] > 15 && $valueRankingGeneral['puntosRanking'] <= 30) 
-                        <div class="ui star rating" data-rating="2"></div>
-                      @elseif ($valueRankingGeneral['puntosRanking'] > 30 && $valueRankingGeneral['puntosRanking'] <= 45) 
-                        <div class="ui star rating" data-rating="3"></div>
-                      @elseif ($valueRankingGeneral['puntosRanking'] > 45 && $valueRankingGeneral['puntosRanking'] < 75) 
-                        <div class="ui star rating" data-rating="4"></div>
-                      @elseif ($valueRankingGeneral['puntosRanking'] >= 75) 
-                        <div class="ui star rating" data-rating="5"></div>
-                      @endif
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ProfileFotosStartsMoreUser">
+                 <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$UsersEmpleados->foto.'') }}</p>
+                 <div class="label dataPrubeIm dataProfileRankingUser" style="background-image: url('data:{{ $UsersEmpleados->mime }};base64,{{ base64_encode($GetImage) }}')">
+                 </div>
+                 <a href="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/profile-users/{{ $UsersEmpleados->id_usuario }}">
+                  <p class="colorBlack fontMiriamProSemiBold">{{ $UsersEmpleados->nombre }} {{ $UsersEmpleados->apellidos }}</p>
+                </a>
+                 @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 
+                  @if($UsersEmpleados->id_usuario == $valueRankingGeneral['id_user'])
+                    @if($valueRankingGeneral['puntosRanking'] <= 15)
+                      <div class="ui star rating" data-rating="1"></div>
+                    @elseif ($valueRankingGeneral['puntosRanking'] > 15 && $valueRankingGeneral['puntosRanking'] <= 30) 
+                      <div class="ui star rating" data-rating="2"></div>
+                    @elseif ($valueRankingGeneral['puntosRanking'] > 30 && $valueRankingGeneral['puntosRanking'] <= 45) 
+                      <div class="ui star rating" data-rating="3"></div>
+                    @elseif ($valueRankingGeneral['puntosRanking'] > 45 && $valueRankingGeneral['puntosRanking'] < 75) 
+                      <div class="ui star rating" data-rating="4"></div>
+                    @elseif ($valueRankingGeneral['puntosRanking'] >= 75) 
+                      <div class="ui star rating" data-rating="5"></div>
                     @endif
-                  @endforeach
-                </div>
+                  @endif
+                @endforeach
               </div>
             @endif
           @endforeach

@@ -872,6 +872,8 @@ class HomeController extends Controller
         $TypefotoUser =$keyUsersDatasLogin->mime;
       }
 
+      dd($arrayOfImages);
+
       return view('usuarios.profile',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','getCreateOnlineUsers','AllOnlineUser','getUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','UsersAlls','Posts','Likes','Coments','DayMothsYear','JoinTableUserPosts','DataArrayPostPar','DataArrayPostImpar','dataPostD','arrayOfImages','HorariosUser','arrayDaysDescansoUser','Solicitudes','PrimerNumerDay','SegundoNumerDay','JoinTableUserDatosPersonalesDatosEmpleado','RankingGeneral','eventosNOtify','AllPost','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser','TypefotoUser'));
     }
 

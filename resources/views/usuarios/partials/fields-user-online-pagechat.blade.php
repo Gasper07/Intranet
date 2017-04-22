@@ -4,6 +4,7 @@
     <div class="title">
       <p class="gasper"> {{ $banderaOnline = 0}}</p>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitrados columnChatss captionLikechatsFlotante">
+        {{-- x --}}
         @foreach($AllOnlineUser as $onlineUsers)
           <p class="gasper"> {{ $banderaOnline = $banderaOnline+1 }}</p>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 AlluserReegitradosPorBloque">

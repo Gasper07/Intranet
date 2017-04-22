@@ -49,7 +49,8 @@ if ($mysqli->connect_error) {
 
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
-	$data['message'] = $_POST['message'];	
+	$data['message'] = $_POST['message'];
+	print_r($_FILES['file']);	
 
 	$Menssage = $_POST['conversation'];	
 	$id_user = $_POST['id_Usuario'];	

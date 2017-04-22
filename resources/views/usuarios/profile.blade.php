@@ -37,7 +37,7 @@
             <div class="containerPhotoProfile" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUsers->foto }}')">
             </div>
             <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUsers->foto.'') }}</p>
-            <div class="containerPhotoProfile" style="background-image: url('data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($GetImage) }}')">
+            <div class="containerPhotoProfile" style="background-image: url('data:{{ $dataUsers->mime }};base64,{{ base64_encode($GetImage) }}')">
             </div>
             <p class="colorBlack fontMiriamProSemiBold">{{ $dataUsers->nombre }} {{ $dataUsers->apellidos }}</p>
             @foreach ($RankingGeneral as $keyRankingGeneral => $valueRankingGeneral) 

@@ -1064,7 +1064,8 @@ class HomeController extends Controller
           if($keyPostsImages->imagen != ''){
             $ArrayImgeesGaleri = '';
             $ArrayImgeesGaleri = explode(",", $keyPostsImages->imagen);
-            array_push($arrayOfImages,$ArrayImgeesGaleri);
+            $dataImaeAray = array('imagesGalery'=>  $ArrayImgeesGaleri,'imagesGaleryType'=>  $keyPostsImages->mime);
+            array_push($arrayOfImages,$dataImaeAray);
           }
         }
         

@@ -165,7 +165,7 @@
 
     <script>
       $(window).bind("beforeunload", function() { 
-          return confirm("deseas cerrar la ventana?"); 
+          // return confirm("deseas cerrar la ventana?"); 
       });
     </script>
 

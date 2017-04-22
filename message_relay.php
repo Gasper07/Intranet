@@ -16,10 +16,11 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-// if ( 0 < $_FILES['file']['error'] ) {
+if ( 0 < $_FILES['file']['error'] ) {
 
-// }
-// else {
+}
+else {
+	print_r($_FILES['file']);
 // 	print_r($_FILES['file']);
 // 	// $targetPath2 = $_FILES['file']['name']; 
 // 	// $direc = __FILE__;
@@ -45,7 +46,7 @@ if ($mysqli->connect_error) {
 // 	// }
 
 // 	print_r($new2);
-// }
+}
 
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		

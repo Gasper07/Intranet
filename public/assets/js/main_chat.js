@@ -79,6 +79,7 @@
 	      id_Usuario_conversation: $('.chat_box .input_name').val(),
 	      id_Usuario: $('.chat_box .input_id_user_logi').val(),
 	      conversation: message,
+	      dtaFile: form_data,
 	      // message: '<strong>' + $('.chat_box .input_name').val() + '</strong>: ' + message
 	      message: message
 	    }

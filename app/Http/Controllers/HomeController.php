@@ -85,7 +85,11 @@ class HomeController extends Controller
       foreach ($OnlineUser as $keyOnlineUser) {
         foreach ($allUsers as $keyallUsers) {
           if($keyOnlineUser->id_user_login == $keyallUsers->id_usuario){
-            $getArrayUser = array('id_user' => $keyallUsers->id_usuario, 'nombre_user' => $keyallUsers->nombre, 'foto' => $keyallUsers->foto);
+            $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$keyallUsers->foto.'');
+            $DataImgae = base64_encode($GetImage);
+            $foto = 'background-image: url("data:'.$keyallUsers->mime.';base64,'.$DataImgae.'")';
+            
+            $getArrayUser = array('id_user' => $keyallUsers->id_usuario, 'nombre_user' => $keyallUsers->nombre, 'foto' => $foto);
             array_push($arrayUsersOnline,$getArrayUser);
           }
         }       

@@ -85,6 +85,30 @@
   	    	$.each(result, function(index, element) {
   				var dataFile = element.file;  				
   				var dataFileType = element.fileType;
+
+  				// Validate Name field
+  				if (id_Usuario_conversation === '') {
+  				  bootbox.alert('<br /><p class="bg-danger">Please enter a Name.</p>');
+  				
+  				} else if (message !== '') {
+  				  // Define ajax data
+  				  var chat_message={
+  				    id_Usuario_conversation: $('.chat_box .input_name').val(),
+  				    id_Usuario: $('.chat_box .input_id_user_logi').val(),
+  				    file: dataFile,
+  				    fileType: dataFileType,
+  				    conversation: message,
+  				    // message: '<strong>' + $('.chat_box .input_name').val() + '</strong>: ' + message
+  				    message: message
+  				  }
+  				  // Send the message to the server
+  				  ajaxCall('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php', chat_message);
+  				  
+  				  // Clear the message input field
+  				  $('.chat_box .input_message').val('');
+  				  // Show a loading image while sending
+  				  $('.input_send_holder').html('<input type="submit" value="Send" class="btn btn-primary" disabled /> &nbsp;<img src="loading.gif" />');
+  				}
   			});
 	 	 },
 	    error: function() {
@@ -92,31 +116,8 @@
 	    }
 	  });
 
-	  console.log(dataFile);
 	  
-	  // Validate Name field
-	  if (id_Usuario_conversation === '') {
-	    bootbox.alert('<br /><p class="bg-danger">Please enter a Name.</p>');
 	  
-	  } else if (message !== '') {
-	    // Define ajax data
-	    var chat_message={
-	      id_Usuario_conversation: $('.chat_box .input_name').val(),
-	      id_Usuario: $('.chat_box .input_id_user_logi').val(),
-	      file: dataFile,
-	      fileType: dataFileType,
-	      conversation: message,
-	      // message: '<strong>' + $('.chat_box .input_name').val() + '</strong>: ' + message
-	      message: message
-	    }
-	    // Send the message to the server
-	    ajaxCall('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/message_relay.php', chat_message);
-	    
-	    // Clear the message input field
-	    $('.chat_box .input_message').val('');
-	    // Show a loading image while sending
-	    $('.input_send_holder').html('<input type="submit" value="Send" class="btn btn-primary" disabled /> &nbsp;<img src="loading.gif" />');
-	  }
 	 });
 	 
 	 // Send the message when enter key is clicked

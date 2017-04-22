@@ -3,7 +3,8 @@
     <div class="col-md-12">
         <div class="ui feed uifeedAvatar">
           <div class="event">
-            <div class="label dataPrubeIm" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $dataUSe->foto }}')">
+            <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$dataUSe->foto.'') }}</p>
+            <div class="label dataPrubeIm" style="background-image: url('data:{{ $PostImpar['mime'] }};base64,{{ base64_encode($GetImage) }}')">
             </div>
 
             <div class="content">

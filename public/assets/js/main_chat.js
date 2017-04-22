@@ -85,6 +85,8 @@
   	    	$.each(result, function(index, element) {
   				var dataFile = element.file;  				
   				var dataFileType = element.fileType;
+  				console.log(dataFile);
+  				console.log(dataFileType);
 
   				// Validate Name field
   				if (id_Usuario_conversation === '') {

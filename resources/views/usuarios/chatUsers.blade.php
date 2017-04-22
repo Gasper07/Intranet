@@ -63,7 +63,8 @@
                         <a href="#!" data-iduserchat="{{ $users->id_usuario }}">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser">
-                            <div class="label dataPrubeIm dataProfileAllUsersListChat" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
+                            <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$users->foto.'') }}</p>
+                            <div class="label dataPrubeIm dataProfileAllUsersListChat" style="background-image: url('data:{{ $users->mime }};base64,{{ base64_encode($GetImage) }}')"></div>
                           </div>
                           <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 blqueDatasUser">
                             <p class="colorBlack fontMiriamProSemiBold TitleUserMen">{{ $users->name }} <span> dice: </span></p>
@@ -89,7 +90,8 @@
                         <a href="#!" data-iduserchat="{{ $users->id_usuario }}">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 vloqImageUser">
-                            <div class="label dataPrubeIm dataProfileAllUsersListChat" style="background-image: url('http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/profiles/{{ $users->foto }}')"></div>
+                            <p class="gasper">{{ $GetImage  = \Storage::disk('ubUploadsChange')->get('/profiles/'.$users->foto.'') }}</p>
+                            <div class="label dataPrubeIm dataProfileAllUsersListChat" style="background-image: url('data:{{ $users->mime }};base64,{{ base64_encode($GetImage) }}')"></div>
                           </div>
                           <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 blqueDatasUser">
                             <p class="colorBlack fontMiriamProSemiBold TitleUserMen">{{ $users->name }} <span> dice: </span></p>

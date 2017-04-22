@@ -88,7 +88,10 @@
   				var dataFileType = element.fileType;
   				console.log(dataFileType);
   			});
-	 	 };
+	 	 },
+	    error: function() {
+	        console.log('Error');
+	    }
 	  });
 	  
 	  // Validate Name field

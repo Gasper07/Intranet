@@ -2880,7 +2880,6 @@ class HomeController extends Controller
       // $fileImages = facedesrequest::all();
 
       $fileImages = $request->file('file'); 
-      dd($fileImages); 
       $imageName = $fileImages->getClientOriginalName();
 
       $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));

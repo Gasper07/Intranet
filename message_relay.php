@@ -20,9 +20,10 @@ if ( 0 < $_FILES['file']['error'] ) {
 	print_r('ho');
 }
 else {
-	$imageName = $_FILES['file']['name'];
+	$imageName = $_FILES['fileInputImageChat']['name'];
+	#da
 	print_r($imageName);
-	// $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($_FILES['file']));
+	$SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($_FILES['file']));
 }
 // 	print_r($_FILES['file']);
 // 	// $targetPath2 = $_FILES['file']['name']; 

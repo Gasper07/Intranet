@@ -2892,7 +2892,7 @@ class HomeController extends Controller
 
       $dataArchivoCreate = array('file' => $file, 'fileType' => $fileType);
 
-      echo $dataArchivoCreate;
+      echo json_encode($dataArchivoCreate);
 
     }
 

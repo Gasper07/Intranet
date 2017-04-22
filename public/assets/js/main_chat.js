@@ -80,14 +80,15 @@
           cache: false,
           contentType: false,
      	  processData: false
-      }).done(function(res){
-      	$.each(res, function(index, element) {
-  			var dataFile = element.file;
-  			console.log(dataFile);
-  			var dataFileType = element.fileType;
-  			console.log(dataFileType);
-  		});
-
+     	  dataType: 'json',
+     	  success: function(result, index, value, data) {
+  	    	$.each(result, function(index, element) {
+  				var dataFile = element.file;
+  				console.log(dataFile);
+  				var dataFileType = element.fileType;
+  				console.log(dataFileType);
+  			});
+	 	 };
 	  });
 	  
 	  // Validate Name field

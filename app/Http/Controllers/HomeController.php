@@ -2881,20 +2881,9 @@ class HomeController extends Controller
 
       $fileImages = $request->file('file'); 
       dd($fileImages); 
-      $nombreDocumento = $fileImages->getClientOriginalName();
-      $move = $fileImages->move(
-          base_path().'/public/assets/images/documents-admin/', $nombreDocumento
-      );
+      $imageName = $fileImages->getClientOriginalName();
 
-
-      // if($fileImages != ''){
-      //    $nombreFoto = $fileImages->getClientOriginalName();
-      //    $fileNameFoto = rand(11,99999);
-      //    $imageName = $fileNameFoto.'.'.$fileImages->getClientOriginalExtension();
-      //    $fileImages->move(
-      //        base_path() . 'http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/documents-chat/', $imageName
-      //    );
-      // }
+      $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));
       echo 'guaradao';
 
     }

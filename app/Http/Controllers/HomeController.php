@@ -2878,6 +2878,7 @@ class HomeController extends Controller
 
     public function UploadArchivos(Request $request){
       // $fileImages = facedesrequest::all();
+      $dataELe = array();
 
       $fileImages = $request->file('file'); 
       $imageName = $fileImages->getClientOriginalName();
@@ -2891,8 +2892,9 @@ class HomeController extends Controller
       $fileType = $imageNameType;
 
       $dataArchivoCreate = array('file' => $file, 'fileType' => $fileType);
+      array_push($dataELe,$dataArchivoCreate);
 
-      echo json_encode($dataArchivoCreate);
+      echo json_encode($dataELe);
 
     }
 

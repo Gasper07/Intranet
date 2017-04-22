@@ -69,8 +69,7 @@
         alert('sefue');
 	  });
 
-	  var dataFile = '';
-	  var dataFileType = '';
+	  
 
       $.ajax({
           url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/uploadArchive",
@@ -82,6 +81,8 @@
      	  processData: false,
      	  dataType: 'json',
      	  success: function(result, index, value, data) {
+     	  	var dataFile = '';
+     	  	var dataFileType = '';
   	    	$.each(result, function(index, element) {
   				var dataFile = element.file;  				
   				var dataFileType = element.fileType;

@@ -2881,9 +2881,15 @@ class HomeController extends Controller
 
       $fileImages = $request->file('file'); 
       $imageName = $fileImages->getClientOriginalName();
+      $imageNameType = $fileImages->getClientOriginalExtension();
 
       $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($fileImages));
-      echo 'guaradao';
+
+      $GetImage  = \Storage::disk('ubUploadsChange')->get('/documents/'.$imageName.'');
+      $DataImgae = base64_encode($GetImage);
+      $file = 'data:'.$imageNameType.';base64,'.$DataImgae.'';
+
+      echo $file;
 
     }
 

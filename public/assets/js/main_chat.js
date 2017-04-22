@@ -78,7 +78,7 @@
           contentType: false,
      	  processData: false
       }).done(function(res){
-        alert('sefue2');
+        alert(res);
 	  });
 	  
 	  // Validate Name field

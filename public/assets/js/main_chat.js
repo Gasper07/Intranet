@@ -69,6 +69,9 @@
         alert('sefue');
 	  });
 
+	  var dataFile = '';
+	  var dataFileType = '';
+
       $.ajax({
           url: "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/uploadArchive",
           type: "post",
@@ -78,7 +81,11 @@
           contentType: false,
      	  processData: false
       }).done(function(res){
-        alert(res);
+      	$.each(res, function(index, element) {
+  			var dataFile = element.file;
+  			var dataFileType = element.fileType;
+  		});
+
 	  });
 	  
 	  // Validate Name field
@@ -90,6 +97,8 @@
 	    var chat_message={
 	      id_Usuario_conversation: $('.chat_box .input_name').val(),
 	      id_Usuario: $('.chat_box .input_id_user_logi').val(),
+	      file: dataFile,
+	      fileType: dataFileType,
 	      conversation: message,
 	      // message: '<strong>' + $('.chat_box .input_name').val() + '</strong>: ' + message
 	      message: message

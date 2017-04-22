@@ -2888,8 +2888,11 @@ class HomeController extends Controller
       $GetImage  = \Storage::disk('ubUploadsChange')->get('/documents/'.$imageName.'');
       $DataImgae = base64_encode($GetImage);
       $file = 'data:'.$imageNameType.';base64,'.$DataImgae.'';
+      $fileType = $imageNameType;
 
-      echo $file;
+      $dataArchivoCreate = array('file' => $file, 'fileType' => $fileType);
+
+      echo $dataArchivoCreate;
 
     }
 

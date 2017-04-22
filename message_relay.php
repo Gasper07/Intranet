@@ -16,17 +16,7 @@ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-if ( 0 < $_FILES['file']['error'] ) {
-	print_r('ho');
-}
-else {
-	$imageName = $_FILES['file']['name'];
 
-	// move_uploaded_file($_FILES['file']['name'], 'bucket-1237ad59-1025-48ba-90c5-d567e8ecd3dc-fsbucket.services.clever-cloud.com/documents/' . $_FILES['file']);
-	
-	print_r($imageName);
-	// $SaveFile = \Storage::disk('ubUploadsChange')->put('documents/'.$imageName,  \File::get($_FILES['file']));
-}
 // 	print_r($_FILES['file']);
 // 	// $targetPath2 = $_FILES['file']['name']; 
 // 	// $direc = __FILE__;
@@ -57,16 +47,16 @@ else {
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
 	$data['message'] = $_POST['message'];
-	print_r($_FILES['file']);	
 
 	$Menssage = $_POST['conversation'];	
 	$id_user = $_POST['id_Usuario'];	
 	$id_userConversation = $_POST['id_Usuario_conversation'];	
-	
+	$dataArchivo = $_POST['file'];	
+	$dataArchivoType = $_POST['fileType'];	
 	// Return the received message
 	if($pusher->trigger('test_channel', 'my_event', $data)) {			
 		//MySqli Insert Query
-		$insert_row = $mysqli->query("INSERT INTO chats_users (id, conversations, id_user, id_user_conversation) VALUES('', '$Menssage', '$id_user', '$id_userConversation')");
+		$insert_row = $mysqli->query("INSERT INTO chats_users (id, conversations, file, mime, id_user, id_user_conversation) VALUES('', '$Menssage', '$dataArchivo', '$dataArchivoType', '$id_user', '$id_userConversation')");
 		mysqli_close($mysqli);
 	
 		echo 'success';			

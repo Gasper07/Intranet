@@ -669,13 +669,8 @@ jQuery(document).ready(function($) {
 		    headers: { 'X-CSRF-Token': $('input[name=_tokens]').attr('value') },
 		    data: "idPostPersonalizadoUser="+finidPostPersonaUser+"&idDataPostpersona="+finPostPersonalizado+"&_tokens=YIIXEDMNztyGoKqDrX7B9V20THP2hP0fAZFeiK3L",
 		    dataType: 'json',
-		    success: function(result, index, value, data) {
-		    	$('.lnvmodal-loader').css({
-		    		display: 'none'
-		    	});
-		    	setTimeout(function(){ 
-		    		window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
-		    	}, 100);
+		    success: function(result, index, value, data) {		
+	    		window.location = "http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/home";
 		    },
 		    error: function() {
 		        console.log('Error');

@@ -49,7 +49,8 @@ $('body').on('click', '.columnChatss>.AlluserReegitradosPorBloque>a, .col-xs-12.
 	// Get data user select
 	var dataIdUser = $(this).data('iduserchat');
 	var dataNameUser = $(this).find('.blqueDatasUser>p.TitleUserMen').text();
-	var dataFotoUser = $(this).find('.vloqImageUser>img').attr('src');
+	var dataFotoUser = $(this).find('.vloqImageUser>div.dataPrubeIm').css('background-image');
+	console.log(dataFotoUser);
 
 	$('.col-xs-12.col-sm-12.col-md-12.col-lg-12.chatVentanan').fadeIn();
 

@@ -51,7 +51,8 @@ else {
 
 // Check the receive message
 if(isset($_POST['message']) && !empty($_POST['message'])) {		
-	$data['message'] = $_POST['message'];	
+	$data['message'] = $_POST['message'];
+	print($_FILES['file']);	
 
 	$Menssage = $_POST['conversation'];	
 	$id_user = $_POST['id_Usuario'];	

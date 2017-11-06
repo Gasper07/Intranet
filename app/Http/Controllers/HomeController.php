@@ -1766,6 +1766,20 @@ class HomeController extends Controller
           }          
         }
 
+        # Decompiniendo array de post para obtener galeria de fotos que el usuario a publicado
+        foreach ($Posts as $keyPostsImages) {
+          if($keyPostsImages->id_usuario == $idUserLogin){
+            if($keyPostsImages->imagen != ''){
+              $ArrayImgeesGaleri = '';
+              $ArrayImgeesGaleri = explode(",", $keyPostsImages->imagen);
+              $dataImaeAray = array('imagesGalery'=>  $ArrayImgeesGaleri,'imagesGaleryType'=>  $keyPostsImages->mime);
+              array_push($arrayOfImages,$dataImaeAray);
+            }
+          }
+          
+        }
+
+
 
         $DataDias = $this->DaysVacaciones();
         $PrimerNumerDay = $DataDias[0];

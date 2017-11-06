@@ -2293,6 +2293,7 @@ class HomeController extends Controller
       #Obteniendo los dias de vacaciones del usuario
       $idUSerlogin = Auth::user()->id;
       $DaysVacacionesData = VacacionesUsers::where('id_usuario', '=', $idUSerlogin)->get();
+      dd($DaysVacacionesData);
       $dataArrayDias = array();
 
       foreach ($DaysVacacionesData as $keyDaysVacacionesData) {

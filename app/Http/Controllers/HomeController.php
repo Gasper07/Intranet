@@ -1948,11 +1948,12 @@ class HomeController extends Controller
         $fotoUser = '';
         foreach ($UsersDatasLogin as $keyUsersDatasLogin) {
           $fotoUser =$keyUsersDatasLogin->foto;
+          $TypefotoUser =$keyUsersDatasLogin->mime;
         }
 
 
 
-      return view('usuarios.motivo-emergencia',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser'));
+      return view('usuarios.motivo-emergencia',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser','TypefotoUser'));
     }
 
     public function StoreSolicitudEmergencia(Request $request){

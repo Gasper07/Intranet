@@ -2312,7 +2312,7 @@ class HomeController extends Controller
           array_push($dataArrayDias, $SegundoNumerDay);
         }
       }
-    dd($dataArrayDias);
+      
       return $dataArrayDias;
 
     }

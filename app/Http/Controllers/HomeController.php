@@ -1699,6 +1699,9 @@ class HomeController extends Controller
       $Solicitudes = DetallesSolicitudes::where('id_usuario','=',$idUserLogin)->get();
       
 
+      # Get posts
+      $Posts = $this->GetPost();
+      
       # Creamos session de idLogiado para chat
       $getCreateOnlineUsers = $this->CreateGetOnlineUser($idUserLogin);
 
@@ -1756,7 +1759,7 @@ class HomeController extends Controller
       # Get posts
         $Posts = $this->GetPost();
       # Decompiniendo array de post para obtener galeria de fotos que el usuario a publicado
-        foreach ($Posts as $keyPostsImages) {
+   /*     foreach ($Posts as $keyPostsImages) {
           if($keyPostsImages->id_usuario == $idUserLogin){
             if($keyPostsImages->imagen != ''){
               $ArrayImgeesGaleri = '';
@@ -1765,7 +1768,7 @@ class HomeController extends Controller
             }
           }          
         }
-
+*/
         # Decompiniendo array de post para obtener galeria de fotos que el usuario a publicado
         foreach ($Posts as $keyPostsImages) {
           if($keyPostsImages->id_usuario == $idUserLogin){

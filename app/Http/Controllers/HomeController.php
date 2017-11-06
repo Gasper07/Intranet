@@ -1677,14 +1677,18 @@ class HomeController extends Controller
       #get Color del panel del usuario d
       $Bguser  = $this->GetBackgroundPanelOfUSer();
 
+ 
       #get Foto User login
       $UsersDatasLogin = DatosPersonales::where('id_usuario','=', $idUserLogin)->get();
       $fotoUser = '';
       foreach ($UsersDatasLogin as $keyUsersDatasLogin) {
         $fotoUser =$keyUsersDatasLogin->foto;
+        $TypefotoUser =$keyUsersDatasLogin->mime;
       }
 
-      return view('usuarios.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser'));
+
+
+      return view('usuarios.calendario',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','DatosPersonales','EventsDayCalendarOrder','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser','TypefotoUser'));
     }
 
     public function SolicitudPermiso()
@@ -2312,7 +2316,7 @@ class HomeController extends Controller
           array_push($dataArrayDias, $SegundoNumerDay);
         }
       }
-      
+
       return $dataArrayDias;
 
     }

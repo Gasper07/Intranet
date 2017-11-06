@@ -1701,7 +1701,7 @@ class HomeController extends Controller
 
       # Get posts
       $Posts = $this->GetPost();
-      
+
       # Creamos session de idLogiado para chat
       $getCreateOnlineUsers = $this->CreateGetOnlineUser($idUserLogin);
 
@@ -1802,10 +1802,11 @@ class HomeController extends Controller
         $fotoUser = '';
         foreach ($UsersDatasLogin as $keyUsersDatasLogin) {
           $fotoUser =$keyUsersDatasLogin->foto;
+          $TypefotoUser =$keyUsersDatasLogin->mime;
         }
 
 
-      return view('usuarios.solicitud-permiso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser'));
+      return view('usuarios.solicitud-permiso',compact('idUserLogin','AllOnlineUser','EventsDayCalendar','UsersAlls','getCreateOnlineUsers','DayMothsYear','EventsCalendar','eventsEnero','eventsFebrero','eventsMarzo','eventsAbril','eventsMayo','eventsJunio','eventsJulio','eventsAgosto','eventsSeptiembre','eventsOctubre','eventsNoviembre','eventsDiciembre','JoinTableUserDatas','HorariosUser','arrayDaysDescansoUser','getUsers','Posts','arrayOfImages','Solicitudes','PrimerNumerDay','SegundoNumerDay','Activities','NotifisEventos','AllPost','ActivitiesNotifys','Bguser','fotoUser','TypefotoUser'));
     }
 
     public function StoreSolicitudPermimso(Request $request){

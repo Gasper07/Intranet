@@ -254,7 +254,7 @@ class HomeController extends Controller
 
       #Verifi Cumpleanos de algun empleado
       $UsuariosAll = DatosPersonales::all();
-      dd($UsuariosAll);
+      // dd($UsuariosAll);
       $AllPost = Post::all();
       $carbon = new \Carbon\Carbon();
       $FechaActual = $carbon->now()->format('m-d');

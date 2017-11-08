@@ -169,7 +169,7 @@ body.bgUser{
 }
 
 .form-group.BlockSession>.col-md-8.col-md-offset-4>a {
-    font-size: 17px;
+    font-size: 16px;
     width: 29%;
     display: block;
     margin: 0 auto;
@@ -269,7 +269,7 @@ li.bloquesMarca>a {
    margin-right: 10%;
    text-align: center;
    line-height: 50px;
-   font-size: 17px;
+   font-size: 16px;
 }
 
 .gn-menu li:not(:first-child), .gn-menu li li {
@@ -312,7 +312,7 @@ li.bloquesMarca.accionesPerfil.accionesBussines>a {
 }
 
 ul.centerNameUserMenu>li {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 ul.nav.navbar-nav.navbar-right.navulRIght {
@@ -400,7 +400,7 @@ li.dropdown.uSerLogue.colorBlackSuave {
 
 .ui.feed.uifeedAvatar>.event>.content>.summary>.date {
   float: right;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .col-xs-12.col-sm-6.col-md-7.col-lg-7.captionPosteos>div>div {
@@ -540,6 +540,7 @@ a.dataSaveChanges.dataSaveChangesActive {
 
 .date.fontMiriamProRegular.colorGrisMediumSuave.comentUser {
   color: #666666 !important;
+  font-size: 11px !important;
 }
 
 form.ui.form.formComentUser>div>input {
@@ -603,6 +604,7 @@ a.removeComent>i {
 .col-xs-12.col-sm-6.col-md-7.col-lg-7.captionPosteos>div>div.col-md-12.typeAvisosPost>div>div.content {
   color: white;
   opacity: 1;
+  font-size: 16px;
 }
 
 .col-xs-12.col-sm-6.col-md-7.col-lg-7.captionPosteos>div>div.col-md-12.typeAvisosPost>div>img {
@@ -740,7 +742,7 @@ p.textCOment.fontMiriamProRegular.colorGrisMediumSuave {
 }
 
 .captionCalendar>.dayMonth>p{
-  font-size: 21px;
+  font-size: 16px;
   margin-bottom: 2%;
   line-height: 30px;
   text-transform: uppercase;
@@ -1087,7 +1089,7 @@ div#sandbox-container>h4 {
 }
 
 .captionRankingUser>div>a>p {
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   margin-top: 6%;
   margin-bottom: 6%;
@@ -1121,7 +1123,7 @@ div#sandbox-container>h4 {
 }
 
 div#carousel-example-genericRan>div.carousel-inner>div.item>div>a>p {
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   margin-top: 6%;
   margin-bottom: 6%;
@@ -1359,19 +1361,19 @@ div.ui.dropdown.dropdownSemantic.notifiICos.fontMiriamProRegular>div.menu>.capti
 }
 
 .notficiActivitie>.ui.relaxed.divided.list>.item>.content>a>strong {
-  font-size: 12px;
+  font-size: 11px;
   color: #727271;
   font-family: 'MyrianPro-Bold';
 }
 
 .notficiActivitie>.ui.relaxed.divided.list>.item>.content>a {
-  font-size: 12px;
+  font-size: 11px;
   color: #727271 !important;
   font-family: 'MyrianPro-Regular';
 }
 
 .notficiActivitie>.ui.relaxed.divided.list>.item>.content>a>span {
-  font-size: 12px;
+  font-size: 11px;
   color: #0071bc !important;
   font-family: 'MyrianPro-Semibold';
 }
@@ -1505,8 +1507,8 @@ form.sectionPublichUser>div {
   border: 0;
   background: #ffd00b;
   color: #000000;
-  font-size: 17px;
   font-family: 'MyrianPro-Regular';
+  font-size: 16px;
 }
 
 .col-md-6.ButtinPublish {
@@ -1552,6 +1554,7 @@ form.ui.form.formComentUser>a>p {
   color: white;
   padding: 3%;
   width: 100%;
+  font-size: 13px;
 }
 
 /* PROFILE PAGE */
@@ -2106,7 +2109,7 @@ span.estusLive {
 }
 
 p.DayAgenda {
-  font-size: 10px;
+  font-size: 11px;
   color: #000000;
   font-family: 'MyrianPro-Semibold';
   text-transform: uppercase;
@@ -2120,7 +2123,7 @@ p.DayNumberAgenda {
 }
 
 p.typEEvento {
-  font-size: 12px;
+  font-size: 11px;
   color: #000000;
   font-family: 'MyrianPro-Semibold';
   text-align: left;
@@ -2346,7 +2349,7 @@ p.typEEvento {
 
 p.cont_previwMenSage {
   color: #666666;
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'MyrianPro-Regular';
 }
 
@@ -2505,7 +2508,7 @@ form.formSearchChat>div {
 
 .col-lg-12.MensaGedate {
   color: rgba(0, 0, 0, .40);
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'MyrianPro-Regular';
   margin-bottom: 0%;
 }
@@ -2544,7 +2547,7 @@ form.formSearchChat>div {
 
 .col-lg-12.MensaGedate.getUserReceive>div.datafechasND {
   color: rgba(0, 0, 0, .40);
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'MyrianPro-Regular';
   margin-bottom: 2%;
   text-align-last: center;
@@ -2552,7 +2555,7 @@ form.formSearchChat>div {
 
 .col-lg-12.MensaGedate.getUserSend>div.datafechasND {
   color: rgba(0, 0, 0, .40);
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'MyrianPro-Regular';
   margin-bottom: 2%;
   text-align-last: center;
@@ -2722,7 +2725,7 @@ form.formSearchChat>div {
 
 .col-xs-12.col-sm-12.col-md-6.col-lg-6.vDataPublicType>p {
   color: #666666;
-  font-size: 17px;
+  font-size: 16px;
   font-family: 'MyrianPro-Regular';
 }
 
@@ -2747,7 +2750,7 @@ form.formSearchChat>div {
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.fechasEventos>p {
   color: #666666;
-  font-size: 17px;
+  font-size: 16px;
   font-family: 'MyrianPro-Regular';
   display: inline-block;
   bottom: 5px;
@@ -2896,7 +2899,7 @@ div#carousel-example-generic2>a {
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.permission>h3 {
   color: #666666;
-  font-size: 17px;
+  font-size: 16px;
   font-family: 'MyrianPro-Semibold';
 }
 
@@ -3056,7 +3059,7 @@ div#datetimepicker12>.bootstrap-datetimepicker-widget.timepicker-sbs>div>.timepi
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.nameUisersMensage > h3 {
   color: #000000;
-  font-size: 17px;
+  font-size: 16px;
   font-family: 'MyrianPro-Semibold';
   margin-bottom: 1%;
 }
@@ -3298,7 +3301,7 @@ form.formReturnMennsage > div > div.textAreaReturn > textarea {
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.motioEmergency>h3 {
   color: #666666;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 2%;
   font-family: 'MyrianPro-Semibold';
 }
@@ -3558,7 +3561,7 @@ ul.Redconocistes>li>div {
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts>div>p {
   color: #333333;
-  font-size: 17px;
+  font-size: 16px;
   /* margin-top: 5%; */
   margin-top: 1%;
   margin-bottom: 1%;
@@ -3567,7 +3570,7 @@ ul.Redconocistes>li>div {
 
 .col-xs-12.col-sm-12.col-md-6.col-lg-6.sectionProfiles.sectionPermissionRequest.sectionEvalutionToPersonal > div > .col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts > div > p {
   color: #333333;
-  font-size: 17px;
+  font-size: 16px;
   margin-top: 5%;
   margin-bottom: 1%;
   font-family: 'MyrianPro-Regular';
@@ -3686,7 +3689,7 @@ ul.Redconocistes>li>div {
 
 .bg-bar-name {
   background: #ffd00b;
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'MyrianPro-Regular';
   text-align: left;
   padding-left: 3%;

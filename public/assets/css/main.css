@@ -196,7 +196,7 @@ div#app-navbar-collapse>.gn-menu-main>li>a {
    padding-top: 23%;
 }
 
-ul#gn-menu {
+ul#gn-menuData {
    background: transparent;
    z-index: 100;
    position: relative;

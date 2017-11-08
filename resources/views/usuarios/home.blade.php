@@ -108,11 +108,11 @@
             </div>
         
           
-          <div class="captionPromos">
-            <p class="fontMiriamProSemiBold">Promociones de hoy</p>
-            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
-            <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
-          </div>
+         <!--  <div class="captionPromos">
+           <p class="fontMiriamProSemiBold">Promociones de hoy</p>
+           <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
+           <img class="img-responsive" src="http://app-7983e06f-f506-428d-aef9-aea82667c6d7.cleverapps.io/public/assets/images/promo-public.jpg">
+         </div> -->
 
           <div class="captionPostGuardadosText">
             <p class="fontMiriamProRegular">Post personalizados</p>

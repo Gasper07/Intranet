@@ -101,7 +101,7 @@
                         </div>
                       </div>
                     </div>
-                    <ul id="gn-menu" class="nav navbar-nav gn-menu-main">
+                    <ul  class="nav navbar-nav gn-menu-main">
                         <li class="gn-trigger">
                             <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
                             <nav class="gn-menu-wrapper">

@@ -125,7 +125,7 @@ body.bgUser{
 .container.loginAcceso>.row>.col-md-8.col-md-offset-2>h2 {
     color: #b3b3b3;
     text-align: center;
-    font-size: 24px;    
+    font-size: 16px;    
     margin-bottom: 4%;
 }
 
@@ -261,7 +261,7 @@ nav.navbar.navbar-default.navbar-static-top.navbarHome.BgYellow {
 
 li.gn-search-item>a>p {
    text-align: center;
-   font-size: 21px;
+   font-size: 16px;
 }
 
 li.bloquesMarca>a {
@@ -293,7 +293,7 @@ a.fontMiriamProRegular.colorGrisMediumSuave.lineJustify.borderLineGris {
 }
 
 li.bloquesMarca.marEntrada>a, li.bloquesMarca.marSalida>a {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 li.bloquesMarca.accionesPerfil.accionesBussines>a {
@@ -571,7 +571,7 @@ form.ui.form.formComentUser {
 }
 
 .col-xs-12.col-sm-6.col-md-7.col-lg-7.captionPosteos>div>div.col-md-12.typeEventEspecial>h5 {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 1%;
   color: #5a5959;
   border-bottom: 1px solid #e6e6e6;
@@ -649,7 +649,7 @@ a.removeComent>i {
 }
 
 .col-md-12.typeEventCumpleanos>a.removeComent>i {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .col-md-12.typeEventCumpleanos>h4 {
@@ -660,7 +660,7 @@ a.removeComent>i {
 }
 
 .col-md-12.typeEventCumpleanos>h5 {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 1%;
   color: #5a5959;
   border-bottom: 1px solid #e6e6e6;
@@ -699,7 +699,7 @@ p.textCOment.fontMiriamProRegular.colorGrisMediumSuave {
 }
 
 .captionAvisos>p {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .captionAvisos>h1 {
@@ -716,7 +716,7 @@ p.textCOment.fontMiriamProRegular.colorGrisMediumSuave {
 
 .captionPromos>p {
   color: #727271;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .captionPromos>img {
@@ -892,7 +892,7 @@ img.img-responsive.clImgView {
 
 .carousel-inner.carouselWithMeses>.item>h3 {
   color: #777777;
-  font-size: 24px;  
+  font-size: 16px;  
   margin-top: 2%;
 }
 
@@ -1049,7 +1049,7 @@ div#sandbox-container>h4 {
 
 .captionGaleriFotos>h3 {
   text-align: center;
-  font-size: 21px;
+  font-size: 16px;
   color: #666666;
 }
 
@@ -1117,7 +1117,7 @@ div#sandbox-container>h4 {
 
 .carousel-inner>a.carouselRank>span{
   color: black;
-  font-size: 15px;
+  font-size: 16px;
   top: 16px;
   left: 11%;
 }
@@ -1380,7 +1380,7 @@ div.ui.dropdown.dropdownSemantic.notifiICos.fontMiriamProRegular>div.menu>.capti
 
 .captionActivitiesRecientes>h3 {
   color: #727271;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .captionActivitiesRecientes>h3 {
@@ -1590,7 +1590,7 @@ form.ui.form.formComentUser>a>p {
   color: #1a1a1a;
   text-align: center;
   font-family: 'MyrianPro-Semibold';
-  font-size: 15px;
+  font-size: 16px;
 }
 
 p#titleHorrarios {
@@ -1604,7 +1604,7 @@ p#titleHorrarios {
 
 p.ListDays {
   color: #666666;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 2%;
   margin-top: 4%;
 }
@@ -1639,7 +1639,7 @@ p.ListHours.fontMiriamProRegular.DayDescans {
   color: white;
   text-align: center;
   font-family: 'MyrianPro-Semibold';
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .col-xs-12.col-sm-12.col-md-12.LinksForEmpleados>ul>li>a {
@@ -1666,14 +1666,14 @@ li.gn-search-item>p {
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts>p {
   color: #000000;
-  font-size: 21px;  
+  font-size: 16px;  
   margin-top: 2%;
   margin-bottom: 0;
 }
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts>a>p {
     color: #000000;
-    font-size: 21px;
+    font-size: 16px;
     margin-top: 2%;
     margin-bottom: 0;
 }
@@ -1740,7 +1740,7 @@ p.detallInformation>a {
 
 input.detallInformation {
   font-family: 'MyrianPro-Regular';
-  font-size: 16px;
+  font-size: 14px;
   border: 0;
   background: transparent;
 }
@@ -1892,7 +1892,7 @@ input.detallInformation:disabled {
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.geleriFotosUser>h3 {
   color: #666666;
   text-align: center;
-  font-size: 21px;
+  font-size: 16px;
   font-family: 'MyrianPro-Semibold';
 }
 
@@ -1907,7 +1907,7 @@ input.detallInformation:disabled {
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.dataEventos>h3 {
   color: #666666;
   margin-top: 3%;
-  font-size: 21px;
+  font-size: 16px;
   font-family: 'MyrianPro-Semibold';
   margin-bottom: 3%;
 }
@@ -2068,7 +2068,7 @@ span.estusLive {
   padding: 7%;
   text-align: center;
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'MyrianPro-Regular';
 }
 
@@ -2305,7 +2305,7 @@ p.typEEvento {
   background: #ffd00b;
   border: 0;
   padding: 5%;
-  font-size: 15px;
+  font-size: 16px;
   color: #1a1a1a;
   font-family: 'MyrianPro-Semibold';
 }
@@ -2538,7 +2538,7 @@ form.formSearchChat>div {
   position: absolute;
   left: 86%;
   top: 30%;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.sectionCreateCHat {
@@ -2823,7 +2823,7 @@ div#carousel-example-generic2>a {
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.captionProfileMy>p {
   color: #000000;
-  font-size: 21px;
+  font-size: 16px;
   text-align: center;
   font-family: 'MyrianPro-Semibold';
   margin-bottom: 4%;
@@ -2841,7 +2841,7 @@ div#carousel-example-generic2>a {
   color: white;
   padding: 6%;
   margin-bottom: 8%;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 3px;
 }
 
@@ -2924,7 +2924,7 @@ form.formMotivoPermission>textarea {
   background: #808080;
   text-align: center;
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'MyrianPro-Semibold';
   padding: 5%;
 }
@@ -2976,7 +2976,7 @@ div#datetimepicker12>.bootstrap-datetimepicker-widget.timepicker-sbs>div>.timepi
   background: #ffd00b;
   border: 0;
   color: #1a1a1a;
-  font-size: 15px;
+  font-size: 16px;
   padding: 2%;
   width: 35%;
   margin: 0 auto;
@@ -3472,7 +3472,7 @@ form.formReturnMennsage > div > div.textAreaReturn > textarea {
 }
 
 .col-xs-12.col-sm-12.col-md-12.col-lg-12.EvaluationPersonal>.col-xs-12.col-sm-12.col-md-12.col-lg-12.ProfileFotosStarts>.col-xs-12.col-sm-12.col-md-12.col-lg-12.textConesta>p {
-  font-size: 15px;
+  font-size: 16px;
   color: #333333;
   font-family: 'Multicolore';
 }
